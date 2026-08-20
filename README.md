@@ -208,7 +208,6 @@ docker compose ps
 | **dbt Documentation** | `8082`  | [http://localhost:8082](http://localhost:8082)           | Public                |
 | **Nessie Catalog**    | `19120` | [http://localhost:19120](http://localhost:19120)         | API Endpoint          |
 | **Jupyter Lab**       | `8888`  | [http://localhost:8888](http://localhost:8888)           | Token: `admin`        |
-| **Data Source API**   | `8005`  | [http://localhost:8005/docs](http://localhost:8005/docs) | Swagger Docs          |
 
 ---
 
