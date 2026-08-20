@@ -1,0 +1,41 @@
+# ==========================================
+# STAGE 1: Builder (Tải dependencies & Kiểm tra)
+# ==========================================
+FROM alpine:3.19 AS builder
+
+# Cài đặt curl VÀ unzip để test file JAR
+RUN apk add --no-cache curl unzip
+
+WORKDIR /downloads
+
+# Khai báo version
+ARG ICEBERG_VERSION="1.6.1"
+ARG NESSIE_VERSION="0.104.10"
+ARG HADOOP_AWS_VERSION="3.3.4"
+ARG AWS_SDK_VERSION="1.12.262"
+
+# Tải các file JAR từ Maven Central
+RUN curl -fSL --retry 3 "https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.5_2.12/${ICEBERG_VERSION}/iceberg-spark-runtime-3.5_2.12-${ICEBERG_VERSION}.jar" -o iceberg-spark-runtime.jar && \
+    curl -fSL --retry 3 "https://repo1.maven.org/maven2/org/projectnessie/nessie-integrations/nessie-spark-extensions-3.5_2.12/${NESSIE_VERSION}/nessie-spark-extensions-3.5_2.12-${NESSIE_VERSION}.jar" -o nessie-spark-extensions.jar && \
+    curl -fSL --retry 3 "https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/${HADOOP_AWS_VERSION}/hadoop-aws-${HADOOP_AWS_VERSION}.jar" -o hadoop-aws.jar && \
+    curl -fSL --retry 3 "https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/${AWS_SDK_VERSION}/aws-java-sdk-bundle-${AWS_SDK_VERSION}.jar" -o aws-java-sdk-bundle.jar
+
+# CHỐT CHẶN: Kiểm tra tính toàn vẹn (đảm bảo không bị corrupt file)
+RUN unzip -t iceberg-spark-runtime.jar > /dev/null && \
+    unzip -t nessie-spark-extensions.jar > /dev/null && \
+    unzip -t hadoop-aws.jar > /dev/null && \
+    unzip -t aws-java-sdk-bundle.jar > /dev/null
+
+# ==========================================
+# STAGE 2: Final Image (Java 17 Runtime)
+# ==========================================
+FROM apache/spark:3.5.4-java17-python3
+
+USER root
+
+ENV SPARK_JARS_DIR=/opt/spark/jars
+
+# Copy các file JAR từ Stage 1 sang Stage 2 và phân quyền trực tiếp cho user spark
+COPY --from=builder --chown=spark:spark /downloads/*.jar $SPARK_JARS_DIR/
+
+USER spark

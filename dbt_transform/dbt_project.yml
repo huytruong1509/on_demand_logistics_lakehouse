@@ -1,0 +1,24 @@
+name: "logistics_transformation"
+version: "1.0.0"
+config-version: 2
+
+# TRỌNG TÂM: Phải trỏ đúng tên profile trong profiles.yml của em
+profile: "lakehouse_dbt"
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+models:
+  logistics_transformation:
+    staging:
+      +materialized: table # Tầng Silver tạo View cho nhẹ
+      +schema: silver # Trino sẽ tạo view tại schema lakehouse.silver
+    marts:
+      +materialized: table # Tầng Gold tạo Table vật lý để query nhanh
+      +schema: gold # Trino sẽ tạo table tại schema lakehouse.gold
+    presentation:
+      +materialized: incremental
+      +schema: gold
+
+vars:
+  lookback_days: 1

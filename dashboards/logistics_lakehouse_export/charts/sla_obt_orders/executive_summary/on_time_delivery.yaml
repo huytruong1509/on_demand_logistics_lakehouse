@@ -1,0 +1,24 @@
+version: 1.0.0
+uuid: c8f41111-0001-4000-8000-000000000002
+slice_name: "1. OTDR (North Star Metric)"
+viz_type: big_number
+dataset_uuid: d8f41111-8888-4000-8000-000000000001
+params:
+  datasource: d8f41111-8888-4000-8000-000000000001__table
+  viz_type: big_number
+  granularity_sqla: create_date
+  time_grain_sqla: P1W # Gom theo Tuần để đường trendline mượt, không bị sọc đứng
+  metric:
+    expressionType: SQL
+    sqlExpression: >
+      COUNT(CASE WHEN time_to_complete_minutes <= 30 AND order_status = 'COMPLETED' THEN 1 END) * 1.0 
+      / NULLIF(COUNT(CASE WHEN order_status = 'COMPLETED' THEN 1 END), 0)
+    label: "OTDR Rate"
+  show_trend_line: true
+  start_y_axis_at_zero: false
+  time_compare:
+    - "1 week ago"
+  y_axis_format: ",.2%"
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  subheader: "Target: >95.0% | Danger Zone: <90.0%"

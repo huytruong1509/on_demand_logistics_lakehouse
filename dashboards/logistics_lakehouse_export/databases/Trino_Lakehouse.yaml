@@ -1,0 +1,17 @@
+database_name: Trino_Lakehouse
+sqlalchemy_uri: trino://admin@trino-coordinator:8080/lakehouse
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: true
+allow_cvas: true
+allow_dml: true
+allow_file_upload: false
+extra:
+  cost_estimate_enabled: false
+  allows_virtual_table_explore: true
+  schemas_allowed_for_file_upload: []
+impersonate_user: false
+configuration_method: sqlalchemy_form
+uuid: b7384d56-7848-43d7-8d26-7f4b89694001
+version: 1.0.0

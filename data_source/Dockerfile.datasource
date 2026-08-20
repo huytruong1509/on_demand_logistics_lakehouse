@@ -1,0 +1,35 @@
+# Sử dụng base image Python nhẹ nhàng
+FROM python:3.12-slim
+
+# Cài đặt curl (cho Healthcheck) và các thư viện hệ thống cần thiết cho osmnx/geopandas
+RUN apt-get update && apt-get install -y \
+    curl \
+    libgdal-dev \
+    gdal-bin \
+    libspatialindex-dev \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
+
+# Cấu hình biến môi trường để pip có thể tìm thấy GDAL headers khi build thư viện
+ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
+ENV C_INCLUDE_PATH=/usr/include/gdal
+
+WORKDIR /app
+
+# Copy requirements và cài đặt
+COPY requirements.txt .
+# Nâng cấp pip trước để tránh lỗi build wheel, sau đó cài đặt requirements
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+# Copy source code
+COPY main.py .
+
+# Tạo thư mục chứa database để Volume mount vào
+RUN mkdir -p /app/db
+
+# Mở port 8005
+EXPOSE 8005
+
+# Chạy server uvicorn
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8005"]

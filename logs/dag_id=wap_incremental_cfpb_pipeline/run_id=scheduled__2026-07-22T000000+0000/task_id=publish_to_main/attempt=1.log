@@ -1,0 +1,63 @@
+[2026-07-23T02:01:39.720+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T02:01:39.738+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.publish_to_main scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T02:01:39.745+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.publish_to_main scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T02:01:39.746+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-23T02:01:39.757+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): publish_to_main> on 2026-07-22 00:00:00+00:00
+[2026-07-23T02:01:39.763+0000] {standard_task_runner.py:72} INFO - Started process 1749 to run task
+[2026-07-23T02:01:39.766+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_incremental_cfpb_pipeline', 'publish_to_main', 'scheduled__2026-07-22T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/wap_incremental_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpns0pzto9']
+[2026-07-23T02:01:39.768+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask publish_to_main
+[2026-07-23T02:01:39.838+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_incremental_cfpb_pipeline.publish_to_main scheduled__2026-07-22T00:00:00+00:00 [running]> on host d0280eba3cdf
+[2026-07-23T02:01:39.932+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_incremental_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='publish_to_main' AIRFLOW_CTX_EXECUTION_DATE='2026-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-22T00:00:00+00:00'
+[2026-07-23T02:01:39.935+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T02:01:39.938+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-23T02:01:39.958+0000] {nessie_client.py:59} INFO - 🔄 Đang Merge 'etl_20260722_scheduled202607' -> 'main'...
+[2026-07-23T02:01:39.997+0000] {nessie_client.py:62} INFO - ✅ Merge thành công! Dữ liệu đã lên Production.
+[2026-07-23T02:01:39.998+0000] {wap_incremental_cfpb_pipeline.py:239} INFO - 🚀 PUBLISH THÀNH CÔNG: Dữ liệu từ etl_20260722_scheduled202607 đã xuất hiện trên main.
+[2026-07-23T02:01:39.999+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-07-23T02:01:40.013+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T02:01:40.014+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_incremental_cfpb_pipeline, task_id=publish_to_main, run_id=scheduled__2026-07-22T00:00:00+00:00, execution_date=20260722T000000, start_date=20260723T020139, end_date=20260723T020140
+[2026-07-23T02:01:40.061+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-23T02:01:40.085+0000] {taskinstance.py:3900} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2026-07-23T02:01:40.088+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-23T03:03:18.040+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T03:03:18.062+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.publish_to_main scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T03:03:18.071+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.publish_to_main scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T03:03:18.072+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-23T03:03:18.083+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): publish_to_main> on 2026-07-22 00:00:00+00:00
+[2026-07-23T03:03:18.089+0000] {standard_task_runner.py:72} INFO - Started process 1060 to run task
+[2026-07-23T03:03:18.093+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_incremental_cfpb_pipeline', 'publish_to_main', 'scheduled__2026-07-22T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/wap_incremental_cfpb_pipeline.py', '--cfg-path', '/tmp/tmph4pxqs01']
+[2026-07-23T03:03:18.095+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask publish_to_main
+[2026-07-23T03:03:18.171+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_incremental_cfpb_pipeline.publish_to_main scheduled__2026-07-22T00:00:00+00:00 [running]> on host b3f56365d5f7
+[2026-07-23T03:03:18.269+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_incremental_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='publish_to_main' AIRFLOW_CTX_EXECUTION_DATE='2026-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-22T00:00:00+00:00'
+[2026-07-23T03:03:18.272+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T03:03:18.276+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-23T03:03:18.300+0000] {nessie_client.py:59} INFO - 🔄 Đang Merge 'etl_20260722_scheduled202607' -> 'main'...
+[2026-07-23T03:03:18.342+0000] {nessie_client.py:62} INFO - ✅ Merge thành công! Dữ liệu đã lên Production.
+[2026-07-23T03:03:18.343+0000] {wap_incremental_cfpb_pipeline.py:239} INFO - 🚀 PUBLISH THÀNH CÔNG: Dữ liệu từ etl_20260722_scheduled202607 đã xuất hiện trên main.
+[2026-07-23T03:03:18.345+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-07-23T03:03:18.358+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T03:03:18.360+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_incremental_cfpb_pipeline, task_id=publish_to_main, run_id=scheduled__2026-07-22T00:00:00+00:00, execution_date=20260722T000000, start_date=20260723T030318, end_date=20260723T030318
+[2026-07-23T03:03:18.388+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-23T03:03:18.412+0000] {taskinstance.py:3900} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2026-07-23T03:03:18.416+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-23T03:45:21.781+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T03:45:21.798+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.publish_to_main scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T03:45:21.806+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.publish_to_main scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T03:45:21.808+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-23T03:45:21.818+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): publish_to_main> on 2026-07-22 00:00:00+00:00
+[2026-07-23T03:45:21.824+0000] {standard_task_runner.py:72} INFO - Started process 1067 to run task
+[2026-07-23T03:45:21.827+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_incremental_cfpb_pipeline', 'publish_to_main', 'scheduled__2026-07-22T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/wap_incremental_cfpb_pipeline.py', '--cfg-path', '/tmp/tmp9kgsanwr']
+[2026-07-23T03:45:21.829+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask publish_to_main
+[2026-07-23T03:45:21.898+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_incremental_cfpb_pipeline.publish_to_main scheduled__2026-07-22T00:00:00+00:00 [running]> on host 260824ef083b
+[2026-07-23T03:45:21.983+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_incremental_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='publish_to_main' AIRFLOW_CTX_EXECUTION_DATE='2026-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-22T00:00:00+00:00'
+[2026-07-23T03:45:21.985+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T03:45:21.989+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-23T03:45:22.007+0000] {nessie_client.py:59} INFO - 🔄 Đang Merge 'etl_20260722_scheduled202607' -> 'main'...
+[2026-07-23T03:45:22.066+0000] {nessie_client.py:62} INFO - ✅ Merge thành công! Dữ liệu đã lên Production.
+[2026-07-23T03:45:22.068+0000] {wap_incremental_cfpb_pipeline.py:239} INFO - 🚀 PUBLISH THÀNH CÔNG: Dữ liệu từ etl_20260722_scheduled202607 đã xuất hiện trên main.
+[2026-07-23T03:45:22.070+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-07-23T03:45:22.085+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T03:45:22.087+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_incremental_cfpb_pipeline, task_id=publish_to_main, run_id=scheduled__2026-07-22T00:00:00+00:00, execution_date=20260722T000000, start_date=20260723T034521, end_date=20260723T034522
+[2026-07-23T03:45:22.121+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-23T03:45:22.143+0000] {taskinstance.py:3900} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2026-07-23T03:45:22.148+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

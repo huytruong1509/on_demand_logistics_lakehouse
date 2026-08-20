@@ -1,0 +1,28 @@
+[2026-07-10T04:47:21.815+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T04:47:21.833+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_full_load_test.prepare_and_clean_target manual__2026-07-10T04:46:53.227952+00:00 [queued]>
+[2026-07-10T04:47:21.842+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_full_load_test.prepare_and_clean_target manual__2026-07-10T04:46:53.227952+00:00 [queued]>
+[2026-07-10T04:47:21.844+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-10T04:47:21.856+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): prepare_and_clean_target> on 2026-07-10 04:46:53.227952+00:00
+[2026-07-10T04:47:21.862+0000] {standard_task_runner.py:72} INFO - Started process 2406 to run task
+[2026-07-10T04:47:21.866+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_full_load_test', 'prepare_and_clean_target', 'manual__2026-07-10T04:46:53.227952+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_full_load.py', '--cfg-path', '/tmp/tmpnwb3qbab']
+[2026-07-10T04:47:21.868+0000] {standard_task_runner.py:105} INFO - Job 30: Subtask prepare_and_clean_target
+[2026-07-10T04:47:21.939+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_full_load_test.prepare_and_clean_target manual__2026-07-10T04:46:53.227952+00:00 [running]> on host 3c4c4f9f722a
+[2026-07-10T04:47:22.024+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_full_load_test' AIRFLOW_CTX_TASK_ID='prepare_and_clean_target' AIRFLOW_CTX_EXECUTION_DATE='2026-07-10T04:46:53.227952+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-10T04:46:53.227952+00:00'
+[2026-07-10T04:47:22.027+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T04:47:22.031+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-10T04:47:22.033+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-10T04:47:22.035+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-10T04:47:22.418+0000] {minio_loader.py:184} INFO - 🧹 Đang xóa 2 file cũ trong phân vùng landing/consumer_complaints/run_date=2026-07-10...
+[2026-07-10T04:47:22.425+0000] {s3.py:1383} INFO - Deleted: ['landing/consumer_complaints/run_date=2026-07-10/full_2026-07-10_bank_of_america_national_association_complaints.json', 'landing/consumer_complaints/run_date=2026-07-10/full_2026-07-10_jpmorgan_chase_&_co._complaints.json']
+[2026-07-10T04:47:22.426+0000] {minio_loader.py:186} INFO - ✓ Phân vùng đã sạch sẽ, sẵn sàng nhận data mới!
+[2026-07-10T04:47:22.428+0000] {consumer_complaints_full_load.py:49} INFO - Đã dọn dẹp sạch sẽ thư mục Landing cho run_date=2026-07-10.
+[2026-07-10T04:47:22.429+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-10T04:47:22.431+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-10T04:47:22.434+0000] {sql.py:509} INFO - Running statement: DELETE FROM lakehouse.bronze.raw_consumer_complaints, parameters: None
+[2026-07-10T04:47:22.465+0000] {consumer_complaints_full_load.py:59} ERROR - Lỗi khi xóa dữ liệu bảng (Có thể bảng chưa tồn tại): TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 1:1: Table 'lakehouse.bronze.raw_consumer_complaints' does not exist", query_id=20260710_044722_00015_v22m2)
+[2026-07-10T04:47:22.467+0000] {python.py:240} INFO - Done. Returned value was: 2026-07-10
+[2026-07-10T04:47:22.493+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T04:47:22.495+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_full_load_test, task_id=prepare_and_clean_target, run_id=manual__2026-07-10T04:46:53.227952+00:00, execution_date=20260710T044653, start_date=20260710T044721, end_date=20260710T044722
+[2026-07-10T04:47:22.523+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-10T04:47:22.560+0000] {taskinstance.py:3900} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T04:47:22.564+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

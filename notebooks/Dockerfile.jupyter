@@ -1,0 +1,4 @@
+FROM jupyter/datascience-notebook:latest
+USER jovyan
+COPY requirements.txt /tmp/
+RUN pip install --no-cache-dir -r /tmp/requirements.txt

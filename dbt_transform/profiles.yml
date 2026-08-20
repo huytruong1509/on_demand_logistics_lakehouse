@@ -1,0 +1,11 @@
+lakehouse_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: trino
+      method: none
+      user: admin
+      catalog: lakehouse
+      schema: silver
+      host: trino-coordinator
+      port: 8080

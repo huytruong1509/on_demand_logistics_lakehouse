@@ -1,0 +1,54 @@
+[2026-07-11T00:50:11.047+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-11T00:50:11.085+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.extract_and_upload_company scheduled__2026-07-10T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-11T00:50:11.101+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.extract_and_upload_company scheduled__2026-07-10T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-11T00:50:11.103+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-11T00:50:11.130+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company> on 2026-07-10 00:00:00+00:00
+[2026-07-11T00:50:11.140+0000] {standard_task_runner.py:72} INFO - Started process 1023 to run task
+[2026-07-11T00:50:11.150+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'extract_and_upload_company', 'scheduled__2026-07-10T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmp588j7pwr', '--map-index', '0']
+[2026-07-11T00:50:11.154+0000] {standard_task_runner.py:105} INFO - Job 13: Subtask extract_and_upload_company
+[2026-07-11T00:50:11.267+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.extract_and_upload_company scheduled__2026-07-10T00:00:00+00:00 map_index=0 [running]> on host 128d9097399a
+[2026-07-11T00:50:11.378+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='extract_and_upload_company' AIRFLOW_CTX_EXECUTION_DATE='2026-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-10T00:00:00+00:00'
+[2026-07-11T00:50:11.382+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-11T00:50:11.389+0000] {cfpb_api_client.py:486} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: JPMORGAN CHASE & CO.
+[2026-07-11T00:50:11.391+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: JPMORGAN CHASE & CO.
+[2026-07-11T00:50:11.392+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2026-07-03 đến 2026-07-10
+[2026-07-11T00:50:12.667+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 15 / 15 records...
+[2026-07-11T00:50:12.668+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 15 khiếu nại có sẵn.
+[2026-07-11T00:50:12.669+0000] {consumer_complaints_incremental_dag_test.py:114} INFO - Uploading inc_2026-07-10_jpmorgan_chase_&_co._complaints.json (15 rows) lên Landing...
+[2026-07-11T00:50:12.671+0000] {minio_loader.py:203} INFO - 📤 Đang upload inc_2026-07-10_jpmorgan_chase_&_co._complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-07-10/inc_2026-07-10_jpmorgan_chase_&_co._complaints.json
+[2026-07-11T00:50:12.673+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-11T00:50:12.676+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-11T00:50:12.677+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-11T00:50:13.156+0000] {consumer_complaints_incremental_dag_test.py:126} INFO - Đã dọn dẹp an toàn file tạm: /tmp/inc_2026-07-10_jpmorgan_chase_&_co._complaints.json
+[2026-07-11T00:50:13.158+0000] {python.py:240} INFO - Done. Returned value was: 15
+[2026-07-11T00:50:13.213+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-11T00:50:13.214+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_incremental_load_test, task_id=extract_and_upload_company, run_id=scheduled__2026-07-10T00:00:00+00:00, map_index=0, execution_date=20260710T000000, start_date=20260711T005011, end_date=20260711T005013
+[2026-07-11T00:50:13.298+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-11T00:50:13.325+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-11T01:37:00.973+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-11T01:37:00.995+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.extract_and_upload_company scheduled__2026-07-10T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-11T01:37:01.008+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.extract_and_upload_company scheduled__2026-07-10T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-11T01:37:01.010+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-11T01:37:01.024+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company> on 2026-07-10 00:00:00+00:00
+[2026-07-11T01:37:01.030+0000] {standard_task_runner.py:72} INFO - Started process 1086 to run task
+[2026-07-11T01:37:01.036+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'extract_and_upload_company', 'scheduled__2026-07-10T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmp1x_q8ogx', '--map-index', '0']
+[2026-07-11T01:37:01.039+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask extract_and_upload_company
+[2026-07-11T01:37:01.125+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.extract_and_upload_company scheduled__2026-07-10T00:00:00+00:00 map_index=0 [running]> on host af4cbd4903dd
+[2026-07-11T01:37:01.262+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='extract_and_upload_company' AIRFLOW_CTX_EXECUTION_DATE='2026-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-10T00:00:00+00:00'
+[2026-07-11T01:37:01.266+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-11T01:37:01.279+0000] {cfpb_api_client.py:486} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: JPMORGAN CHASE & CO.
+[2026-07-11T01:37:01.281+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: JPMORGAN CHASE & CO.
+[2026-07-11T01:37:01.283+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2026-07-03 đến 2026-07-10
+[2026-07-11T01:37:01.675+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 15 / 15 records...
+[2026-07-11T01:37:01.677+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 15 khiếu nại có sẵn.
+[2026-07-11T01:37:01.679+0000] {consumer_complaints_incremental_dag_test.py:156} INFO - Uploading inc_2026-07-10_jpmorgan_chase_&_co._complaints.json (15 rows) lên Landing...
+[2026-07-11T01:37:01.680+0000] {minio_loader.py:203} INFO - 📤 Đang upload inc_2026-07-10_jpmorgan_chase_&_co._complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-07-10/inc_2026-07-10_jpmorgan_chase_&_co._complaints.json
+[2026-07-11T01:37:01.682+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-11T01:37:01.684+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-11T01:37:01.685+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-11T01:37:02.121+0000] {consumer_complaints_incremental_dag_test.py:168} INFO - Đã dọn dẹp an toàn file tạm: /tmp/inc_2026-07-10_jpmorgan_chase_&_co._complaints.json
+[2026-07-11T01:37:02.123+0000] {python.py:240} INFO - Done. Returned value was: 15
+[2026-07-11T01:37:02.159+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-11T01:37:02.160+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_incremental_load_test, task_id=extract_and_upload_company, run_id=scheduled__2026-07-10T00:00:00+00:00, map_index=0, execution_date=20260710T000000, start_date=20260711T013700, end_date=20260711T013702
+[2026-07-11T01:37:02.216+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-11T01:37:02.230+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

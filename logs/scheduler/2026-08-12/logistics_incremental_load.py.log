@@ -1,0 +1,336 @@
+[2026-08-12T07:59:10.568+0000] {processor.py:186} INFO - Started process (PID=179) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T07:59:10.570+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T07:59:10.573+0000] {logging_mixin.py:190} INFO - [2026-08-12T07:59:10.573+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T07:59:11.354+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T07:59:11.400+0000] {logging_mixin.py:190} INFO - [2026-08-12T07:59:11.400+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T07:59:11.442+0000] {logging_mixin.py:190} INFO - [2026-08-12T07:59:11.442+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T07:59:11.476+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.916 seconds
+[2026-08-12T07:59:43.057+0000] {processor.py:186} INFO - Started process (PID=336) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T07:59:43.060+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T07:59:43.065+0000] {logging_mixin.py:190} INFO - [2026-08-12T07:59:43.064+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T07:59:43.473+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T07:59:43.519+0000] {logging_mixin.py:190} INFO - [2026-08-12T07:59:43.519+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T07:59:43.562+0000] {logging_mixin.py:190} INFO - [2026-08-12T07:59:43.562+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T07:59:43.602+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.555 seconds
+[2026-08-12T08:00:13.928+0000] {processor.py:186} INFO - Started process (PID=468) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:00:13.929+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:00:13.931+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:00:13.930+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:00:14.354+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:00:14.400+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:00:14.400+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:00:14.447+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:00:14.446+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:00:14.495+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.573 seconds
+[2026-08-12T08:00:45.402+0000] {processor.py:186} INFO - Started process (PID=629) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:00:45.404+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:00:45.408+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:00:45.407+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:00:46.084+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:00:46.112+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:00:46.112+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:00:46.145+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:00:46.144+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:00:46.187+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.796 seconds
+[2026-08-12T08:01:16.962+0000] {processor.py:186} INFO - Started process (PID=769) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:01:16.964+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:01:16.966+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:01:16.965+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:01:17.245+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:01:17.269+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:01:17.269+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:01:17.293+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:01:17.293+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:01:17.316+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.359 seconds
+[2026-08-12T08:01:47.540+0000] {processor.py:186} INFO - Started process (PID=916) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:01:47.541+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:01:47.542+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:01:47.542+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:01:47.804+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:01:47.831+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:01:47.831+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:01:47.854+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:01:47.854+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:01:47.873+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.339 seconds
+[2026-08-12T08:02:18.068+0000] {processor.py:186} INFO - Started process (PID=1051) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:02:18.069+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:02:18.072+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:02:18.071+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:02:18.422+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:02:18.448+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:02:18.448+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:02:18.472+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:02:18.472+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:02:18.495+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.434 seconds
+[2026-08-12T08:02:49.138+0000] {processor.py:186} INFO - Started process (PID=1190) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:02:49.139+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:02:49.141+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:02:49.140+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:02:49.461+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:02:49.485+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:02:49.485+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:02:49.506+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:02:49.506+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:02:49.528+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.395 seconds
+[2026-08-12T08:03:19.713+0000] {processor.py:186} INFO - Started process (PID=1345) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:03:19.714+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:03:19.715+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:03:19.715+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:03:19.997+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:03:20.022+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:03:20.022+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:03:20.045+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:03:20.045+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:03:20.064+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.358 seconds
+[2026-08-12T08:03:50.500+0000] {processor.py:186} INFO - Started process (PID=1470) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:03:50.501+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:03:50.503+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:03:50.503+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:03:50.787+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:03:50.812+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:03:50.812+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:03:50.956+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:03:50.956+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:03:50.976+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.481 seconds
+[2026-08-12T08:04:21.509+0000] {processor.py:186} INFO - Started process (PID=1604) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:04:21.510+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:04:21.512+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:04:21.512+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:04:21.962+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:04:21.986+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:04:21.986+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:04:22.008+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:04:22.007+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:04:22.030+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.526 seconds
+[2026-08-12T08:04:52.408+0000] {processor.py:186} INFO - Started process (PID=1741) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:04:52.409+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:04:52.411+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:04:52.410+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:04:52.826+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:04:52.846+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:04:52.845+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:04:52.864+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:04:52.864+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:04:52.884+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.482 seconds
+[2026-08-12T08:05:23.004+0000] {processor.py:186} INFO - Started process (PID=1888) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:05:23.005+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:05:23.006+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:05:23.006+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:05:23.385+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:05:23.407+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:05:23.407+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:05:23.424+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:05:23.424+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:05:23.442+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.444 seconds
+[2026-08-12T08:05:54.298+0000] {processor.py:186} INFO - Started process (PID=2023) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:05:54.299+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:05:54.300+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:05:54.300+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:05:54.690+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:05:54.711+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:05:54.711+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:05:54.730+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:05:54.730+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:05:54.753+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.461 seconds
+[2026-08-12T08:07:12.166+0000] {processor.py:186} INFO - Started process (PID=175) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:07:12.168+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:07:12.171+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:07:12.171+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:07:12.636+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:07:12.686+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:07:12.686+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:07:12.721+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:07:12.721+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:07:12.757+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.600 seconds
+[2026-08-12T08:07:43.104+0000] {processor.py:186} INFO - Started process (PID=313) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:07:43.105+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:07:43.109+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:07:43.109+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:07:43.468+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:07:43.494+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:07:43.494+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:07:43.517+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:07:43.517+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:07:43.544+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.446 seconds
+[2026-08-12T08:08:14.547+0000] {processor.py:186} INFO - Started process (PID=464) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:08:14.548+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:08:14.551+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:08:14.550+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:08:14.838+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:08:14.863+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:08:14.862+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:08:14.885+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:08:14.885+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:08:14.905+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.363 seconds
+[2026-08-12T08:08:45.429+0000] {processor.py:186} INFO - Started process (PID=584) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:08:45.430+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:08:45.432+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:08:45.432+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:08:45.714+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:08:45.745+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:08:45.745+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:08:45.776+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:08:45.776+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:08:45.795+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.371 seconds
+[2026-08-12T08:09:16.663+0000] {processor.py:186} INFO - Started process (PID=721) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:09:16.664+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:09:16.666+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:09:16.666+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:09:16.949+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:09:16.973+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:09:16.973+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:09:16.994+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:09:16.993+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:09:17.015+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.357 seconds
+[2026-08-12T08:09:47.847+0000] {processor.py:186} INFO - Started process (PID=858) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:09:47.848+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:09:47.850+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:09:47.850+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:09:48.115+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:09:48.144+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:09:48.144+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:09:48.171+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:09:48.171+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:09:48.200+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.358 seconds
+[2026-08-12T08:10:18.753+0000] {processor.py:186} INFO - Started process (PID=1007) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:10:18.755+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:10:18.757+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:10:18.757+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:10:19.040+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:10:19.062+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:10:19.062+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:10:19.083+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:10:19.083+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:10:19.243+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.495 seconds
+[2026-08-12T08:11:46.266+0000] {processor.py:186} INFO - Started process (PID=176) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:11:46.267+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:11:46.270+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:11:46.270+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:11:46.752+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:11:46.808+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:11:46.807+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:11:46.847+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:11:46.847+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:11:46.885+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.628 seconds
+[2026-08-12T08:12:17.319+0000] {processor.py:186} INFO - Started process (PID=314) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:12:17.324+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:12:17.328+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:12:17.328+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:12:17.743+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:12:17.785+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:12:17.785+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:12:17.823+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:12:17.823+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:12:17.858+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.546 seconds
+[2026-08-12T08:12:48.974+0000] {processor.py:186} INFO - Started process (PID=465) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:12:48.975+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:12:48.977+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:12:48.977+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:12:49.253+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:12:49.275+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:12:49.275+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:12:49.297+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:12:49.296+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:12:49.314+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.346 seconds
+[2026-08-12T08:13:19.545+0000] {processor.py:186} INFO - Started process (PID=599) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:13:19.546+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:13:19.549+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:13:19.548+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:13:19.848+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:13:19.878+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:13:19.877+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:13:19.908+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:13:19.908+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:13:19.938+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.399 seconds
+[2026-08-12T08:13:50.347+0000] {processor.py:186} INFO - Started process (PID=722) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:13:50.348+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T08:13:50.350+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:13:50.350+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:13:50.629+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T08:13:50.654+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:13:50.654+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T08:13:50.676+0000] {logging_mixin.py:190} INFO - [2026-08-12T08:13:50.676+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T08:13:50.697+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.356 seconds
+[2026-08-12T09:24:49.611+0000] {processor.py:186} INFO - Started process (PID=176) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:24:49.613+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:24:49.617+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:24:49.617+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:24:50.561+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:24:50.612+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:24:50.612+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:24:50.650+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:24:50.650+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:24:50.688+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 1.090 seconds
+[2026-08-12T09:25:21.751+0000] {processor.py:186} INFO - Started process (PID=327) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:25:21.752+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:25:21.755+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:25:21.754+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:25:22.088+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:25:22.120+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:25:22.119+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:25:22.148+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:25:22.148+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:25:22.177+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.431 seconds
+[2026-08-12T09:25:52.524+0000] {processor.py:186} INFO - Started process (PID=448) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:25:52.525+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:25:52.527+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:25:52.527+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:25:52.892+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:25:52.931+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:25:52.931+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:25:52.967+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:25:52.966+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:25:52.996+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.478 seconds
+[2026-08-12T09:26:24.486+0000] {processor.py:186} INFO - Started process (PID=603) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:26:24.488+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:26:24.491+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:26:24.490+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:26:25.360+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:26:25.411+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:26:25.411+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:26:25.511+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:26:25.511+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:26:25.568+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 1.105 seconds
+[2026-08-12T09:26:55.650+0000] {processor.py:186} INFO - Started process (PID=737) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:26:55.652+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:26:55.653+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:26:55.653+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:26:55.921+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:26:55.945+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:26:55.944+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:26:55.966+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:26:55.966+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:26:56.000+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.355 seconds
+[2026-08-12T09:27:26.142+0000] {processor.py:186} INFO - Started process (PID=869) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:27:26.144+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:27:26.147+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:27:26.146+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:27:26.430+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:27:26.456+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:27:26.455+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:27:26.478+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:27:26.478+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:27:26.500+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.364 seconds
+[2026-08-12T09:27:56.572+0000] {processor.py:186} INFO - Started process (PID=1005) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:27:56.573+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:27:56.575+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:27:56.575+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:27:56.857+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:27:56.882+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:27:56.881+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:27:56.904+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:27:56.904+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:27:56.924+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.357 seconds
+[2026-08-12T09:28:26.996+0000] {processor.py:186} INFO - Started process (PID=1140) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:28:26.997+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:28:26.999+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:28:26.999+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:28:27.268+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:28:27.291+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:28:27.291+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:28:27.313+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:28:27.313+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:28:27.332+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.341 seconds
+[2026-08-12T09:28:58.211+0000] {processor.py:186} INFO - Started process (PID=1275) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:28:58.212+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:28:58.213+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:28:58.213+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:28:58.528+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:28:58.701+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:28:58.700+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:28:58.721+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:28:58.721+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:28:58.740+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.536 seconds
+[2026-08-12T09:29:28.933+0000] {processor.py:186} INFO - Started process (PID=1407) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:29:28.934+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:29:28.936+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:29:28.936+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:29:29.244+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:29:29.273+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:29:29.273+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:29:29.446+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:29:29.446+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:29:29.468+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.541 seconds
+[2026-08-12T09:29:59.817+0000] {processor.py:186} INFO - Started process (PID=1546) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:29:59.819+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:29:59.821+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:29:59.821+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:30:00.336+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:30:00.360+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:30:00.360+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:30:00.387+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:30:00.386+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:30:00.415+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.605 seconds
+[2026-08-12T09:30:30.890+0000] {processor.py:186} INFO - Started process (PID=1696) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:30:30.891+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:30:30.893+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:30:30.892+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:30:31.316+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:30:31.336+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:30:31.336+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:30:31.355+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:30:31.354+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:30:31.373+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.488 seconds
+[2026-08-12T09:31:01.454+0000] {processor.py:186} INFO - Started process (PID=1830) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:31:01.455+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:31:01.457+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:31:01.456+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:31:01.854+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:31:01.876+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:31:01.876+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:31:01.894+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:31:01.894+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:31:01.914+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.465 seconds
+[2026-08-12T09:31:32.084+0000] {processor.py:186} INFO - Started process (PID=1967) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:31:32.085+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:31:32.087+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:31:32.087+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:31:32.470+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:31:32.492+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:31:32.491+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:31:32.512+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:31:32.512+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:31:32.529+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.451 seconds
+[2026-08-12T09:32:03.043+0000] {processor.py:186} INFO - Started process (PID=2102) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:32:03.044+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:32:03.045+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:32:03.045+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:32:03.580+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:32:03.608+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:32:03.608+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:32:03.635+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:32:03.635+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:32:03.661+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.626 seconds
+[2026-08-12T09:32:34.071+0000] {processor.py:186} INFO - Started process (PID=2244) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:32:34.072+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:32:34.074+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:32:34.073+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:32:34.505+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:32:34.525+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:32:34.525+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:32:34.544+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:32:34.544+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:32:34.560+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.494 seconds
+[2026-08-12T09:33:04.811+0000] {processor.py:186} INFO - Started process (PID=2378) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:33:04.812+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:33:04.814+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:33:04.813+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:33:05.322+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:33:05.386+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:33:05.386+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:33:05.441+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:33:05.441+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:33:05.474+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.668 seconds
+[2026-08-12T09:33:36.373+0000] {processor.py:186} INFO - Started process (PID=2520) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:33:36.374+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:33:36.376+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:33:36.376+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:33:36.780+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:33:36.802+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:33:36.801+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:33:36.823+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:33:36.823+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:33:36.843+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.476 seconds
+[2026-08-12T09:34:07.108+0000] {processor.py:186} INFO - Started process (PID=2655) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:34:07.109+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:34:07.110+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:34:07.110+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:34:07.556+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:34:07.574+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:34:07.574+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:34:07.592+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:34:07.591+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:34:07.609+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.506 seconds
+[2026-08-12T09:34:37.822+0000] {processor.py:186} INFO - Started process (PID=2789) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:34:37.823+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:34:37.824+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:34:37.824+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:34:38.191+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:34:38.210+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:34:38.210+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:34:38.229+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:34:38.229+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:34:38.252+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.435 seconds
+[2026-08-12T09:35:08.466+0000] {processor.py:186} INFO - Started process (PID=2926) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:35:08.467+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:35:08.470+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:35:08.469+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:35:08.852+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:35:08.873+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:35:08.873+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:35:08.895+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:35:08.895+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:35:08.917+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.457 seconds
+[2026-08-12T09:35:39.402+0000] {processor.py:186} INFO - Started process (PID=3061) to work on /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:35:39.403+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/logistics_incremental_load.py for tasks to queue
+[2026-08-12T09:35:39.405+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:35:39.404+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:35:39.823+0000] {processor.py:925} INFO - DAG(s) 'logistics_orders_incremental_load' retrieved from /opt/airflow/dags/logistics_incremental_load.py
+[2026-08-12T09:35:39.846+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:35:39.846+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-12T09:35:39.868+0000] {logging_mixin.py:190} INFO - [2026-08-12T09:35:39.868+0000] {dag.py:4180} INFO - Setting next_dagrun for logistics_orders_incremental_load to 2026-08-11 00:00:00+00:00, run_after=2026-08-12 00:00:00+00:00
+[2026-08-12T09:35:39.888+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/logistics_incremental_load.py took 0.492 seconds

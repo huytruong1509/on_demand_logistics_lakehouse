@@ -1,0 +1,26 @@
+[2026-07-11T01:56:53.825+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-11T01:56:53.846+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_full_load_test.extract_and_upload_company_full manual__2026-07-11T01:56:50.715526+00:00 map_index=0 [queued]>
+[2026-07-11T01:56:53.859+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_full_load_test.extract_and_upload_company_full manual__2026-07-11T01:56:50.715526+00:00 map_index=0 [queued]>
+[2026-07-11T01:56:53.862+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-11T01:56:53.875+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company_full> on 2026-07-11 01:56:50.715526+00:00
+[2026-07-11T01:56:53.880+0000] {standard_task_runner.py:72} INFO - Started process 549 to run task
+[2026-07-11T01:56:53.884+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_full_load_test', 'extract_and_upload_company_full', 'manual__2026-07-11T01:56:50.715526+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_full_load.py', '--cfg-path', '/tmp/tmphmfytjfh', '--map-index', '0']
+[2026-07-11T01:56:53.891+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask extract_and_upload_company_full
+[2026-07-11T01:56:53.974+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_full_load_test.extract_and_upload_company_full manual__2026-07-11T01:56:50.715526+00:00 map_index=0 [running]> on host 7f27b4ab35cf
+[2026-07-11T01:56:54.089+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_full_load_test' AIRFLOW_CTX_TASK_ID='extract_and_upload_company_full' AIRFLOW_CTX_EXECUTION_DATE='2026-07-11T01:56:50.715526+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-11T01:56:50.715526+00:00'
+[2026-07-11T01:56:54.092+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-11T01:56:54.100+0000] {cfpb_api_client.py:486} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: JPMORGAN CHASE & CO.
+[2026-07-11T01:56:54.102+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: JPMORGAN CHASE & CO.
+[2026-07-11T01:56:54.103+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2024-01-01 đến 2025-12-31
+[2026-07-11T01:56:58.895+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 43,691 / 43,691 records...
+[2026-07-11T01:56:58.897+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 43,691 khiếu nại có sẵn.
+[2026-07-11T01:56:58.921+0000] {minio_loader.py:203} INFO - 📤 Đang upload full_2026-07-11_jpmorgan_chase_&_co._complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-07-11/full_2026-07-11_jpmorgan_chase_&_co._complaints.json
+[2026-07-11T01:56:58.924+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-11T01:56:58.927+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-11T01:56:58.930+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-11T01:56:59.845+0000] {python.py:240} INFO - Done. Returned value was: 43691
+[2026-07-11T01:56:59.876+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-11T01:56:59.878+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_full_load_test, task_id=extract_and_upload_company_full, run_id=manual__2026-07-11T01:56:50.715526+00:00, map_index=0, execution_date=20260711T015650, start_date=20260711T015653, end_date=20260711T015659
+[2026-07-11T01:56:59.937+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-11T01:56:59.968+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-11T01:56:59.973+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

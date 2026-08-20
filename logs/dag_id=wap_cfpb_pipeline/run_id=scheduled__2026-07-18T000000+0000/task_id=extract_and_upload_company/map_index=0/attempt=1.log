@@ -1,0 +1,179 @@
+[2026-07-19T01:48:33.076+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-19T01:48:33.098+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T01:48:33.108+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T01:48:33.110+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-19T01:48:33.124+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company> on 2026-07-18 00:00:00+00:00
+[2026-07-19T01:48:33.129+0000] {standard_task_runner.py:72} INFO - Started process 1248 to run task
+[2026-07-19T01:48:33.135+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_cfpb_pipeline', 'extract_and_upload_company', 'scheduled__2026-07-18T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/wap_cfpb_pipeline.py', '--cfg-path', '/tmp/tmp3vapk9oj', '--map-index', '0']
+[2026-07-19T01:48:33.137+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask extract_and_upload_company
+[2026-07-19T01:48:33.237+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [running]> on host 96738fd4eac0
+[2026-07-19T01:48:33.357+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='extract_and_upload_company' AIRFLOW_CTX_EXECUTION_DATE='2026-07-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-18T00:00:00+00:00'
+[2026-07-19T01:48:33.359+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-19T01:48:33.367+0000] {cfpb_api_client.py:487} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T01:48:33.368+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T01:48:33.370+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2026-07-11 đến 2026-07-18
+[2026-07-19T01:48:34.989+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 28 / 28 records...
+[2026-07-19T01:48:34.991+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 28 khiếu nại có sẵn.
+[2026-07-19T01:48:34.994+0000] {minio_loader.py:203} INFO - 📤 Đang upload inc_2026-07-18_jpmorgan_chase_&_co._complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-07-18/inc_2026-07-18_jpmorgan_chase_&_co._complaints.json
+[2026-07-19T01:48:34.997+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-19T01:48:35.000+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-19T01:48:35.003+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-19T01:48:35.437+0000] {python.py:240} INFO - Done. Returned value was: 28
+[2026-07-19T01:48:35.469+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-19T01:48:35.471+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_cfpb_pipeline, task_id=extract_and_upload_company, run_id=scheduled__2026-07-18T00:00:00+00:00, map_index=0, execution_date=20260718T000000, start_date=20260719T014833, end_date=20260719T014835
+[2026-07-19T01:48:35.519+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-19T01:48:35.548+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-19T01:48:35.552+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-19T01:59:56.520+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-19T01:59:56.542+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T01:59:56.554+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T01:59:56.556+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-19T01:59:56.570+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company> on 2026-07-18 00:00:00+00:00
+[2026-07-19T01:59:56.576+0000] {standard_task_runner.py:72} INFO - Started process 842 to run task
+[2026-07-19T01:59:56.580+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_cfpb_pipeline', 'extract_and_upload_company', 'scheduled__2026-07-18T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/wap_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpffsuj30k', '--map-index', '0']
+[2026-07-19T01:59:56.582+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask extract_and_upload_company
+[2026-07-19T01:59:56.674+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [running]> on host 69b947dac9cb
+[2026-07-19T01:59:56.783+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='extract_and_upload_company' AIRFLOW_CTX_EXECUTION_DATE='2026-07-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-18T00:00:00+00:00'
+[2026-07-19T01:59:56.785+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-19T01:59:56.791+0000] {cfpb_api_client.py:487} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T01:59:56.792+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T01:59:56.792+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2026-07-11 đến 2026-07-18
+[2026-07-19T01:59:57.102+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 28 / 28 records...
+[2026-07-19T01:59:57.104+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 28 khiếu nại có sẵn.
+[2026-07-19T01:59:57.106+0000] {minio_loader.py:203} INFO - 📤 Đang upload inc_2026-07-18_jpmorgan_chase_&_co._complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-07-18/inc_2026-07-18_jpmorgan_chase_&_co._complaints.json
+[2026-07-19T01:59:57.108+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-19T01:59:57.111+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-19T01:59:57.113+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-19T01:59:57.601+0000] {python.py:240} INFO - Done. Returned value was: 28
+[2026-07-19T01:59:57.639+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-19T01:59:57.641+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_cfpb_pipeline, task_id=extract_and_upload_company, run_id=scheduled__2026-07-18T00:00:00+00:00, map_index=0, execution_date=20260718T000000, start_date=20260719T015956, end_date=20260719T015957
+[2026-07-19T01:59:57.680+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-19T01:59:57.720+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-19T01:59:57.723+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-19T02:21:13.717+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-19T02:21:13.740+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T02:21:13.750+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T02:21:13.752+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-19T02:21:13.765+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company> on 2026-07-18 00:00:00+00:00
+[2026-07-19T02:21:13.772+0000] {standard_task_runner.py:72} INFO - Started process 822 to run task
+[2026-07-19T02:21:13.776+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_cfpb_pipeline', 'extract_and_upload_company', 'scheduled__2026-07-18T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/wap_cfpb_pipeline.py', '--cfg-path', '/tmp/tmp78m7mzk3', '--map-index', '0']
+[2026-07-19T02:21:13.779+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask extract_and_upload_company
+[2026-07-19T02:21:13.864+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [running]> on host c5d1b1fe0cf1
+[2026-07-19T02:21:13.974+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='extract_and_upload_company' AIRFLOW_CTX_EXECUTION_DATE='2026-07-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-18T00:00:00+00:00'
+[2026-07-19T02:21:13.978+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-19T02:21:13.985+0000] {cfpb_api_client.py:487} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T02:21:13.987+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T02:21:13.988+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2026-07-11 đến 2026-07-18
+[2026-07-19T02:21:14.323+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 28 / 28 records...
+[2026-07-19T02:21:14.325+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 28 khiếu nại có sẵn.
+[2026-07-19T02:21:14.327+0000] {minio_loader.py:203} INFO - 📤 Đang upload inc_2026-07-18_jpmorgan_chase_&_co._complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-07-18/inc_2026-07-18_jpmorgan_chase_&_co._complaints.json
+[2026-07-19T02:21:14.329+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-19T02:21:14.331+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-19T02:21:14.333+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-19T02:21:14.764+0000] {python.py:240} INFO - Done. Returned value was: 28
+[2026-07-19T02:21:14.795+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-19T02:21:14.797+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_cfpb_pipeline, task_id=extract_and_upload_company, run_id=scheduled__2026-07-18T00:00:00+00:00, map_index=0, execution_date=20260718T000000, start_date=20260719T022113, end_date=20260719T022114
+[2026-07-19T02:21:14.839+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-19T02:21:14.852+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-19T02:29:54.625+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-19T02:29:54.656+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T02:29:54.672+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T02:29:54.674+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-19T02:29:54.696+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company> on 2026-07-18 00:00:00+00:00
+[2026-07-19T02:29:54.710+0000] {standard_task_runner.py:72} INFO - Started process 648 to run task
+[2026-07-19T02:29:54.717+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_cfpb_pipeline', 'extract_and_upload_company', 'scheduled__2026-07-18T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/wap_cfpb_pipeline.py', '--cfg-path', '/tmp/tmp_h46rost', '--map-index', '0']
+[2026-07-19T02:29:54.719+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask extract_and_upload_company
+[2026-07-19T02:29:54.825+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [running]> on host 2407d3fab07b
+[2026-07-19T02:29:54.989+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='extract_and_upload_company' AIRFLOW_CTX_EXECUTION_DATE='2026-07-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-18T00:00:00+00:00'
+[2026-07-19T02:29:54.992+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-19T02:29:54.998+0000] {cfpb_api_client.py:487} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T02:29:55.000+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T02:29:55.001+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2026-07-11 đến 2026-07-18
+[2026-07-19T02:29:56.209+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 28 / 28 records...
+[2026-07-19T02:29:56.211+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 28 khiếu nại có sẵn.
+[2026-07-19T02:29:56.212+0000] {minio_loader.py:203} INFO - 📤 Đang upload inc_2026-07-18_jpmorgan_chase_&_co._complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-07-18/inc_2026-07-18_jpmorgan_chase_&_co._complaints.json
+[2026-07-19T02:29:56.214+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-19T02:29:56.217+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-19T02:29:56.218+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-19T02:29:56.657+0000] {python.py:240} INFO - Done. Returned value was: 28
+[2026-07-19T02:29:56.688+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-19T02:29:56.690+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_cfpb_pipeline, task_id=extract_and_upload_company, run_id=scheduled__2026-07-18T00:00:00+00:00, map_index=0, execution_date=20260718T000000, start_date=20260719T022954, end_date=20260719T022956
+[2026-07-19T02:29:56.739+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-19T02:29:56.771+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-19T02:29:56.776+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-19T02:55:36.889+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-19T02:55:36.913+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T02:55:36.922+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T02:55:36.924+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-19T02:55:36.937+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company> on 2026-07-18 00:00:00+00:00
+[2026-07-19T02:55:36.943+0000] {standard_task_runner.py:72} INFO - Started process 474 to run task
+[2026-07-19T02:55:36.950+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_cfpb_pipeline', 'extract_and_upload_company', 'scheduled__2026-07-18T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/wap_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpgs0v7qkq', '--map-index', '0']
+[2026-07-19T02:55:36.952+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask extract_and_upload_company
+[2026-07-19T02:55:37.045+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [running]> on host 95e463f0d1a1
+[2026-07-19T02:55:37.157+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='extract_and_upload_company' AIRFLOW_CTX_EXECUTION_DATE='2026-07-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-18T00:00:00+00:00'
+[2026-07-19T02:55:37.160+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-19T02:55:37.168+0000] {cfpb_api_client.py:487} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T02:55:37.169+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T02:55:37.170+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2026-07-11 đến 2026-07-18
+[2026-07-19T02:55:37.457+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 28 / 28 records...
+[2026-07-19T02:55:37.458+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 28 khiếu nại có sẵn.
+[2026-07-19T02:55:37.460+0000] {minio_loader.py:203} INFO - 📤 Đang upload inc_2026-07-18_jpmorgan_chase_&_co._complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-07-18/inc_2026-07-18_jpmorgan_chase_&_co._complaints.json
+[2026-07-19T02:55:37.464+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-19T02:55:37.466+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-19T02:55:37.468+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-19T02:55:37.966+0000] {python.py:240} INFO - Done. Returned value was: 28
+[2026-07-19T02:55:38.007+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-19T02:55:38.008+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_cfpb_pipeline, task_id=extract_and_upload_company, run_id=scheduled__2026-07-18T00:00:00+00:00, map_index=0, execution_date=20260718T000000, start_date=20260719T025536, end_date=20260719T025538
+[2026-07-19T02:55:38.046+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-19T02:55:38.060+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-19T04:32:13.292+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-19T04:32:13.317+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T04:32:13.328+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T04:32:13.329+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-19T04:32:13.351+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company> on 2026-07-18 00:00:00+00:00
+[2026-07-19T04:32:13.357+0000] {standard_task_runner.py:72} INFO - Started process 476 to run task
+[2026-07-19T04:32:13.364+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_cfpb_pipeline', 'extract_and_upload_company', 'scheduled__2026-07-18T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/wap_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpukg4stgr', '--map-index', '0']
+[2026-07-19T04:32:13.366+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask extract_and_upload_company
+[2026-07-19T04:32:13.478+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [running]> on host 634783a6dfed
+[2026-07-19T04:32:13.609+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='extract_and_upload_company' AIRFLOW_CTX_EXECUTION_DATE='2026-07-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-18T00:00:00+00:00'
+[2026-07-19T04:32:13.613+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-19T04:32:13.622+0000] {cfpb_api_client.py:487} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T04:32:13.624+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T04:32:13.625+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2026-07-11 đến 2026-07-18
+[2026-07-19T04:32:13.956+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 28 / 28 records...
+[2026-07-19T04:32:13.957+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 28 khiếu nại có sẵn.
+[2026-07-19T04:32:13.959+0000] {minio_loader.py:203} INFO - 📤 Đang upload inc_2026-07-18_jpmorgan_chase_&_co._complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-07-18/inc_2026-07-18_jpmorgan_chase_&_co._complaints.json
+[2026-07-19T04:32:13.961+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-19T04:32:13.963+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-19T04:32:13.964+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-19T04:32:14.411+0000] {python.py:240} INFO - Done. Returned value was: 28
+[2026-07-19T04:32:14.443+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-19T04:32:14.445+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_cfpb_pipeline, task_id=extract_and_upload_company, run_id=scheduled__2026-07-18T00:00:00+00:00, map_index=0, execution_date=20260718T000000, start_date=20260719T043213, end_date=20260719T043214
+[2026-07-19T04:32:14.503+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-19T04:32:14.515+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-19T04:46:28.400+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-19T04:46:28.421+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T04:46:28.435+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [queued]>
+[2026-07-19T04:46:28.437+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-19T04:46:28.454+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company> on 2026-07-18 00:00:00+00:00
+[2026-07-19T04:46:28.460+0000] {standard_task_runner.py:72} INFO - Started process 1086 to run task
+[2026-07-19T04:46:28.464+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_cfpb_pipeline', 'extract_and_upload_company', 'scheduled__2026-07-18T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/wap_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpr8ufw50y', '--map-index', '0']
+[2026-07-19T04:46:28.467+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask extract_and_upload_company
+[2026-07-19T04:46:28.551+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_cfpb_pipeline.extract_and_upload_company scheduled__2026-07-18T00:00:00+00:00 map_index=0 [running]> on host e086fa01d0f5
+[2026-07-19T04:46:28.650+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='extract_and_upload_company' AIRFLOW_CTX_EXECUTION_DATE='2026-07-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-18T00:00:00+00:00'
+[2026-07-19T04:46:28.653+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-19T04:46:28.663+0000] {cfpb_api_client.py:487} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T04:46:28.664+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: JPMORGAN CHASE & CO.
+[2026-07-19T04:46:28.666+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2026-07-11 đến 2026-07-18
+[2026-07-19T04:46:29.002+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 28 / 28 records...
+[2026-07-19T04:46:29.004+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 28 khiếu nại có sẵn.
+[2026-07-19T04:46:29.005+0000] {minio_loader.py:203} INFO - 📤 Đang upload inc_2026-07-18_jpmorgan_chase_&_co._complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-07-18/inc_2026-07-18_jpmorgan_chase_&_co._complaints.json
+[2026-07-19T04:46:29.007+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-19T04:46:29.009+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-19T04:46:29.011+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-19T04:46:29.418+0000] {python.py:240} INFO - Done. Returned value was: 28
+[2026-07-19T04:46:29.448+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-19T04:46:29.449+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_cfpb_pipeline, task_id=extract_and_upload_company, run_id=scheduled__2026-07-18T00:00:00+00:00, map_index=0, execution_date=20260718T000000, start_date=20260719T044628, end_date=20260719T044629
+[2026-07-19T04:46:29.482+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-19T04:46:29.510+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-19T04:46:29.515+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

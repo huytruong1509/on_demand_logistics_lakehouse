@@ -1,0 +1,36 @@
+
+FROM apache/airflow:2.10.2-python3.10
+
+USER root
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    python3-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+
+USER airflow
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+
+
+ARG AIRFLOW_VERSION=2.10.2
+ARG CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-3.10.txt"
+
+
+RUN pip install --no-cache-dir "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}" \
+    requests \
+    pandas \
+    minio \
+    apache-airflow-providers-trino \
+    apache-airflow-providers-amazon \
+    duckdb \
+    pyiceberg \
+    s3fs \
+    pyarrow \
+    dbt-core \
+    dbt-trino \
+    astronomer-cosmos
+
+RUN python -c "import duckdb; duckdb.execute('INSTALL httpfs;')"
+
+RUN pip install --no-cache-dir apache-airflow-providers-docker

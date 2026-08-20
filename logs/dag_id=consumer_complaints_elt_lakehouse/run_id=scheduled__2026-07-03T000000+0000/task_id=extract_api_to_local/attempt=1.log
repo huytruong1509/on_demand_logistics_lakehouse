@@ -1,0 +1,31 @@
+[2026-07-04T13:15:16.115+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.extract_api_to_local scheduled__2026-07-03T00:00:00+00:00 [queued]>
+[2026-07-04T13:15:16.126+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.extract_api_to_local scheduled__2026-07-03T00:00:00+00:00 [queued]>
+[2026-07-04T13:15:16.127+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2026-07-04T13:15:16.141+0000] {taskinstance.py:2214} INFO - Executing <Task(_PythonDecoratedOperator): extract_api_to_local> on 2026-07-03 00:00:00+00:00
+[2026-07-04T13:15:16.149+0000] {standard_task_runner.py:60} INFO - Started process 195 to run task
+[2026-07-04T13:15:16.153+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_elt_lakehouse', 'extract_api_to_local', 'scheduled__2026-07-03T00:00:00+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_elt.py', '--cfg-path', '/tmp/tmpmtpq4cjr']
+[2026-07-04T13:15:16.153+0000] {standard_task_runner.py:88} INFO - Job 27: Subtask extract_api_to_local
+[2026-07-04T13:15:16.257+0000] {task_command.py:423} INFO - Running <TaskInstance: consumer_complaints_elt_lakehouse.extract_api_to_local scheduled__2026-07-03T00:00:00+00:00 [running]> on host 75f86298c0be
+[2026-07-04T13:15:16.381+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering' AIRFLOW_CTX_DAG_ID='consumer_complaints_elt_lakehouse' AIRFLOW_CTX_TASK_ID='extract_api_to_local' AIRFLOW_CTX_EXECUTION_DATE='2026-07-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-03T00:00:00+00:00'
+[2026-07-04T13:15:16.385+0000] {consumer_complaints_elt.py:62} INFO - Bắt đầu kéo data từ API cho 2 công ty
+[2026-07-04T13:15:16.386+0000] {consumer_complaints_elt.py:73} INFO - Đang kéo dữ liệu cho: JPMORGAN CHASE & CO.
+[2026-07-04T13:15:16.387+0000] {cfpb_api_client.py:312} INFO - Fetching complaints for company: JPMORGAN CHASE & CO.
+[2026-07-04T13:15:16.388+0000] {cfpb_api_client.py:132} INFO - Fetching complaints from CFPB API with params: {'size': 10000, 'frm': 0, 'sort': 'created_date_desc', 'format': 'json', 'date_received_min': '2024-01-01', 'date_received_max': '2025-12-31', 'no_aggs': 'true', 'company': 'JPMORGAN CHASE & CO.'}
+[2026-07-04T13:15:35.578+0000] {cfpb_api_client.py:141} INFO - Successfully fetched 43691 complaints (direct list format)
+[2026-07-04T13:15:35.585+0000] {cfpb_api_client.py:225} INFO - Fetched 43691 complaints. Total so far: 43691
+[2026-07-04T13:15:35.586+0000] {cfpb_api_client.py:231} INFO - Fetched all available complaints
+[2026-07-04T13:15:35.586+0000] {cfpb_api_client.py:237} INFO - Total complaints fetched: 43691
+[2026-07-04T13:15:36.156+0000] {consumer_complaints_elt.py:90} INFO - ✓ Đã lưu 43691 records vào /tmp/consumer_complaints/jpmorgan_chase_&_co._complaints.json
+[2026-07-04T13:15:36.157+0000] {consumer_complaints_elt.py:73} INFO - Đang kéo dữ liệu cho: BANK OF AMERICA, NATIONAL ASSOCIATION
+[2026-07-04T13:15:36.158+0000] {cfpb_api_client.py:312} INFO - Fetching complaints for company: BANK OF AMERICA, NATIONAL ASSOCIATION
+[2026-07-04T13:15:36.159+0000] {cfpb_api_client.py:132} INFO - Fetching complaints from CFPB API with params: {'size': 10000, 'frm': 0, 'sort': 'created_date_desc', 'format': 'json', 'date_received_min': '2024-01-01', 'date_received_max': '2025-12-31', 'no_aggs': 'true', 'company': 'BANK OF AMERICA, NATIONAL ASSOCIATION'}
+[2026-07-04T13:15:58.021+0000] {cfpb_api_client.py:141} INFO - Successfully fetched 33492 complaints (direct list format)
+[2026-07-04T13:15:58.027+0000] {cfpb_api_client.py:225} INFO - Fetched 33492 complaints. Total so far: 33492
+[2026-07-04T13:15:58.028+0000] {cfpb_api_client.py:231} INFO - Fetched all available complaints
+[2026-07-04T13:15:58.029+0000] {cfpb_api_client.py:237} INFO - Total complaints fetched: 33492
+[2026-07-04T13:15:58.378+0000] {consumer_complaints_elt.py:90} INFO - ✓ Đã lưu 33492 records vào /tmp/consumer_complaints/bank_of_america,_national_association_complaints.json
+[2026-07-04T13:15:58.379+0000] {cfpb_api_client.py:328} INFO - CFPB API client session closed
+[2026-07-04T13:15:58.401+0000] {python.py:202} INFO - Done. Returned value was: {'JPMORGAN CHASE & CO.': '/tmp/consumer_complaints/jpmorgan_chase_&_co._complaints.json', 'BANK OF AMERICA, NATIONAL ASSOCIATION': '/tmp/consumer_complaints/bank_of_america,_national_association_complaints.json'}
+[2026-07-04T13:15:58.460+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_elt_lakehouse, task_id=extract_api_to_local, execution_date=20260703T000000, start_date=20260704T131516, end_date=20260704T131558
+[2026-07-04T13:15:58.499+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-07-04T13:15:58.527+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check

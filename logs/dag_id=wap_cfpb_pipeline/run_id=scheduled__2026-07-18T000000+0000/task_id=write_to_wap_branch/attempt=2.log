@@ -1,0 +1,50 @@
+[2026-07-19T02:56:22.204+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-19T02:56:22.225+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.write_to_wap_branch scheduled__2026-07-18T00:00:00+00:00 [queued]>
+[2026-07-19T02:56:22.235+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.write_to_wap_branch scheduled__2026-07-18T00:00:00+00:00 [queued]>
+[2026-07-19T02:56:22.236+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2026-07-19T02:56:22.250+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): write_to_wap_branch> on 2026-07-18 00:00:00+00:00
+[2026-07-19T02:56:22.256+0000] {standard_task_runner.py:72} INFO - Started process 991 to run task
+[2026-07-19T02:56:22.259+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_cfpb_pipeline', 'write_to_wap_branch', 'scheduled__2026-07-18T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/wap_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpf30m10zq']
+[2026-07-19T02:56:22.261+0000] {standard_task_runner.py:105} INFO - Job 18: Subtask write_to_wap_branch
+[2026-07-19T02:56:22.350+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_cfpb_pipeline.write_to_wap_branch scheduled__2026-07-18T00:00:00+00:00 [running]> on host 95e463f0d1a1
+[2026-07-19T02:56:22.473+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='write_to_wap_branch' AIRFLOW_CTX_EXECUTION_DATE='2026-07-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-18T00:00:00+00:00'
+[2026-07-19T02:56:22.476+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-19T02:56:22.479+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-19T02:56:22.481+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-19T02:56:22.483+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-19T02:56:22.600+0000] {duckdb_to_bronze.py:62} INFO - Đã khởi tạo DuckDB và PyIceberg Catalog trên nhánh 'etl_20260718_scheduled202607'.
+[2026-07-19T02:56:22.625+0000] {__init__.py:331} INFO - Loaded FileIO: pyiceberg.io.fsspec.FsspecFileIO
+[2026-07-19T02:56:23.217+0000] {duckdb_to_bronze.py:110} INFO - Hoàn tất (Batch): 48 dòng vào bronze.raw_consumer_complaints.
+[2026-07-19T02:56:23.220+0000] {duckdb_to_bronze.py:177} INFO - Đã đóng kết nối DuckDB an toàn.
+[2026-07-19T02:56:23.221+0000] {python.py:240} INFO - Done. Returned value was: {'wap_branch': 'etl_20260718_scheduled202607', 'total_inserted_rows': 48, 'total_extracted_rows': 48, 'run_id': 'scheduled__2026-07-18T00:00:00+00:00'}
+[2026-07-19T02:56:23.270+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-19T02:56:23.272+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_cfpb_pipeline, task_id=write_to_wap_branch, run_id=scheduled__2026-07-18T00:00:00+00:00, execution_date=20260718T000000, start_date=20260719T025622, end_date=20260719T025623
+[2026-07-19T02:56:23.319+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-19T02:56:23.351+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-19T02:56:23.354+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-19T04:37:13.550+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-19T04:37:13.572+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.write_to_wap_branch scheduled__2026-07-18T00:00:00+00:00 [queued]>
+[2026-07-19T04:37:13.585+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_cfpb_pipeline.write_to_wap_branch scheduled__2026-07-18T00:00:00+00:00 [queued]>
+[2026-07-19T04:37:13.586+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2026-07-19T04:37:13.606+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): write_to_wap_branch> on 2026-07-18 00:00:00+00:00
+[2026-07-19T04:37:13.613+0000] {standard_task_runner.py:72} INFO - Started process 1883 to run task
+[2026-07-19T04:37:13.620+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_cfpb_pipeline', 'write_to_wap_branch', 'scheduled__2026-07-18T00:00:00+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/wap_cfpb_pipeline.py', '--cfg-path', '/tmp/tmphcajc5yy']
+[2026-07-19T04:37:13.623+0000] {standard_task_runner.py:105} INFO - Job 33: Subtask write_to_wap_branch
+[2026-07-19T04:37:13.712+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_cfpb_pipeline.write_to_wap_branch scheduled__2026-07-18T00:00:00+00:00 [running]> on host 634783a6dfed
+[2026-07-19T04:37:13.826+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='write_to_wap_branch' AIRFLOW_CTX_EXECUTION_DATE='2026-07-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-18T00:00:00+00:00'
+[2026-07-19T04:37:13.829+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-19T04:37:13.834+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-19T04:37:13.838+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-19T04:37:13.840+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-19T04:37:13.965+0000] {duckdb_to_bronze.py:63} INFO - Đã khởi tạo DuckDB và PyIceberg Catalog trên nhánh 'etl_20260718_scheduled202607'.
+[2026-07-19T04:37:13.988+0000] {__init__.py:331} INFO - Loaded FileIO: pyiceberg.io.fsspec.FsspecFileIO
+[2026-07-19T04:37:13.989+0000] {duckdb_to_bronze.py:99} INFO - 🧹 [Write Mode: overwrite_run_id] Đang dọn dẹp dữ liệu cũ của _run_id = 'scheduled__2026-07-18T00:00:00+00:00' trên nhánh 'etl_20260718_scheduled202607'...
+[2026-07-19T04:37:14.563+0000] {duckdb_to_bronze.py:101} INFO - ✅ Dọn dẹp hoàn tất. Chuẩn bị ghi dữ liệu mới.
+[2026-07-19T04:37:14.672+0000] {duckdb_to_bronze.py:126} INFO - Hoàn tất (Batch): 48 dòng vào bronze.raw_consumer_complaints.
+[2026-07-19T04:37:14.675+0000] {duckdb_to_bronze.py:195} INFO - Đã đóng kết nối DuckDB an toàn.
+[2026-07-19T04:37:14.677+0000] {python.py:240} INFO - Done. Returned value was: {'wap_branch': 'etl_20260718_scheduled202607', 'total_inserted_rows': 48, 'total_extracted_rows': 48, 'run_id': 'scheduled__2026-07-18T00:00:00+00:00'}
+[2026-07-19T04:37:14.713+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-19T04:37:14.714+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_cfpb_pipeline, task_id=write_to_wap_branch, run_id=scheduled__2026-07-18T00:00:00+00:00, execution_date=20260718T000000, start_date=20260719T043713, end_date=20260719T043714
+[2026-07-19T04:37:14.762+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-19T04:37:14.789+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-19T04:37:14.792+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

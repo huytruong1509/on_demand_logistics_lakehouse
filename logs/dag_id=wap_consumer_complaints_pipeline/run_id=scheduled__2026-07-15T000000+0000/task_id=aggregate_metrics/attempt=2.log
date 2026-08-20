@@ -1,0 +1,17 @@
+[2026-07-16T04:24:10.854+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-16T04:24:10.874+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_consumer_complaints_pipeline.aggregate_metrics scheduled__2026-07-15T00:00:00+00:00 [queued]>
+[2026-07-16T04:24:10.883+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_consumer_complaints_pipeline.aggregate_metrics scheduled__2026-07-15T00:00:00+00:00 [queued]>
+[2026-07-16T04:24:10.886+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 3
+[2026-07-16T04:24:10.899+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): aggregate_metrics> on 2026-07-15 00:00:00+00:00
+[2026-07-16T04:24:10.906+0000] {standard_task_runner.py:72} INFO - Started process 1522 to run task
+[2026-07-16T04:24:10.910+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_consumer_complaints_pipeline', 'aggregate_metrics', 'scheduled__2026-07-15T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/wap_consumer_complaints_pipeline.py', '--cfg-path', '/tmp/tmp7uyf5aby']
+[2026-07-16T04:24:10.912+0000] {standard_task_runner.py:105} INFO - Job 13: Subtask aggregate_metrics
+[2026-07-16T04:24:10.983+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_consumer_complaints_pipeline.aggregate_metrics scheduled__2026-07-15T00:00:00+00:00 [running]> on host 32badddb9ea4
+[2026-07-16T04:24:11.071+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='wap_consumer_complaints_pipeline' AIRFLOW_CTX_TASK_ID='aggregate_metrics' AIRFLOW_CTX_EXECUTION_DATE='2026-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-15T00:00:00+00:00'
+[2026-07-16T04:24:11.073+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-16T04:24:11.085+0000] {python.py:240} INFO - Done. Returned value was: 22
+[2026-07-16T04:24:11.103+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-16T04:24:11.105+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_consumer_complaints_pipeline, task_id=aggregate_metrics, run_id=scheduled__2026-07-15T00:00:00+00:00, execution_date=20260715T000000, start_date=20260716T042410, end_date=20260716T042411
+[2026-07-16T04:24:11.125+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-16T04:24:11.166+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-16T04:24:11.170+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

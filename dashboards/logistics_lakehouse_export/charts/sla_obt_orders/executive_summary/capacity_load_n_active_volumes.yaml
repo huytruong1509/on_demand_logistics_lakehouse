@@ -1,0 +1,21 @@
+version: 1.0.0
+uuid: c8f41111-0001-4000-8000-000000000004
+slice_name: "3. Capacity Load & Active Volume"
+viz_type: big_number
+dataset_uuid: d8f41111-8888-4000-8000-000000000001
+params:
+  datasource: d8f41111-8888-4000-8000-000000000001__table
+  viz_type: big_number
+  granularity_sqla: create_time
+  time_grain_sqla: PT1H
+  metric:
+    expressionType: SQL
+    sqlExpression: "COUNT(DISTINCT order_id)"
+    label: "Active Orders"
+  time_compare:
+    - "1 week ago"
+  show_trend_line: true
+  start_y_axis_at_zero: true
+  y_axis_format: ",.0f"
+  header_font_size: 0.4
+  subheader_font_size: 0.15

@@ -1,0 +1,25 @@
+[2026-08-05T08:04:44.568+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-05T08:04:44.591+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: logistics_orders_full_load.extract_and_upload_full manual__2026-08-05T08:04:40.686468+00:00 [queued]>
+[2026-08-05T08:04:44.599+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: logistics_orders_full_load.extract_and_upload_full manual__2026-08-05T08:04:40.686468+00:00 [queued]>
+[2026-08-05T08:04:44.600+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-08-05T08:04:44.613+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): extract_and_upload_full> on 2026-08-05 08:04:40.686468+00:00
+[2026-08-05T08:04:44.622+0000] {standard_task_runner.py:72} INFO - Started process 460 to run task
+[2026-08-05T08:04:44.625+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'logistics_orders_full_load', 'extract_and_upload_full', 'manual__2026-08-05T08:04:40.686468+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/logistics_full_load.py', '--cfg-path', '/tmp/tmprto7lh9g']
+[2026-08-05T08:04:44.630+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask extract_and_upload_full
+[2026-08-05T08:04:44.714+0000] {task_command.py:467} INFO - Running <TaskInstance: logistics_orders_full_load.extract_and_upload_full manual__2026-08-05T08:04:40.686468+00:00 [running]> on host b52b39f445e7
+[2026-08-05T08:04:44.803+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='logistics_orders_full_load' AIRFLOW_CTX_TASK_ID='extract_and_upload_full' AIRFLOW_CTX_EXECUTION_DATE='2026-08-05T08:04:40.686468+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-08-05T08:04:40.686468+00:00'
+[2026-08-05T08:04:44.806+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-05T08:04:44.815+0000] {orders_api_client.py:69} INFO - 🚀 Khởi tạo luồng kéo TOÀN BỘ dữ liệu Batch (Keyset Stream)
+[2026-08-05T08:04:49.118+0000] {orders_api_client.py:85} INFO -   ➜ Đã kéo được 10,000 records...
+[2026-08-05T08:04:49.120+0000] {orders_api_client.py:106} ERROR - 🚨 CRITICAL: Không thể xác định cursor/id để lật trang. Buộc ngắt vòng lặp!
+[2026-08-05T08:04:49.122+0000] {minio_loader.py:139} INFO - 📤 Đang upload full_2026-08-05_all_orders.json lên s3://lakehouse/landing/logistics_orders/run_date=2026-08-05/full_2026-08-05_all_orders.json
+[2026-08-05T08:04:49.124+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-08-05T08:04:49.126+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-08-05T08:04:49.127+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-08-05T08:04:49.641+0000] {orders_api_client.py:170} INFO - Orders API client session closed
+[2026-08-05T08:04:49.669+0000] {python.py:240} INFO - Done. Returned value was: 10000
+[2026-08-05T08:04:49.711+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-05T08:04:49.713+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=logistics_orders_full_load, task_id=extract_and_upload_full, run_id=manual__2026-08-05T08:04:40.686468+00:00, execution_date=20260805T080440, start_date=20260805T080444, end_date=20260805T080449
+[2026-08-05T08:04:49.758+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-08-05T08:04:49.789+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-08-05T08:04:49.792+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

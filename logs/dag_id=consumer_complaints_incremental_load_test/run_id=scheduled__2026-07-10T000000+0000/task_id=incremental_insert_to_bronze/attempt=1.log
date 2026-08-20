@@ -1,0 +1,48 @@
+[2026-07-11T00:50:15.958+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-11T00:50:15.977+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-10T00:00:00+00:00 [queued]>
+[2026-07-11T00:50:15.987+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-10T00:00:00+00:00 [queued]>
+[2026-07-11T00:50:15.990+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-11T00:50:16.003+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): incremental_insert_to_bronze> on 2026-07-10 00:00:00+00:00
+[2026-07-11T00:50:16.009+0000] {standard_task_runner.py:72} INFO - Started process 1057 to run task
+[2026-07-11T00:50:16.012+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'incremental_insert_to_bronze', 'scheduled__2026-07-10T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmpv5_h54lv']
+[2026-07-11T00:50:16.015+0000] {standard_task_runner.py:105} INFO - Job 15: Subtask incremental_insert_to_bronze
+[2026-07-11T00:50:16.090+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-10T00:00:00+00:00 [running]> on host 128d9097399a
+[2026-07-11T00:50:16.197+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='incremental_insert_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-10T00:00:00+00:00'
+[2026-07-11T00:50:16.201+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-11T00:50:16.210+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-11T00:50:16.213+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-11T00:50:16.216+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-11T00:50:16.307+0000] {duckdb_to_bronze.py:51} INFO - Đã khởi tạo DuckDB Connection và cấu hình S3 Secret thành công.
+[2026-07-11T00:50:16.332+0000] {__init__.py:331} INFO - Loaded FileIO: pyiceberg.io.fsspec.FsspecFileIO
+[2026-07-11T00:50:16.898+0000] {duckdb_to_bronze.py:99} INFO - Hoàn tất (Batch): 22 dòng vào bronze.raw_consumer_complaints.
+[2026-07-11T00:50:16.901+0000] {duckdb_to_bronze.py:169} INFO - Đã đóng kết nối DuckDB an toàn.
+[2026-07-11T00:50:16.903+0000] {python.py:240} INFO - Done. Returned value was: {'inserted_run_id': 'scheduled__2026-07-10T00:00:00+00:00', 'total_inserted_rows': 22, 'total_extracted_rows': 22}
+[2026-07-11T00:50:16.939+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-11T00:50:16.941+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_incremental_load_test, task_id=incremental_insert_to_bronze, run_id=scheduled__2026-07-10T00:00:00+00:00, execution_date=20260710T000000, start_date=20260711T005015, end_date=20260711T005016
+[2026-07-11T00:50:16.991+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-11T00:50:17.020+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-11T00:50:17.024+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-11T01:37:04.867+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-11T01:37:04.889+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-10T00:00:00+00:00 [queued]>
+[2026-07-11T01:37:04.898+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-10T00:00:00+00:00 [queued]>
+[2026-07-11T01:37:04.899+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-11T01:37:04.912+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): incremental_insert_to_bronze> on 2026-07-10 00:00:00+00:00
+[2026-07-11T01:37:04.917+0000] {standard_task_runner.py:72} INFO - Started process 1121 to run task
+[2026-07-11T01:37:04.921+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'incremental_insert_to_bronze', 'scheduled__2026-07-10T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmplz_ubzab']
+[2026-07-11T01:37:04.926+0000] {standard_task_runner.py:105} INFO - Job 8: Subtask incremental_insert_to_bronze
+[2026-07-11T01:37:05.012+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-10T00:00:00+00:00 [running]> on host af4cbd4903dd
+[2026-07-11T01:37:05.123+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='incremental_insert_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-10T00:00:00+00:00'
+[2026-07-11T01:37:05.126+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-11T01:37:05.129+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-11T01:37:05.131+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-11T01:37:05.133+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-11T01:37:05.273+0000] {duckdb_to_bronze.py:51} INFO - Đã khởi tạo DuckDB Connection và cấu hình S3 Secret thành công.
+[2026-07-11T01:37:06.222+0000] {__init__.py:331} INFO - Loaded FileIO: pyiceberg.io.fsspec.FsspecFileIO
+[2026-07-11T01:37:06.926+0000] {duckdb_to_bronze.py:99} INFO - Hoàn tất (Batch): 22 dòng vào bronze.raw_consumer_complaints.
+[2026-07-11T01:37:06.930+0000] {duckdb_to_bronze.py:169} INFO - Đã đóng kết nối DuckDB an toàn.
+[2026-07-11T01:37:06.932+0000] {python.py:240} INFO - Done. Returned value was: {'inserted_run_id': 'scheduled__2026-07-10T00:00:00+00:00', 'total_inserted_rows': 22, 'total_extracted_rows': 22}
+[2026-07-11T01:37:06.969+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-11T01:37:06.972+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_incremental_load_test, task_id=incremental_insert_to_bronze, run_id=scheduled__2026-07-10T00:00:00+00:00, execution_date=20260710T000000, start_date=20260711T013704, end_date=20260711T013706
+[2026-07-11T01:37:07.004+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-11T01:37:07.030+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-11T01:37:07.034+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

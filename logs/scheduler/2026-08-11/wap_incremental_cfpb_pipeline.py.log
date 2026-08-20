@@ -1,0 +1,421 @@
+[2026-08-11T08:20:49.785+0000] {processor.py:186} INFO - Started process (PID=229) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:20:49.789+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:20:49.798+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:20:49.797+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:20:50.973+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:20:51.056+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:20:51.056+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:20:51.119+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:20:51.118+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:20:51.175+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.415 seconds
+[2026-08-11T08:21:26.575+0000] {processor.py:186} INFO - Started process (PID=373) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:21:26.579+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:21:26.594+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:21:26.593+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:21:29.121+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:21:29.297+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:21:29.296+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:21:29.415+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:21:29.415+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:21:29.493+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 2.948 seconds
+[2026-08-11T08:21:59.773+0000] {processor.py:186} INFO - Started process (PID=501) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:21:59.775+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:21:59.780+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:21:59.779+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:22:00.201+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:22:00.235+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:22:00.235+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:22:00.267+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:22:00.267+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:22:00.291+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.528 seconds
+[2026-08-11T08:22:30.570+0000] {processor.py:186} INFO - Started process (PID=632) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:22:30.572+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:22:30.575+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:22:30.575+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:22:31.043+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:22:31.100+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:22:31.100+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:22:31.140+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:22:31.140+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:22:31.172+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.609 seconds
+[2026-08-11T08:23:01.374+0000] {processor.py:186} INFO - Started process (PID=760) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:23:01.376+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:23:01.381+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:23:01.380+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:23:02.008+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:23:02.044+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:23:02.044+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:23:02.080+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:23:02.079+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:23:02.112+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.748 seconds
+[2026-08-11T08:23:32.621+0000] {processor.py:186} INFO - Started process (PID=890) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:23:32.623+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:23:32.627+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:23:32.626+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:23:33.107+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:23:33.163+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:23:33.162+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:23:33.222+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:23:33.222+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:23:33.275+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.664 seconds
+[2026-08-11T08:24:03.894+0000] {processor.py:186} INFO - Started process (PID=1018) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:24:03.896+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:24:03.900+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:24:03.899+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:24:04.488+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:24:04.536+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:24:04.535+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:24:04.578+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:24:04.578+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:24:04.621+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.735 seconds
+[2026-08-11T08:24:34.875+0000] {processor.py:186} INFO - Started process (PID=1146) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:24:34.877+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:24:34.882+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:24:34.881+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:24:35.286+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:24:35.341+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:24:35.341+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:24:35.379+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:24:35.379+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:24:35.417+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.546 seconds
+[2026-08-11T08:25:05.907+0000] {processor.py:186} INFO - Started process (PID=1276) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:25:05.908+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:25:05.911+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:25:05.911+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:25:06.421+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:25:06.465+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:25:06.464+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:25:06.521+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:25:06.521+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:25:06.557+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.656 seconds
+[2026-08-11T08:25:37.566+0000] {processor.py:186} INFO - Started process (PID=1405) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:25:37.568+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:25:37.573+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:25:37.573+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:25:38.811+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:25:38.894+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:25:38.894+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:25:38.990+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:25:38.989+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:25:39.063+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.518 seconds
+[2026-08-11T08:26:10.625+0000] {processor.py:186} INFO - Started process (PID=1532) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:26:10.627+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:26:10.631+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:26:10.631+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:26:11.359+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:26:11.417+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:26:11.417+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:26:11.481+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:26:11.480+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:26:11.540+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.927 seconds
+[2026-08-11T08:26:41.915+0000] {processor.py:186} INFO - Started process (PID=1663) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:26:41.916+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:26:41.919+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:26:41.919+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:26:42.632+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:26:42.693+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:26:42.692+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:26:42.747+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:26:42.747+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:26:42.794+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.885 seconds
+[2026-08-11T08:27:13.371+0000] {processor.py:186} INFO - Started process (PID=1791) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:27:13.372+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:27:13.375+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:27:13.375+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:27:13.987+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:27:14.041+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:27:14.040+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:27:14.087+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:27:14.087+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:27:14.135+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.769 seconds
+[2026-08-11T08:27:44.279+0000] {processor.py:186} INFO - Started process (PID=1921) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:27:44.282+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:27:44.291+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:27:44.290+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:27:45.149+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:27:45.214+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:27:45.213+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:27:45.497+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:27:45.496+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:27:45.542+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.278 seconds
+[2026-08-11T08:28:16.324+0000] {processor.py:186} INFO - Started process (PID=2050) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:28:16.326+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T08:28:16.332+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:28:16.331+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:28:17.107+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T08:28:17.187+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:28:17.186+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:28:17.244+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:28:17.243+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:28:17.326+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.013 seconds
+[2026-08-11T09:01:18.170+0000] {processor.py:186} INFO - Started process (PID=230) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:01:18.173+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:01:18.184+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:01:18.183+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:01:20.020+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:01:20.155+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:01:20.154+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:01:20.251+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:01:20.250+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:01:20.367+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 2.235 seconds
+[2026-08-11T09:01:51.633+0000] {processor.py:186} INFO - Started process (PID=374) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:01:51.637+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:01:51.642+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:01:51.641+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:01:52.316+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:01:52.360+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:01:52.360+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:01:52.419+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:01:52.419+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:01:52.472+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.849 seconds
+[2026-08-11T09:02:22.692+0000] {processor.py:186} INFO - Started process (PID=500) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:02:22.696+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:02:22.708+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:02:22.706+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:02:23.737+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:02:23.799+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:02:23.798+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:02:23.860+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:02:23.859+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:02:23.910+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.252 seconds
+[2026-08-11T09:02:55.545+0000] {processor.py:186} INFO - Started process (PID=632) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:02:55.550+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:02:55.573+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:02:55.571+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:02:56.439+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:02:56.483+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:02:56.482+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:02:56.525+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:02:56.525+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:02:56.557+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.038 seconds
+[2026-08-11T09:03:27.328+0000] {processor.py:186} INFO - Started process (PID=761) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:03:27.333+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:03:27.341+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:03:27.340+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:03:28.258+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:03:28.357+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:03:28.356+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:03:28.427+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:03:28.426+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:03:28.488+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.171 seconds
+[2026-08-11T09:03:59.356+0000] {processor.py:186} INFO - Started process (PID=888) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:03:59.358+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:03:59.361+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:03:59.360+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:03:59.944+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:03:59.986+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:03:59.985+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:04:00.065+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:04:00.064+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:04:00.110+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.768 seconds
+[2026-08-11T09:09:02.790+0000] {processor.py:186} INFO - Started process (PID=230) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:09:02.793+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:09:02.809+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:02.808+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:09:03.822+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:09:04.005+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:04.004+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:wap_incremental_cfpb_pipeline
+[2026-08-11T09:09:04.030+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:04.029+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:wap_incremental_cfpb_pipeline
+[2026-08-11T09:09:04.047+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:04.046+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:wap_incremental_cfpb_pipeline
+[2026-08-11T09:09:04.070+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:04.069+0000] {override.py:1900} INFO - Created Permission View: menu access on DAG Run:wap_incremental_cfpb_pipeline
+[2026-08-11T09:09:04.092+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:04.092+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG Run:wap_incremental_cfpb_pipeline
+[2026-08-11T09:09:04.123+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:04.122+0000] {override.py:1900} INFO - Created Permission View: can create on DAG Run:wap_incremental_cfpb_pipeline
+[2026-08-11T09:09:04.143+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:04.142+0000] {override.py:1900} INFO - Created Permission View: can read on DAG Run:wap_incremental_cfpb_pipeline
+[2026-08-11T09:09:04.144+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:04.144+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:09:04.173+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:04.173+0000] {dag.py:3262} INFO - Creating ORM DAG for wap_incremental_cfpb_pipeline
+[2026-08-11T09:09:04.213+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:04.212+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:09:04.271+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.513 seconds
+[2026-08-11T09:09:36.746+0000] {processor.py:186} INFO - Started process (PID=376) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:09:36.750+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:09:36.758+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:36.757+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:09:37.596+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:09:37.667+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:37.666+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:09:37.730+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:37.730+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:09:37.783+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.060 seconds
+[2026-08-11T09:10:08.241+0000] {processor.py:186} INFO - Started process (PID=503) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:10:08.243+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:10:08.245+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:10:08.245+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:10:09.102+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:10:09.166+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:10:09.165+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:10:09.234+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:10:09.233+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:10:09.292+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.062 seconds
+[2026-08-11T09:10:39.436+0000] {processor.py:186} INFO - Started process (PID=633) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:10:39.439+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:10:39.445+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:10:39.444+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:10:40.334+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:10:40.423+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:10:40.422+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:10:40.494+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:10:40.493+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:10:40.544+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.119 seconds
+[2026-08-11T09:11:10.856+0000] {processor.py:186} INFO - Started process (PID=762) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:11:10.857+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:11:10.860+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:11:10.859+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:11:11.189+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:11:11.218+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:11:11.218+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:11:11.248+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:11:11.247+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:11:11.269+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.418 seconds
+[2026-08-11T09:11:41.902+0000] {processor.py:186} INFO - Started process (PID=901) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:11:41.904+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:11:41.908+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:11:41.907+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:11:42.318+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:11:42.353+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:11:42.353+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:11:42.389+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:11:42.389+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:11:42.422+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.526 seconds
+[2026-08-11T09:12:12.510+0000] {processor.py:186} INFO - Started process (PID=1032) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:12:12.512+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:12:12.516+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:12:12.515+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:12:12.969+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:12:13.024+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:12:13.023+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:12:13.064+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:12:13.064+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:12:13.108+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.605 seconds
+[2026-08-11T09:12:43.508+0000] {processor.py:186} INFO - Started process (PID=1160) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:12:43.510+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:12:43.518+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:12:43.517+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:12:44.193+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:12:44.244+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:12:44.244+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:12:44.292+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:12:44.292+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:12:44.341+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.847 seconds
+[2026-08-11T09:13:16.571+0000] {processor.py:186} INFO - Started process (PID=1290) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:13:16.574+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:13:16.580+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:13:16.579+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:13:17.460+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:13:17.573+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:13:17.572+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:13:17.653+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:13:17.652+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:13:17.713+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.157 seconds
+[2026-08-11T09:13:47.874+0000] {processor.py:186} INFO - Started process (PID=1418) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:13:47.876+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:13:47.879+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:13:47.878+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:13:48.513+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:13:48.577+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:13:48.576+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:13:48.968+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:13:48.968+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:13:49.032+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.166 seconds
+[2026-08-11T09:14:19.694+0000] {processor.py:186} INFO - Started process (PID=1545) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:14:19.696+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:14:19.701+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:14:19.700+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:14:20.208+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:14:20.248+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:14:20.247+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:14:20.280+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:14:20.280+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:14:20.308+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.623 seconds
+[2026-08-11T09:14:52.716+0000] {processor.py:186} INFO - Started process (PID=1706) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:14:52.719+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:14:52.726+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:14:52.726+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:14:53.353+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:14:53.728+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:14:53.727+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:14:53.789+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:14:53.788+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:14:53.839+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.136 seconds
+[2026-08-11T09:15:24.341+0000] {processor.py:186} INFO - Started process (PID=1833) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:15:24.343+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:15:24.351+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:15:24.350+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:15:25.577+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:15:25.656+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:15:25.655+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:15:25.733+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:15:25.733+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:15:25.795+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.467 seconds
+[2026-08-11T09:15:56.417+0000] {processor.py:186} INFO - Started process (PID=1963) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:15:56.420+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:15:56.428+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:15:56.427+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:15:57.662+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:15:57.736+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:15:57.735+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:15:57.823+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:15:57.822+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:15:57.888+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.484 seconds
+[2026-08-11T09:16:28.642+0000] {processor.py:186} INFO - Started process (PID=2091) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:16:28.644+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:16:28.650+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:16:28.649+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:16:29.686+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:16:29.739+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:16:29.739+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:16:29.798+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:16:29.797+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:16:29.855+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.231 seconds
+[2026-08-11T09:17:00.094+0000] {processor.py:186} INFO - Started process (PID=2218) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:17:00.096+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:17:00.105+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:17:00.104+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:17:01.232+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:17:01.298+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:17:01.297+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:17:01.371+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:17:01.370+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:17:01.447+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.372 seconds
+[2026-08-11T09:17:32.079+0000] {processor.py:186} INFO - Started process (PID=2359) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:17:32.083+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:17:32.093+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:17:32.092+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:17:33.840+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:17:33.935+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:17:33.934+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:17:34.005+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:17:34.005+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:17:34.064+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 2.012 seconds
+[2026-08-11T09:18:04.326+0000] {processor.py:186} INFO - Started process (PID=2600) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:18:04.328+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:18:04.334+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:18:04.332+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:18:06.615+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:18:06.703+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:18:06.702+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:18:06.750+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:18:06.750+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:18:06.796+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 2.482 seconds
+[2026-08-11T09:18:36.930+0000] {processor.py:186} INFO - Started process (PID=2763) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:18:36.932+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:18:36.941+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:18:36.940+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:18:37.628+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:18:37.682+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:18:37.681+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:18:37.725+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:18:37.724+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:18:37.773+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.853 seconds
+[2026-08-11T09:19:08.090+0000] {processor.py:186} INFO - Started process (PID=2891) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:19:08.092+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:19:08.095+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:19:08.095+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:19:08.768+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:19:08.803+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:19:08.803+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:19:08.831+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:19:08.831+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:19:08.859+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.776 seconds
+[2026-08-11T09:19:39.668+0000] {processor.py:186} INFO - Started process (PID=3018) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:19:39.670+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:19:39.676+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:19:39.676+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:19:41.040+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:19:41.110+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:19:41.109+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:19:41.165+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:19:41.164+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:19:41.217+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.560 seconds
+[2026-08-11T09:20:11.780+0000] {processor.py:186} INFO - Started process (PID=3149) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:20:11.782+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:20:11.784+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:20:11.784+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:20:12.325+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:20:12.352+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:20:12.351+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:20:12.376+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:20:12.376+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:20:12.399+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.626 seconds
+[2026-08-11T09:20:42.888+0000] {processor.py:186} INFO - Started process (PID=3277) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:20:42.890+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:20:42.894+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:20:42.894+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:20:43.480+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:20:43.512+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:20:43.512+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:20:43.545+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:20:43.545+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:20:43.566+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.688 seconds
+[2026-08-11T09:23:48.626+0000] {processor.py:186} INFO - Started process (PID=229) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:23:48.628+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:23:48.634+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:23:48.633+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:23:49.767+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:23:49.871+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:23:49.870+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:23:49.975+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:23:49.975+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:23:50.051+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.444 seconds
+[2026-08-11T09:24:21.249+0000] {processor.py:186} INFO - Started process (PID=373) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:24:21.253+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:24:21.263+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:24:21.262+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:24:21.797+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:24:21.834+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:24:21.834+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:24:21.868+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:24:21.868+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:24:21.896+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.668 seconds
+[2026-08-11T09:24:52.171+0000] {processor.py:186} INFO - Started process (PID=500) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:24:52.173+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:24:52.178+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:24:52.178+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:24:52.690+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:24:52.759+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:24:52.759+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:24:52.838+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:24:52.838+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:24:52.901+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.742 seconds
+[2026-08-11T09:25:23.685+0000] {processor.py:186} INFO - Started process (PID=631) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:25:23.686+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:25:23.689+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:25:23.689+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:25:24.186+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:25:24.233+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:25:24.232+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:25:24.271+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:25:24.271+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:25:24.304+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.627 seconds
+[2026-08-11T09:25:54.595+0000] {processor.py:186} INFO - Started process (PID=761) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:25:54.597+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:25:54.600+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:25:54.600+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:25:54.917+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:25:54.947+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:25:54.947+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:25:54.980+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:25:54.979+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:25:55.003+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.419 seconds
+[2026-08-11T09:26:25.499+0000] {processor.py:186} INFO - Started process (PID=891) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:26:25.500+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:26:25.503+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:26:25.502+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:26:25.822+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:26:25.850+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:26:25.850+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:26:25.878+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:26:25.877+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:26:25.900+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.407 seconds
+[2026-08-11T09:26:56.354+0000] {processor.py:186} INFO - Started process (PID=1020) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:26:56.356+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:26:56.359+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:26:56.358+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:26:56.699+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:26:56.726+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:26:56.726+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:26:56.748+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:26:56.748+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:26:56.779+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.432 seconds
+[2026-08-11T09:27:27.884+0000] {processor.py:186} INFO - Started process (PID=1161) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:27:27.888+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:27:27.896+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:27:27.895+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:27:28.754+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:27:28.833+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:27:28.833+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:27:28.885+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:27:28.885+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:27:28.928+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.064 seconds
+[2026-08-11T09:27:59.399+0000] {processor.py:186} INFO - Started process (PID=1295) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:27:59.404+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:27:59.412+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:27:59.411+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:28:01.507+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:28:01.701+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:28:01.699+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:28:01.814+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:28:01.813+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:28:01.885+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 2.524 seconds
+[2026-08-11T09:28:35.278+0000] {processor.py:186} INFO - Started process (PID=1442) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:28:35.280+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:28:35.285+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:28:35.285+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:28:36.301+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:28:36.373+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:28:36.372+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:28:36.434+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:28:36.433+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:28:36.779+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 1.514 seconds
+[2026-08-11T09:29:07.087+0000] {processor.py:186} INFO - Started process (PID=1571) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:29:07.089+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:29:07.095+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:29:07.094+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:29:07.606+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:29:07.845+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:29:07.845+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:29:07.884+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:29:07.884+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:29:07.923+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.849 seconds
+[2026-08-11T09:29:38.410+0000] {processor.py:186} INFO - Started process (PID=1701) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:29:38.412+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:29:38.415+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:29:38.415+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:29:38.937+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:29:38.976+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:29:38.976+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:29:39.205+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:29:39.205+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:29:39.233+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.831 seconds
+[2026-08-11T09:30:09.389+0000] {processor.py:186} INFO - Started process (PID=1828) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:30:09.391+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:30:09.395+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:30:09.395+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:30:09.984+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:30:10.023+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:30:10.023+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:30:10.045+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:30:10.045+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:30:10.071+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.693 seconds
+[2026-08-11T09:30:40.821+0000] {processor.py:186} INFO - Started process (PID=1962) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:30:40.823+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:30:40.825+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:30:40.825+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:30:41.392+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:30:41.420+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:30:41.420+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:30:41.452+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:30:41.451+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:30:41.487+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.672 seconds
+[2026-08-11T09:31:12.099+0000] {processor.py:186} INFO - Started process (PID=2093) to work on /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:31:12.101+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_incremental_cfpb_pipeline.py for tasks to queue
+[2026-08-11T09:31:12.104+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:31:12.104+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:31:12.708+0000] {processor.py:925} INFO - DAG(s) 'wap_incremental_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_incremental_cfpb_pipeline.py
+[2026-08-11T09:31:12.746+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:31:12.746+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:31:12.783+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:31:12.783+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_incremental_cfpb_pipeline to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:31:12.815+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_incremental_cfpb_pipeline.py took 0.724 seconds

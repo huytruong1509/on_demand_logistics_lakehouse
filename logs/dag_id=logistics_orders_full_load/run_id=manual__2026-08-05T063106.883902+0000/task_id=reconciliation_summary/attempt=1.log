@@ -1,0 +1,24 @@
+[2026-08-05T06:31:28.855+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-05T06:31:28.878+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: logistics_orders_full_load.reconciliation_summary manual__2026-08-05T06:31:06.883902+00:00 [queued]>
+[2026-08-05T06:31:28.886+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: logistics_orders_full_load.reconciliation_summary manual__2026-08-05T06:31:06.883902+00:00 [queued]>
+[2026-08-05T06:31:28.888+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-08-05T06:31:28.902+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): reconciliation_summary> on 2026-08-05 06:31:06.883902+00:00
+[2026-08-05T06:31:28.910+0000] {standard_task_runner.py:72} INFO - Started process 1689 to run task
+[2026-08-05T06:31:28.913+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'logistics_orders_full_load', 'reconciliation_summary', 'manual__2026-08-05T06:31:06.883902+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/logistics_full_load.py', '--cfg-path', '/tmp/tmp6e8vuef7']
+[2026-08-05T06:31:28.916+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask reconciliation_summary
+[2026-08-05T06:31:28.992+0000] {task_command.py:467} INFO - Running <TaskInstance: logistics_orders_full_load.reconciliation_summary manual__2026-08-05T06:31:06.883902+00:00 [running]> on host d576d9cb631e
+[2026-08-05T06:31:29.088+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='logistics_orders_full_load' AIRFLOW_CTX_TASK_ID='reconciliation_summary' AIRFLOW_CTX_EXECUTION_DATE='2026-08-05T06:31:06.883902+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-08-05T06:31:06.883902+00:00'
+[2026-08-05T06:31:29.090+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-05T06:31:29.093+0000] {logistics_full_load.py:254} INFO - 
+        📊 BÁO CÁO FULL LOAD ĐỐI SOÁT
+        - Run ID: manual__2026-08-05T06:31:06.883902+00:00
+        - Dữ liệu API (Extracted): 20,000
+        - Nạp Bronze  (Inserted) : 20,000
+        - Dữ liệu lỗi (Rescued)  : 0
+        
+[2026-08-05T06:31:29.094+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-08-05T06:31:29.106+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-05T06:31:29.107+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=logistics_orders_full_load, task_id=reconciliation_summary, run_id=manual__2026-08-05T06:31:06.883902+00:00, execution_date=20260805T063106, start_date=20260805T063128, end_date=20260805T063129
+[2026-08-05T06:31:29.128+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-08-05T06:31:29.146+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-08-05T06:31:29.150+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

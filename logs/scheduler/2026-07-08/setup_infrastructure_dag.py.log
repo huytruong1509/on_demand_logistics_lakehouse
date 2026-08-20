@@ -1,0 +1,204 @@
+[2026-07-08T05:28:25.926+0000] {processor.py:186} INFO - Started process (PID=208) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:28:25.927+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:28:25.930+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:25.930+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:28:25.969+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:28:26.042+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:26.042+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:setup_lakehouse_infrastructure
+[2026-07-08T05:28:26.053+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:26.053+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:setup_lakehouse_infrastructure
+[2026-07-08T05:28:26.062+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:26.062+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:setup_lakehouse_infrastructure
+[2026-07-08T05:28:26.072+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:26.072+0000] {override.py:1900} INFO - Created Permission View: menu access on DAG Run:setup_lakehouse_infrastructure
+[2026-07-08T05:28:26.080+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:26.080+0000] {override.py:1900} INFO - Created Permission View: can read on DAG Run:setup_lakehouse_infrastructure
+[2026-07-08T05:28:26.089+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:26.088+0000] {override.py:1900} INFO - Created Permission View: can create on DAG Run:setup_lakehouse_infrastructure
+[2026-07-08T05:28:26.098+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:26.097+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG Run:setup_lakehouse_infrastructure
+[2026-07-08T05:28:26.099+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:26.098+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:28:26.113+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:26.112+0000] {dag.py:3262} INFO - Creating ORM DAG for setup_lakehouse_infrastructure
+[2026-07-08T05:28:26.125+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:26.125+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:28:26.154+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.235 seconds
+[2026-07-08T05:28:56.401+0000] {processor.py:186} INFO - Started process (PID=252) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:28:56.402+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:28:56.405+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:56.405+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:28:56.434+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:28:56.463+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:56.463+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:28:56.497+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:28:56.497+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:28:56.535+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.140 seconds
+[2026-07-08T05:29:27.371+0000] {processor.py:186} INFO - Started process (PID=303) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:29:27.374+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:29:27.376+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:29:27.376+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:29:27.407+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:29:27.432+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:29:27.431+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:29:27.452+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:29:27.452+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:29:27.474+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.108 seconds
+[2026-07-08T05:29:57.714+0000] {processor.py:186} INFO - Started process (PID=356) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:29:57.716+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:29:57.719+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:29:57.719+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:29:57.747+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:29:57.779+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:29:57.778+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:29:57.802+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:29:57.802+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:29:57.827+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.118 seconds
+[2026-07-08T05:30:28.158+0000] {processor.py:186} INFO - Started process (PID=425) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:30:28.159+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:30:28.162+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:30:28.161+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:30:28.194+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:30:28.223+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:30:28.222+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:30:28.245+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:30:28.244+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:30:28.269+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.117 seconds
+[2026-07-08T05:30:58.543+0000] {processor.py:186} INFO - Started process (PID=474) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:30:58.544+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:30:58.547+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:30:58.546+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:30:58.571+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:30:58.601+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:30:58.601+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:30:58.624+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:30:58.624+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:30:58.649+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.111 seconds
+[2026-07-08T05:31:28.755+0000] {processor.py:186} INFO - Started process (PID=517) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:31:28.756+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:31:28.760+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:31:28.759+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:31:28.792+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:31:28.820+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:31:28.820+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:31:28.840+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:31:28.840+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:31:28.866+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.116 seconds
+[2026-07-08T05:31:59.014+0000] {processor.py:186} INFO - Started process (PID=566) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:31:59.015+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:31:59.018+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:31:59.018+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:31:59.048+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:31:59.076+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:31:59.075+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:31:59.101+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:31:59.100+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:31:59.128+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.120 seconds
+[2026-07-08T05:32:29.329+0000] {processor.py:186} INFO - Started process (PID=604) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:32:29.331+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:32:29.335+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:32:29.335+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:32:29.366+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:32:29.403+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:32:29.403+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:32:29.430+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:32:29.430+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:32:29.459+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.137 seconds
+[2026-07-08T05:32:59.581+0000] {processor.py:186} INFO - Started process (PID=650) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:32:59.582+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:32:59.585+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:32:59.585+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:32:59.609+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:32:59.635+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:32:59.635+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:32:59.656+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:32:59.656+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:32:59.675+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.101 seconds
+[2026-07-08T05:33:29.874+0000] {processor.py:186} INFO - Started process (PID=697) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:33:29.875+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:33:29.877+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:33:29.877+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:33:29.900+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:33:29.927+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:33:29.927+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:33:29.953+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:33:29.952+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:33:29.973+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.104 seconds
+[2026-07-08T05:34:00.378+0000] {processor.py:186} INFO - Started process (PID=746) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:34:00.379+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:34:00.382+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:34:00.381+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:34:00.409+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:34:00.447+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:34:00.447+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:34:00.471+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:34:00.470+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:34:00.496+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.124 seconds
+[2026-07-08T05:34:30.768+0000] {processor.py:186} INFO - Started process (PID=795) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:34:30.769+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:34:30.771+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:34:30.771+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:34:30.795+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:34:30.824+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:34:30.823+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:34:30.846+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:34:30.846+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:34:30.868+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.104 seconds
+[2026-07-08T05:35:01.184+0000] {processor.py:186} INFO - Started process (PID=844) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:35:01.186+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:35:01.188+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:35:01.188+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:35:01.214+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:35:01.245+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:35:01.245+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:35:01.267+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:35:01.267+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:35:01.290+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.111 seconds
+[2026-07-08T05:35:31.456+0000] {processor.py:186} INFO - Started process (PID=893) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:35:31.458+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:35:31.461+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:35:31.461+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:35:31.488+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:35:31.518+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:35:31.518+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:35:31.545+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:35:31.545+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:35:31.569+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.122 seconds
+[2026-07-08T05:36:01.651+0000] {processor.py:186} INFO - Started process (PID=942) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:36:01.652+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:36:01.654+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:36:01.654+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:36:01.680+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:36:01.718+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:36:01.718+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:36:01.742+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:36:01.742+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:36:01.763+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.117 seconds
+[2026-07-08T05:36:32.010+0000] {processor.py:186} INFO - Started process (PID=991) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:36:32.011+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:36:32.013+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:36:32.013+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:36:32.040+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:36:32.069+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:36:32.069+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:36:32.093+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:36:32.093+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:36:32.113+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.108 seconds
+[2026-07-08T05:37:02.867+0000] {processor.py:186} INFO - Started process (PID=1040) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:37:02.868+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:37:02.871+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:37:02.870+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:37:02.895+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:37:02.924+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:37:02.924+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:37:02.947+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:37:02.947+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:37:02.969+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.108 seconds
+[2026-07-08T05:37:33.234+0000] {processor.py:186} INFO - Started process (PID=1089) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:37:33.236+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:37:33.239+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:37:33.238+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:37:33.276+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:37:33.305+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:37:33.304+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:37:33.327+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:37:33.327+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:37:33.347+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.119 seconds
+[2026-07-08T05:38:03.649+0000] {processor.py:186} INFO - Started process (PID=1138) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:38:03.650+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:38:03.652+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:38:03.652+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:38:03.678+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:38:03.706+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:38:03.706+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:38:03.729+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:38:03.728+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:38:03.749+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.107 seconds
+[2026-07-08T05:38:34.055+0000] {processor.py:186} INFO - Started process (PID=1187) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:38:34.056+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:38:34.060+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:38:34.060+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:38:34.086+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:38:34.123+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:38:34.123+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:38:34.150+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:38:34.150+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:38:34.174+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.125 seconds
+[2026-07-08T05:39:04.257+0000] {processor.py:186} INFO - Started process (PID=1236) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:39:04.259+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:39:04.262+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:39:04.262+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:39:04.296+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:39:04.325+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:39:04.324+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:39:04.347+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:39:04.347+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:39:04.369+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.120 seconds
+[2026-07-08T05:39:34.484+0000] {processor.py:186} INFO - Started process (PID=1285) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:39:34.485+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:39:34.488+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:39:34.488+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:39:34.516+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:39:34.543+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:39:34.543+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:39:34.565+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:39:34.564+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:39:34.584+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.107 seconds
+[2026-07-08T05:40:04.920+0000] {processor.py:186} INFO - Started process (PID=1334) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:40:04.921+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:40:04.924+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:40:04.924+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:40:04.950+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:40:04.977+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:40:04.976+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:40:04.999+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:40:04.999+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:40:05.019+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.106 seconds
+[2026-07-08T05:40:35.357+0000] {processor.py:186} INFO - Started process (PID=1383) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:40:35.359+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:40:35.362+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:40:35.362+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:40:35.388+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:40:35.418+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:40:35.418+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:40:35.438+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:40:35.438+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:40:35.460+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.112 seconds
+[2026-07-08T05:41:05.736+0000] {processor.py:186} INFO - Started process (PID=1432) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:41:05.738+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:41:05.743+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:41:05.742+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:41:05.776+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:41:05.808+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:41:05.808+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:41:05.840+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:41:05.839+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:41:05.860+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.132 seconds
+[2026-07-08T05:41:36.070+0000] {processor.py:186} INFO - Started process (PID=1483) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:41:36.071+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:41:36.073+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:41:36.073+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:41:36.096+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:41:36.120+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:41:36.120+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:41:36.142+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:41:36.141+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:41:36.162+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.098 seconds
+[2026-07-08T05:42:06.367+0000] {processor.py:186} INFO - Started process (PID=1530) to work on /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:42:06.368+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/setup_infrastructure_dag.py for tasks to queue
+[2026-07-08T05:42:06.370+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:42:06.370+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:42:06.397+0000] {processor.py:925} INFO - DAG(s) 'setup_lakehouse_infrastructure' retrieved from /opt/airflow/dags/setup_infrastructure_dag.py
+[2026-07-08T05:42:06.422+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:42:06.422+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T05:42:06.444+0000] {logging_mixin.py:190} INFO - [2026-07-08T05:42:06.444+0000] {dag.py:4180} INFO - Setting next_dagrun for setup_lakehouse_infrastructure to 2024-01-01 00:00:00+00:00, run_after=2024-01-01 00:00:00+00:00
+[2026-07-08T05:42:06.467+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/setup_infrastructure_dag.py took 0.108 seconds

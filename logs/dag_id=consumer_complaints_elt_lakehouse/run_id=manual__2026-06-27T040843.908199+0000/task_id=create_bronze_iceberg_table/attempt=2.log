@@ -1,0 +1,139 @@
+[2026-06-27T04:28:00.076+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.create_bronze_iceberg_table manual__2026-06-27T04:08:43.908199+00:00 [queued]>
+[2026-06-27T04:28:00.085+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.create_bronze_iceberg_table manual__2026-06-27T04:08:43.908199+00:00 [queued]>
+[2026-06-27T04:28:00.086+0000] {taskinstance.py:2193} INFO - Starting attempt 2 of 3
+[2026-06-27T04:28:00.096+0000] {taskinstance.py:2214} INFO - Executing <Task(_PythonDecoratedOperator): create_bronze_iceberg_table> on 2026-06-27 04:08:43.908199+00:00
+[2026-06-27T04:28:00.102+0000] {standard_task_runner.py:60} INFO - Started process 191 to run task
+[2026-06-27T04:28:00.105+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_elt_lakehouse', 'create_bronze_iceberg_table', 'manual__2026-06-27T04:08:43.908199+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_elt.py', '--cfg-path', '/tmp/tmpu4ia2n5a']
+[2026-06-27T04:28:00.107+0000] {standard_task_runner.py:88} INFO - Job 37: Subtask create_bronze_iceberg_table
+[2026-06-27T04:28:00.187+0000] {task_command.py:423} INFO - Running <TaskInstance: consumer_complaints_elt_lakehouse.create_bronze_iceberg_table manual__2026-06-27T04:08:43.908199+00:00 [running]> on host cebc290b51ca
+[2026-06-27T04:28:00.273+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering' AIRFLOW_CTX_DAG_ID='consumer_complaints_elt_lakehouse' AIRFLOW_CTX_TASK_ID='create_bronze_iceberg_table' AIRFLOW_CTX_EXECUTION_DATE='2026-06-27T04:08:43.908199+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-27T04:08:43.908199+00:00'
+[2026-06-27T04:28:00.275+0000] {consumer_complaints_elt.py:166} INFO - Kiểm tra/Tạo bảng Iceberg: lakehouse.bronze.raw__consumer_complaints
+[2026-06-27T04:28:00.276+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-27T04:28:00.277+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-27T04:28:00.284+0000] {sql.py:457} INFO - Running statement: 
+CREATE TABLE IF NOT EXISTS lakehouse.bronze.raw__consumer_complaints (
+    complaint_id VARCHAR,
+    date_received VARCHAR,
+    date_sent_to_company VARCHAR,
+    product VARCHAR,
+    sub_product VARCHAR,
+    issue VARCHAR,
+    sub_issue VARCHAR,
+    company VARCHAR,
+    state VARCHAR,
+    zip_code VARCHAR,
+    tags VARCHAR,
+    consumer_consent_provided VARCHAR,
+    submitted_via VARCHAR,
+    company_response_to_consumer VARCHAR,
+    timely_response VARCHAR,
+    consumer_disputed VARCHAR,
+    complaint_what_happened VARCHAR,
+    company_public_response VARCHAR
+) WITH (
+    format = 'PARQUET'
+)
+, parameters: None
+[2026-06-27T04:28:08.227+0000] {client.py:914} INFO - failed after 3 attempts
+[2026-06-27T04:28:08.240+0000] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.8/http/client.py", line 1256, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.8/http/client.py", line 1302, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x71cb9091e580>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='trino-coordinator', port=8080): Max retries exceeded with url: /v1/statement (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71cb9091e580>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/trino/client.py", line 812, in execute
+    response = self._request.post(self._query, additional_http_headers)
+  File "/home/airflow/.local/lib/python3.8/site-packages/trino/client.py", line 568, in post
+    http_response = self._post(
+  File "/home/airflow/.local/lib/python3.8/site-packages/trino/client.py", line 916, in decorated
+    raise error
+  File "/home/airflow/.local/lib/python3.8/site-packages/trino/client.py", line 898, in decorated
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='trino-coordinator', port=8080): Max retries exceeded with url: /v1/statement (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71cb9091e580>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/airflow/dags/consumer_complaints_elt.py", line 170, in create_bronze_iceberg_table
+    trino_hook.run(CREATE_BRONZE_TABLE_SQL)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 404, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 462, in _run_command
+    cur.execute(sql_statement)
+  File "/home/airflow/.local/lib/python3.8/site-packages/trino/dbapi.py", line 589, in execute
+    self._iterator = iter(self._query.execute())
+  File "/home/airflow/.local/lib/python3.8/site-packages/trino/client.py", line 814, in execute
+    raise trino.exceptions.TrinoConnectionError("failed to execute: {}".format(e))
+trino.exceptions.TrinoConnectionError: failed to execute: HTTPConnectionPool(host='trino-coordinator', port=8080): Max retries exceeded with url: /v1/statement (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71cb9091e580>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/consumer_complaints_elt.py", line 173, in create_bronze_iceberg_table
+    raise AirflowException(f"Lỗi khi tạo bảng Trino: {e}")
+airflow.exceptions.AirflowException: Lỗi khi tạo bảng Trino: failed to execute: HTTPConnectionPool(host='trino-coordinator', port=8080): Max retries exceeded with url: /v1/statement (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71cb9091e580>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2026-06-27T04:28:08.255+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=consumer_complaints_elt_lakehouse, task_id=create_bronze_iceberg_table, execution_date=20260627T040843, start_date=20260627T042800, end_date=20260627T042808
+[2026-06-27T04:28:08.268+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 37 for task create_bronze_iceberg_table (Lỗi khi tạo bảng Trino: failed to execute: HTTPConnectionPool(host='trino-coordinator', port=8080): Max retries exceeded with url: /v1/statement (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71cb9091e580>: Failed to establish a new connection: [Errno -2] Name or service not known')); 191)
+[2026-06-27T04:28:08.309+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-06-27T04:28:08.334+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

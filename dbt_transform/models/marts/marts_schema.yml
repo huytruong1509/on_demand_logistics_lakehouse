@@ -1,0 +1,134 @@
+version: 2
+
+models:
+  # ==========================================
+  # DIMENSIONS (MASTER DATA)
+  # ==========================================
+
+  - name: dim_user
+    description: "Bảng Dimension lưu trữ thông tin người dùng (Khách hàng). Áp dụng SCD Type 1 để lấy thông tin mới nhất."
+    meta:
+      owner: "data-platform-team"
+      domain: "customer"
+    columns:
+      - name: user_sk
+        description: "Surrogate Key của user (MD5 hash). Khoá chính của bảng."
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        description: "Mã User ID từ hệ thống nguồn."
+      - name: user_name
+        description: "Tên hiển thị của người dùng."
+        meta:
+          contains_pii: true
+
+  - name: dim_supplier
+    description: "Bảng Dimension lưu trữ thông tin nhà cung cấp (Tài xế/Đối tác vận tải). Áp dụng SCD Type 1."
+    meta:
+      owner: "data-platform-team"
+      domain: "supply"
+    columns:
+      - name: supplier_sk
+        description: "Surrogate Key của nhà cung cấp."
+        tests:
+          - unique
+          - not_null
+      - name: supplier_name
+        description: "Tên nhà cung cấp."
+        meta:
+          contains_pii: true
+
+  - name: dim_partner
+    description: "Bảng Dimension lưu trữ thông tin Partner (Đối tác liên kết)."
+    columns:
+      - name: partner_sk
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_date
+    description: "Bảng Calendar Dimension tĩnh hỗ trợ vẽ báo cáo theo thời gian (chuẩn Kimball)."
+    columns:
+      - name: date_sk
+        description: "Date Surrogate Key định dạng Integer YYYYMMDD để tối ưu partition pruning."
+        tests:
+          - unique
+          - not_null
+
+  # ==========================================
+  # FACTS (TRANSACTIONAL DATA)
+  # ==========================================
+
+  - name: fact_orders
+    description: "Bảng Fact chính theo dõi vòng đời đơn hàng, doanh thu và Unit Economics."
+    meta:
+      owner: "bi-team"
+      domain: "core-business"
+    columns:
+      - name: order_sk
+        description: "Surrogate key định danh duy nhất cho một đơn hàng."
+        tests:
+          - unique
+          - not_null
+
+      # --- FOREIGN KEYS TESTING ---
+      - name: user_sk
+        description: "Khoá ngoại liên kết tới dim_user."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_user')
+              field: user_sk
+              severity: warn # Dùng warn để tránh failed pipeline do late-arriving dimension
+
+      - name: supplier_sk
+        description: "Khoá ngoại liên kết tới dim_supplier."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_supplier')
+              field: supplier_sk
+              severity: warn
+
+      - name: partner_sk
+        description: "Khoá ngoại liên kết tới dim_partner."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_partner')
+              field: partner_sk
+              severity: warn
+
+      # --- BUSINESS RULES & DATA QUALITY ---
+      - name: total_price
+        description: "Tổng tiền khách hàng phải trả cho đơn hàng."
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              config:
+                severity: error # Tiền âm là lỗi data nghiêm trọng, phải dừng pipeline
+
+  - name: fact_order_stops
+    description: "Bảng Fact theo dõi chi tiết từng trạm dừng (Stop) trong một đơn hàng."
+    columns:
+      - name: order_stop_sk
+        tests:
+          - unique
+          - not_null
+      - name: order_sk
+        description: "Mỗi stop phải thuộc về 1 order hợp lệ."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('fact_orders')
+              field: order_sk
+
+  - name: fact_order_requests
+    description: "Bảng Fact lưu các luồng ping/request tìm tài xế của hệ thống."
+    columns:
+      - name: order_request_sk
+        tests:
+          - unique
+          - not_null

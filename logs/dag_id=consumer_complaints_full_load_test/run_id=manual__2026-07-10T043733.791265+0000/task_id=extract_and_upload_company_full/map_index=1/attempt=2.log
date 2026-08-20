@@ -1,0 +1,27 @@
+[2026-07-10T04:39:13.790+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T04:39:13.815+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_full_load_test.extract_and_upload_company_full manual__2026-07-10T04:37:33.791265+00:00 map_index=1 [queued]>
+[2026-07-10T04:39:13.826+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_full_load_test.extract_and_upload_company_full manual__2026-07-10T04:37:33.791265+00:00 map_index=1 [queued]>
+[2026-07-10T04:39:13.827+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2026-07-10T04:39:13.840+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company_full> on 2026-07-10 04:37:33.791265+00:00
+[2026-07-10T04:39:13.846+0000] {standard_task_runner.py:72} INFO - Started process 786 to run task
+[2026-07-10T04:39:13.851+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_full_load_test', 'extract_and_upload_company_full', 'manual__2026-07-10T04:37:33.791265+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_full_load.py', '--cfg-path', '/tmp/tmpa4d5xorq', '--map-index', '1']
+[2026-07-10T04:39:13.854+0000] {standard_task_runner.py:105} INFO - Job 10: Subtask extract_and_upload_company_full
+[2026-07-10T04:39:13.940+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_full_load_test.extract_and_upload_company_full manual__2026-07-10T04:37:33.791265+00:00 map_index=1 [running]> on host 3c4c4f9f722a
+[2026-07-10T04:39:14.047+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_full_load_test' AIRFLOW_CTX_TASK_ID='extract_and_upload_company_full' AIRFLOW_CTX_EXECUTION_DATE='2026-07-10T04:37:33.791265+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-10T04:37:33.791265+00:00'
+[2026-07-10T04:39:14.050+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T04:39:14.057+0000] {consumer_complaints_full_load.py:93} INFO - Bắt đầu tải FULL HISTORY cho BANK OF AMERICA, NATIONAL ASSOCIATION từ 2024-01-01 đến 2025-12-31.
+[2026-07-10T04:39:14.058+0000] {cfpb_api_client.py:486} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: BANK OF AMERICA, NATIONAL ASSOCIATION
+[2026-07-10T04:39:14.059+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: BANK OF AMERICA, NATIONAL ASSOCIATION
+[2026-07-10T04:39:14.060+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2024-01-01 đến 2025-12-31
+[2026-07-10T04:39:17.822+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 33,492 / 33,492 records...
+[2026-07-10T04:39:17.825+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 33,492 khiếu nại có sẵn.
+[2026-07-10T04:39:17.842+0000] {minio_loader.py:203} INFO - 📤 Đang upload full_2026-07-10_bank_of_america_national_association_complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-07-10/full_2026-07-10_bank_of_america_national_association_complaints.json
+[2026-07-10T04:39:17.846+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-10T04:39:17.849+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-10T04:39:17.852+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-10T04:39:18.578+0000] {python.py:240} INFO - Done. Returned value was: 33492
+[2026-07-10T04:39:18.627+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T04:39:18.630+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_full_load_test, task_id=extract_and_upload_company_full, run_id=manual__2026-07-10T04:37:33.791265+00:00, map_index=1, execution_date=20260710T043733, start_date=20260710T043913, end_date=20260710T043918
+[2026-07-10T04:39:18.688+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-10T04:39:18.735+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T04:39:18.743+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

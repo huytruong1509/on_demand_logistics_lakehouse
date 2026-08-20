@@ -1,0 +1,424 @@
+[2026-07-20T02:16:27.425+0000] {processor.py:186} INFO - Started process (PID=244) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:16:27.427+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T02:16:27.433+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:27.433+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:16:27.750+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:16:27.827+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:27.826+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T02:16:27.842+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:27.841+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T02:16:27.854+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:27.853+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T02:16:27.865+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:27.864+0000] {override.py:1900} INFO - Created Permission View: can read on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T02:16:27.873+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:27.873+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T02:16:27.882+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:27.882+0000] {override.py:1900} INFO - Created Permission View: menu access on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T02:16:27.892+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:27.891+0000] {override.py:1900} INFO - Created Permission View: can create on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T02:16:27.893+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:27.893+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T02:16:27.911+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:27.910+0000] {dag.py:3262} INFO - Creating ORM DAG for consumer_complaints_elt_lakehouse
+[2026-07-20T02:16:27.927+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:27.927+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T02:16:27.967+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.547 seconds
+[2026-07-20T02:16:58.525+0000] {processor.py:186} INFO - Started process (PID=329) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:16:58.526+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T02:16:58.529+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:58.529+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:16:58.764+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:16:58.785+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:58.785+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T02:16:58.807+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:16:58.806+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T02:16:58.833+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.313 seconds
+[2026-07-20T02:17:29.001+0000] {processor.py:186} INFO - Started process (PID=413) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:17:29.002+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T02:17:29.004+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:17:29.004+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:17:29.269+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:17:29.290+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:17:29.290+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T02:17:29.314+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:17:29.314+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T02:17:29.332+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.337 seconds
+[2026-07-20T02:17:59.914+0000] {processor.py:186} INFO - Started process (PID=502) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:17:59.915+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T02:17:59.918+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:17:59.918+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:18:00.245+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:18:00.274+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:18:00.274+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T02:18:00.299+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:18:00.298+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T02:18:00.322+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.413 seconds
+[2026-07-20T02:18:30.416+0000] {processor.py:186} INFO - Started process (PID=588) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:18:30.417+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T02:18:30.419+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:18:30.419+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:18:30.661+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:18:30.687+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:18:30.687+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T02:18:30.712+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:18:30.711+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T02:18:30.734+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.323 seconds
+[2026-07-20T02:19:01.282+0000] {processor.py:186} INFO - Started process (PID=675) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:19:01.283+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T02:19:01.285+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:19:01.285+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:19:01.531+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:19:01.555+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:19:01.555+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T02:19:01.577+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:19:01.577+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T02:19:01.595+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.318 seconds
+[2026-07-20T02:19:31.653+0000] {processor.py:186} INFO - Started process (PID=761) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:19:31.654+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T02:19:31.656+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:19:31.656+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:19:31.925+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:19:31.955+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:19:31.954+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T02:19:31.981+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:19:31.981+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T02:19:32.001+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.354 seconds
+[2026-07-20T02:20:02.138+0000] {processor.py:186} INFO - Started process (PID=850) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:20:02.139+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T02:20:02.141+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:20:02.141+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:20:02.387+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:20:02.414+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:20:02.414+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T02:20:02.435+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:20:02.435+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T02:20:02.456+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.323 seconds
+[2026-07-20T02:59:17.014+0000] {processor.py:186} INFO - Started process (PID=266) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:59:17.016+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T02:59:17.019+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:17.019+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:59:17.402+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:59:17.495+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:17.494+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T02:59:17.509+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:17.509+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T02:59:17.520+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:17.520+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T02:59:17.534+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:17.534+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T02:59:17.543+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:17.543+0000] {override.py:1900} INFO - Created Permission View: can create on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T02:59:17.554+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:17.554+0000] {override.py:1900} INFO - Created Permission View: menu access on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T02:59:17.564+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:17.563+0000] {override.py:1900} INFO - Created Permission View: can read on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T02:59:17.565+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:17.565+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T02:59:17.581+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:17.581+0000] {dag.py:3262} INFO - Creating ORM DAG for consumer_complaints_elt_lakehouse
+[2026-07-20T02:59:17.601+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:17.600+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T02:59:17.652+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.647 seconds
+[2026-07-20T02:59:48.509+0000] {processor.py:186} INFO - Started process (PID=373) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:59:48.510+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T02:59:48.512+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:48.512+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:59:48.768+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T02:59:48.791+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:48.791+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T02:59:48.815+0000] {logging_mixin.py:190} INFO - [2026-07-20T02:59:48.815+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T02:59:48.834+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.330 seconds
+[2026-07-20T03:00:19.022+0000] {processor.py:186} INFO - Started process (PID=479) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:00:19.025+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:00:19.027+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:00:19.027+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:00:19.301+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:00:19.327+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:00:19.326+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:00:19.349+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:00:19.349+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:00:19.368+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.351 seconds
+[2026-07-20T03:00:49.596+0000] {processor.py:186} INFO - Started process (PID=590) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:00:49.597+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:00:49.599+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:00:49.599+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:00:49.865+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:00:49.891+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:00:49.891+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:00:49.914+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:00:49.914+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:00:49.935+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.344 seconds
+[2026-07-20T03:01:20.442+0000] {processor.py:186} INFO - Started process (PID=699) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:01:20.443+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:01:20.445+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:01:20.445+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:01:20.672+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:01:20.691+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:01:20.691+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:01:20.711+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:01:20.711+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:01:20.731+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.296 seconds
+[2026-07-20T03:01:51.181+0000] {processor.py:186} INFO - Started process (PID=858) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:01:51.183+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:01:51.186+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:01:51.186+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:01:51.456+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:01:51.481+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:01:51.480+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:01:51.505+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:01:51.505+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:01:51.523+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.348 seconds
+[2026-07-20T03:02:21.704+0000] {processor.py:186} INFO - Started process (PID=1274) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:02:21.705+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:02:21.708+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:02:21.708+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:02:21.998+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:02:22.023+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:02:22.023+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:02:22.045+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:02:22.045+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:02:22.069+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.372 seconds
+[2026-07-20T03:02:52.916+0000] {processor.py:186} INFO - Started process (PID=1398) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:02:52.917+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:02:52.919+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:02:52.919+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:02:53.162+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:02:53.189+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:02:53.189+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:02:53.217+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:02:53.217+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:02:53.237+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.327 seconds
+[2026-07-20T03:03:23.831+0000] {processor.py:186} INFO - Started process (PID=1509) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:03:23.832+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:03:23.835+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:03:23.835+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:03:24.139+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:03:24.163+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:03:24.162+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:03:24.188+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:03:24.188+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:03:24.211+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.387 seconds
+[2026-07-20T03:03:54.397+0000] {processor.py:186} INFO - Started process (PID=1617) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:03:54.398+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:03:54.401+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:03:54.401+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:03:54.655+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:03:54.686+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:03:54.685+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:03:54.706+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:03:54.706+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:03:54.729+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.338 seconds
+[2026-07-20T03:04:25.455+0000] {processor.py:186} INFO - Started process (PID=1728) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:04:25.456+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:04:25.458+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:04:25.458+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:04:25.683+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:04:25.706+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:04:25.706+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:04:25.727+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:04:25.727+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:04:25.746+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.296 seconds
+[2026-07-20T03:04:56.015+0000] {processor.py:186} INFO - Started process (PID=1837) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:04:56.016+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:04:56.018+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:04:56.018+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:04:56.251+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:04:56.274+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:04:56.274+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:04:56.301+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:04:56.300+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:04:56.320+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.311 seconds
+[2026-07-20T03:05:27.100+0000] {processor.py:186} INFO - Started process (PID=1945) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:05:27.101+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:05:27.104+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:05:27.103+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:05:27.367+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:05:27.388+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:05:27.388+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:05:27.408+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:05:27.408+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:05:27.430+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.335 seconds
+[2026-07-20T03:05:58.101+0000] {processor.py:186} INFO - Started process (PID=2057) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:05:58.104+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:05:58.109+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:05:58.108+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:05:58.376+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:05:58.399+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:05:58.398+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:05:58.423+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:05:58.423+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:05:58.441+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.348 seconds
+[2026-07-20T03:06:29.356+0000] {processor.py:186} INFO - Started process (PID=2178) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:06:29.358+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:06:29.360+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:06:29.360+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:06:29.603+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:06:29.623+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:06:29.622+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:06:29.646+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:06:29.646+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:06:29.665+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.314 seconds
+[2026-07-20T03:07:00.063+0000] {processor.py:186} INFO - Started process (PID=2287) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:07:00.064+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:07:00.066+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:07:00.066+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:07:00.321+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:07:00.346+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:07:00.346+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:07:00.371+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:07:00.371+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:07:00.390+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.333 seconds
+[2026-07-20T03:07:31.091+0000] {processor.py:186} INFO - Started process (PID=2410) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:07:31.092+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:07:31.095+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:07:31.095+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:07:31.340+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:07:31.363+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:07:31.363+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:07:31.386+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:07:31.385+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:07:31.538+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.453 seconds
+[2026-07-20T03:08:02.056+0000] {processor.py:186} INFO - Started process (PID=2521) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:08:02.057+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:08:02.059+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:08:02.059+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:08:02.303+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:08:02.450+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:08:02.450+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:08:02.474+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:08:02.474+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:08:02.497+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.446 seconds
+[2026-07-20T03:08:32.889+0000] {processor.py:186} INFO - Started process (PID=2630) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:08:32.890+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:08:32.893+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:08:32.893+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:08:33.147+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:08:33.171+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:08:33.171+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:08:33.192+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:08:33.192+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:08:33.345+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.462 seconds
+[2026-07-20T03:09:03.536+0000] {processor.py:186} INFO - Started process (PID=2738) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:09:03.538+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:09:03.540+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:09:03.540+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:09:03.815+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:09:03.979+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:09:03.978+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:09:04.005+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:09:04.005+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:09:04.028+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.498 seconds
+[2026-07-20T03:09:34.244+0000] {processor.py:186} INFO - Started process (PID=2849) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:09:34.246+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:09:34.249+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:09:34.249+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:09:34.647+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:09:34.670+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:09:34.670+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:09:34.690+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:09:34.690+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:09:34.712+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.474 seconds
+[2026-07-20T03:12:28.185+0000] {processor.py:186} INFO - Started process (PID=266) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:12:28.187+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:12:28.191+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:12:28.190+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:12:28.605+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:12:28.696+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:12:28.695+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T03:12:28.713+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:12:28.713+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T03:12:28.724+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:12:28.724+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T03:12:28.739+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:12:28.739+0000] {override.py:1900} INFO - Created Permission View: can read on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T03:12:28.758+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:12:28.758+0000] {override.py:1900} INFO - Created Permission View: can create on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T03:12:28.772+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:12:28.771+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T03:12:28.783+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:12:28.783+0000] {override.py:1900} INFO - Created Permission View: menu access on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T03:12:28.785+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:12:28.784+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:12:28.801+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:12:28.801+0000] {dag.py:3262} INFO - Creating ORM DAG for consumer_complaints_elt_lakehouse
+[2026-07-20T03:12:28.823+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:12:28.823+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:12:28.887+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.708 seconds
+[2026-07-20T03:12:59.792+0000] {processor.py:186} INFO - Started process (PID=373) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:12:59.793+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:12:59.795+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:12:59.795+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:13:00.066+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:13:00.091+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:13:00.091+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:13:00.115+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:13:00.114+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:13:00.138+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.351 seconds
+[2026-07-20T03:13:30.408+0000] {processor.py:186} INFO - Started process (PID=485) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:13:30.409+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:13:30.411+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:13:30.410+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:13:30.657+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:13:30.688+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:13:30.687+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:13:30.714+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:13:30.714+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:13:30.742+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.339 seconds
+[2026-07-20T03:14:00.964+0000] {processor.py:186} INFO - Started process (PID=601) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:14:00.965+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:14:00.967+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:14:00.967+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:14:01.228+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:14:01.253+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:14:01.252+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:14:01.273+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:14:01.273+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:14:01.297+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.339 seconds
+[2026-07-20T03:14:32.184+0000] {processor.py:186} INFO - Started process (PID=710) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:14:32.185+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:14:32.187+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:14:32.187+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:14:32.427+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:14:32.451+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:14:32.450+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:14:32.474+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:14:32.474+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:14:32.494+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.316 seconds
+[2026-07-20T03:15:02.696+0000] {processor.py:186} INFO - Started process (PID=818) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:15:02.697+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:15:02.700+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:15:02.699+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:15:02.948+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:15:02.974+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:15:02.974+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:15:02.999+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:15:02.999+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:15:03.022+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.331 seconds
+[2026-07-20T03:15:33.192+0000] {processor.py:186} INFO - Started process (PID=1263) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:15:33.193+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:15:33.195+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:15:33.195+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:15:33.435+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:15:33.456+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:15:33.455+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:15:33.476+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:15:33.476+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:15:33.493+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.307 seconds
+[2026-07-20T03:16:04.718+0000] {processor.py:186} INFO - Started process (PID=1382) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:16:04.720+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:16:04.724+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:16:04.724+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:16:05.035+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:16:05.071+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:16:05.070+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:16:05.098+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:16:05.098+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:16:05.120+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.412 seconds
+[2026-07-20T03:16:36.013+0000] {processor.py:186} INFO - Started process (PID=1496) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:16:36.017+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:16:36.022+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:16:36.022+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:16:36.500+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:16:36.536+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:16:36.536+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:16:36.564+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:16:36.564+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:16:36.595+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.596 seconds
+[2026-07-20T03:17:06.726+0000] {processor.py:186} INFO - Started process (PID=1640) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:17:06.728+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T03:17:06.734+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:17:06.733+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:17:07.151+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T03:17:07.189+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:17:07.189+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T03:17:07.236+0000] {logging_mixin.py:190} INFO - [2026-07-20T03:17:07.236+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T03:17:07.274+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.582 seconds
+[2026-07-20T04:29:24.982+0000] {processor.py:186} INFO - Started process (PID=266) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:29:24.986+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:29:24.993+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:29:24.992+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:29:25.718+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:29:25.901+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:29:25.900+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T04:29:25.956+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:29:25.955+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T04:29:25.982+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:29:25.982+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T04:32:13.444+0000] {processor.py:186} INFO - Started process (PID=267) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:32:13.446+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:32:13.450+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:13.450+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:32:13.769+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:32:13.838+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:13.837+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T04:32:13.865+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:13.864+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T04:32:13.880+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:13.879+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:consumer_complaints_elt_lakehouse
+[2026-07-20T04:32:13.894+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:13.893+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T04:32:13.909+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:13.909+0000] {override.py:1900} INFO - Created Permission View: menu access on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T04:32:13.917+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:13.917+0000] {override.py:1900} INFO - Created Permission View: can create on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T04:32:13.925+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:13.925+0000] {override.py:1900} INFO - Created Permission View: can read on DAG Run:consumer_complaints_elt_lakehouse
+[2026-07-20T04:32:13.926+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:13.926+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:32:13.940+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:13.939+0000] {dag.py:3262} INFO - Creating ORM DAG for consumer_complaints_elt_lakehouse
+[2026-07-20T04:32:13.951+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:13.951+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:32:13.981+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.543 seconds
+[2026-07-20T04:32:44.426+0000] {processor.py:186} INFO - Started process (PID=374) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:32:44.428+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:32:44.431+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:44.430+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:32:44.668+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:32:44.694+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:44.694+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:32:44.717+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:32:44.717+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:32:44.740+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.319 seconds
+[2026-07-20T04:33:14.842+0000] {processor.py:186} INFO - Started process (PID=486) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:33:14.843+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:33:14.846+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:33:14.846+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:33:15.112+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:33:15.141+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:33:15.141+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:33:15.168+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:33:15.168+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:33:15.188+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.351 seconds
+[2026-07-20T04:33:45.359+0000] {processor.py:186} INFO - Started process (PID=597) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:33:45.361+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:33:45.363+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:33:45.362+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:33:45.598+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:33:45.623+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:33:45.623+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:33:45.644+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:33:45.644+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:33:45.667+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.313 seconds
+[2026-07-20T04:34:16.057+0000] {processor.py:186} INFO - Started process (PID=898) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:34:16.058+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:34:16.060+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:34:16.060+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:34:16.331+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:34:16.359+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:34:16.358+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:34:16.382+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:34:16.382+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:34:16.401+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.350 seconds
+[2026-07-20T04:34:46.542+0000] {processor.py:186} INFO - Started process (PID=1166) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:34:46.544+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:34:46.546+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:34:46.546+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:34:46.875+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:34:46.912+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:34:46.912+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:34:46.940+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:34:46.940+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:34:46.978+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.441 seconds
+[2026-07-20T04:35:17.057+0000] {processor.py:186} INFO - Started process (PID=1287) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:35:17.058+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:35:17.061+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:35:17.061+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:35:17.329+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:35:17.355+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:35:17.355+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:35:17.379+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:35:17.378+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:35:17.399+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.347 seconds
+[2026-07-20T04:35:48.394+0000] {processor.py:186} INFO - Started process (PID=1421) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:35:48.395+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:35:48.397+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:35:48.397+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:35:48.982+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:35:49.052+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:35:49.051+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:35:49.117+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:35:49.116+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:35:49.159+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.773 seconds
+[2026-07-20T04:36:19.428+0000] {processor.py:186} INFO - Started process (PID=1583) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:36:19.429+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:36:19.432+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:36:19.432+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:36:19.718+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:36:19.744+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:36:19.744+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:36:19.767+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:36:19.767+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:36:19.787+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.367 seconds
+[2026-07-20T04:36:50.273+0000] {processor.py:186} INFO - Started process (PID=1748) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:36:50.274+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:36:50.277+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:36:50.277+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:36:50.524+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:36:50.551+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:36:50.551+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:36:50.575+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:36:50.575+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:36:50.594+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.326 seconds
+[2026-07-20T04:37:20.854+0000] {processor.py:186} INFO - Started process (PID=1859) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:37:20.855+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:37:20.858+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:37:20.857+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:37:21.105+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:37:21.128+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:37:21.127+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:37:21.151+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:37:21.151+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:37:21.171+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.323 seconds
+[2026-07-20T04:37:51.844+0000] {processor.py:186} INFO - Started process (PID=1983) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:37:51.845+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:37:51.848+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:37:51.847+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:37:52.107+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:37:52.132+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:37:52.131+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:37:52.153+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:37:52.153+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:37:52.172+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.334 seconds
+[2026-07-20T04:38:22.390+0000] {processor.py:186} INFO - Started process (PID=2091) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:38:22.392+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:38:22.395+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:38:22.394+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:38:22.650+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:38:22.681+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:38:22.681+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:38:22.715+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:38:22.715+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:38:22.747+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.362 seconds
+[2026-07-20T04:38:53.203+0000] {processor.py:186} INFO - Started process (PID=2202) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:38:53.204+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:38:53.207+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:38:53.207+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:38:53.472+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:38:53.496+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:38:53.495+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:38:53.517+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:38:53.517+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:38:53.536+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.338 seconds
+[2026-07-20T04:39:24.197+0000] {processor.py:186} INFO - Started process (PID=2311) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:39:24.198+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:39:24.200+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:39:24.200+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:39:24.445+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:39:24.468+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:39:24.467+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:39:24.493+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:39:24.492+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:39:24.512+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.321 seconds
+[2026-07-20T04:39:54.856+0000] {processor.py:186} INFO - Started process (PID=2419) to work on /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:39:54.858+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_elt.py for tasks to queue
+[2026-07-20T04:39:54.860+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:39:54.860+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:39:55.110+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_elt_lakehouse' retrieved from /opt/airflow/dags/consumer_complaints_elt.py
+[2026-07-20T04:39:55.133+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:39:55.133+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-20T04:39:55.154+0000] {logging_mixin.py:190} INFO - [2026-07-20T04:39:55.154+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_elt_lakehouse to 2026-07-19 00:00:00+00:00, run_after=2026-07-20 00:00:00+00:00
+[2026-07-20T04:39:55.173+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_elt.py took 0.323 seconds

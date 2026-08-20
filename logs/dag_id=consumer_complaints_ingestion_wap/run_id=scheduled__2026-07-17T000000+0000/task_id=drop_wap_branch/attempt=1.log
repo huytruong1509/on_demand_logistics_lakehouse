@@ -1,0 +1,100 @@
+[2026-07-18T01:28:41.838+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-18T01:28:41.855+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [queued]>
+[2026-07-18T01:28:41.863+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [queued]>
+[2026-07-18T01:28:41.864+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-18T01:28:41.877+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): drop_wap_branch> on 2026-07-17 00:00:00+00:00
+[2026-07-18T01:28:41.883+0000] {standard_task_runner.py:72} INFO - Started process 1144 to run task
+[2026-07-18T01:28:41.887+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_ingestion_wap', 'drop_wap_branch', 'scheduled__2026-07-17T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/wap_consumer_complaints_pipeline.py', '--cfg-path', '/tmp/tmprgzhi1sx']
+[2026-07-18T01:28:41.890+0000] {standard_task_runner.py:105} INFO - Job 10: Subtask drop_wap_branch
+[2026-07-18T01:28:41.969+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [running]> on host ac6ebf98646b
+[2026-07-18T01:28:42.073+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_ingestion_wap' AIRFLOW_CTX_TASK_ID='drop_wap_branch' AIRFLOW_CTX_EXECUTION_DATE='2026-07-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-17T00:00:00+00:00'
+[2026-07-18T01:28:42.076+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-18T01:28:42.079+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-18T01:28:42.118+0000] {nessie_client.py:72} INFO - 🗑️ Đã dọn dẹp nhánh tạm 'etl_inc_2026-07-17_scheduled__2026_07_17T00_00_00'.
+[2026-07-18T01:28:42.120+0000] {wap_consumer_complaints_pipeline.py:272} INFO - 🗑️ CLEANUP: Đã xóa an toàn nhánh tạm etl_inc_2026-07-17_scheduled__2026_07_17T00_00_00.
+[2026-07-18T01:28:42.122+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-07-18T01:28:42.134+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-18T01:28:42.136+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_ingestion_wap, task_id=drop_wap_branch, run_id=scheduled__2026-07-17T00:00:00+00:00, execution_date=20260717T000000, start_date=20260718T012841, end_date=20260718T012842
+[2026-07-18T01:28:42.186+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-18T01:28:42.205+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-18T01:28:42.209+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-18T01:39:35.448+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-18T01:39:35.466+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [queued]>
+[2026-07-18T01:39:35.474+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [queued]>
+[2026-07-18T01:39:35.475+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-18T01:39:35.487+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): drop_wap_branch> on 2026-07-17 00:00:00+00:00
+[2026-07-18T01:39:35.492+0000] {standard_task_runner.py:72} INFO - Started process 620 to run task
+[2026-07-18T01:39:35.496+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_ingestion_wap', 'drop_wap_branch', 'scheduled__2026-07-17T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/wap_consumer_complaints_pipeline.py', '--cfg-path', '/tmp/tmpkj8805i1']
+[2026-07-18T01:39:35.499+0000] {standard_task_runner.py:105} INFO - Job 10: Subtask drop_wap_branch
+[2026-07-18T01:39:35.577+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [running]> on host 93246aa1c53f
+[2026-07-18T01:39:35.676+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_ingestion_wap' AIRFLOW_CTX_TASK_ID='drop_wap_branch' AIRFLOW_CTX_EXECUTION_DATE='2026-07-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-17T00:00:00+00:00'
+[2026-07-18T01:39:35.679+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-18T01:39:35.682+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-18T01:39:35.720+0000] {nessie_client.py:72} INFO - 🗑️ Đã dọn dẹp nhánh tạm 'etl_20260717_scheduled202607'.
+[2026-07-18T01:39:35.721+0000] {wap_consumer_complaints_pipeline.py:272} INFO - 🗑️ CLEANUP: Đã xóa an toàn nhánh tạm etl_20260717_scheduled202607.
+[2026-07-18T01:39:35.723+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-07-18T01:39:35.735+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-18T01:39:35.737+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_ingestion_wap, task_id=drop_wap_branch, run_id=scheduled__2026-07-17T00:00:00+00:00, execution_date=20260717T000000, start_date=20260718T013935, end_date=20260718T013935
+[2026-07-18T01:39:35.751+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-18T01:39:35.770+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-18T01:39:35.773+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-18T01:50:44.902+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-18T01:50:44.937+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [queued]>
+[2026-07-18T01:50:44.946+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [queued]>
+[2026-07-18T01:50:44.948+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-18T01:50:44.962+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): drop_wap_branch> on 2026-07-17 00:00:00+00:00
+[2026-07-18T01:50:44.968+0000] {standard_task_runner.py:72} INFO - Started process 590 to run task
+[2026-07-18T01:50:44.971+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_ingestion_wap', 'drop_wap_branch', 'scheduled__2026-07-17T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/wap_consumer_complaints_pipeline.py', '--cfg-path', '/tmp/tmp16at6xte']
+[2026-07-18T01:50:44.974+0000] {standard_task_runner.py:105} INFO - Job 10: Subtask drop_wap_branch
+[2026-07-18T01:50:45.060+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [running]> on host a48e29a78335
+[2026-07-18T01:50:45.151+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_ingestion_wap' AIRFLOW_CTX_TASK_ID='drop_wap_branch' AIRFLOW_CTX_EXECUTION_DATE='2026-07-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-17T00:00:00+00:00'
+[2026-07-18T01:50:45.154+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-18T01:50:45.158+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-18T01:50:45.201+0000] {nessie_client.py:72} INFO - 🗑️ Đã dọn dẹp nhánh tạm 'etl_20260717_scheduled202607'.
+[2026-07-18T01:50:45.202+0000] {wap_consumer_complaints_pipeline.py:274} INFO - 🗑️ CLEANUP: Đã xóa an toàn nhánh tạm etl_20260717_scheduled202607.
+[2026-07-18T01:50:45.204+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-07-18T01:50:45.218+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-18T01:50:45.221+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_ingestion_wap, task_id=drop_wap_branch, run_id=scheduled__2026-07-17T00:00:00+00:00, execution_date=20260717T000000, start_date=20260718T015044, end_date=20260718T015045
+[2026-07-18T01:50:45.271+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-18T01:50:45.289+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-18T01:50:45.294+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-18T02:22:24.470+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-18T02:22:24.488+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [queued]>
+[2026-07-18T02:22:24.497+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [queued]>
+[2026-07-18T02:22:24.499+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-18T02:22:24.510+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): drop_wap_branch> on 2026-07-17 00:00:00+00:00
+[2026-07-18T02:22:24.516+0000] {standard_task_runner.py:72} INFO - Started process 617 to run task
+[2026-07-18T02:22:24.519+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_ingestion_wap', 'drop_wap_branch', 'scheduled__2026-07-17T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/wap_consumer_complaints_pipeline.py', '--cfg-path', '/tmp/tmpt0ft4n3u']
+[2026-07-18T02:22:24.521+0000] {standard_task_runner.py:105} INFO - Job 9: Subtask drop_wap_branch
+[2026-07-18T02:22:24.599+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [running]> on host 407f07aaae66
+[2026-07-18T02:22:24.684+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_ingestion_wap' AIRFLOW_CTX_TASK_ID='drop_wap_branch' AIRFLOW_CTX_EXECUTION_DATE='2026-07-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-17T00:00:00+00:00'
+[2026-07-18T02:22:24.687+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-18T02:22:24.690+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-18T02:22:24.723+0000] {nessie_client.py:72} INFO - 🗑️ Đã dọn dẹp nhánh tạm 'etl_20260717_scheduled202607'.
+[2026-07-18T02:22:24.725+0000] {wap_consumer_complaints_pipeline.py:258} INFO - 🗑️ CLEANUP: Đã xóa an toàn nhánh tạm etl_20260717_scheduled202607.
+[2026-07-18T02:22:24.727+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-07-18T02:22:24.739+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-18T02:22:24.741+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_ingestion_wap, task_id=drop_wap_branch, run_id=scheduled__2026-07-17T00:00:00+00:00, execution_date=20260717T000000, start_date=20260718T022224, end_date=20260718T022224
+[2026-07-18T02:22:24.774+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-18T02:22:24.793+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-18T02:22:24.797+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-18T02:31:53.479+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-18T02:31:53.499+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [queued]>
+[2026-07-18T02:31:53.510+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [queued]>
+[2026-07-18T02:31:53.511+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-18T02:31:53.523+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): drop_wap_branch> on 2026-07-17 00:00:00+00:00
+[2026-07-18T02:31:53.530+0000] {standard_task_runner.py:72} INFO - Started process 848 to run task
+[2026-07-18T02:31:53.536+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_ingestion_wap', 'drop_wap_branch', 'scheduled__2026-07-17T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/wap_consumer_complaints_pipeline.py', '--cfg-path', '/tmp/tmpqaiza2ir']
+[2026-07-18T02:31:53.539+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask drop_wap_branch
+[2026-07-18T02:31:53.625+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_ingestion_wap.drop_wap_branch scheduled__2026-07-17T00:00:00+00:00 [running]> on host e28a35e52d18
+[2026-07-18T02:31:53.723+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_ingestion_wap' AIRFLOW_CTX_TASK_ID='drop_wap_branch' AIRFLOW_CTX_EXECUTION_DATE='2026-07-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-17T00:00:00+00:00'
+[2026-07-18T02:31:53.726+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-18T02:31:53.730+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-18T02:31:53.773+0000] {nessie_client.py:72} INFO - 🗑️ Đã dọn dẹp nhánh tạm 'etl_20260717_scheduled202607'.
+[2026-07-18T02:31:53.774+0000] {wap_consumer_complaints_pipeline.py:259} INFO - 🗑️ CLEANUP: Đã xóa an toàn nhánh tạm etl_20260717_scheduled202607.
+[2026-07-18T02:31:53.776+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-07-18T02:31:53.791+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-18T02:31:53.794+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_ingestion_wap, task_id=drop_wap_branch, run_id=scheduled__2026-07-17T00:00:00+00:00, execution_date=20260717T000000, start_date=20260718T023153, end_date=20260718T023153
+[2026-07-18T02:31:53.831+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-18T02:31:53.859+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-18T02:31:53.863+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

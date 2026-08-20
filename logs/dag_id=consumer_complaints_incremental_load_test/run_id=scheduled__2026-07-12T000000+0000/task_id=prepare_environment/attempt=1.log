@@ -1,0 +1,93 @@
+[2026-07-13T01:29:21.079+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-13T01:29:21.100+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.prepare_environment scheduled__2026-07-12T00:00:00+00:00 [queued]>
+[2026-07-13T01:29:21.111+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.prepare_environment scheduled__2026-07-12T00:00:00+00:00 [queued]>
+[2026-07-13T01:29:21.113+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-13T01:29:21.125+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): prepare_environment> on 2026-07-12 00:00:00+00:00
+[2026-07-13T01:29:21.130+0000] {standard_task_runner.py:72} INFO - Started process 488 to run task
+[2026-07-13T01:29:21.134+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'prepare_environment', 'scheduled__2026-07-12T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmp0e1h3j9n']
+[2026-07-13T01:29:21.136+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask prepare_environment
+[2026-07-13T01:29:21.235+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.prepare_environment scheduled__2026-07-12T00:00:00+00:00 [running]> on host 281b3026bd5f
+[2026-07-13T01:29:21.321+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='prepare_environment' AIRFLOW_CTX_EXECUTION_DATE='2026-07-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-12T00:00:00+00:00'
+[2026-07-13T01:29:21.325+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-13T01:29:21.329+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-13T01:29:21.332+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-13T01:29:21.334+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-13T01:29:21.905+0000] {minio_loader.py:188} INFO - ℹ️ Phân vùng landing/consumer_complaints/run_date=2026-07-12 đang trống.
+[2026-07-13T01:29:21.907+0000] {consumer_complaints_incremental_dag_test.py:65} INFO - ✅ [LANDING] Đã dọn dẹp sạch sẽ phân vùng run_date=2026-07-12.
+[2026-07-13T01:29:21.909+0000] {consumer_complaints_incremental_dag_test.py:82} INFO - 🧹 [BRONZE] Đang quét rác Iceberg cho _run_id = 'scheduled__2026-07-12T00:00:00+00:00'...
+[2026-07-13T01:29:21.911+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-13T01:29:21.913+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-13T01:29:21.917+0000] {sql.py:509} INFO - Running statement: 
+                DELETE FROM lakehouse.bronze.raw_consumer_complaints
+                WHERE _run_id = 'scheduled__2026-07-12T00:00:00+00:00'
+            , parameters: None
+[2026-07-13T01:29:22.946+0000] {sql.py:518} INFO - Rows affected: 0
+[2026-07-13T01:29:22.979+0000] {consumer_complaints_incremental_dag_test.py:85} INFO - ✅ [BRONZE] Môi trường Iceberg an toàn. Sẵn sàng Append data mới.
+[2026-07-13T01:29:22.992+0000] {python.py:240} INFO - Done. Returned value was: {'run_date': '2026-07-12', 'start_date': '2026-07-05', 'end_date': '2026-07-12', 'run_id': 'scheduled__2026-07-12T00:00:00+00:00'}
+[2026-07-13T01:29:23.061+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-13T01:29:23.063+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_incremental_load_test, task_id=prepare_environment, run_id=scheduled__2026-07-12T00:00:00+00:00, execution_date=20260712T000000, start_date=20260713T012921, end_date=20260713T012923
+[2026-07-13T01:29:23.118+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-13T01:29:23.161+0000] {taskinstance.py:3900} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2026-07-13T01:29:23.164+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-13T02:53:22.733+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-13T02:53:22.751+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.prepare_environment scheduled__2026-07-12T00:00:00+00:00 [queued]>
+[2026-07-13T02:53:22.763+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.prepare_environment scheduled__2026-07-12T00:00:00+00:00 [queued]>
+[2026-07-13T02:53:22.764+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-13T02:53:22.778+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): prepare_environment> on 2026-07-12 00:00:00+00:00
+[2026-07-13T02:53:22.784+0000] {standard_task_runner.py:72} INFO - Started process 339 to run task
+[2026-07-13T02:53:22.790+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'prepare_environment', 'scheduled__2026-07-12T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmpay4spaqa']
+[2026-07-13T02:53:22.791+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask prepare_environment
+[2026-07-13T02:53:22.894+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.prepare_environment scheduled__2026-07-12T00:00:00+00:00 [running]> on host 233c1ebc8655
+[2026-07-13T02:53:22.969+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='prepare_environment' AIRFLOW_CTX_EXECUTION_DATE='2026-07-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-12T00:00:00+00:00'
+[2026-07-13T02:53:22.973+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-13T02:53:22.977+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-13T02:53:22.979+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-13T02:53:22.981+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-13T02:53:23.499+0000] {minio_loader.py:188} INFO - ℹ️ Phân vùng landing/consumer_complaints/run_date=2026-07-12 đang trống.
+[2026-07-13T02:53:23.501+0000] {consumer_complaints_incremental_dag_test.py:65} INFO - ✅ [LANDING] Đã dọn dẹp sạch sẽ phân vùng run_date=2026-07-12.
+[2026-07-13T02:53:23.501+0000] {consumer_complaints_incremental_dag_test.py:82} INFO - 🧹 [BRONZE] Đang quét rác Iceberg cho _run_id = 'scheduled__2026-07-12T00:00:00+00:00'...
+[2026-07-13T02:53:23.503+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-13T02:53:23.504+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-13T02:53:23.507+0000] {sql.py:509} INFO - Running statement: 
+                DELETE FROM lakehouse.bronze.raw_consumer_complaints
+                WHERE _run_id = 'scheduled__2026-07-12T00:00:00+00:00'
+            , parameters: None
+[2026-07-13T02:53:24.254+0000] {sql.py:518} INFO - Rows affected: 0
+[2026-07-13T02:53:24.271+0000] {consumer_complaints_incremental_dag_test.py:85} INFO - ✅ [BRONZE] Môi trường Iceberg an toàn. Sẵn sàng Append data mới.
+[2026-07-13T02:53:24.274+0000] {python.py:240} INFO - Done. Returned value was: {'run_date': '2026-07-12', 'start_date': '2026-07-05', 'end_date': '2026-07-12', 'run_id': 'scheduled__2026-07-12T00:00:00+00:00'}
+[2026-07-13T02:53:24.361+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-13T02:53:24.363+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_incremental_load_test, task_id=prepare_environment, run_id=scheduled__2026-07-12T00:00:00+00:00, execution_date=20260712T000000, start_date=20260713T025322, end_date=20260713T025324
+[2026-07-13T02:53:24.415+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-13T02:53:24.473+0000] {taskinstance.py:3900} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2026-07-13T02:53:24.476+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-13T05:54:59.970+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-13T05:54:59.997+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.prepare_environment scheduled__2026-07-12T00:00:00+00:00 [queued]>
+[2026-07-13T05:55:00.008+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.prepare_environment scheduled__2026-07-12T00:00:00+00:00 [queued]>
+[2026-07-13T05:55:00.010+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-13T05:55:00.026+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): prepare_environment> on 2026-07-12 00:00:00+00:00
+[2026-07-13T05:55:00.035+0000] {standard_task_runner.py:72} INFO - Started process 488 to run task
+[2026-07-13T05:55:00.041+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'prepare_environment', 'scheduled__2026-07-12T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmp_jd_dsnc']
+[2026-07-13T05:55:00.043+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask prepare_environment
+[2026-07-13T05:55:00.155+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.prepare_environment scheduled__2026-07-12T00:00:00+00:00 [running]> on host fa6c32dea14c
+[2026-07-13T05:55:00.267+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='prepare_environment' AIRFLOW_CTX_EXECUTION_DATE='2026-07-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-12T00:00:00+00:00'
+[2026-07-13T05:55:00.271+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-13T05:55:00.275+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-13T05:55:00.277+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-13T05:55:00.280+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-13T05:55:00.933+0000] {minio_loader.py:188} INFO - ℹ️ Phân vùng landing/consumer_complaints/run_date=2026-07-12 đang trống.
+[2026-07-13T05:55:00.935+0000] {consumer_complaints_incremental_dag_test.py:65} INFO - ✅ [LANDING] Đã dọn dẹp sạch sẽ phân vùng run_date=2026-07-12.
+[2026-07-13T05:55:00.937+0000] {consumer_complaints_incremental_dag_test.py:82} INFO - 🧹 [BRONZE] Đang quét rác Iceberg cho _run_id = 'scheduled__2026-07-12T00:00:00+00:00'...
+[2026-07-13T05:55:00.939+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-13T05:55:00.941+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-13T05:55:00.944+0000] {sql.py:509} INFO - Running statement: 
+                DELETE FROM lakehouse.bronze.raw_consumer_complaints
+                WHERE _run_id = 'scheduled__2026-07-12T00:00:00+00:00'
+            , parameters: None
+[2026-07-13T05:55:01.741+0000] {sql.py:518} INFO - Rows affected: 0
+[2026-07-13T05:55:01.753+0000] {consumer_complaints_incremental_dag_test.py:85} INFO - ✅ [BRONZE] Môi trường Iceberg an toàn. Sẵn sàng Append data mới.
+[2026-07-13T05:55:01.755+0000] {python.py:240} INFO - Done. Returned value was: {'run_date': '2026-07-12', 'start_date': '2026-07-05', 'end_date': '2026-07-12', 'run_id': 'scheduled__2026-07-12T00:00:00+00:00'}
+[2026-07-13T05:55:01.807+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-13T05:55:01.809+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_incremental_load_test, task_id=prepare_environment, run_id=scheduled__2026-07-12T00:00:00+00:00, execution_date=20260712T000000, start_date=20260713T055459, end_date=20260713T055501
+[2026-07-13T05:55:01.866+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-13T05:55:01.902+0000] {taskinstance.py:3900} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2026-07-13T05:55:01.905+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,18 @@
+[2026-08-05T04:22:18.161+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-05T04:22:18.188+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: logistics_orders_full_load.aggregate_metrics manual__2026-08-05T04:22:01.040981+00:00 [queued]>
+[2026-08-05T04:22:18.203+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: logistics_orders_full_load.aggregate_metrics manual__2026-08-05T04:22:01.040981+00:00 [queued]>
+[2026-08-05T04:22:18.205+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-08-05T04:22:18.222+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): aggregate_metrics> on 2026-08-05 04:22:01.040981+00:00
+[2026-08-05T04:22:18.231+0000] {standard_task_runner.py:72} INFO - Started process 633 to run task
+[2026-08-05T04:22:18.235+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'logistics_orders_full_load', 'aggregate_metrics', 'manual__2026-08-05T04:22:01.040981+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/logistics_full_load.py', '--cfg-path', '/tmp/tmpoxiefhp1']
+[2026-08-05T04:22:18.237+0000] {standard_task_runner.py:105} INFO - Job 8: Subtask aggregate_metrics
+[2026-08-05T04:22:18.323+0000] {task_command.py:467} INFO - Running <TaskInstance: logistics_orders_full_load.aggregate_metrics manual__2026-08-05T04:22:01.040981+00:00 [running]> on host cc5b3f281162
+[2026-08-05T04:22:18.425+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='logistics_orders_full_load' AIRFLOW_CTX_TASK_ID='aggregate_metrics' AIRFLOW_CTX_EXECUTION_DATE='2026-08-05T04:22:01.040981+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-08-05T04:22:01.040981+00:00'
+[2026-08-05T04:22:18.428+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-05T04:22:18.442+0000] {logistics_full_load.py:151} INFO - 🚀 TỔNG HỢP KÉO API: 20000 records.
+[2026-08-05T04:22:18.444+0000] {python.py:240} INFO - Done. Returned value was: 20000
+[2026-08-05T04:22:18.462+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-05T04:22:18.464+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=logistics_orders_full_load, task_id=aggregate_metrics, run_id=manual__2026-08-05T04:22:01.040981+00:00, execution_date=20260805T042201, start_date=20260805T042218, end_date=20260805T042218
+[2026-08-05T04:22:18.492+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-08-05T04:22:18.517+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-08-05T04:22:18.522+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

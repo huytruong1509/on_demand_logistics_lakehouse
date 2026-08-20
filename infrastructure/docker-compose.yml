@@ -1,0 +1,468 @@
+# ==========================================
+# MODERN DATA LAKEHOUSE - LOCAL PRODUCTION
+# ==========================================
+networks:
+  lakehouse_net:
+    driver: bridge
+    name: lakehouse_net
+
+volumes:
+  postgres_data:
+  minio_data:
+  superset_home:
+  qdrant_data:
+  data_source_db:
+
+services:
+  # --- 1. DATABASE METADATA CHUNG ---
+  postgres:
+    image: postgres:15-alpine
+    container_name: postgres
+    restart: unless-stopped
+    networks:
+      - lakehouse_net
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres_init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  # --- 2. TẦNG LƯU TRỮ (MINIO) ---
+  minio:
+    image: minio/minio:${MINIO_VERSION}
+    container_name: minio
+    restart: unless-stopped
+    networks:
+      - lakehouse_net
+    environment:
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  minio-setup:
+    image: minio/mc:latest
+    container_name: minio-setup
+    networks:
+      - lakehouse_net
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc alias set myminio http://minio:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD};
+      /usr/bin/mc mb myminio/lakehouse --ignore-existing;
+      /usr/bin/mc mb myminio/dbt-docs --ignore-existing;
+      /usr/bin/mc anonymous set download myminio/dbt-docs;
+      echo '=== [MINIO-SETUP] Da tao xong cac buckets va set quyen Public cho dbt-docs! ===';
+      exit 0;
+      "
+
+  # --- 3. TẦNG DANH MỤC (NESSIE) ---
+  nessie:
+    image: ghcr.io/projectnessie/nessie:0.104.10 # Chuẩn registry chính thức
+    container_name: nessie
+    restart: unless-stopped
+    networks:
+      - lakehouse_net
+    ports:
+      - "19120:19120"
+    environment:
+      # --- 1. Cấu hình Lưu trữ Metadata (Version Store) ---
+      - NESSIE_VERSION_STORE_TYPE=JDBC
+      - QUARKUS_DATASOURCE_JDBC_URL=jdbc:postgresql://postgres:5432/${POSTGRES_DB}
+      - QUARKUS_DATASOURCE_USERNAME=${POSTGRES_USER}
+      - QUARKUS_DATASOURCE_PASSWORD=${POSTGRES_PASSWORD}
+
+      # --- 2. Cấu hình Định danh Catalog (Viết hoa toàn bộ key biến môi trường) ---
+      - NESSIE_CATALOG_DEFAULT_WAREHOUSE=lakehouse
+      - NESSIE_CATALOG_WAREHOUSES_LAKEHOUSE_LOCATION=${NESSIE_WAREHOUSE_LOCATION}
+
+      # --- 3. Cấu hình Kết nối MinIO (S3 Options) ---
+      - NESSIE_CATALOG_SERVICE_S3_DEFAULT_OPTIONS_ENDPOINT=${NESSIE_S3_ENDPOINT}
+      - NESSIE_CATALOG_SERVICE_S3_DEFAULT_OPTIONS_REGION=${NESSIE_S3_REGION}
+      - NESSIE_CATALOG_SERVICE_S3_DEFAULT_OPTIONS_PATH_STYLE_ACCESS=true
+      - NESSIE_CATALOG_SERVICE_S3_DEFAULT_OPTIONS_AUTH_TYPE=STATIC
+
+      # --- 4. Cấu hình Secrets giải mã Access Key ---
+      - NESSIE_CATALOG_SERVICE_S3_DEFAULT_OPTIONS_ACCESS_KEY=urn:nessie-secret:quarkus:nessie.catalog.secrets.minio
+      - NESSIE_CATALOG_SECRETS_MINIO_NAME=${MINIO_ROOT_USER}
+      - NESSIE_CATALOG_SECRETS_MINIO_SECRET=${MINIO_ROOT_PASSWORD}
+
+      # --- 5. Tối ưu log Production (Tắt cảnh báo OpenTelemetry kết nối lỗi) ---
+      - QUARKUS_OTEL_SDK_DISABLED=true
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  # --- 4. TẦNG TÍNH TOÁN (TRINO CLUSTER) ---
+  trino-coordinator:
+    image: trinodb/trino:476
+    container_name: trino-coordinator
+    user: root
+    restart: unless-stopped
+    networks:
+      - lakehouse_net
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./trino_config/coordinator:/etc/trino
+      - ./trino_config/catalog:/etc/trino/catalog
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          'curl -fs http://localhost:8080/v1/info | grep ''"starting":false'' || exit 1',
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      nessie:
+        condition: service_started
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+  trino-worker-1:
+    image: trinodb/trino:476
+    container_name: trino-worker-1
+    user: root
+    restart: unless-stopped
+    networks:
+      - lakehouse_net
+    volumes:
+      - ./trino_config/worker:/etc/trino
+      - ./trino_config/catalog:/etc/trino/catalog
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          'curl -fs http://localhost:8080/v1/info | grep ''"starting":false'' || exit 1',
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      - trino-coordinator
+    deploy:
+      resources:
+        limits:
+          memory: 3.5G
+
+  trino-setup:
+    image: trinodb/trino:476
+    container_name: trino-setup
+    user: root
+    networks:
+      - lakehouse_net
+    depends_on:
+      - trino-coordinator
+    entrypoint: >
+      /bin/bash -c "
+      echo '=== [TRINO-SETUP] Đang đợi Trino Coordinator sẵn sàng... ===';
+      while ! trino --server http://trino-coordinator:8080 --user admin --execute 'SELECT 1' >/dev/null 2>&1; do
+        sleep 3;
+      done;
+      echo '=== [TRINO-SETUP] Trino đã online và sẵn sàng nhận truy vấn! ===';
+      echo '=== [TRINO-SETUP] Nhiệm vụ hoàn tất, tự động thoát... ===';
+      "
+
+  # --- 5. ĐIỀU PHỐI (AIRFLOW LOCAL EXECUTOR) ---
+  x-airflow-common: &airflow-common
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    image: custom-lakehouse-airflow:latest
+    user: root
+    networks:
+      - lakehouse_net
+    environment: &airflow-common-env
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${AIRFLOW_DB_USER}:${AIRFLOW_DB_PASSWORD}@postgres:5432/${AIRFLOW_DB_NAME}
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__WEBSERVER__SECRET_KEY: "secret_key"
+      AIRFLOW_CONN_MINIO_DEFAULT: "aws://admin:password@/?endpoint_url=http%3A%2F%2Fminio%3A9000"
+      AIRFLOW_CONN_TRINO_DEFAULT: "trino://admin@trino-coordinator:8080/lakehouse"
+      AIRFLOW__CORE__DAGBAG_IMPORT_TIMEOUT: "120"
+      AIRFLOW_CONN_TRINO_API_CONN: "http://trino-coordinator:8080"
+      AIRFLOW_CONN_NESSIE_API_DEFAULT: "http://nessie:19120"
+      AIRFLOW_CONN_AI_AGENT_API: "http://ai_agent_ui:8000"
+      AIRFLOW_CONN_DATA_SOURCE_DEFAULT: "http://data_source:8005"
+      HOST_PROJECT_PATH: ${HOST_PROJECT_PATH}
+    volumes:
+      - ../dags:/opt/airflow/dags
+      - ../logs:/opt/airflow/logs
+      - ../plugins:/opt/airflow/plugins
+      - ../dbt_transform:/opt/airflow/dbt_transform
+      - ../ai_agent:/opt/airflow/ai_agent
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ../spark_jobs:/opt/airflow/spark_jobs
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # 5.1. Khởi tạo Database (Chạy 1 lần rồi tự tắt)
+  airflow-init:
+    <<: *airflow-common
+    container_name: airflow_init
+    environment:
+      <<: *airflow-common-env
+      _AIRFLOW_DB_MIGRATE: "true"
+      _AIRFLOW_WWW_USER_CREATE: "true"
+      _AIRFLOW_WWW_USER_USERNAME: admin
+      _AIRFLOW_WWW_USER_PASSWORD: admin
+    command: airflow version
+
+  # 5.2. Web Giao diện (Webserver)
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: airflow_webserver
+    restart: unless-stopped
+    command: webserver
+    ports:
+      - "8081:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+
+  # 5.3. Trái tim lên lịch (Scheduler)
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: airflow_scheduler
+    restart: unless-stopped
+    command: >
+      bash -c "
+      if [ ! -d '/opt/airflow/dbt_transform/dbt_packages/dbt_utils' ]; then
+        echo '=== CHUA CO THU VIEN, DANG TAI DBT PACKAGES ===';
+        dbt deps --project-dir /opt/airflow/dbt_transform;
+      else
+        echo '=== THU VIEN DA TON TAI, BO QUA BUOC TAI ===';
+      fi &&
+      exec airflow scheduler"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+  # 5.4. Hệ thống theo dõi tác vụ ngầm (Triggerer)
+  airflow-triggerer:
+    <<: *airflow-common
+    container_name: airflow_triggerer
+    restart: unless-stopped
+    command: triggerer
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+
+  # --- 6. TẦNG BI (SUPERSET) ---
+
+  superset:
+    build:
+      context: .
+      dockerfile: Dockerfile.superset
+    container_name: superset
+    restart: unless-stopped
+    ports:
+      - "8088:8088"
+    networks:
+      - lakehouse_net
+    environment:
+      - SUPERSET_SECRET_KEY=${SUPERSET_SECRET_KEY}
+      - SQLALCHEMY_DATABASE_URI=postgresql://${SUPERSET_DB_USER}:${SUPERSET_DB_PASSWORD}@postgres:5432/${SUPERSET_DB_NAME}
+      - SUPERSET_LOAD_EXAMPLES=no
+    volumes:
+      - superset_home:/app/superset_home
+      - ../dashboards:/app/superset_dashboards
+    depends_on:
+      superset-init:
+        condition: service_completed_successfully
+
+  superset-init:
+    build:
+      context: .
+      dockerfile: Dockerfile.superset
+    container_name: superset_init
+    networks:
+      - lakehouse_net
+    environment:
+      - SUPERSET_SECRET_KEY=${SUPERSET_SECRET_KEY}
+      - SQLALCHEMY_DATABASE_URI=postgresql://${SUPERSET_DB_USER}:${SUPERSET_DB_PASSWORD}@postgres:5432/${SUPERSET_DB_NAME}
+      - SUPERSET_LOAD_EXAMPLES=no
+      - SUPERSET_ADMIN_USER=${SUPERSET_ADMIN_USER}
+      - SUPERSET_ADMIN_PASSWORD=${SUPERSET_ADMIN_PASSWORD}
+      - SUPERSET_ADMIN_EMAIL=${SUPERSET_ADMIN_EMAIL}
+    volumes:
+      - superset_home:/app/superset_home
+      - ../dashboards:/app/superset_dashboards
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: >
+      bash -c "
+      echo '=== Bước 1: Upgrade metadata database... ===' &&
+      superset db upgrade &&
+
+      echo '=== Bước 2: Tạo tài khoản Admin hệ thống... ===' &&
+      superset fab create-admin --username \"$$SUPERSET_ADMIN_USER\" --firstname Superset --lastname Admin --email \"$$SUPERSET_ADMIN_EMAIL\" --password \"$$SUPERSET_ADMIN_PASSWORD\" || true &&
+
+      echo '=== Bước 3: Khởi tạo phân quyền (Permissions)... ===' &&
+      superset init &&
+
+      echo '=== Bước 4: Import Dashboard qua import-directory ===' &&
+      superset import-directory /app/superset_dashboards/logistics_lakehouse_export/ --overwrite &&
+
+      echo '=== HOÀN TẤT KHỞI TẠO! CHUYỂN GIAO CHO WEB APP... ==='
+      "
+
+  # --- 7. DBT DOCS VIEWER (NGINX) ---
+  dbt-docs-viewer:
+    image: nginx:alpine
+    container_name: dbt_docs_nginx
+    ports:
+      - "8082:8080"
+    networks:
+      - lakehouse_net
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      minio-setup:
+        condition: service_completed_successfully
+    restart: always
+
+  # --- 8. VECTOR DATABASE (QDRANT) ---
+  qdrant:
+    image: qdrant/qdrant:v1.18.2
+    container_name: qdrant
+    restart: unless-stopped
+    networks:
+      - lakehouse_net
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    healthcheck:
+      # Sử dụng thủ thuật /dev/tcp của bash để ping trực tiếp vào port 6333
+      # Không cần phụ thuộc vào curl hay wget
+      test: ["CMD-SHELL", "bash -c '</dev/tcp/127.0.0.1/6333' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s # Quan trọng: Cho Qdrant 30 giây để khởi động xong
+    deploy:
+      resources:
+        limits:
+          memory: 512M # Nâng RAM lên 1G để quá trình init mượt mà hơn
+
+  # --- 9. AI AGENT & CHATBOT UI ---
+  ai_agent:
+    build:
+      context: ../ai_agent
+      dockerfile: Dockerfile.agent
+    container_name: ai_agent_ui
+    restart: unless-stopped
+    networks:
+      - lakehouse_net
+    volumes:
+      - ../ai_agent:/app
+      - ../dbt_transform:/app/dbt_transform:ro
+    ports:
+      - "8083:8000" # Mở port 8083 ra ngoài, map vào port 8000 của Chainlit bên trong
+    env_file:
+      - .env # Nạp toàn bộ GEMINI_API_KEY và cấu hình từ file .env
+    depends_on:
+      qdrant:
+        condition: service_healthy
+      trino-setup:
+        condition: service_completed_successfully
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+
+  # --- 10. DATA SOURCE API ---
+  data_source:
+    build:
+      context: ../data_source
+      dockerfile: Dockerfile.datasource
+    container_name: data_source
+    restart: unless-stopped
+    networks:
+      - lakehouse_net
+    ports:
+      - "8005:8005"
+    volumes:
+      - data_source_db:/app/db # Mount Named Volume vào thư mục chứa sqlite
+    healthcheck:
+      # Chờ FastAPI chạy xong hàm lifespan sinh 200k records rồi mới báo healthy
+      test: ["CMD", "curl", "-f", "http://localhost:8005/docs"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 180s
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+  # --- 11. JUPYTER NOTEBOOK (DATA EXPLORATION & VISUALIZATION) ---
+  jupyter:
+    build:
+      context: ../notebooks # Trỏ ngữ cảnh (context) ra ngoài, vào thư mục notebooks
+      dockerfile: Dockerfile.jupyter # Tên file Dockerfile nằm trong context đó
+    container_name: jupyter_notebook
+    restart: unless-stopped
+    networks:
+      - lakehouse_net
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_TOKEN=admin
+    volumes:
+      - ../notebooks:/home/jovyan/work
+    depends_on:
+      trino-setup:
+        condition: service_completed_successfully
+    deploy:
+      resources:
+        limits:
+          memory: 6G

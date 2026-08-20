@@ -1,0 +1,24 @@
+[2026-06-28T01:02:23.974+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.upload_local_to_minio_landing manual__2026-06-27T04:28:47.169585+00:00 [queued]>
+[2026-06-28T01:02:23.981+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.upload_local_to_minio_landing manual__2026-06-27T04:28:47.169585+00:00 [queued]>
+[2026-06-28T01:02:23.981+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2026-06-28T01:02:23.993+0000] {taskinstance.py:2214} INFO - Executing <Task(_PythonDecoratedOperator): upload_local_to_minio_landing> on 2026-06-27 04:28:47.169585+00:00
+[2026-06-28T01:02:23.998+0000] {standard_task_runner.py:60} INFO - Started process 270 to run task
+[2026-06-28T01:02:24.000+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_elt_lakehouse', 'upload_local_to_minio_landing', 'manual__2026-06-27T04:28:47.169585+00:00', '--job-id', '46', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_elt.py', '--cfg-path', '/tmp/tmpbv75d9ps']
+[2026-06-28T01:02:24.001+0000] {standard_task_runner.py:88} INFO - Job 46: Subtask upload_local_to_minio_landing
+[2026-06-28T01:02:24.071+0000] {task_command.py:423} INFO - Running <TaskInstance: consumer_complaints_elt_lakehouse.upload_local_to_minio_landing manual__2026-06-27T04:28:47.169585+00:00 [running]> on host bcaa462ce9f4
+[2026-06-28T01:02:24.155+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering' AIRFLOW_CTX_DAG_ID='consumer_complaints_elt_lakehouse' AIRFLOW_CTX_TASK_ID='upload_local_to_minio_landing' AIRFLOW_CTX_EXECUTION_DATE='2026-06-27T04:28:47.169585+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-27T04:28:47.169585+00:00'
+[2026-06-28T01:02:24.157+0000] {minio_loader.py:47} INFO - Đang upload 2 files lên bucket: lakehouse
+[2026-06-28T01:02:24.158+0000] {minio_loader.py:64} INFO - 📁 Đang upload jpmorgan_complaints.json (3.38 MB)
+[2026-06-28T01:02:24.159+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-06-28T01:02:24.161+0000] {base.py:83} INFO - Using connection ID 'minio_default' for task execution.
+[2026-06-28T01:02:24.163+0000] {connection_wrapper.py:382} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and password.
+[2026-06-28T01:02:24.387+0000] {minio_loader.py:88} ERROR - Lỗi khi upload data cho jpmorgan: Failed to upload /tmp/consumer_complaints/jpmorgan_complaints.json to lakehouse/landing/consumer_complaints/20260628_010224_jpmorgan_complaints.json: An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The Access Key Id you provided does not exist in our records.
+[2026-06-28T01:02:24.388+0000] {minio_loader.py:64} INFO - 📁 Đang upload bank_of_america_complaints.json (34.32 MB)
+[2026-06-28T01:02:24.395+0000] {minio_loader.py:88} ERROR - Lỗi khi upload data cho bank of america: Failed to upload /tmp/consumer_complaints/bank_of_america_complaints.json to lakehouse/landing/consumer_complaints/20260628_010224_bank_of_america_complaints.json: An error occurred (InvalidAccessKeyId) when calling the CreateMultipartUpload operation: The Access Key Id you provided does not exist in our records.
+[2026-06-28T01:02:24.396+0000] {minio_loader.py:91} INFO - ✓ Hoàn tất upload 0 files lên Landing Zone
+[2026-06-28T01:02:24.397+0000] {consumer_complaints_elt.py:157} INFO - Đã xóa file tạm local: /tmp/consumer_complaints/jpmorgan_complaints.json
+[2026-06-28T01:02:24.400+0000] {consumer_complaints_elt.py:157} INFO - Đã xóa file tạm local: /tmp/consumer_complaints/bank_of_america_complaints.json
+[2026-06-28T01:02:24.401+0000] {python.py:202} INFO - Done. Returned value was: []
+[2026-06-28T01:02:24.426+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_elt_lakehouse, task_id=upload_local_to_minio_landing, execution_date=20260627T042847, start_date=20260628T010223, end_date=20260628T010224
+[2026-06-28T01:02:24.456+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-06-28T01:02:24.480+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check

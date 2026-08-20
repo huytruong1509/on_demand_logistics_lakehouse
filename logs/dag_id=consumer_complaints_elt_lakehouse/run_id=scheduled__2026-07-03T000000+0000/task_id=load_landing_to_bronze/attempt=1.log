@@ -1,0 +1,77 @@
+[2026-07-04T13:16:02.293+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.load_landing_to_bronze scheduled__2026-07-03T00:00:00+00:00 [queued]>
+[2026-07-04T13:16:02.301+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.load_landing_to_bronze scheduled__2026-07-03T00:00:00+00:00 [queued]>
+[2026-07-04T13:16:02.302+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2026-07-04T13:16:02.314+0000] {taskinstance.py:2214} INFO - Executing <Task(_PythonDecoratedOperator): load_landing_to_bronze> on 2026-07-03 00:00:00+00:00
+[2026-07-04T13:16:02.319+0000] {standard_task_runner.py:60} INFO - Started process 254 to run task
+[2026-07-04T13:16:02.322+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_elt_lakehouse', 'load_landing_to_bronze', 'scheduled__2026-07-03T00:00:00+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_elt.py', '--cfg-path', '/tmp/tmpea_gn7am']
+[2026-07-04T13:16:02.323+0000] {standard_task_runner.py:88} INFO - Job 31: Subtask load_landing_to_bronze
+[2026-07-04T13:16:02.395+0000] {task_command.py:423} INFO - Running <TaskInstance: consumer_complaints_elt_lakehouse.load_landing_to_bronze scheduled__2026-07-03T00:00:00+00:00 [running]> on host 75f86298c0be
+[2026-07-04T13:16:02.505+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering' AIRFLOW_CTX_DAG_ID='consumer_complaints_elt_lakehouse' AIRFLOW_CTX_TASK_ID='load_landing_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-07-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-03T00:00:00+00:00'
+[2026-07-04T13:16:02.508+0000] {consumer_complaints_elt.py:145} INFO - Đang dọn dẹp dữ liệu cũ trong bảng Bronze...
+[2026-07-04T13:16:02.509+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-04T13:16:02.510+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-04T13:16:02.513+0000] {sql.py:457} INFO - Running statement: DELETE FROM lakehouse.bronze.raw_consumer_complaints, parameters: None
+[2026-07-04T13:16:02.791+0000] {sql.py:466} INFO - Rows affected: 77183
+[2026-07-04T13:16:02.800+0000] {consumer_complaints_elt.py:149} INFO - Đang ra lệnh cho Trino load data từ Landing -> Bronze và inject Metadata...
+[2026-07-04T13:16:02.802+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-04T13:16:02.804+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-04T13:16:02.805+0000] {sql.py:457} INFO - Running statement: 
+                INSERT INTO lakehouse.bronze.raw_consumer_complaints (
+                    complaint_id,
+                    date_received,
+                    date_sent_to_company,
+                    product,
+                    sub_product,
+                    issue,
+                    sub_issue,
+                    company,
+                    state,
+                    zip_code,
+                    tags,
+                    submitted_via,
+                    company_response,
+                    timely,
+                    has_narrative,
+                    complaint_what_happened,
+                    company_public_response,
+                    
+                    -- Cột Metadata/Audit nội bộ
+                    _ingest_time,
+                    _run_id,
+                    _source_system
+                )
+                SELECT 
+                    complaint_id, 
+                    date_received,
+                    date_sent_to_company,
+                    product, 
+                    sub_product,
+                    issue, 
+                    sub_issue,
+                    company, 
+                    state, 
+                    zip_code, 
+                    tags,
+                    submitted_via, 
+                    company_response,
+                    timely,
+                    has_narrative,
+                    complaint_what_happened,
+                    company_public_response,
+                    
+                    -- Inject dữ liệu Audit nội bộ
+                    CURRENT_TIMESTAMP AS _ingest_time,
+                    'scheduled__2026-07-03T00:00:00+00:00' AS _run_id,
+                    'cfpb_api' AS _source_system
+                FROM minio_landing.default.raw_json_complaints
+            , parameters: None
+[2026-07-04T13:16:05.695+0000] {sql.py:466} INFO - Rows affected: 77183
+[2026-07-04T13:16:05.701+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-04T13:16:05.703+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-04T13:16:05.704+0000] {sql.py:457} INFO - Running statement: SELECT COUNT(*) FROM lakehouse.bronze.raw_consumer_complaints, parameters: None
+[2026-07-04T13:16:05.926+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py:407 AirflowProviderDeprecationWarning: Call to deprecated method _make_common_data_structure. (The `_make_serializable` method is deprecated and support will be removed in a future version of the common.sql provider. Please update the DbApiHook's provider to a version based on common.sql >= 1.9.1.)
+[2026-07-04T13:16:05.927+0000] {consumer_complaints_elt.py:208} INFO - ✓ Pushdown Compute hoàn tất! Đã load 77183 dòng kèm Audit Metadata.
+[2026-07-04T13:16:05.928+0000] {python.py:202} INFO - Done. Returned value was: {'rows_loaded': 77183}
+[2026-07-04T13:16:05.983+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_elt_lakehouse, task_id=load_landing_to_bronze, execution_date=20260703T000000, start_date=20260704T131602, end_date=20260704T131605
+[2026-07-04T13:16:06.037+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-07-04T13:16:06.062+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,54 @@
+[2026-08-15T14:28:35.851+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-15T14:28:35.870+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_docs_generate_and_publish.generate_dbt_docs manual__2026-08-15T14:27:28.895425+00:00 [queued]>
+[2026-08-15T14:28:35.882+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_docs_generate_and_publish.generate_dbt_docs manual__2026-08-15T14:27:28.895425+00:00 [queued]>
+[2026-08-15T14:28:35.883+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 3
+[2026-08-15T14:28:36.016+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): generate_dbt_docs> on 2026-08-15 14:27:28.895425+00:00
+[2026-08-15T14:28:36.020+0000] {standard_task_runner.py:72} INFO - Started process 382 to run task
+[2026-08-15T14:28:36.023+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'dbt_docs_generate_and_publish', 'generate_dbt_docs', 'manual__2026-08-15T14:27:28.895425+00:00', '--job-id', '325', '--raw', '--subdir', 'DAGS_FOLDER/dbt_docs_pipeline.py', '--cfg-path', '/tmp/tmp_htbdq11']
+[2026-08-15T14:28:36.027+0000] {standard_task_runner.py:105} INFO - Job 325: Subtask generate_dbt_docs
+[2026-08-15T14:28:36.107+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_docs_generate_and_publish.generate_dbt_docs manual__2026-08-15T14:27:28.895425+00:00 [running]> on host acd208339516
+[2026-08-15T14:28:36.211+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='dbt_docs_generate_and_publish' AIRFLOW_CTX_TASK_ID='generate_dbt_docs' AIRFLOW_CTX_EXECUTION_DATE='2026-08-15T14:27:28.895425+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-08-15T14:27:28.895425+00:00'
+[2026-08-15T14:28:36.216+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-15T14:28:36.219+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-08-15T14:28:36.221+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/airflow/dbt_transform && dbt clean && dbt deps && dbt docs generate --profiles-dir /opt/airflow/dbt_transform']
+[2026-08-15T14:28:36.231+0000] {subprocess.py:86} INFO - Output:
+[2026-08-15T14:28:37.506+0000] {subprocess.py:93} INFO - [0m14:28:37  Running with dbt=1.8.8
+[2026-08-15T14:28:37.667+0000] {subprocess.py:93} INFO - [0m14:28:37  Checking /opt/airflow/dbt_transform/target/*
+[2026-08-15T14:28:37.798+0000] {subprocess.py:93} INFO - [0m14:28:37  Cleaned /opt/airflow/dbt_transform/target/*
+[2026-08-15T14:28:37.800+0000] {subprocess.py:93} INFO - [0m14:28:37  Finished cleaning all paths.
+[2026-08-15T14:28:41.073+0000] {subprocess.py:93} INFO - [0m14:28:41  Running with dbt=1.8.8
+[2026-08-15T14:28:43.081+0000] {subprocess.py:93} INFO - [0m14:28:43  Installing dbt-labs/dbt_utils
+[2026-08-15T14:28:50.441+0000] {subprocess.py:93} INFO - [0m14:28:50  Installed from version 1.3.0
+[2026-08-15T14:28:50.442+0000] {subprocess.py:93} INFO - [0m14:28:50  Updated version available: 1.4.1
+[2026-08-15T14:28:50.447+0000] {subprocess.py:93} INFO - [0m14:28:50  Installing metaplane/dbt_expectations
+[2026-08-15T14:29:10.116+0000] {subprocess.py:93} INFO - [0m14:29:10  Installed from version 0.10.8
+[2026-08-15T14:29:10.118+0000] {subprocess.py:93} INFO - [0m14:29:10  Updated version available: 0.10.10
+[2026-08-15T14:29:10.120+0000] {subprocess.py:93} INFO - [0m14:29:10  Installing godatadriven/dbt_date
+[2026-08-15T14:29:11.417+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2026-08-15T14:29:11.420+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-08-15T14:29:11.423+0000] {process_utils.py:132} INFO - Sending 15 to group 382. PIDs of all processes in the group: [384, 387, 382]
+[2026-08-15T14:29:11.425+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 382
+[2026-08-15T14:29:11.426+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2026-08-15T14:29:11.428+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2026-08-15T14:29:11.448+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/bash.py", line 240, in execute
+    result = self.subprocess_hook.run_command(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/hooks/subprocess.py", line 91, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3094, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2026-08-15T14:29:11.453+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=dbt_docs_generate_and_publish, task_id=generate_dbt_docs, run_id=manual__2026-08-15T14:27:28.895425+00:00, execution_date=20260815T142728, start_date=20260815T142835, end_date=20260815T142911
+[2026-08-15T14:29:11.474+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-15T14:29:11.519+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=382, status='terminated', exitcode=2, started='14:28:35') (382) terminated with exit code 2
+[2026-08-15T14:29:11.521+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=387, status='terminated', started='14:28:39') (387) terminated with exit code None
+[2026-08-15T14:29:11.522+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=384, status='terminated', started='14:28:35') (384) terminated with exit code None

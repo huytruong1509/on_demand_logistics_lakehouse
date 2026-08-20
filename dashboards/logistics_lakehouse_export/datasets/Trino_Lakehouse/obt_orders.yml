@@ -1,0 +1,879 @@
+table_name: obt_orders
+main_dttm_col: create_time
+currency_code_column: null
+description: "One Big Table (OBT) cho mảng Đơn hàng Delivery - Gold Layer. Tích hợp thông tin Orders, Stops, Requests và các chiều Dimensions (User, Supplier, Partner, Date)."
+default_endpoint: null
+offset: 0
+cache_timeout: 3600
+catalog: null
+schema: gold
+sql: null
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+folders: null
+uuid: d8f41111-8888-4000-8000-000000000001
+database_uuid: b7384d56-7848-43d7-8d26-7f4b89694001
+version: 1.0.0
+
+# ===================================================================
+# 1. METRICS LAYER (Chỉ số đo lường kinh doanh & vận hành)
+# ===================================================================
+metrics:
+  - metric_name: total_orders
+    verbose_name: "Total Orders"
+    metric_type: count
+    expression: "COUNT(order_id)"
+    description: "Tổng số lượng đơn hàng được khởi tạo"
+    d3format: ",.0f"
+    currency: null
+    extra: null
+    warning_text: null
+
+  - metric_name: completed_orders
+    verbose_name: "Completed Orders"
+    metric_type: count
+    expression: "COUNT(CASE WHEN order_status = 'COMPLETED' THEN 1 END)"
+    description: "Tổng số lượng đơn hàng giao thành công"
+    d3format: ",.0f"
+    currency: null
+    extra: null
+    warning_text: null
+
+  - metric_name: cancelled_orders
+    verbose_name: "Cancelled Orders"
+    metric_type: count
+    expression: "COUNT(CASE WHEN order_status = 'CANCELLED' THEN 1 END)"
+    description: "Tổng số lượng đơn hàng bị hủy"
+    d3format: ",.0f"
+    currency: null
+    extra: null
+    warning_text: null
+
+  - metric_name: fulfillment_rate
+    verbose_name: "Fulfillment Rate (%)"
+    metric_type: ratio
+    expression: "CAST(COUNT(CASE WHEN order_status = 'COMPLETED' THEN 1 END) AS DOUBLE) * 100.0 / NULLIF(COUNT(order_id), 0)"
+    description: "Tỷ lệ giao hàng thành công (%)"
+    d3format: ",.2f"
+    currency: null
+    extra: null
+    warning_text: null
+
+  - metric_name: cancellation_rate
+    verbose_name: "Cancellation Rate (%)"
+    metric_type: ratio
+    expression: "CAST(COUNT(CASE WHEN order_status = 'CANCELLED' THEN 1 END) AS DOUBLE) * 100.0 / NULLIF(COUNT(order_id), 0)"
+    description: "Tỷ lệ hủy đơn (%)"
+    d3format: ",.2f"
+    currency: null
+    extra: null
+    warning_text: null
+
+  - metric_name: gross_revenue
+    verbose_name: "GMV (Gross Revenue)"
+    metric_type: sum
+    expression: "SUM(gross_revenue)"
+    description: "Tổng tổng doanh số gộp (bao gồm cả trợ giá/discount)"
+    d3format: ",.0f"
+    currency: VND
+    extra: null
+    warning_text: null
+
+  - metric_name: net_revenue
+    verbose_name: "Net Revenue"
+    metric_type: sum
+    expression: "SUM(net_revenue)"
+    description: "Doanh thu thực nhận sau khi trừ chi phí tài xế"
+    d3format: ",.0f"
+    currency: VND
+    extra: null
+    warning_text: null
+
+  - metric_name: total_discount
+    verbose_name: "Total Discount Amount"
+    metric_type: sum
+    expression: "SUM(discount_amount)"
+    description: "Tổng tiền khuyến mãi/voucher áp dụng"
+    d3format: ",.0f"
+    currency: VND
+    extra: null
+    warning_text: null
+
+  - metric_name: total_cod_amount
+    verbose_name: "Total COD Volume"
+    metric_type: sum
+    expression: "SUM(total_cod_amount)"
+    description: "Tổng số tiền thu hộ (COD) luân chuyển"
+    d3format: ",.0f"
+    currency: VND
+    extra: null
+    warning_text: null
+
+  - metric_name: avg_distance_km
+    verbose_name: "Avg Distance (km)"
+    metric_type: avg
+    expression: "AVG(distance_km)"
+    description: "Khoảng cách giao hàng trung bình per đơn"
+    d3format: ",.2f"
+    currency: null
+    extra: null
+    warning_text: null
+
+  - metric_name: avg_accept_time_sec
+    verbose_name: "Avg Accept Time (s)"
+    metric_type: avg
+    expression: "AVG(time_to_accept_seconds)"
+    description: "Thời gian trung bình tài xế nhận đơn (giây)"
+    d3format: ",.1f"
+    currency: null
+    extra: null
+    warning_text: null
+
+  - metric_name: avg_pickup_time_min
+    verbose_name: "Avg Pickup Time (m)"
+    metric_type: avg
+    expression: "AVG(time_to_pickup_minutes)"
+    description: "Thời gian trung bình tài xế di chuyển tới điểm lấy hàng (phút)"
+    d3format: ",.1f"
+    currency: null
+    extra: null
+    warning_text: null
+
+  - metric_name: avg_delivery_time_min
+    verbose_name: "Avg Complete Time (m)"
+    metric_type: avg
+    expression: "AVG(time_to_complete_minutes)"
+    description: "Thời gian hoàn thành giao hàng trung bình (phút)"
+    d3format: ",.1f"
+    currency: null
+    extra: null
+    warning_text: null
+
+  - metric_name: avg_user_rating
+    verbose_name: "Avg User Rating"
+    metric_type: avg
+    expression: "AVG(rating_by_user)"
+    description: "Đánh giá trung bình từ khách hàng (1-5 sao)"
+    d3format: ",.2f"
+    currency: null
+    extra: null
+    warning_text: null
+
+  - metric_name: pod_compliance_rate
+    verbose_name: "POD Compliance Rate (%)"
+    metric_type: ratio
+    expression: "CAST(COUNT(CASE WHEN is_fully_pod_compliant = TRUE THEN 1 END) AS DOUBLE) * 100.0 / NULLIF(COUNT(CASE WHEN total_pod_required > 0 THEN 1 END), 0)"
+    description: "Tỷ lệ đơn hàng tuân thủ chụp ảnh xác thực giao hàng (POD)"
+    d3format: ",.2f"
+    currency: null
+    extra: null
+    warning_text: null
+  - metric_name: actual_take_rate
+    verbose_name: "Actual Take Rate (%)"
+    metric_type: custom
+    # Đo lường tỷ suất lợi nhuận thực tế
+    expression: "SUM(net_revenue) * 100.0 / NULLIF(SUM(gross_revenue), 0)"
+    description: "Tỷ lệ Net Revenue / Gross Revenue. Baseline an toàn: > 20%."
+    d3format: ",.2f"
+
+  - metric_name: promotion_intensity
+    verbose_name: "Promo Intensity (%)"
+    metric_type: custom
+    # Đo lường cường độ đốt tiền khuyến mãi
+    expression: "SUM(discount_amount) * 100.0 / NULLIF(SUM(gross_revenue), 0)"
+    description: "Tỷ lệ chi phí Khuyến mãi trên GMV. Baseline: < 15%."
+    d3format: ",.2f"
+
+  - metric_name: profitability_per_km
+    verbose_name: "Profitability per KM (VND)"
+    metric_type: custom
+    # Đánh giá hiệu quả kinh tế trên mỗi km vận hành (cần các trường mới update ở SQL)
+    expression: "(SUM(net_revenue) - SUM(user_bonus_account) - SUM(supplier_bonus_account)) / NULLIF(SUM(distance_km), 0)"
+    description: "Lợi nhuận ròng trên mỗi KM sau khi trừ mọi chi phí thưởng. Phải > 0."
+    d3format: ",.0f"
+
+  - metric_name: operational_bleeding_cod
+    verbose_name: "Ops Bleeding - COD Risk"
+    metric_type: custom
+    # Rủi ro mất tiền thu hộ ở các đơn giao thất bại nhưng không có ảnh POD hợp lệ
+    expression: "SUM(CASE WHEN order_status = 'FAILED' AND is_fully_pod_compliant = FALSE THEN total_cod_amount ELSE 0 END)"
+    description: "Tổng tiền COD có rủi ro thất thoát."
+    d3format: ",.0f"
+    currency: VND
+
+# ===================================================================
+# 2. COLUMNS LAYER (Danh mục các trường thuộc tính & Phân loại)
+# ===================================================================
+columns:
+  # Identifiers
+  - column_name: order_sk
+    verbose_name: "Order Surrogate Key"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: order_id
+    verbose_name: "Order ID"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  # Core Status & Attributes
+  - column_name: order_status
+    verbose_name: "Order Status"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: sub_status
+    verbose_name: "Sub Status"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: service_id
+    verbose_name: "Service ID"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: city_id
+    verbose_name: "City ID"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: payment_method
+    verbose_name: "Payment Method"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: promo_code
+    verbose_name: "Promo Code"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: cancel_by_user
+    verbose_name: "Cancel By User Type"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: cancel_comment
+    verbose_name: "Cancel Reason"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  # Denormalized Dimensions (Date, User, Supplier, Partner)
+  - column_name: create_date
+    verbose_name: "Create Date"
+    is_dttm: true
+    is_active: true
+    type: DATE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: year_month
+    verbose_name: "Year-Month (YYYY-MM)"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: day_name
+    verbose_name: "Day Name"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: is_weekend
+    verbose_name: "Is Weekend Flag"
+    is_dttm: false
+    is_active: true
+    type: BOOLEAN
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: create_hour
+    verbose_name: "Create Hour (0-23)"
+    is_dttm: false
+    is_active: true
+    type: INTEGER
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: user_id
+    verbose_name: "Sender User ID"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: user_name
+    verbose_name: "Sender User Name"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: supplier_id
+    verbose_name: "Driver Supplier ID"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: supplier_name
+    verbose_name: "Driver Supplier Name"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: partner_name
+    verbose_name: "Partner Name (B2B Merchant)"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  # Operations & Geospatial
+  - column_name: from_lat
+    verbose_name: "Pickup Latitude"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: false
+    filterable: false
+    expression: null
+
+  - column_name: from_lng
+    verbose_name: "Pickup Longitude"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: false
+    filterable: false
+    expression: null
+
+  - column_name: distance_km
+    verbose_name: "Distance (KM)"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: total_stops
+    verbose_name: "Total Stops"
+    is_dttm: false
+    is_active: true
+    type: BIGINT
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: total_successful_stops
+    verbose_name: "Total Successful Stops"
+    is_dttm: false
+    is_active: true
+    type: BIGINT
+    groupby: true
+    filterable: true
+    expression: null
+
+  # Financial Amounts
+  - column_name: gross_revenue
+    verbose_name: "Gross Revenue Amount"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: net_revenue
+    verbose_name: "Net Revenue Amount"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: total_fee
+    verbose_name: "Total Fee"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: discount_amount
+    verbose_name: "Discount Amount"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: total_cod_amount
+    verbose_name: "Total COD Amount"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: total_request_price
+    verbose_name: "Total Extra Request Price"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: total_request_value
+    verbose_name: "Total Extra Request Value"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  # Timestamps & Timings (SLA)
+  - column_name: create_time
+    verbose_name: "Create Timestamp"
+    is_dttm: true
+    is_active: true
+    type: TIMESTAMP
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: order_time
+    verbose_name: "Order Timestamp"
+    is_dttm: true
+    is_active: true
+    type: TIMESTAMP
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: accept_time
+    verbose_name: "Accept Timestamp"
+    is_dttm: true
+    is_active: true
+    type: TIMESTAMP
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: pickup_time
+    verbose_name: "Pickup Timestamp"
+    is_dttm: true
+    is_active: true
+    type: TIMESTAMP
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: complete_time
+    verbose_name: "Complete Timestamp"
+    is_dttm: true
+    is_active: true
+    type: TIMESTAMP
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: cancel_time
+    verbose_name: "Cancel Timestamp"
+    is_dttm: true
+    is_active: true
+    type: TIMESTAMP
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: lead_time_seconds
+    verbose_name: "Lead Time (s)"
+    is_dttm: false
+    is_active: true
+    type: BIGINT
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: time_to_accept_seconds
+    verbose_name: "Time to Accept (s)"
+    is_dttm: false
+    is_active: true
+    type: BIGINT
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: time_to_pickup_minutes
+    verbose_name: "Time to Pickup (m)"
+    is_dttm: false
+    is_active: true
+    type: BIGINT
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: time_to_complete_minutes
+    verbose_name: "Time to Complete (m)"
+    is_dttm: false
+    is_active: true
+    type: BIGINT
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: is_cancelled_before_pickup
+    verbose_name: "Is Cancelled Before Pickup Flag"
+    is_dttm: false
+    is_active: true
+    type: BOOLEAN
+    groupby: true
+    filterable: true
+    expression: null
+
+  # Quality & Compliance
+  - column_name: rating_by_user
+    verbose_name: "User Rating Score"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: rating_by_supplier
+    verbose_name: "Supplier Rating Score"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: total_pod_required
+    verbose_name: "Total POD Required Count"
+    is_dttm: false
+    is_active: true
+    type: BIGINT
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: total_pod_compliant
+    verbose_name: "Total POD Compliant Count"
+    is_dttm: false
+    is_active: true
+    type: BIGINT
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: is_fully_pod_compliant
+    verbose_name: "Is Fully POD Compliant Flag"
+    is_dttm: false
+    is_active: true
+    type: BOOLEAN
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: request_id_list
+    verbose_name: "Extra Service Request IDs"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: false
+    filterable: true
+    expression: null
+
+  - column_name: _obt_updated_at
+    verbose_name: "OBT Lineage Updated At"
+    is_dttm: true
+    is_active: true
+    type: TIMESTAMP
+    groupby: true
+    filterable: true
+    expression: null
+
+  # Core Attributes & Feedback
+  - column_name: assigned_by
+    verbose_name: "Assigned By"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: currency
+    verbose_name: "Currency"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: is_reminded
+    verbose_name: "Is Reminded Flag"
+    is_dttm: false
+    is_active: true
+    type: BOOLEAN
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: comment_by_user
+    verbose_name: "User Comment"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: false
+    filterable: true
+    expression: null
+
+  - column_name: comment_by_supplier
+    verbose_name: "Supplier Comment"
+    is_dttm: false
+    is_active: true
+    type: VARCHAR
+    groupby: false
+    filterable: true
+    expression: null
+
+  # Geospatial
+  - column_name: accept_lat
+    verbose_name: "Accept Latitude"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: false
+    filterable: false
+    expression: null
+
+  - column_name: accept_lng
+    verbose_name: "Accept Longitude"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: false
+    filterable: false
+    expression: null
+
+  # Timestamps
+  - column_name: board_time
+    verbose_name: "Board Timestamp"
+    is_dttm: true
+    is_active: true
+    type: TIMESTAMP
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: return_time
+    verbose_name: "Return Timestamp"
+    is_dttm: true
+    is_active: true
+    type: TIMESTAMP
+    groupby: true
+    filterable: true
+    expression: null
+
+  # Financial Metrics
+  - column_name: distance_fee
+    verbose_name: "Distance Fee"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: total_price
+    verbose_name: "Total Price"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: stop_fee
+    verbose_name: "Stop Fee"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: request_fee
+    verbose_name: "Request Fee"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: distance_price
+    verbose_name: "Distance Price"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: special_request_price
+    verbose_name: "Special Request Price"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: stoppoint_price
+    verbose_name: "Stop Point Price"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: voucher_discount
+    verbose_name: "Voucher Discount"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: subtotal_price
+    verbose_name: "Subtotal Price"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: total_pay
+    verbose_name: "Total Pay"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: user_main_account
+    verbose_name: "User Main Account"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: user_bonus_account
+    verbose_name: "User Bonus Account"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: supplier_main_account
+    verbose_name: "Supplier Main Account"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null
+
+  - column_name: supplier_bonus_account
+    verbose_name: "Supplier Bonus Account"
+    is_dttm: false
+    is_active: true
+    type: DOUBLE
+    groupby: true
+    filterable: true
+    expression: null

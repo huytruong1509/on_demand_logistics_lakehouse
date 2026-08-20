@@ -1,0 +1,51 @@
+[2026-06-29T02:53:18.971+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.load_landing_to_bronze manual__2026-06-29T02:51:43.035316+00:00 [queued]>
+[2026-06-29T02:53:18.979+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.load_landing_to_bronze manual__2026-06-29T02:51:43.035316+00:00 [queued]>
+[2026-06-29T02:53:18.979+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2026-06-29T02:53:18.989+0000] {taskinstance.py:2214} INFO - Executing <Task(_PythonDecoratedOperator): load_landing_to_bronze> on 2026-06-29 02:51:43.035316+00:00
+[2026-06-29T02:53:18.993+0000] {standard_task_runner.py:60} INFO - Started process 477 to run task
+[2026-06-29T02:53:18.995+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_elt_lakehouse', 'load_landing_to_bronze', 'manual__2026-06-29T02:51:43.035316+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_elt.py', '--cfg-path', '/tmp/tmpnbd6slk0']
+[2026-06-29T02:53:18.996+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask load_landing_to_bronze
+[2026-06-29T02:53:19.074+0000] {task_command.py:423} INFO - Running <TaskInstance: consumer_complaints_elt_lakehouse.load_landing_to_bronze manual__2026-06-29T02:51:43.035316+00:00 [running]> on host 54da7b202381
+[2026-06-29T02:53:19.160+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering' AIRFLOW_CTX_DAG_ID='consumer_complaints_elt_lakehouse' AIRFLOW_CTX_TASK_ID='load_landing_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-06-29T02:51:43.035316+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-29T02:51:43.035316+00:00'
+[2026-06-29T02:53:19.162+0000] {consumer_complaints_elt.py:140} INFO - Đang dọn dẹp dữ liệu cũ trong bảng Bronze...
+[2026-06-29T02:53:19.163+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-29T02:53:19.164+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-29T02:53:19.167+0000] {sql.py:457} INFO - Running statement: DELETE FROM lakehouse.bronze.raw_consumer_complaints, parameters: None
+[2026-06-29T02:53:19.213+0000] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/consumer_complaints_elt.py", line 141, in load_landing_to_bronze
+    trino_hook.run(f"DELETE FROM {TRINO_CATALOG}.{TRINO_SCHEMA}.{TARGET_TABLE}")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 404, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 462, in _run_command
+    cur.execute(sql_statement)
+  File "/home/airflow/.local/lib/python3.8/site-packages/trino/dbapi.py", line 589, in execute
+    self._iterator = iter(self._query.execute())
+  File "/home/airflow/.local/lib/python3.8/site-packages/trino/client.py", line 829, in execute
+    self._result.rows += self.fetch()
+  File "/home/airflow/.local/lib/python3.8/site-packages/trino/client.py", line 849, in fetch
+    status = self._request.process(response)
+  File "/home/airflow/.local/lib/python3.8/site-packages/trino/client.py", line 621, in process
+    raise self._process_error(response["error"], response.get("id"))
+trino.exceptions.TrinoUserError: TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 1:1: Table 'lakehouse.bronze.raw_consumer_complaints' does not exist", query_id=20260629_025319_00012_efbn3)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/consumer_complaints_elt.py", line 162, in load_landing_to_bronze
+    raise AirflowException(f"ELT Load thất bại: {e}")
+airflow.exceptions.AirflowException: ELT Load thất bại: TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 1:1: Table 'lakehouse.bronze.raw_consumer_complaints' does not exist", query_id=20260629_025319_00012_efbn3)
+[2026-06-29T02:53:19.222+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=consumer_complaints_elt_lakehouse, task_id=load_landing_to_bronze, execution_date=20260629T025143, start_date=20260629T025318, end_date=20260629T025319
+[2026-06-29T02:53:19.233+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 12 for task load_landing_to_bronze (ELT Load thất bại: TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 1:1: Table 'lakehouse.bronze.raw_consumer_complaints' does not exist", query_id=20260629_025319_00012_efbn3); 477)
+[2026-06-29T02:53:19.248+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-06-29T02:53:19.268+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

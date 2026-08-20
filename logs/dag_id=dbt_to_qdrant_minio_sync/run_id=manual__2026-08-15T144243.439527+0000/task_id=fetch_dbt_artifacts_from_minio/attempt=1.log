@@ -1,0 +1,26 @@
+[2026-08-15T14:42:45.039+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-15T14:42:45.060+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_to_qdrant_minio_sync.fetch_dbt_artifacts_from_minio manual__2026-08-15T14:42:43.439527+00:00 [queued]>
+[2026-08-15T14:42:45.192+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_to_qdrant_minio_sync.fetch_dbt_artifacts_from_minio manual__2026-08-15T14:42:43.439527+00:00 [queued]>
+[2026-08-15T14:42:45.194+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 4
+[2026-08-15T14:42:45.209+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): fetch_dbt_artifacts_from_minio> on 2026-08-15 14:42:43.439527+00:00
+[2026-08-15T14:42:45.216+0000] {standard_task_runner.py:72} INFO - Started process 2650 to run task
+[2026-08-15T14:42:45.219+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'dbt_to_qdrant_minio_sync', 'fetch_dbt_artifacts_from_minio', 'manual__2026-08-15T14:42:43.439527+00:00', '--job-id', '331', '--raw', '--subdir', 'DAGS_FOLDER/dbt_to_qdrant_dag.py', '--cfg-path', '/tmp/tmptc2041nz']
+[2026-08-15T14:42:45.223+0000] {standard_task_runner.py:105} INFO - Job 331: Subtask fetch_dbt_artifacts_from_minio
+[2026-08-15T14:42:45.303+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_to_qdrant_minio_sync.fetch_dbt_artifacts_from_minio manual__2026-08-15T14:42:43.439527+00:00 [running]> on host acd208339516
+[2026-08-15T14:42:45.377+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_platform_team' AIRFLOW_CTX_DAG_ID='dbt_to_qdrant_minio_sync' AIRFLOW_CTX_TASK_ID='fetch_dbt_artifacts_from_minio' AIRFLOW_CTX_EXECUTION_DATE='2026-08-15T14:42:43.439527+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-08-15T14:42:43.439527+00:00'
+[2026-08-15T14:42:45.381+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-15T14:42:45.383+0000] {dbt_to_qdrant_dag.py:65} INFO - Đang tiến hành stream nội dung file manifest.json từ bucket dbt-docs...
+[2026-08-15T14:42:45.385+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-08-15T14:42:45.388+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-08-15T14:42:45.389+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-08-15T14:42:45.699+0000] {dbt_to_qdrant_dag.py:71} INFO - ✅ Đọc và parse in-memory thành công: manifest.json
+[2026-08-15T14:42:45.700+0000] {dbt_to_qdrant_dag.py:65} INFO - Đang tiến hành stream nội dung file catalog.json từ bucket dbt-docs...
+[2026-08-15T14:42:45.711+0000] {dbt_to_qdrant_dag.py:71} INFO - ✅ Đọc và parse in-memory thành công: catalog.json
+[2026-08-15T14:42:45.713+0000] {dbt_to_qdrant_dag.py:77} INFO - 🎉 Đã load toàn bộ dbt artifacts từ MinIO vào bộ nhớ!
+[2026-08-15T14:42:45.716+0000] {python.py:240} INFO - Done. Returned value was: {'status': 'success', 'source': 'minio'}
+[2026-08-15T14:42:45.751+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-15T14:42:45.753+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dbt_to_qdrant_minio_sync, task_id=fetch_dbt_artifacts_from_minio, run_id=manual__2026-08-15T14:42:43.439527+00:00, execution_date=20260815T144243, start_date=20260815T144245, end_date=20260815T144245
+[2026-08-15T14:42:45.796+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-08-15T14:42:45.816+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py:1378 AirflowProviderDeprecationWarning: Call to deprecated class SimpleHttpOperator. (Class `SimpleHttpOperator` is deprecated and will be removed in a future release. Please use `HttpOperator` instead.)
+[2026-08-15T14:42:45.827+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-08-15T14:42:45.830+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

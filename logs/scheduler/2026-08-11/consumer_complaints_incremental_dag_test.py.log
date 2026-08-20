@@ -1,0 +1,421 @@
+[2026-08-11T08:20:52.508+0000] {processor.py:186} INFO - Started process (PID=280) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:20:52.511+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:20:52.519+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:20:52.518+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:20:53.478+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:20:53.589+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:20:53.589+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:20:53.677+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:20:53.677+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:20:53.743+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.255 seconds
+[2026-08-11T08:21:32.032+0000] {processor.py:186} INFO - Started process (PID=407) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:21:32.046+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:21:32.056+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:21:32.054+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:21:34.115+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:21:34.206+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:21:34.206+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:21:34.283+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:21:34.283+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:21:34.333+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 2.337 seconds
+[2026-08-11T08:22:04.568+0000] {processor.py:186} INFO - Started process (PID=535) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:22:04.570+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:22:04.574+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:22:04.574+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:22:05.046+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:22:05.088+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:22:05.088+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:22:05.126+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:22:05.125+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:22:05.163+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.603 seconds
+[2026-08-11T08:22:35.480+0000] {processor.py:186} INFO - Started process (PID=666) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:22:35.482+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:22:35.489+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:22:35.488+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:22:36.044+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:22:36.125+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:22:36.125+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:22:36.174+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:22:36.174+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:22:36.218+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.756 seconds
+[2026-08-11T08:23:07.025+0000] {processor.py:186} INFO - Started process (PID=794) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:23:07.027+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:23:07.031+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:23:07.031+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:23:07.546+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:23:07.590+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:23:07.589+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:23:07.626+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:23:07.625+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:23:07.669+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.658 seconds
+[2026-08-11T08:23:38.524+0000] {processor.py:186} INFO - Started process (PID=924) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:23:38.527+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:23:38.532+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:23:38.531+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:23:39.182+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:23:39.242+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:23:39.241+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:23:39.297+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:23:39.297+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:23:39.343+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.836 seconds
+[2026-08-11T08:24:09.759+0000] {processor.py:186} INFO - Started process (PID=1052) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:24:09.761+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:24:09.766+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:24:09.766+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:24:10.515+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:24:10.597+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:24:10.596+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:24:10.646+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:24:10.645+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:24:10.697+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.950 seconds
+[2026-08-11T08:24:41.253+0000] {processor.py:186} INFO - Started process (PID=1180) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:24:41.255+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:24:41.263+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:24:41.262+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:24:41.840+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:24:41.882+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:24:41.881+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:24:41.915+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:24:41.915+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:24:41.949+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.712 seconds
+[2026-08-11T08:25:12.310+0000] {processor.py:186} INFO - Started process (PID=1311) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:25:12.311+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:25:12.314+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:25:12.314+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:25:12.737+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:25:12.775+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:25:12.775+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:25:12.809+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:25:12.808+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:25:12.836+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.531 seconds
+[2026-08-11T08:25:43.338+0000] {processor.py:186} INFO - Started process (PID=1439) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:25:43.340+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:25:43.347+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:25:43.346+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:25:43.983+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:25:44.029+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:25:44.029+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:25:44.070+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:25:44.070+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:25:44.115+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.790 seconds
+[2026-08-11T08:26:14.444+0000] {processor.py:186} INFO - Started process (PID=1569) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:26:14.446+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:26:14.449+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:26:14.449+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:26:14.895+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:26:14.936+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:26:14.936+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:26:14.975+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:26:14.975+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:26:15.004+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.568 seconds
+[2026-08-11T08:26:45.459+0000] {processor.py:186} INFO - Started process (PID=1697) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:26:45.462+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:26:45.468+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:26:45.468+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:26:46.370+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:26:46.436+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:26:46.435+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:26:46.501+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:26:46.500+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:26:46.554+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.107 seconds
+[2026-08-11T08:27:17.170+0000] {processor.py:186} INFO - Started process (PID=1825) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:27:17.172+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:27:17.176+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:27:17.176+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:27:17.930+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:27:17.990+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:27:17.989+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:27:18.035+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:27:18.035+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:27:18.353+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.192 seconds
+[2026-08-11T08:27:48.736+0000] {processor.py:186} INFO - Started process (PID=1955) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:27:48.739+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:27:48.743+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:27:48.742+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:27:49.302+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:27:49.356+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:27:49.355+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:27:49.412+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:27:49.411+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:27:49.476+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.747 seconds
+[2026-08-11T08:28:19.834+0000] {processor.py:186} INFO - Started process (PID=2084) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:28:19.836+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T08:28:19.841+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:28:19.840+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:28:20.940+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T08:28:21.028+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:28:21.027+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T08:28:21.511+0000] {logging_mixin.py:190} INFO - [2026-08-11T08:28:21.511+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T08:28:21.563+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.746 seconds
+[2026-08-11T09:01:23.313+0000] {processor.py:186} INFO - Started process (PID=280) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:01:23.326+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:01:23.347+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:01:23.346+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:01:25.234+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:01:25.367+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:01:25.366+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:01:25.497+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:01:25.496+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:01:25.599+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 2.311 seconds
+[2026-08-11T09:01:56.307+0000] {processor.py:186} INFO - Started process (PID=409) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:01:56.310+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:01:56.315+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:01:56.314+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:01:57.195+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:01:57.262+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:01:57.261+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:01:57.329+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:01:57.328+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:01:57.381+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.087 seconds
+[2026-08-11T09:02:27.950+0000] {processor.py:186} INFO - Started process (PID=536) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:02:27.953+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:02:27.964+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:02:27.963+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:02:29.352+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:02:29.442+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:02:29.442+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:02:29.548+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:02:29.547+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:02:29.628+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.698 seconds
+[2026-08-11T09:02:59.751+0000] {processor.py:186} INFO - Started process (PID=666) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:02:59.753+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:02:59.758+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:02:59.757+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:03:00.378+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:03:00.439+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:03:00.439+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:03:00.492+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:03:00.491+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:03:00.530+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.790 seconds
+[2026-08-11T09:03:30.818+0000] {processor.py:186} INFO - Started process (PID=795) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:03:30.832+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:03:30.851+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:03:30.849+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:03:31.674+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:03:31.743+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:03:31.742+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:03:31.821+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:03:31.820+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:03:31.894+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.104 seconds
+[2026-08-11T09:04:02.495+0000] {processor.py:186} INFO - Started process (PID=925) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:04:02.498+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:04:02.504+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:04:02.503+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:04:03.396+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:04:03.445+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:04:03.445+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:04:03.501+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:04:03.500+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:04:03.548+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.068 seconds
+[2026-08-11T09:09:06.279+0000] {processor.py:186} INFO - Started process (PID=281) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:09:06.282+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:09:06.291+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:06.290+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:09:07.418+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:09:07.638+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:07.636+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:consumer_complaints_incremental_load_test
+[2026-08-11T09:09:07.678+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:07.677+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:consumer_complaints_incremental_load_test
+[2026-08-11T09:09:07.709+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:07.708+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:consumer_complaints_incremental_load_test
+[2026-08-11T09:09:07.737+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:07.736+0000] {override.py:1900} INFO - Created Permission View: menu access on DAG Run:consumer_complaints_incremental_load_test
+[2026-08-11T09:09:07.760+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:07.759+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG Run:consumer_complaints_incremental_load_test
+[2026-08-11T09:09:07.785+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:07.784+0000] {override.py:1900} INFO - Created Permission View: can create on DAG Run:consumer_complaints_incremental_load_test
+[2026-08-11T09:09:07.815+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:07.814+0000] {override.py:1900} INFO - Created Permission View: can read on DAG Run:consumer_complaints_incremental_load_test
+[2026-08-11T09:09:07.817+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:07.816+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:09:07.852+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:07.851+0000] {dag.py:3262} INFO - Creating ORM DAG for consumer_complaints_incremental_load_test
+[2026-08-11T09:09:07.887+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:07.887+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:09:07.949+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.688 seconds
+[2026-08-11T09:09:39.026+0000] {processor.py:186} INFO - Started process (PID=410) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:09:39.029+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:09:39.037+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:39.036+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:09:40.393+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:09:40.488+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:40.488+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:09:40.570+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:09:40.569+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:09:40.644+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.636 seconds
+[2026-08-11T09:10:11.485+0000] {processor.py:186} INFO - Started process (PID=537) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:10:11.487+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:10:11.492+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:10:11.491+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:10:12.048+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:10:12.087+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:10:12.087+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:10:12.126+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:10:12.126+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:10:12.162+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.686 seconds
+[2026-08-11T09:10:42.621+0000] {processor.py:186} INFO - Started process (PID=668) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:10:42.627+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:10:42.632+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:10:42.632+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:10:43.549+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:10:43.624+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:10:43.624+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:10:43.683+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:10:43.683+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:10:43.716+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.111 seconds
+[2026-08-11T09:11:13.903+0000] {processor.py:186} INFO - Started process (PID=802) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:11:13.905+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:11:13.908+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:11:13.907+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:11:14.683+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:11:14.757+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:11:14.756+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:11:14.832+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:11:14.831+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:11:14.898+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.008 seconds
+[2026-08-11T09:11:45.165+0000] {processor.py:186} INFO - Started process (PID=938) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:11:45.166+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:11:45.170+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:11:45.170+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:11:45.769+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:11:45.819+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:11:45.818+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:11:45.865+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:11:45.865+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:11:45.926+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.771 seconds
+[2026-08-11T09:12:16.382+0000] {processor.py:186} INFO - Started process (PID=1066) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:12:16.383+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:12:16.387+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:12:16.387+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:12:17.053+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:12:17.108+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:12:17.108+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:12:17.163+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:12:17.163+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:12:17.219+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.849 seconds
+[2026-08-11T09:12:47.579+0000] {processor.py:186} INFO - Started process (PID=1194) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:12:47.581+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:12:47.585+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:12:47.584+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:12:48.100+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:12:48.140+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:12:48.140+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:12:48.174+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:12:48.174+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:12:48.213+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.641 seconds
+[2026-08-11T09:13:19.355+0000] {processor.py:186} INFO - Started process (PID=1324) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:13:19.360+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:13:19.373+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:13:19.369+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:13:20.318+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:13:20.413+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:13:20.412+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:13:20.497+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:13:20.496+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:13:20.571+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.241 seconds
+[2026-08-11T09:13:51.148+0000] {processor.py:186} INFO - Started process (PID=1452) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:13:51.151+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:13:51.156+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:13:51.155+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:13:52.013+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:13:52.061+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:13:52.061+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:13:52.399+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:13:52.398+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:13:52.442+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.303 seconds
+[2026-08-11T09:14:22.919+0000] {processor.py:186} INFO - Started process (PID=1579) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:14:22.920+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:14:22.924+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:14:22.924+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:14:23.403+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:14:23.453+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:14:23.452+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:14:23.702+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:14:23.701+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:14:23.744+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.832 seconds
+[2026-08-11T09:14:55.266+0000] {processor.py:186} INFO - Started process (PID=1740) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:14:55.268+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:14:55.273+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:14:55.272+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:14:56.499+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:14:56.550+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:14:56.550+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:14:56.601+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:14:56.601+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:14:56.657+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.404 seconds
+[2026-08-11T09:15:27.198+0000] {processor.py:186} INFO - Started process (PID=1865) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:15:27.202+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:15:27.217+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:15:27.215+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:15:28.611+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:15:28.688+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:15:28.688+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:15:28.756+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:15:28.756+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:15:28.812+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.649 seconds
+[2026-08-11T09:15:59.511+0000] {processor.py:186} INFO - Started process (PID=1997) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:15:59.515+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:15:59.524+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:15:59.523+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:16:00.384+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:16:00.434+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:16:00.433+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:16:00.501+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:16:00.500+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:16:00.551+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.057 seconds
+[2026-08-11T09:16:31.311+0000] {processor.py:186} INFO - Started process (PID=2125) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:16:31.313+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:16:31.321+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:16:31.321+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:16:32.545+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:16:32.618+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:16:32.617+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:16:32.689+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:16:32.689+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:16:32.743+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.450 seconds
+[2026-08-11T09:17:03.437+0000] {processor.py:186} INFO - Started process (PID=2252) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:17:03.438+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:17:03.442+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:17:03.442+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:17:04.214+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:17:04.266+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:17:04.266+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:17:04.310+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:17:04.310+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:17:04.355+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.932 seconds
+[2026-08-11T09:17:36.456+0000] {processor.py:186} INFO - Started process (PID=2393) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:17:36.458+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:17:36.466+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:17:36.465+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:17:37.931+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:17:37.999+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:17:37.999+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:17:38.079+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:17:38.079+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:17:38.144+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.706 seconds
+[2026-08-11T09:18:08.764+0000] {processor.py:186} INFO - Started process (PID=2635) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:18:08.767+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:18:08.774+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:18:08.773+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:18:09.947+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:18:10.051+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:18:10.048+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:18:10.131+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:18:10.131+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:18:10.195+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.446 seconds
+[2026-08-11T09:18:42.583+0000] {processor.py:186} INFO - Started process (PID=2797) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:18:42.585+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:18:42.588+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:18:42.588+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:18:43.247+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:18:43.296+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:18:43.295+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:18:43.331+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:18:43.331+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:18:43.361+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.787 seconds
+[2026-08-11T09:19:14.252+0000] {processor.py:186} INFO - Started process (PID=2925) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:19:14.255+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:19:14.262+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:19:14.261+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:19:15.445+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:19:15.488+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:19:15.488+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:19:15.525+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:19:15.525+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:19:15.563+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.325 seconds
+[2026-08-11T09:19:46.110+0000] {processor.py:186} INFO - Started process (PID=3052) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:19:46.111+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:19:46.114+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:19:46.113+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:19:46.827+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:19:46.873+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:19:46.872+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:19:46.911+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:19:46.911+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:19:46.948+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.845 seconds
+[2026-08-11T09:20:17.738+0000] {processor.py:186} INFO - Started process (PID=3183) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:20:17.742+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:20:17.749+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:20:17.748+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:20:18.460+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:20:18.496+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:20:18.496+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:20:18.529+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:20:18.529+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:20:18.559+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.837 seconds
+[2026-08-11T09:20:48.873+0000] {processor.py:186} INFO - Started process (PID=3311) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:20:48.877+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:20:48.885+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:20:48.884+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:20:49.458+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:20:49.479+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:20:49.479+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:20:49.500+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:20:49.500+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:20:49.522+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.671 seconds
+[2026-08-11T09:23:51.409+0000] {processor.py:186} INFO - Started process (PID=279) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:23:51.413+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:23:51.418+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:23:51.418+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:23:52.479+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:23:52.567+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:23:52.566+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:23:52.633+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:23:52.632+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:23:52.726+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.332 seconds
+[2026-08-11T09:24:23.320+0000] {processor.py:186} INFO - Started process (PID=407) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:24:23.322+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:24:23.325+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:24:23.325+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:24:23.853+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:24:23.897+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:24:23.896+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:24:23.936+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:24:23.936+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:24:23.974+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.663 seconds
+[2026-08-11T09:24:54.675+0000] {processor.py:186} INFO - Started process (PID=534) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:24:54.677+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:24:54.680+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:24:54.680+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:24:55.028+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:24:55.056+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:24:55.056+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:24:55.086+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:24:55.086+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:24:55.115+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.445 seconds
+[2026-08-11T09:25:25.422+0000] {processor.py:186} INFO - Started process (PID=665) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:25:25.425+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:25:25.429+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:25:25.429+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:25:25.786+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:25:25.813+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:25:25.812+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:25:25.838+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:25:25.838+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:25:25.859+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.444 seconds
+[2026-08-11T09:25:56.159+0000] {processor.py:186} INFO - Started process (PID=795) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:25:56.161+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:25:56.166+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:25:56.165+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:25:56.448+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:25:56.477+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:25:56.477+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:25:56.498+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:25:56.498+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:25:56.523+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.375 seconds
+[2026-08-11T09:26:27.027+0000] {processor.py:186} INFO - Started process (PID=925) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:26:27.028+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:26:27.031+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:26:27.031+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:26:27.393+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:26:27.422+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:26:27.422+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:26:27.449+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:26:27.449+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:26:27.473+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.454 seconds
+[2026-08-11T09:26:57.915+0000] {processor.py:186} INFO - Started process (PID=1054) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:26:57.916+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:26:57.919+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:26:57.919+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:26:58.282+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:26:58.313+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:26:58.312+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:26:58.339+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:26:58.338+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:26:58.362+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.455 seconds
+[2026-08-11T09:27:30.034+0000] {processor.py:186} INFO - Started process (PID=1195) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:27:30.038+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:27:30.045+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:27:30.044+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:27:30.692+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:27:30.753+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:27:30.753+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:27:30.820+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:27:30.819+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:27:30.867+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.852 seconds
+[2026-08-11T09:28:02.081+0000] {processor.py:186} INFO - Started process (PID=1329) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:28:02.092+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:28:02.110+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:28:02.108+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:28:03.931+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:28:04.087+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:28:04.086+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:28:04.232+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:28:04.231+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:28:04.317+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 2.266 seconds
+[2026-08-11T09:28:38.401+0000] {processor.py:186} INFO - Started process (PID=1476) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:28:38.404+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:28:38.412+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:28:38.411+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:28:39.226+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:28:39.291+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:28:39.290+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:28:39.616+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:28:39.616+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:28:39.668+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.288 seconds
+[2026-08-11T09:29:10.102+0000] {processor.py:186} INFO - Started process (PID=1605) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:29:10.104+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:29:10.111+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:29:10.110+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:29:10.686+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:29:10.742+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:29:10.742+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:29:11.146+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:29:11.146+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:29:11.170+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.077 seconds
+[2026-08-11T09:29:41.458+0000] {processor.py:186} INFO - Started process (PID=1735) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:29:41.464+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:29:41.478+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:29:41.476+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:29:42.307+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:29:42.354+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:29:42.354+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:29:42.400+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:29:42.399+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:29:42.472+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 1.030 seconds
+[2026-08-11T09:30:13.299+0000] {processor.py:186} INFO - Started process (PID=1864) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:30:13.302+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:30:13.308+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:30:13.307+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:30:14.169+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:30:14.205+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:30:14.205+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:30:14.239+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:30:14.239+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:30:14.280+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.993 seconds
+[2026-08-11T09:30:44.607+0000] {processor.py:186} INFO - Started process (PID=1996) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:30:44.609+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:30:44.612+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:30:44.612+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:30:45.334+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:30:45.382+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:30:45.381+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:30:45.428+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:30:45.428+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:30:45.474+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.875 seconds
+[2026-08-11T09:31:15.683+0000] {processor.py:186} INFO - Started process (PID=2127) to work on /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:31:15.685+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/consumer_complaints_incremental_dag_test.py for tasks to queue
+[2026-08-11T09:31:15.687+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:31:15.687+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:31:16.327+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_incremental_load_test' retrieved from /opt/airflow/dags/consumer_complaints_incremental_dag_test.py
+[2026-08-11T09:31:16.353+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:31:16.352+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-11T09:31:16.378+0000] {logging_mixin.py:190} INFO - [2026-08-11T09:31:16.378+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_incremental_load_test to 2026-08-10 00:00:00+00:00, run_after=2026-08-11 00:00:00+00:00
+[2026-08-11T09:31:16.408+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/consumer_complaints_incremental_dag_test.py took 0.731 seconds

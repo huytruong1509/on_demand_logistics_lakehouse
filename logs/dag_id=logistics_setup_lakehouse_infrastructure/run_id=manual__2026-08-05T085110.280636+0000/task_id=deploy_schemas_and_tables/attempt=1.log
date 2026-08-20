@@ -1,0 +1,107 @@
+[2026-08-05T08:51:12.334+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-05T08:51:12.360+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: logistics_setup_lakehouse_infrastructure.deploy_schemas_and_tables manual__2026-08-05T08:51:10.280636+00:00 [queued]>
+[2026-08-05T08:51:12.370+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: logistics_setup_lakehouse_infrastructure.deploy_schemas_and_tables manual__2026-08-05T08:51:10.280636+00:00 [queued]>
+[2026-08-05T08:51:12.373+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-08-05T08:51:12.387+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): deploy_schemas_and_tables> on 2026-08-05 08:51:10.280636+00:00
+[2026-08-05T08:51:12.392+0000] {standard_task_runner.py:72} INFO - Started process 434 to run task
+[2026-08-05T08:51:12.395+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'logistics_setup_lakehouse_infrastructure', 'deploy_schemas_and_tables', 'manual__2026-08-05T08:51:10.280636+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/logistics_setup_infrastructure.py', '--cfg-path', '/tmp/tmphwu3sfk_']
+[2026-08-05T08:51:12.399+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask deploy_schemas_and_tables
+[2026-08-05T08:51:12.469+0000] {task_command.py:467} INFO - Running <TaskInstance: logistics_setup_lakehouse_infrastructure.deploy_schemas_and_tables manual__2026-08-05T08:51:10.280636+00:00 [running]> on host ea50901866c3
+[2026-08-05T08:51:12.672+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='logistics_setup_lakehouse_infrastructure' AIRFLOW_CTX_TASK_ID='deploy_schemas_and_tables' AIRFLOW_CTX_EXECUTION_DATE='2026-08-05T08:51:10.280636+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-08-05T08:51:10.280636+00:00'
+[2026-08-05T08:51:12.674+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-05T08:51:12.682+0000] {logistics_setup_infrastructure.py:58} INFO - ⏭️ BỎ QUA TẦNG LANDING: Không cần tạo bảng Trino cho file raw JSON.
+[2026-08-05T08:51:12.684+0000] {logistics_setup_infrastructure.py:64} INFO - === ĐANG DEPLOY TẦNG: BRONZE_LAYER ===
+[2026-08-05T08:51:12.686+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-05T08:51:12.688+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-05T08:51:12.692+0000] {sql.py:509} INFO - Running statement: CREATE SCHEMA IF NOT EXISTS lakehouse.bronze, parameters: None
+[2026-08-05T08:51:13.877+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-05T08:51:13.880+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-05T08:51:13.881+0000] {sql.py:509} INFO - Running statement: 
+                CREATE TABLE IF NOT EXISTS lakehouse.bronze.raw_orders (
+                    _db_id INTEGER,
+    _id VARCHAR,
+    status VARCHAR,
+    sub_status VARCHAR,
+    service_id VARCHAR,
+    city_id VARCHAR,
+    requests VARCHAR,
+    user_id VARCHAR,
+    user_name VARCHAR,
+    supplier_id VARCHAR,
+    supplier_name VARCHAR,
+    partner VARCHAR,
+    create_time DOUBLE,
+    order_time DOUBLE,
+    idle_until DOUBLE,
+    accept_time DOUBLE,
+    accept_lat DOUBLE,
+    accept_lng DOUBLE,
+    accept_distance DOUBLE,
+    accept_duration DOUBLE,
+    board_time DOUBLE,
+    pickup_time DOUBLE,
+    cancel_time DOUBLE,
+    complete_time DOUBLE,
+    return_time DOUBLE,
+    cancel_comment VARCHAR,
+    cancel_by_user VARCHAR,
+    currency VARCHAR,
+    promo_code VARCHAR,
+    payment_method VARCHAR,
+    distance DOUBLE,
+    distance_fee DOUBLE,
+    stop_fee DOUBLE,
+    request_fee DOUBLE,
+    discount DOUBLE,
+    total_fee DOUBLE,
+    distance_price DOUBLE,
+    special_request_price DOUBLE,
+    stoppoint_price DOUBLE,
+    voucher_discount DOUBLE,
+    subtotal_price DOUBLE,
+    total_price DOUBLE,
+    user_main_account DOUBLE,
+    user_bonus_account DOUBLE,
+    total_pay DOUBLE,
+    supplier_main_account DOUBLE,
+    supplier_bonus_account DOUBLE,
+    rating_by_user INTEGER,
+    comment_by_user VARCHAR,
+    rating_by_supplier INTEGER,
+    comment_by_supplier VARCHAR,
+    path VARCHAR,
+    remarks VARCHAR,
+    remind BOOLEAN,
+    assigned_by VARCHAR,
+    index INTEGER,
+    from_location VARCHAR,
+    _rescued_data VARCHAR,
+    _ingest_time TIMESTAMP(6) WITH TIME ZONE,
+    _run_id VARCHAR,
+    _source_system VARCHAR
+                )
+                
+WITH (
+    format = 'PARQUET',
+    partitioning = ARRAY['day(_ingest_time)']
+), parameters: None
+[2026-08-05T08:51:16.234+0000] {logistics_setup_infrastructure.py:101} INFO - Đang kiểm tra Schema Drift cho bảng lakehouse.bronze.raw_orders...
+[2026-08-05T08:51:16.236+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-05T08:51:16.237+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-05T08:51:16.239+0000] {sql.py:509} INFO - Running statement: SELECT column_name 
+                    FROM lakehouse.information_schema.columns 
+                    WHERE table_schema = 'bronze' AND table_name = 'raw_orders', parameters: None
+[2026-08-05T08:51:16.941+0000] {logistics_setup_infrastructure.py:64} INFO - === ĐANG DEPLOY TẦNG: SILVER_LAYER ===
+[2026-08-05T08:51:16.944+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-05T08:51:16.946+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-05T08:51:16.948+0000] {sql.py:509} INFO - Running statement: CREATE SCHEMA IF NOT EXISTS lakehouse.silver, parameters: None
+[2026-08-05T08:51:17.002+0000] {logistics_setup_infrastructure.py:64} INFO - === ĐANG DEPLOY TẦNG: GOLD_LAYER ===
+[2026-08-05T08:51:17.007+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-05T08:51:17.009+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-05T08:51:17.011+0000] {sql.py:509} INFO - Running statement: CREATE SCHEMA IF NOT EXISTS lakehouse.gold, parameters: None
+[2026-08-05T08:51:17.072+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-08-05T08:51:17.087+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-05T08:51:17.090+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=logistics_setup_lakehouse_infrastructure, task_id=deploy_schemas_and_tables, run_id=manual__2026-08-05T08:51:10.280636+00:00, execution_date=20260805T085110, start_date=20260805T085112, end_date=20260805T085117
+[2026-08-05T08:51:17.154+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-08-05T08:51:17.172+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-08-05T08:51:17.175+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

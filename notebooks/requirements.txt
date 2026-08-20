@@ -1,0 +1,10 @@
+numpy
+pandas
+trino
+s3fs
+pyarrow
+plotly
+ipywidgets
+voila
+jupyterlab
+nbformat>=4.2.0

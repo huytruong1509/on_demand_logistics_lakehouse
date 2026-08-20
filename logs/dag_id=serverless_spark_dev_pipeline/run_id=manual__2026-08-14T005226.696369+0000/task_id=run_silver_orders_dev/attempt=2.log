@@ -1,0 +1,316 @@
+[2026-08-14T00:53:40.486+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-14T00:53:40.504+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: serverless_spark_dev_pipeline.run_silver_orders_dev manual__2026-08-14T00:52:26.696369+00:00 [queued]>
+[2026-08-14T00:53:40.512+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: serverless_spark_dev_pipeline.run_silver_orders_dev manual__2026-08-14T00:52:26.696369+00:00 [queued]>
+[2026-08-14T00:53:40.514+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2026-08-14T00:53:40.525+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_silver_orders_dev> on 2026-08-14 00:52:26.696369+00:00
+[2026-08-14T00:53:40.530+0000] {standard_task_runner.py:72} INFO - Started process 683 to run task
+[2026-08-14T00:53:40.533+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'serverless_spark_dev_pipeline', 'run_silver_orders_dev', 'manual__2026-08-14T00:52:26.696369+00:00', '--job-id', '142', '--raw', '--subdir', 'DAGS_FOLDER/silver_spark_serverless.py', '--cfg-path', '/tmp/tmppbe_r6s8']
+[2026-08-14T00:53:40.536+0000] {standard_task_runner.py:105} INFO - Job 142: Subtask run_silver_orders_dev
+[2026-08-14T00:53:40.616+0000] {task_command.py:467} INFO - Running <TaskInstance: serverless_spark_dev_pipeline.run_silver_orders_dev manual__2026-08-14T00:52:26.696369+00:00 [running]> on host 7ff084437984
+[2026-08-14T00:53:40.808+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering_dev' AIRFLOW_CTX_DAG_ID='serverless_spark_dev_pipeline' AIRFLOW_CTX_TASK_ID='run_silver_orders_dev' AIRFLOW_CTX_EXECUTION_DATE='2026-08-14T00:52:26.696369+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-08-14T00:52:26.696369+00:00'
+[2026-08-14T00:53:40.810+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-14T00:53:40.882+0000] {docker.py:367} INFO - Starting docker container from image logistics-lakehouse-spark:latest
+[2026-08-14T00:53:43.161+0000] {docker.py:438} INFO - 2026-08-14 00:53:43 | INFO     | __main__ | 🚀 Khởi động Pipeline. Cấu hình: Job='silver_orders', LookbackDays=3
+[2026-08-14T00:53:43.163+0000] {docker.py:438} INFO - 2026-08-14 00:53:43 | INFO     | configs.spark_config | Initializing SparkSession for App: Job_Silver_Orders in DEV environment...
+[2026-08-14T00:53:43.257+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO SparkContext: Running Spark version 3.5.4
+[2026-08-14T00:53:43.260+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO SparkContext: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+[2026-08-14T00:53:43.262+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO SparkContext: Java version 17.0.13
+[2026-08-14T00:53:43.329+0000] {docker.py:438} INFO - 26/08/14 00:53:43 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-08-14T00:53:43.458+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO ResourceUtils: ==============================================================
+[2026-08-14T00:53:43.461+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2026-08-14T00:53:43.463+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO ResourceUtils: ==============================================================
+[2026-08-14T00:53:43.467+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO SparkContext: Submitted application: Job_Silver_Orders
+[2026-08-14T00:53:43.502+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 2048, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2026-08-14T00:53:43.506+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO ResourceProfile: Limiting resource is cpu
+[2026-08-14T00:53:43.508+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2026-08-14T00:53:43.586+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO SecurityManager: Changing view acls to: spark
+[2026-08-14T00:53:43.588+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO SecurityManager: Changing modify acls to: spark
+[2026-08-14T00:53:43.589+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO SecurityManager: Changing view acls groups to:
+[2026-08-14T00:53:43.591+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO SecurityManager: Changing modify acls groups to:
+[2026-08-14T00:53:43.592+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+[2026-08-14T00:53:43.912+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO Utils: Successfully started service 'sparkDriver' on port 42319.
+[2026-08-14T00:53:43.951+0000] {docker.py:438} INFO - 26/08/14 00:53:43 INFO SparkEnv: Registering MapOutputTracker
+[2026-08-14T00:53:44.018+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO SparkEnv: Registering BlockManagerMaster
+[2026-08-14T00:53:44.033+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2026-08-14T00:53:44.036+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2026-08-14T00:53:44.039+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2026-08-14T00:53:44.060+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-18b8f4c8-c611-47cd-a11d-7fc3d812e495
+[2026-08-14T00:53:44.083+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO MemoryStore: MemoryStore started with capacity 3.0 GiB
+[2026-08-14T00:53:44.114+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO SparkEnv: Registering OutputCommitCoordinator
+[2026-08-14T00:53:44.321+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2026-08-14T00:53:44.380+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2026-08-14T00:53:44.457+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO Executor: Starting executor ID driver on host 9e36526becd3
+[2026-08-14T00:53:44.459+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO Executor: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+[2026-08-14T00:53:44.461+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO Executor: Java version 17.0.13
+[2026-08-14T00:53:44.463+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2026-08-14T00:53:44.466+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@55401d63 for default.
+[2026-08-14T00:53:44.480+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43553.
+[2026-08-14T00:53:44.482+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO NettyBlockTransferService: Server created on 9e36526becd3:43553
+[2026-08-14T00:53:44.485+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2026-08-14T00:53:44.488+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 9e36526becd3, 43553, None)
+[2026-08-14T00:53:44.492+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO BlockManagerMasterEndpoint: Registering block manager 9e36526becd3:43553 with 3.0 GiB RAM, BlockManagerId(driver, 9e36526becd3, 43553, None)
+[2026-08-14T00:53:44.494+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 9e36526becd3, 43553, None)
+[2026-08-14T00:53:44.495+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 9e36526becd3, 43553, None)
+[2026-08-14T00:53:44.791+0000] {docker.py:438} INFO - 2026-08-14 00:53:44 | INFO     | configs.spark_config | Spark initialized successfully. Version: 3.5.4
+[2026-08-14T00:53:44.796+0000] {docker.py:438} INFO - 2026-08-14 00:53:44 | INFO     | jobs.silver_orders_job | --- BẮT ĐẦU CHẠY JOB: Job_Silver_Orders ---
+[2026-08-14T00:53:44.866+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2026-08-14T00:53:44.868+0000] {docker.py:438} INFO - 26/08/14 00:53:44 INFO SharedState: Warehouse path is 'file:/opt/spark/work-dir/spark-warehouse'.
+[2026-08-14T00:53:45.821+0000] {docker.py:438} INFO - 26/08/14 00:53:45 INFO CatalogUtil: Loading custom FileIO implementation: org.apache.iceberg.hadoop.HadoopFileIO
+[2026-08-14T00:53:46.181+0000] {docker.py:438} INFO - 26/08/14 00:53:46 INFO BaseMetastoreTableOperations: Refreshing table metadata from new version: s3a://lakehouse/silver/orders_dfc1f84c-e61b-43fa-abae-e186ee4e613d/metadata/00000-55acda65-11fb-4b6e-befb-df97e1270911.metadata.json
+[2026-08-14T00:53:46.272+0000] {docker.py:438} INFO - 26/08/14 00:53:46 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+[2026-08-14T00:53:46.280+0000] {docker.py:438} INFO - 26/08/14 00:53:46 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+[2026-08-14T00:53:46.283+0000] {docker.py:438} INFO - 26/08/14 00:53:46 INFO MetricsSystemImpl: s3a-file-system metrics system started
+[2026-08-14T00:53:46.795+0000] {docker.py:438} INFO - 2026-08-14 00:53:46 | ERROR    | jobs.silver_orders_job | Job Job_Silver_Orders thất bại với lỗi: An error occurred while calling o77.tableExists.
+[2026-08-14T00:53:46.797+0000] {docker.py:438} INFO - : org.apache.iceberg.exceptions.NotFoundException: Failed to open input stream for file: s3a://lakehouse/silver/orders_dfc1f84c-e61b-43fa-abae-e186ee4e613d/metadata/00000-55acda65-11fb-4b6e-befb-df97e1270911.metadata.json
+[2026-08-14T00:53:46.799+0000] {docker.py:438} INFO - 	at org.apache.iceberg.hadoop.HadoopInputFile.newStream(HadoopInputFile.java:185)
+[2026-08-14T00:53:46.803+0000] {docker.py:438} INFO - 	at org.apache.iceberg.TableMetadataParser.read(TableMetadataParser.java:279)
+[2026-08-14T00:53:46.805+0000] {docker.py:438} INFO - 	at org.apache.iceberg.TableMetadataParser.read(TableMetadataParser.java:273)
+[2026-08-14T00:53:46.806+0000] {docker.py:438} INFO - 	at org.apache.iceberg.nessie.NessieTableOperations.lambda$doRefresh$1(NessieTableOperations.java:105)
+[2026-08-14T00:53:46.807+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreTableOperations.lambda$refreshFromMetadataLocation$1(BaseMetastoreTableOperations.java:201)
+[2026-08-14T00:53:46.808+0000] {docker.py:438} INFO - 	at org.apache.iceberg.util.Tasks$Builder.runTaskWithRetry(Tasks.java:413)
+[2026-08-14T00:53:46.809+0000] {docker.py:438} INFO - 	at org.apache.iceberg.util.Tasks$Builder.runSingleThreaded(Tasks.java:219)
+[2026-08-14T00:53:46.812+0000] {docker.py:438} INFO - 	at org.apache.iceberg.util.Tasks$Builder.run(Tasks.java:203)
+[2026-08-14T00:53:46.816+0000] {docker.py:438} INFO - 	at org.apache.iceberg.util.Tasks$Builder.run(Tasks.java:196)
+[2026-08-14T00:53:46.818+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreTableOperations.refreshFromMetadataLocation(BaseMetastoreTableOperations.java:201)
+[2026-08-14T00:53:46.819+0000] {docker.py:438} INFO - 	at org.apache.iceberg.nessie.NessieTableOperations.doRefresh(NessieTableOperations.java:99)
+[2026-08-14T00:53:46.821+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreTableOperations.refresh(BaseMetastoreTableOperations.java:90)
+[2026-08-14T00:53:46.822+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreTableOperations.current(BaseMetastoreTableOperations.java:73)
+[2026-08-14T00:53:46.825+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreCatalog.loadTable(BaseMetastoreCatalog.java:49)
+[2026-08-14T00:53:46.826+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.BoundedLocalCache.lambda$doComputeIfAbsent$14(BoundedLocalCache.java:2406)
+[2026-08-14T00:53:46.828+0000] {docker.py:438} INFO - 	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1916)
+[2026-08-14T00:53:46.829+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.BoundedLocalCache.doComputeIfAbsent(BoundedLocalCache.java:2404)
+[2026-08-14T00:53:46.831+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.BoundedLocalCache.computeIfAbsent(BoundedLocalCache.java:2387)
+[2026-08-14T00:53:46.833+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.LocalCache.computeIfAbsent(LocalCache.java:108)
+[2026-08-14T00:53:46.834+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.LocalManualCache.get(LocalManualCache.java:62)
+[2026-08-14T00:53:46.836+0000] {docker.py:438} INFO - 	at org.apache.iceberg.CachingCatalog.loadTable(CachingCatalog.java:167)
+[2026-08-14T00:53:46.837+0000] {docker.py:438} INFO - 	at org.apache.iceberg.spark.SparkCatalog.load(SparkCatalog.java:845)
+[2026-08-14T00:53:46.838+0000] {docker.py:438} INFO - 	at org.apache.iceberg.spark.SparkCatalog.loadTable(SparkCatalog.java:170)
+[2026-08-14T00:53:46.839+0000] {docker.py:438} INFO - 	at org.apache.spark.sql.connector.catalog.TableCatalog.tableExists(TableCatalog.java:185)
+[2026-08-14T00:53:46.840+0000] {docker.py:438} INFO - 	at org.apache.spark.sql.internal.CatalogImpl.tableExists(CatalogImpl.scala:525)
+[2026-08-14T00:53:46.841+0000] {docker.py:438} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2026-08-14T00:53:46.841+0000] {docker.py:438} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2026-08-14T00:53:46.842+0000] {docker.py:438} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2026-08-14T00:53:46.843+0000] {docker.py:438} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2026-08-14T00:53:46.844+0000] {docker.py:438} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2026-08-14T00:53:46.845+0000] {docker.py:438} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2026-08-14T00:53:46.846+0000] {docker.py:438} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2026-08-14T00:53:46.847+0000] {docker.py:438} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2026-08-14T00:53:46.848+0000] {docker.py:438} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2026-08-14T00:53:46.849+0000] {docker.py:438} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2026-08-14T00:53:46.850+0000] {docker.py:438} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2026-08-14T00:53:46.851+0000] {docker.py:438} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-08-14T00:53:46.852+0000] {docker.py:438} INFO - Caused by: java.io.FileNotFoundException: No such file or directory: s3a://lakehouse/silver/orders_dfc1f84c-e61b-43fa-abae-e186ee4e613d/metadata/00000-55acda65-11fb-4b6e-befb-df97e1270911.metadata.json
+[2026-08-14T00:53:46.853+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.s3GetFileStatus(S3AFileSystem.java:3866)
+[2026-08-14T00:53:46.854+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.innerGetFileStatus(S3AFileSystem.java:3688)
+[2026-08-14T00:53:46.855+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.extractOrFetchSimpleFileStatus(S3AFileSystem.java:5401)
+[2026-08-14T00:53:46.856+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.open(S3AFileSystem.java:1465)
+[2026-08-14T00:53:46.856+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.open(S3AFileSystem.java:1441)
+[2026-08-14T00:53:46.857+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:976)
+[2026-08-14T00:53:46.859+0000] {docker.py:438} INFO - 	at org.apache.iceberg.hadoop.HadoopInputFile.newStream(HadoopInputFile.java:183)
+[2026-08-14T00:53:46.860+0000] {docker.py:438} INFO - 	... 36 more
+[2026-08-14T00:53:46.861+0000] {docker.py:438} INFO - Traceback (most recent call last):
+[2026-08-14T00:53:46.862+0000] {docker.py:438} INFO -   File "/app/jobs/silver_orders_job.py", line 25, in run
+[2026-08-14T00:53:46.862+0000] {docker.py:438} INFO -     incremental_time = get_incremental_filter_time(spark, target_table, lookback_days)
+[2026-08-14T00:53:46.864+0000] {docker.py:438} INFO -   File "/app/utils/spark_utils.py", line 34, in get_incremental_filter_time
+[2026-08-14T00:53:46.865+0000] {docker.py:438} INFO -     if not spark.catalog.tableExists(target_table):
+[2026-08-14T00:53:46.866+0000] {docker.py:438} INFO -   File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/catalog.py", line 746, in tableExists
+[2026-08-14T00:53:46.867+0000] {docker.py:438} INFO -     return self._jcatalog.tableExists(tableName)
+[2026-08-14T00:53:46.868+0000] {docker.py:438} INFO -   File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+[2026-08-14T00:53:46.869+0000] {docker.py:438} INFO -     return_value = get_return_value(
+[2026-08-14T00:53:46.869+0000] {docker.py:438} INFO -   File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+[2026-08-14T00:53:46.870+0000] {docker.py:438} INFO -     return f(*a, **kw)
+[2026-08-14T00:53:46.871+0000] {docker.py:438} INFO -   File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+[2026-08-14T00:53:46.872+0000] {docker.py:438} INFO -     raise Py4JJavaError(
+[2026-08-14T00:53:46.873+0000] {docker.py:438} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o77.tableExists.
+[2026-08-14T00:53:46.874+0000] {docker.py:438} INFO - : org.apache.iceberg.exceptions.NotFoundException: Failed to open input stream for file: s3a://lakehouse/silver/orders_dfc1f84c-e61b-43fa-abae-e186ee4e613d/metadata/00000-55acda65-11fb-4b6e-befb-df97e1270911.metadata.json
+[2026-08-14T00:53:46.875+0000] {docker.py:438} INFO - 	at org.apache.iceberg.hadoop.HadoopInputFile.newStream(HadoopInputFile.java:185)
+[2026-08-14T00:53:46.876+0000] {docker.py:438} INFO - 	at org.apache.iceberg.TableMetadataParser.read(TableMetadataParser.java:279)
+[2026-08-14T00:53:46.877+0000] {docker.py:438} INFO - 	at org.apache.iceberg.TableMetadataParser.read(TableMetadataParser.java:273)
+[2026-08-14T00:53:46.878+0000] {docker.py:438} INFO - 	at org.apache.iceberg.nessie.NessieTableOperations.lambda$doRefresh$1(NessieTableOperations.java:105)
+[2026-08-14T00:53:46.879+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreTableOperations.lambda$refreshFromMetadataLocation$1(BaseMetastoreTableOperations.java:201)
+[2026-08-14T00:53:46.880+0000] {docker.py:438} INFO - 	at org.apache.iceberg.util.Tasks$Builder.runTaskWithRetry(Tasks.java:413)
+[2026-08-14T00:53:46.881+0000] {docker.py:438} INFO - 	at org.apache.iceberg.util.Tasks$Builder.runSingleThreaded(Tasks.java:219)
+[2026-08-14T00:53:46.882+0000] {docker.py:438} INFO - 	at org.apache.iceberg.util.Tasks$Builder.run(Tasks.java:203)
+[2026-08-14T00:53:46.883+0000] {docker.py:438} INFO - 	at org.apache.iceberg.util.Tasks$Builder.run(Tasks.java:196)
+[2026-08-14T00:53:46.884+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreTableOperations.refreshFromMetadataLocation(BaseMetastoreTableOperations.java:201)
+[2026-08-14T00:53:46.885+0000] {docker.py:438} INFO - 	at org.apache.iceberg.nessie.NessieTableOperations.doRefresh(NessieTableOperations.java:99)
+[2026-08-14T00:53:46.886+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreTableOperations.refresh(BaseMetastoreTableOperations.java:90)
+[2026-08-14T00:53:46.887+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreTableOperations.current(BaseMetastoreTableOperations.java:73)
+[2026-08-14T00:53:46.888+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreCatalog.loadTable(BaseMetastoreCatalog.java:49)
+[2026-08-14T00:53:46.889+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.BoundedLocalCache.lambda$doComputeIfAbsent$14(BoundedLocalCache.java:2406)
+[2026-08-14T00:53:46.890+0000] {docker.py:438} INFO - 	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1916)
+[2026-08-14T00:53:46.890+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.BoundedLocalCache.doComputeIfAbsent(BoundedLocalCache.java:2404)
+[2026-08-14T00:53:46.891+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.BoundedLocalCache.computeIfAbsent(BoundedLocalCache.java:2387)
+[2026-08-14T00:53:46.892+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.LocalCache.computeIfAbsent(LocalCache.java:108)
+[2026-08-14T00:53:46.893+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.LocalManualCache.get(LocalManualCache.java:62)
+[2026-08-14T00:53:46.895+0000] {docker.py:438} INFO - 	at org.apache.iceberg.CachingCatalog.loadTable(CachingCatalog.java:167)
+[2026-08-14T00:53:46.896+0000] {docker.py:438} INFO - 	at org.apache.iceberg.spark.SparkCatalog.load(SparkCatalog.java:845)
+[2026-08-14T00:53:46.896+0000] {docker.py:438} INFO - 	at org.apache.iceberg.spark.SparkCatalog.loadTable(SparkCatalog.java:170)
+[2026-08-14T00:53:46.898+0000] {docker.py:438} INFO - 	at org.apache.spark.sql.connector.catalog.TableCatalog.tableExists(TableCatalog.java:185)
+[2026-08-14T00:53:46.899+0000] {docker.py:438} INFO - 	at org.apache.spark.sql.internal.CatalogImpl.tableExists(CatalogImpl.scala:525)
+[2026-08-14T00:53:46.900+0000] {docker.py:438} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2026-08-14T00:53:46.901+0000] {docker.py:438} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2026-08-14T00:53:46.902+0000] {docker.py:438} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2026-08-14T00:53:46.903+0000] {docker.py:438} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2026-08-14T00:53:46.904+0000] {docker.py:438} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2026-08-14T00:53:46.905+0000] {docker.py:438} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2026-08-14T00:53:46.906+0000] {docker.py:438} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2026-08-14T00:53:46.907+0000] {docker.py:438} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2026-08-14T00:53:46.908+0000] {docker.py:438} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2026-08-14T00:53:46.909+0000] {docker.py:438} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2026-08-14T00:53:46.910+0000] {docker.py:438} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2026-08-14T00:53:46.911+0000] {docker.py:438} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-08-14T00:53:46.911+0000] {docker.py:438} INFO - Caused by: java.io.FileNotFoundException: No such file or directory: s3a://lakehouse/silver/orders_dfc1f84c-e61b-43fa-abae-e186ee4e613d/metadata/00000-55acda65-11fb-4b6e-befb-df97e1270911.metadata.json
+[2026-08-14T00:53:46.912+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.s3GetFileStatus(S3AFileSystem.java:3866)
+[2026-08-14T00:53:46.913+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.innerGetFileStatus(S3AFileSystem.java:3688)
+[2026-08-14T00:53:46.915+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.extractOrFetchSimpleFileStatus(S3AFileSystem.java:5401)
+[2026-08-14T00:53:46.916+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.open(S3AFileSystem.java:1465)
+[2026-08-14T00:53:46.916+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.open(S3AFileSystem.java:1441)
+[2026-08-14T00:53:46.917+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:976)
+[2026-08-14T00:53:46.918+0000] {docker.py:438} INFO - 	at org.apache.iceberg.hadoop.HadoopInputFile.newStream(HadoopInputFile.java:183)
+[2026-08-14T00:53:46.919+0000] {docker.py:438} INFO - 	... 36 more
+[2026-08-14T00:53:46.920+0000] {docker.py:438} INFO - 
+[2026-08-14T00:53:46.921+0000] {docker.py:438} INFO - 2026-08-14 00:53:46 | INFO     | jobs.silver_orders_job | Đóng SparkSession. Dọn dẹp tài nguyên.
+[2026-08-14T00:53:46.922+0000] {docker.py:438} INFO - 26/08/14 00:53:46 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2026-08-14T00:53:46.923+0000] {docker.py:438} INFO - 26/08/14 00:53:46 INFO SparkUI: Stopped Spark web UI at http://9e36526becd3:4040
+[2026-08-14T00:53:46.924+0000] {docker.py:438} INFO - 26/08/14 00:53:46 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2026-08-14T00:53:46.925+0000] {docker.py:438} INFO - 26/08/14 00:53:46 INFO MemoryStore: MemoryStore cleared
+[2026-08-14T00:53:46.926+0000] {docker.py:438} INFO - 26/08/14 00:53:46 INFO BlockManager: BlockManager stopped
+[2026-08-14T00:53:46.927+0000] {docker.py:438} INFO - 26/08/14 00:53:46 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2026-08-14T00:53:46.928+0000] {docker.py:438} INFO - 26/08/14 00:53:46 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2026-08-14T00:53:46.929+0000] {docker.py:438} INFO - 26/08/14 00:53:46 INFO SparkContext: Successfully stopped SparkContext
+[2026-08-14T00:53:47.184+0000] {docker.py:438} INFO - 2026-08-14 00:53:47 | ERROR    | __main__ | ❌ Job 'silver_orders' THẤT BẠI sau 4.02 giây.
+[2026-08-14T00:53:47.191+0000] {docker.py:438} INFO - 2026-08-14 00:53:47 | ERROR    | __main__ | Chi tiết Call Stack:
+[2026-08-14T00:53:47.193+0000] {docker.py:438} INFO - Traceback (most recent call last):
+[2026-08-14T00:53:47.195+0000] {docker.py:438} INFO -   File "/app/main.py", line 89, in main
+[2026-08-14T00:53:47.197+0000] {docker.py:438} INFO -     job_function(lookback_days=lookback_days)
+[2026-08-14T00:53:47.198+0000] {docker.py:438} INFO -   File "/app/jobs/silver_orders_job.py", line 63, in run
+[2026-08-14T00:53:47.200+0000] {docker.py:438} INFO -     raise e
+[2026-08-14T00:53:47.202+0000] {docker.py:438} INFO -   File "/app/jobs/silver_orders_job.py", line 25, in run
+[2026-08-14T00:53:47.203+0000] {docker.py:438} INFO -     incremental_time = get_incremental_filter_time(spark, target_table, lookback_days)
+[2026-08-14T00:53:47.205+0000] {docker.py:438} INFO -   File "/app/utils/spark_utils.py", line 34, in get_incremental_filter_time
+[2026-08-14T00:53:47.207+0000] {docker.py:438} INFO -     if not spark.catalog.tableExists(target_table):
+[2026-08-14T00:53:47.208+0000] {docker.py:438} INFO -   File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/catalog.py", line 746, in tableExists
+[2026-08-14T00:53:47.209+0000] {docker.py:438} INFO -     return self._jcatalog.tableExists(tableName)
+[2026-08-14T00:53:47.210+0000] {docker.py:438} INFO -   File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+[2026-08-14T00:53:47.213+0000] {docker.py:438} INFO -     return_value = get_return_value(
+[2026-08-14T00:53:47.214+0000] {docker.py:438} INFO -   File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+[2026-08-14T00:53:47.216+0000] {docker.py:438} INFO -     return f(*a, **kw)
+[2026-08-14T00:53:47.218+0000] {docker.py:438} INFO -   File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+[2026-08-14T00:53:47.219+0000] {docker.py:438} INFO -     raise Py4JJavaError(
+[2026-08-14T00:53:47.221+0000] {docker.py:438} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o77.tableExists.
+[2026-08-14T00:53:47.223+0000] {docker.py:438} INFO - : org.apache.iceberg.exceptions.NotFoundException: Failed to open input stream for file: s3a://lakehouse/silver/orders_dfc1f84c-e61b-43fa-abae-e186ee4e613d/metadata/00000-55acda65-11fb-4b6e-befb-df97e1270911.metadata.json
+[2026-08-14T00:53:47.225+0000] {docker.py:438} INFO - 	at org.apache.iceberg.hadoop.HadoopInputFile.newStream(HadoopInputFile.java:185)
+[2026-08-14T00:53:47.226+0000] {docker.py:438} INFO - 	at org.apache.iceberg.TableMetadataParser.read(TableMetadataParser.java:279)
+[2026-08-14T00:53:47.228+0000] {docker.py:438} INFO - 	at org.apache.iceberg.TableMetadataParser.read(TableMetadataParser.java:273)
+[2026-08-14T00:53:47.229+0000] {docker.py:438} INFO - 	at org.apache.iceberg.nessie.NessieTableOperations.lambda$doRefresh$1(NessieTableOperations.java:105)
+[2026-08-14T00:53:47.230+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreTableOperations.lambda$refreshFromMetadataLocation$1(BaseMetastoreTableOperations.java:201)
+[2026-08-14T00:53:47.231+0000] {docker.py:438} INFO - 	at org.apache.iceberg.util.Tasks$Builder.runTaskWithRetry(Tasks.java:413)
+[2026-08-14T00:53:47.233+0000] {docker.py:438} INFO - 	at org.apache.iceberg.util.Tasks$Builder.runSingleThreaded(Tasks.java:219)
+[2026-08-14T00:53:47.235+0000] {docker.py:438} INFO - 	at org.apache.iceberg.util.Tasks$Builder.run(Tasks.java:203)
+[2026-08-14T00:53:47.240+0000] {docker.py:438} INFO - 	at org.apache.iceberg.util.Tasks$Builder.run(Tasks.java:196)
+[2026-08-14T00:53:47.241+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreTableOperations.refreshFromMetadataLocation(BaseMetastoreTableOperations.java:201)
+[2026-08-14T00:53:47.243+0000] {docker.py:438} INFO - 	at org.apache.iceberg.nessie.NessieTableOperations.doRefresh(NessieTableOperations.java:99)
+[2026-08-14T00:53:47.244+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreTableOperations.refresh(BaseMetastoreTableOperations.java:90)
+[2026-08-14T00:53:47.246+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreTableOperations.current(BaseMetastoreTableOperations.java:73)
+[2026-08-14T00:53:47.247+0000] {docker.py:438} INFO - 	at org.apache.iceberg.BaseMetastoreCatalog.loadTable(BaseMetastoreCatalog.java:49)
+[2026-08-14T00:53:47.248+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.BoundedLocalCache.lambda$doComputeIfAbsent$14(BoundedLocalCache.java:2406)
+[2026-08-14T00:53:47.249+0000] {docker.py:438} INFO - 	at java.base/java.util.concurrent.ConcurrentHashMap.compute(ConcurrentHashMap.java:1916)
+[2026-08-14T00:53:47.250+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.BoundedLocalCache.doComputeIfAbsent(BoundedLocalCache.java:2404)
+[2026-08-14T00:53:47.251+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.BoundedLocalCache.computeIfAbsent(BoundedLocalCache.java:2387)
+[2026-08-14T00:53:47.252+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.LocalCache.computeIfAbsent(LocalCache.java:108)
+[2026-08-14T00:53:47.253+0000] {docker.py:438} INFO - 	at org.apache.iceberg.shaded.com.github.benmanes.caffeine.cache.LocalManualCache.get(LocalManualCache.java:62)
+[2026-08-14T00:53:47.254+0000] {docker.py:438} INFO - 	at org.apache.iceberg.CachingCatalog.loadTable(CachingCatalog.java:167)
+[2026-08-14T00:53:47.255+0000] {docker.py:438} INFO - 	at org.apache.iceberg.spark.SparkCatalog.load(SparkCatalog.java:845)
+[2026-08-14T00:53:47.255+0000] {docker.py:438} INFO - 	at org.apache.iceberg.spark.SparkCatalog.loadTable(SparkCatalog.java:170)
+[2026-08-14T00:53:47.256+0000] {docker.py:438} INFO - 	at org.apache.spark.sql.connector.catalog.TableCatalog.tableExists(TableCatalog.java:185)
+[2026-08-14T00:53:47.257+0000] {docker.py:438} INFO - 	at org.apache.spark.sql.internal.CatalogImpl.tableExists(CatalogImpl.scala:525)
+[2026-08-14T00:53:47.258+0000] {docker.py:438} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2026-08-14T00:53:47.259+0000] {docker.py:438} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2026-08-14T00:53:47.261+0000] {docker.py:438} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2026-08-14T00:53:47.262+0000] {docker.py:438} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2026-08-14T00:53:47.263+0000] {docker.py:438} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2026-08-14T00:53:47.265+0000] {docker.py:438} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2026-08-14T00:53:47.266+0000] {docker.py:438} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2026-08-14T00:53:47.267+0000] {docker.py:438} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2026-08-14T00:53:47.268+0000] {docker.py:438} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2026-08-14T00:53:47.269+0000] {docker.py:438} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2026-08-14T00:53:47.270+0000] {docker.py:438} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2026-08-14T00:53:47.271+0000] {docker.py:438} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-08-14T00:53:47.272+0000] {docker.py:438} INFO - Caused by: java.io.FileNotFoundException: No such file or directory: s3a://lakehouse/silver/orders_dfc1f84c-e61b-43fa-abae-e186ee4e613d/metadata/00000-55acda65-11fb-4b6e-befb-df97e1270911.metadata.json
+[2026-08-14T00:53:47.274+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.s3GetFileStatus(S3AFileSystem.java:3866)
+[2026-08-14T00:53:47.275+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.innerGetFileStatus(S3AFileSystem.java:3688)
+[2026-08-14T00:53:47.276+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.extractOrFetchSimpleFileStatus(S3AFileSystem.java:5401)
+[2026-08-14T00:53:47.277+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.open(S3AFileSystem.java:1465)
+[2026-08-14T00:53:47.278+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.s3a.S3AFileSystem.open(S3AFileSystem.java:1441)
+[2026-08-14T00:53:47.279+0000] {docker.py:438} INFO - 	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:976)
+[2026-08-14T00:53:47.281+0000] {docker.py:438} INFO - 	at org.apache.iceberg.hadoop.HadoopInputFile.newStream(HadoopInputFile.java:183)
+[2026-08-14T00:53:47.282+0000] {docker.py:438} INFO - 	... 36 more
+[2026-08-14T00:53:47.283+0000] {docker.py:438} INFO - 26/08/14 00:53:47 INFO ShutdownHookManager: Shutdown hook called
+[2026-08-14T00:53:47.285+0000] {docker.py:438} INFO - 26/08/14 00:53:47 INFO ShutdownHookManager: Deleting directory /tmp/spark-5011f7a2-7073-46a9-b9d9-d1f9979c8353
+[2026-08-14T00:53:47.286+0000] {docker.py:438} INFO - 26/08/14 00:53:47 INFO ShutdownHookManager: Deleting directory /tmp/spark-cc116983-a254-4e40-a4ef-f0461b41992d
+[2026-08-14T00:53:47.287+0000] {docker.py:438} INFO - 26/08/14 00:53:47 INFO ShutdownHookManager: Deleting directory /tmp/spark-cc116983-a254-4e40-a4ef-f0461b41992d/pyspark-6af28f7b-2cb0-4b93-98f0-8f95998134f4
+[2026-08-14T00:53:47.288+0000] {docker.py:438} INFO - 26/08/14 00:53:47 INFO MetricsSystemImpl: Stopping s3a-file-system metrics system...
+[2026-08-14T00:53:47.290+0000] {docker.py:438} INFO - 26/08/14 00:53:47 INFO MetricsSystemImpl: s3a-file-system metrics system stopped.
+[2026-08-14T00:53:47.291+0000] {docker.py:438} INFO - 26/08/14 00:53:47 INFO MetricsSystemImpl: s3a-file-system metrics system shutdown complete.
+[2026-08-14T00:53:47.785+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 513, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 384, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 446, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 1}
+[2026-08-14T00:53:47.790+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=serverless_spark_dev_pipeline, task_id=run_silver_orders_dev, run_id=manual__2026-08-14T00:52:26.696369+00:00, execution_date=20260814T005226, start_date=20260814T005340, end_date=20260814T005347
+[2026-08-14T00:53:47.811+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-14T00:53:47.812+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 142 for task run_silver_orders_dev (Docker container failed: {'StatusCode': 1}; 683)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 513, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 384, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 446, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 1}
+[2026-08-14T00:53:47.852+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-08-14T00:53:47.875+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-08-14T00:53:47.881+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

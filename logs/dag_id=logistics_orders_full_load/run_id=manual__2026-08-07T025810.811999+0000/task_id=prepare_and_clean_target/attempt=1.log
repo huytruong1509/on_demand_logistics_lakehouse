@@ -1,0 +1,25 @@
+[2026-08-07T02:58:12.234+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-07T02:58:12.254+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: logistics_orders_full_load.prepare_and_clean_target manual__2026-08-07T02:58:10.811999+00:00 [queued]>
+[2026-08-07T02:58:12.262+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: logistics_orders_full_load.prepare_and_clean_target manual__2026-08-07T02:58:10.811999+00:00 [queued]>
+[2026-08-07T02:58:12.265+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-08-07T02:58:12.279+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): prepare_and_clean_target> on 2026-08-07 02:58:10.811999+00:00
+[2026-08-07T02:58:12.286+0000] {standard_task_runner.py:72} INFO - Started process 572 to run task
+[2026-08-07T02:58:12.289+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'logistics_orders_full_load', 'prepare_and_clean_target', 'manual__2026-08-07T02:58:10.811999+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/logistics_full_load.py', '--cfg-path', '/tmp/tmpf8cdyva_']
+[2026-08-07T02:58:12.293+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask prepare_and_clean_target
+[2026-08-07T02:58:12.368+0000] {task_command.py:467} INFO - Running <TaskInstance: logistics_orders_full_load.prepare_and_clean_target manual__2026-08-07T02:58:10.811999+00:00 [running]> on host 11b57f220b99
+[2026-08-07T02:58:12.443+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='logistics_orders_full_load' AIRFLOW_CTX_TASK_ID='prepare_and_clean_target' AIRFLOW_CTX_EXECUTION_DATE='2026-08-07T02:58:10.811999+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-08-07T02:58:10.811999+00:00'
+[2026-08-07T02:58:12.445+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-07T02:58:12.449+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-08-07T02:58:12.451+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-08-07T02:58:12.453+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-08-07T02:58:12.874+0000] {logistics_full_load.py:54} INFO - ✅ [LANDING] Đã dọn dẹp TOÀN BỘ thư mục Landing cho luồng Full Load.
+[2026-08-07T02:58:12.876+0000] {logistics_full_load.py:62} INFO - 🧹 [BRONZE] Đang chạy TRUNCATE cho bảng lakehouse.bronze.raw_orders...
+[2026-08-07T02:58:12.877+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-07T02:58:12.878+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-07T02:58:12.881+0000] {sql.py:509} INFO - Running statement: TRUNCATE TABLE lakehouse.bronze.raw_orders, parameters: None
+[2026-08-07T02:58:13.149+0000] {logistics_full_load.py:65} INFO - ✅ [BRONZE] Đã TRUNCATE thành công. Bảng đã sạch sẽ, sẵn sàng nạp Full Load.
+[2026-08-07T02:58:13.151+0000] {python.py:240} INFO - Done. Returned value was: 2026-08-07
+[2026-08-07T02:58:13.182+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-07T02:58:13.184+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=logistics_orders_full_load, task_id=prepare_and_clean_target, run_id=manual__2026-08-07T02:58:10.811999+00:00, execution_date=20260807T025810, start_date=20260807T025812, end_date=20260807T025813
+[2026-08-07T02:58:13.229+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-08-07T02:58:13.242+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

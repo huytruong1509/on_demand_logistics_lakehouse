@@ -1,0 +1,328 @@
+[2026-08-13T14:23:29.187+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-13T14:23:29.207+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: serverless_spark_dev_pipeline.run_silver_orders_dev manual__2026-08-13T14:21:55.467257+00:00 [queued]>
+[2026-08-13T14:23:29.216+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: serverless_spark_dev_pipeline.run_silver_orders_dev manual__2026-08-13T14:21:55.467257+00:00 [queued]>
+[2026-08-13T14:23:29.218+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2026-08-13T14:23:29.230+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_silver_orders_dev> on 2026-08-13 14:21:55.467257+00:00
+[2026-08-13T14:23:29.236+0000] {standard_task_runner.py:72} INFO - Started process 687 to run task
+[2026-08-13T14:23:29.240+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'serverless_spark_dev_pipeline', 'run_silver_orders_dev', 'manual__2026-08-13T14:21:55.467257+00:00', '--job-id', '129', '--raw', '--subdir', 'DAGS_FOLDER/silver_spark_serverless.py', '--cfg-path', '/tmp/tmppdojdyin']
+[2026-08-13T14:23:29.243+0000] {standard_task_runner.py:105} INFO - Job 129: Subtask run_silver_orders_dev
+[2026-08-13T14:23:29.327+0000] {task_command.py:467} INFO - Running <TaskInstance: serverless_spark_dev_pipeline.run_silver_orders_dev manual__2026-08-13T14:21:55.467257+00:00 [running]> on host be544458ffbd
+[2026-08-13T14:23:29.522+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering_dev' AIRFLOW_CTX_DAG_ID='serverless_spark_dev_pipeline' AIRFLOW_CTX_TASK_ID='run_silver_orders_dev' AIRFLOW_CTX_EXECUTION_DATE='2026-08-13T14:21:55.467257+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-08-13T14:21:55.467257+00:00'
+[2026-08-13T14:23:29.525+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-13T14:23:29.602+0000] {docker.py:367} INFO - Starting docker container from image logistics-lakehouse-spark:latest
+[2026-08-13T14:23:34.071+0000] {docker.py:438} INFO - 2026-08-13 14:23:34 | INFO     | __main__ | 🚀 Khởi động Pipeline. Cấu hình: Job='silver_orders', LookbackDays=3
+[2026-08-13T14:23:34.073+0000] {docker.py:438} INFO - 2026-08-13 14:23:34 | INFO     | configs.spark_config | Initializing SparkSession for App: Job_Silver_Orders in DEV environment...
+[2026-08-13T14:23:34.216+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO SparkContext: Running Spark version 3.5.4
+[2026-08-13T14:23:34.222+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO SparkContext: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+[2026-08-13T14:23:34.223+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO SparkContext: Java version 17.0.13
+[2026-08-13T14:23:34.349+0000] {docker.py:438} INFO - 26/08/13 14:23:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-08-13T14:23:34.563+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO ResourceUtils: ==============================================================
+[2026-08-13T14:23:34.565+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2026-08-13T14:23:34.567+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO ResourceUtils: ==============================================================
+[2026-08-13T14:23:34.568+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO SparkContext: Submitted application: Job_Silver_Orders
+[2026-08-13T14:23:34.605+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2026-08-13T14:23:34.616+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO ResourceProfile: Limiting resource is cpu
+[2026-08-13T14:23:34.618+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2026-08-13T14:23:34.697+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO SecurityManager: Changing view acls to: spark
+[2026-08-13T14:23:34.699+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO SecurityManager: Changing modify acls to: spark
+[2026-08-13T14:23:34.702+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO SecurityManager: Changing view acls groups to:
+[2026-08-13T14:23:34.703+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO SecurityManager: Changing modify acls groups to:
+[2026-08-13T14:23:34.704+0000] {docker.py:438} INFO - 26/08/13 14:23:34 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+[2026-08-13T14:23:35.334+0000] {docker.py:438} INFO - 26/08/13 14:23:35 INFO Utils: Successfully started service 'sparkDriver' on port 46177.
+[2026-08-13T14:23:35.382+0000] {docker.py:438} INFO - 26/08/13 14:23:35 INFO SparkEnv: Registering MapOutputTracker
+[2026-08-13T14:23:35.433+0000] {docker.py:438} INFO - 26/08/13 14:23:35 INFO SparkEnv: Registering BlockManagerMaster
+[2026-08-13T14:23:35.471+0000] {docker.py:438} INFO - 26/08/13 14:23:35 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2026-08-13T14:23:35.474+0000] {docker.py:438} INFO - 26/08/13 14:23:35 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2026-08-13T14:23:35.479+0000] {docker.py:438} INFO - 26/08/13 14:23:35 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2026-08-13T14:23:35.523+0000] {docker.py:438} INFO - 26/08/13 14:23:35 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-9c9ca396-c78d-4e13-820b-af621156de14
+[2026-08-13T14:23:35.546+0000] {docker.py:438} INFO - 26/08/13 14:23:35 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2026-08-13T14:23:35.574+0000] {docker.py:438} INFO - 26/08/13 14:23:35 INFO SparkEnv: Registering OutputCommitCoordinator
+[2026-08-13T14:23:35.766+0000] {docker.py:438} INFO - 26/08/13 14:23:35 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2026-08-13T14:23:35.850+0000] {docker.py:438} INFO - 26/08/13 14:23:35 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2026-08-13T14:23:36.081+0000] {docker.py:438} INFO - 26/08/13 14:23:36 INFO Executor: Starting executor ID driver on host ed19b72919b8
+[2026-08-13T14:23:36.084+0000] {docker.py:438} INFO - 26/08/13 14:23:36 INFO Executor: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+[2026-08-13T14:23:36.086+0000] {docker.py:438} INFO - 26/08/13 14:23:36 INFO Executor: Java version 17.0.13
+[2026-08-13T14:23:36.096+0000] {docker.py:438} INFO - 26/08/13 14:23:36 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2026-08-13T14:23:36.098+0000] {docker.py:438} INFO - 26/08/13 14:23:36 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@790bb6fd for default.
+[2026-08-13T14:23:36.131+0000] {docker.py:438} INFO - 26/08/13 14:23:36 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37669.
+[2026-08-13T14:23:36.134+0000] {docker.py:438} INFO - 26/08/13 14:23:36 INFO NettyBlockTransferService: Server created on ed19b72919b8:37669
+[2026-08-13T14:23:36.135+0000] {docker.py:438} INFO - 26/08/13 14:23:36 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2026-08-13T14:23:36.145+0000] {docker.py:438} INFO - 26/08/13 14:23:36 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ed19b72919b8, 37669, None)
+[2026-08-13T14:23:36.149+0000] {docker.py:438} INFO - 26/08/13 14:23:36 INFO BlockManagerMasterEndpoint: Registering block manager ed19b72919b8:37669 with 434.4 MiB RAM, BlockManagerId(driver, ed19b72919b8, 37669, None)
+[2026-08-13T14:23:36.155+0000] {docker.py:438} INFO - 26/08/13 14:23:36 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ed19b72919b8, 37669, None)
+[2026-08-13T14:23:36.157+0000] {docker.py:438} INFO - 26/08/13 14:23:36 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ed19b72919b8, 37669, None)
+[2026-08-13T14:23:36.886+0000] {docker.py:438} INFO - 2026-08-13 14:23:36 | INFO     | configs.spark_config | Spark initialized successfully. Version: 3.5.4
+[2026-08-13T14:23:36.888+0000] {docker.py:438} INFO - 2026-08-13 14:23:36 | INFO     | jobs.silver_orders_job | --- BẮT ĐẦU CHẠY JOB: Job_Silver_Orders ---
+[2026-08-13T14:23:37.164+0000] {docker.py:438} INFO - 26/08/13 14:23:37 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2026-08-13T14:23:37.179+0000] {docker.py:438} INFO - 26/08/13 14:23:37 INFO SharedState: Warehouse path is 'file:/opt/spark/work-dir/spark-warehouse'.
+[2026-08-13T14:23:39.160+0000] {docker.py:438} INFO - 26/08/13 14:23:39 INFO CatalogUtil: Loading custom FileIO implementation: org.apache.iceberg.hadoop.HadoopFileIO
+[2026-08-13T14:23:40.510+0000] {docker.py:438} INFO - 2026-08-13 14:23:40 | INFO     | utils.spark_utils | Target table lakehouse.silver.orders does not exist. Full load will be triggered.
+[2026-08-13T14:23:40.512+0000] {docker.py:438} INFO - 2026-08-13 14:23:40 | INFO     | jobs.silver_orders_job | Đọc dữ liệu từ lakehouse.bronze.raw_orders với _ingest_time >= '1970-01-01 00:00:00'
+[2026-08-13T14:23:40.564+0000] {docker.py:438} INFO - 26/08/13 14:23:40 INFO BaseMetastoreTableOperations: Refreshing table metadata from new version: s3://lakehouse/bronze/raw_orders_09f0a50a-33ab-4012-8e38-5bdb34c9f27d/metadata/00000-18c40179-b27a-4d40-ac75-fc7f00b7cf87.metadata.json
+[2026-08-13T14:23:40.856+0000] {docker.py:438} INFO - 26/08/13 14:23:40 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+[2026-08-13T14:23:40.871+0000] {docker.py:438} INFO - 26/08/13 14:23:40 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+[2026-08-13T14:23:40.873+0000] {docker.py:438} INFO - 26/08/13 14:23:40 INFO MetricsSystemImpl: s3a-file-system metrics system started
+[2026-08-13T14:23:43.048+0000] {docker.py:438} INFO - 26/08/13 14:23:43 INFO NessieUtil: loadTableMetadata for 'bronze.raw_orders' from location 's3://lakehouse/bronze/raw_orders_09f0a50a-33ab-4012-8e38-5bdb34c9f27d/metadata/00000-18c40179-b27a-4d40-ac75-fc7f00b7cf87.metadata.json' at 'Branch{name=main, metadata=null, hash=ef773fc8dfd5aafedf204a81647575f307e816aa3d9e3ac148eadc97ad4cb765}'
+[2026-08-13T14:23:43.071+0000] {docker.py:438} INFO - 26/08/13 14:23:43 INFO BaseMetastoreCatalog: Table loaded by catalog: lakehouse.bronze.raw_orders
+[2026-08-13T14:23:44.098+0000] {docker.py:438} INFO - 26/08/13 14:23:44 INFO SparkScanBuilder: Evaluating completely on Iceberg side: _ingest_time IS NOT NULL
+[2026-08-13T14:23:44.150+0000] {docker.py:438} INFO - 26/08/13 14:23:44 INFO V2ScanRelationPushDown: 
+[2026-08-13T14:23:44.152+0000] {docker.py:438} INFO - Pushing operators to lakehouse.bronze.raw_orders
+[2026-08-13T14:23:44.153+0000] {docker.py:438} INFO - Pushed Filters: _ingest_time IS NOT NULL, _ingest_time >= 0
+[2026-08-13T14:23:44.155+0000] {docker.py:438} INFO - Post-Scan Filters: (_ingest_time#58 >= 1970-01-01 00:00:00)
+[2026-08-13T14:23:44.238+0000] {docker.py:438} INFO - 26/08/13 14:23:44 INFO V2ScanRelationPushDown: 
+[2026-08-13T14:23:44.240+0000] {docker.py:438} INFO - Output: _ingest_time#58
+[2026-08-13T14:23:44.257+0000] {docker.py:438} INFO - 26/08/13 14:23:44 INFO SnapshotScan: Scanning table lakehouse.bronze.raw_orders snapshot 3741569906607206598 created at 2026-08-11T09:18:07.516+00:00 with filter (_ingest_time IS NOT NULL AND _ingest_time >= (1-digit-int))
+[2026-08-13T14:23:44.637+0000] {docker.py:438} INFO - 26/08/13 14:23:44 INFO BaseDistributedDataScan: Planning file tasks locally for table lakehouse.bronze.raw_orders
+[2026-08-13T14:23:44.807+0000] {docker.py:438} INFO - 26/08/13 14:23:44 INFO SparkPartitioningAwareScan: Reporting UnknownPartitioning with 2 partition(s) for table lakehouse.bronze.raw_orders
+[2026-08-13T14:23:45.009+0000] {docker.py:438} INFO - 26/08/13 14:23:45 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 32.0 KiB, free 434.4 MiB)
+[2026-08-13T14:23:45.435+0000] {docker.py:438} INFO - 26/08/13 14:23:45 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 28.4 KiB, free 434.3 MiB)
+[2026-08-13T14:23:45.437+0000] {docker.py:438} INFO - 26/08/13 14:23:45 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on ed19b72919b8:37669 (size: 28.4 KiB, free: 434.4 MiB)
+[2026-08-13T14:23:45.451+0000] {docker.py:438} INFO - 26/08/13 14:23:45 INFO SparkContext: Created broadcast 0 from broadcast at SparkBatch.java:79
+[2026-08-13T14:23:45.515+0000] {docker.py:438} INFO - 26/08/13 14:23:45 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 32.0 KiB, free 434.3 MiB)
+[2026-08-13T14:23:45.541+0000] {docker.py:438} INFO - 26/08/13 14:23:45 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 28.4 KiB, free 434.3 MiB)
+[2026-08-13T14:23:45.544+0000] {docker.py:438} INFO - 26/08/13 14:23:45 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on ed19b72919b8:37669 (size: 28.4 KiB, free: 434.3 MiB)
+[2026-08-13T14:23:45.548+0000] {docker.py:438} INFO - 26/08/13 14:23:45 INFO SparkContext: Created broadcast 1 from broadcast at SparkBatch.java:79
+[2026-08-13T14:23:46.802+0000] {docker.py:438} INFO - 26/08/13 14:23:46 INFO CodeGenerator: Code generated in 907.129926 ms
+[2026-08-13T14:23:46.979+0000] {docker.py:438} INFO - 26/08/13 14:23:46 INFO SparkContext: Starting job: isEmpty at NativeMethodAccessorImpl.java:0
+[2026-08-13T14:23:47.009+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO DAGScheduler: Got job 0 (isEmpty at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2026-08-13T14:23:47.011+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO DAGScheduler: Final stage: ResultStage 0 (isEmpty at NativeMethodAccessorImpl.java:0)
+[2026-08-13T14:23:47.013+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO DAGScheduler: Parents of final stage: List()
+[2026-08-13T14:23:47.015+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO DAGScheduler: Missing parents: List()
+[2026-08-13T14:23:47.018+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at isEmpty at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2026-08-13T14:23:47.135+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 14.0 KiB, free 434.3 MiB)
+[2026-08-13T14:23:47.142+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 5.7 KiB, free 434.3 MiB)
+[2026-08-13T14:23:47.144+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on ed19b72919b8:37669 (size: 5.7 KiB, free: 434.3 MiB)
+[2026-08-13T14:23:47.145+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1585
+[2026-08-13T14:23:47.183+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at isEmpty at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2026-08-13T14:23:47.185+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+[2026-08-13T14:23:47.327+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (ed19b72919b8, executor driver, partition 0, PROCESS_LOCAL, 20144 bytes)
+[2026-08-13T14:23:47.348+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+[2026-08-13T14:23:47.626+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO CodeGenerator: Code generated in 31.252296 ms
+[2026-08-13T14:23:47.856+0000] {docker.py:438} INFO - 26/08/13 14:23:47 INFO S3AInputStream: Switching to Random IO seek policy
+[2026-08-13T14:23:48.590+0000] {docker.py:438} INFO - 26/08/13 14:23:48 INFO VectorizedSparkParquetReaders: Enabling arrow.enable_unsafe_memory_access
+[2026-08-13T14:23:48.592+0000] {docker.py:438} INFO - 26/08/13 14:23:48 INFO VectorizedSparkParquetReaders: Disabling arrow.enable_null_check_for_get
+[2026-08-13T14:23:48.611+0000] {docker.py:438} INFO - 26/08/13 14:23:48 INFO BaseAllocator: Debug mode disabled. Enable with the VM option -Darrow.memory.debug.allocator=true.
+[2026-08-13T14:23:48.617+0000] {docker.py:438} INFO - 26/08/13 14:23:48 INFO DefaultAllocationManagerOption: allocation manager type not specified, using netty as the default type
+[2026-08-13T14:23:48.621+0000] {docker.py:438} INFO - 26/08/13 14:23:48 INFO CheckAllocator: Using DefaultAllocationManager at memory/DefaultAllocationManagerFactory.class
+[2026-08-13T14:23:48.954+0000] {docker.py:438} INFO - 26/08/13 14:23:48 INFO CodecPool: Got brand-new decompressor [.zstd]
+[2026-08-13T14:23:49.704+0000] {docker.py:438} INFO - 26/08/13 14:23:49 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 4395 bytes result sent to driver
+[2026-08-13T14:23:49.745+0000] {docker.py:438} INFO - 26/08/13 14:23:49 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2505 ms on ed19b72919b8 (executor driver) (1/1)
+[2026-08-13T14:23:49.747+0000] {docker.py:438} INFO - 26/08/13 14:23:49 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2026-08-13T14:23:49.753+0000] {docker.py:438} INFO - 26/08/13 14:23:49 INFO DAGScheduler: ResultStage 0 (isEmpty at NativeMethodAccessorImpl.java:0) finished in 2.716 s
+[2026-08-13T14:23:49.758+0000] {docker.py:438} INFO - 26/08/13 14:23:49 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2026-08-13T14:23:49.761+0000] {docker.py:438} INFO - 26/08/13 14:23:49 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+[2026-08-13T14:23:49.762+0000] {docker.py:438} INFO - 26/08/13 14:23:49 INFO DAGScheduler: Job 0 finished: isEmpty at NativeMethodAccessorImpl.java:0, took 2.783223 s
+[2026-08-13T14:23:49.770+0000] {docker.py:438} INFO - 2026-08-13 14:23:49 | INFO     | utils.spark_utils | Deduplicating data based on keys: ['_source_system', '_db_id', '_id'], ordered by _ingest_time DESC
+[2026-08-13T14:23:50.353+0000] {docker.py:438} INFO - 2026-08-13 14:23:50 | INFO     | transformations.orders_tf | Bắt đầu transform dữ liệu orders...
+[2026-08-13T14:23:53.261+0000] {docker.py:438} INFO - 2026-08-13 14:23:53 | INFO     | transformations.orders_tf | Hoàn tất thiết lập logic transform orders.
+[2026-08-13T14:23:53.303+0000] {docker.py:438} INFO - 2026-08-13 14:23:53 | INFO     | utils.iceberg_utils | Table lakehouse.silver.orders not found. Creating and writing initial data...
+[2026-08-13T14:23:53.652+0000] {docker.py:438} INFO - 26/08/13 14:23:53 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[2026-08-13T14:23:53.719+0000] {docker.py:438} INFO - 26/08/13 14:23:53 INFO BaseMetastoreCatalog: Table properties set at catalog level through catalog properties: {gc.enabled=false, write.metadata.delete-after-commit.enabled=false}
+[2026-08-13T14:23:53.722+0000] {docker.py:438} INFO - 26/08/13 14:23:53 INFO BaseMetastoreCatalog: Table properties enforced at catalog level through catalog properties: {}
+[2026-08-13T14:23:54.232+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO SparkScanBuilder: Evaluating completely on Iceberg side: _ingest_time IS NOT NULL
+[2026-08-13T14:23:54.234+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO V2ScanRelationPushDown: 
+[2026-08-13T14:23:54.236+0000] {docker.py:438} INFO - Pushing operators to lakehouse.bronze.raw_orders
+[2026-08-13T14:23:54.238+0000] {docker.py:438} INFO - Pushed Filters: _ingest_time IS NOT NULL, _ingest_time >= 0
+[2026-08-13T14:23:54.240+0000] {docker.py:438} INFO - Post-Scan Filters: (_ingest_time#58 >= 1970-01-01 00:00:00)
+[2026-08-13T14:23:54.302+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO V2ScanRelationPushDown: 
+[2026-08-13T14:23:54.304+0000] {docker.py:438} INFO - Output: _db_id#0, _id#1, status#2, sub_status#3, service_id#4, city_id#5, requests#6, user_id#7, user_name#8, supplier_id#9, supplier_name#10, partner#11, create_time#12, order_time#13, idle_until#14, accept_time#15, accept_lat#16, accept_lng#17, accept_distance#18, accept_duration#19, board_time#20, pickup_time#21, cancel_time#22, complete_time#23, return_time#24, cancel_comment#25, cancel_by_user#26, currency#27, promo_code#28, payment_method#29, distance#30, distance_fee#31, stop_fee#32, request_fee#33, discount#34, total_fee#35, distance_price#36, special_request_price#37, stoppoint_price#38, voucher_discount#39, subtotal_price#40, total_price#41, user_main_account#42, user_bonus_account#43, total_pay#44, supplier_main_account#45, supplier_bonus_account#46, rating_by_user#47, comment_by_user#48, rating_by_supplier#49, comment_by_supplier#50, remarks#52, remind#53, assigned_by#54, index#55, from_location#56, _rescued_data#57, _ingest_time#58, _run_id#59, _source_system#60
+[2026-08-13T14:23:54.306+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO SnapshotScan: Scanning table lakehouse.bronze.raw_orders snapshot 3741569906607206598 created at 2026-08-11T09:18:07.516+00:00 with filter (_ingest_time IS NOT NULL AND _ingest_time >= (1-digit-int))
+[2026-08-13T14:23:54.308+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO BaseDistributedDataScan: Planning file tasks locally for table lakehouse.bronze.raw_orders
+[2026-08-13T14:23:54.311+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO BlockManagerInfo: Removed broadcast_1_piece0 on ed19b72919b8:37669 in memory (size: 28.4 KiB, free: 434.4 MiB)
+[2026-08-13T14:23:54.317+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO BlockManagerInfo: Removed broadcast_0_piece0 on ed19b72919b8:37669 in memory (size: 28.4 KiB, free: 434.4 MiB)
+[2026-08-13T14:23:54.323+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO BlockManagerInfo: Removed broadcast_2_piece0 on ed19b72919b8:37669 in memory (size: 5.7 KiB, free: 434.4 MiB)
+[2026-08-13T14:23:54.351+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO SparkPartitioningAwareScan: Reporting UnknownPartitioning with 2 partition(s) for table lakehouse.bronze.raw_orders
+[2026-08-13T14:23:54.400+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO SparkWrite: Requesting 0 bytes advisory partition size for table silver.orders
+[2026-08-13T14:23:54.402+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO SparkWrite: Requesting UnspecifiedDistribution as write distribution for table silver.orders
+[2026-08-13T14:23:54.403+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO SparkWrite: Requesting [] as write ordering for table silver.orders
+[2026-08-13T14:23:54.598+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 32.0 KiB, free 434.4 MiB)
+[2026-08-13T14:23:54.617+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 28.4 KiB, free 434.3 MiB)
+[2026-08-13T14:23:54.620+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on ed19b72919b8:37669 (size: 28.4 KiB, free: 434.4 MiB)
+[2026-08-13T14:23:54.624+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO SparkContext: Created broadcast 3 from broadcast at SparkBatch.java:79
+[2026-08-13T14:23:54.879+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 32.0 KiB, free 434.3 MiB)
+[2026-08-13T14:23:54.900+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 28.4 KiB, free 434.3 MiB)
+[2026-08-13T14:23:54.903+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on ed19b72919b8:37669 (size: 28.4 KiB, free: 434.3 MiB)
+[2026-08-13T14:23:54.906+0000] {docker.py:438} INFO - 26/08/13 14:23:54 INFO SparkContext: Created broadcast 4 from broadcast at SparkBatch.java:79
+[2026-08-13T14:23:55.901+0000] {docker.py:438} INFO - 26/08/13 14:23:55 INFO CodeGenerator: Code generated in 348.620125 ms
+[2026-08-13T14:23:56.055+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO DAGScheduler: Registering RDD 8 (saveAsTable at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+[2026-08-13T14:23:56.061+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO DAGScheduler: Got map stage job 1 (saveAsTable at NativeMethodAccessorImpl.java:0) with 2 output partitions
+[2026-08-13T14:23:56.063+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO DAGScheduler: Final stage: ShuffleMapStage 1 (saveAsTable at NativeMethodAccessorImpl.java:0)
+[2026-08-13T14:23:56.064+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO DAGScheduler: Parents of final stage: List()
+[2026-08-13T14:23:56.067+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO DAGScheduler: Missing parents: List()
+[2026-08-13T14:23:56.069+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[8] at saveAsTable at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2026-08-13T14:23:56.178+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 70.1 KiB, free 434.2 MiB)
+[2026-08-13T14:23:56.188+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 21.2 KiB, free 434.2 MiB)
+[2026-08-13T14:23:56.192+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on ed19b72919b8:37669 (size: 21.2 KiB, free: 434.3 MiB)
+[2026-08-13T14:23:56.196+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1585
+[2026-08-13T14:23:56.203+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[8] at saveAsTable at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+[2026-08-13T14:23:56.206+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks resource profile 0
+[2026-08-13T14:23:56.214+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (ed19b72919b8, executor driver, partition 0, PROCESS_LOCAL, 23921 bytes)
+[2026-08-13T14:23:56.225+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 2) (ed19b72919b8, executor driver, partition 1, PROCESS_LOCAL, 23930 bytes)
+[2026-08-13T14:23:56.228+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+[2026-08-13T14:23:56.230+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO Executor: Running task 1.0 in stage 1.0 (TID 2)
+[2026-08-13T14:23:56.689+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO CodeGenerator: Code generated in 369.61954 ms
+[2026-08-13T14:23:56.783+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO CodeGenerator: Code generated in 53.556142 ms
+[2026-08-13T14:23:56.850+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO CodeGenerator: Code generated in 36.045142 ms
+[2026-08-13T14:23:56.913+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO CodeGenerator: Code generated in 29.513659 ms
+[2026-08-13T14:23:56.978+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO S3AInputStream: Switching to Random IO seek policy
+[2026-08-13T14:23:56.987+0000] {docker.py:438} INFO - 26/08/13 14:23:56 INFO S3AInputStream: Switching to Random IO seek policy
+[2026-08-13T14:23:57.286+0000] {docker.py:438} INFO - 26/08/13 14:23:57 INFO CodecPool: Got brand-new decompressor [.zstd]
+[2026-08-13T14:23:57.539+0000] {docker.py:438} INFO - 26/08/13 14:23:57 INFO CodecPool: Got brand-new decompressor [.zstd]
+[2026-08-13T14:23:59.120+0000] {docker.py:438} INFO - #
+[2026-08-13T14:23:59.122+0000] {docker.py:438} INFO - # A fatal error has been detected by the Java Runtime Environment:
+[2026-08-13T14:23:59.123+0000] {docker.py:438} INFO - #
+[2026-08-13T14:23:59.124+0000] {docker.py:438} INFO - #  SIGSEGV (0xb) at pc=0x000074cca710efd0, pid=1, tid=31
+[2026-08-13T14:23:59.126+0000] {docker.py:438} INFO - #
+[2026-08-13T14:23:59.127+0000] {docker.py:438} INFO - # JRE version: OpenJDK Runtime Environment Temurin-17.0.13+11 (17.0.13+11) (build 17.0.13+11)
+[2026-08-13T14:23:59.130+0000] {docker.py:438} INFO - # Java VM: OpenJDK 64-Bit Server VM Temurin-17.0.13+11 (17.0.13+11, interpreted mode, sharing, compressed oops, compressed class ptrs, g1 gc, linux-amd64)
+[2026-08-13T14:23:59.132+0000] {docker.py:438} INFO - # Problematic frame:
+[2026-08-13T14:23:59.134+0000] {docker.py:438} INFO - # V  [libjvm.so+0x6f7fd0]
+[2026-08-13T14:23:59.136+0000] {docker.py:438} INFO - void WeakProcessor::Task::work<G1STWIsAliveClosure, G1KeepAliveClosure>(unsigned int, G1STWIsAliveClosure*, G1KeepAliveClosure*)+0x1d0
+[2026-08-13T14:23:59.138+0000] {docker.py:438} INFO - #
+[2026-08-13T14:23:59.139+0000] {docker.py:438} INFO - # Core dump will be written. Default location: Core dumps may be processed with "/wsl-capture-crash %t %E %p %s" (or dumping to /opt/spark/work-dir/core.1)
+[2026-08-13T14:23:59.140+0000] {docker.py:438} INFO - #
+[2026-08-13T14:23:59.142+0000] {docker.py:438} INFO - # An error report file with more information is saved as:
+[2026-08-13T14:23:59.143+0000] {docker.py:438} INFO - # /opt/spark/work-dir/hs_err_pid1.log
+[2026-08-13T14:24:00.677+0000] {docker.py:438} INFO - #
+[2026-08-13T14:24:00.679+0000] {docker.py:438} INFO - # If you would like to submit a bug report, please visit:
+[2026-08-13T14:24:00.680+0000] {docker.py:438} INFO - #   https://github.com/adoptium/adoptium-support/issues
+[2026-08-13T14:24:00.681+0000] {docker.py:438} INFO - #
+[2026-08-13T14:24:00.682+0000] {docker.py:438} INFO - [error occurred during error reporting (), id 0xb, SIGSEGV (0xb) at pc=0x000074cca7d93898]
+[2026-08-13T14:24:00.890+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 513, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 384, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 446, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 127}
+[2026-08-13T14:24:00.895+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=serverless_spark_dev_pipeline, task_id=run_silver_orders_dev, run_id=manual__2026-08-13T14:21:55.467257+00:00, execution_date=20260813T142155, start_date=20260813T142329, end_date=20260813T142400
+[2026-08-13T14:24:00.915+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-13T14:24:00.921+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 129 for task run_silver_orders_dev ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(serverless_spark_dev_pipeline, run_silver_orders_dev, manual__2026-08-13T14:21:55.467257+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'run_silver_orders_dev', 'dag_id': 'serverless_spark_dev_pipeline', 'run_id': 'manual__2026-08-13T14:21:55.467257+00:00', 'map_index': -1, 'start_date': datetime.datetime(2026, 8, 13, 14, 23, 29, 209055, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2026, 8, 13, 14, 24, 0, 894644, tzinfo=Timezone('UTC')), 'duration': 31}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 687)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 513, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 384, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 446, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 127}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.ForeignKeyViolation: insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(serverless_spark_dev_pipeline, run_silver_orders_dev, manual__2026-08-13T14:21:55.467257+00:00, -1) is not present in table "task_instance".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 327, in _run_raw_task
+    ti.handle_failure(e, test_mode, context, session=session)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3427, in handle_failure
+    _handle_failure(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1243, in _handle_failure
+    TaskInstance.save_to_db(failure_context["ti"], session)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3399, in save_to_db
+    session.flush()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3449, in flush
+    self._flush(objects)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3588, in _flush
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3549, in _flush
+    flush_context.execute()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(serverless_spark_dev_pipeline, run_silver_orders_dev, manual__2026-08-13T14:21:55.467257+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'run_silver_orders_dev', 'dag_id': 'serverless_spark_dev_pipeline', 'run_id': 'manual__2026-08-13T14:21:55.467257+00:00', 'map_index': -1, 'start_date': datetime.datetime(2026, 8, 13, 14, 23, 29, 209055, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2026, 8, 13, 14, 24, 0, 894644, tzinfo=Timezone('UTC')), 'duration': 31}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2026-08-13T14:24:00.955+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-08-13T14:24:00.969+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

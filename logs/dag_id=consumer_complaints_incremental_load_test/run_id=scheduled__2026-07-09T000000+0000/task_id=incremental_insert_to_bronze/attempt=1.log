@@ -1,0 +1,469 @@
+[2026-07-10T01:04:20.650+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T01:04:20.669+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T01:04:20.677+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T01:04:20.679+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-10T01:04:20.691+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): incremental_insert_to_bronze> on 2026-07-09 00:00:00+00:00
+[2026-07-10T01:04:20.696+0000] {standard_task_runner.py:72} INFO - Started process 399 to run task
+[2026-07-10T01:04:20.700+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'incremental_insert_to_bronze', 'scheduled__2026-07-09T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmp32mgxo11']
+[2026-07-10T01:04:20.704+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask incremental_insert_to_bronze
+[2026-07-10T01:04:20.779+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [running]> on host 3cd3b92205aa
+[2026-07-10T01:04:20.870+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='incremental_insert_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-07-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-09T00:00:00+00:00'
+[2026-07-10T01:04:20.874+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T01:04:20.878+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-10T01:04:20.880+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-10T01:04:20.882+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-10T01:04:20.884+0000] {consumer_complaints_incremental_dag_test.py:121} INFO - Kết nối thành công Nessie Catalog tại: http://nessie:19120/iceberg
+[2026-07-10T01:04:20.966+0000] {duckdb_to_bronze.py:64} INFO - Bắt đầu xử lý file cho ngày: 2026-07-09
+[2026-07-10T01:04:24.076+0000] {__init__.py:331} INFO - Loaded FileIO: pyiceberg.io.fsspec.FsspecFileIO
+[2026-07-10T01:04:24.079+0000] {duckdb_to_bronze.py:93} INFO - Append 18 records vào bảng bronze.raw_consumer_complaints
+[2026-07-10T01:04:24.827+0000] {python.py:240} INFO - Done. Returned value was: {'inserted_run_id': 'scheduled__2026-07-09T00:00:00+00:00', 'total_inserted_rows': 18, 'total_extracted_rows': 18}
+[2026-07-10T01:04:24.864+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T01:04:24.866+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_incremental_load_test, task_id=incremental_insert_to_bronze, run_id=scheduled__2026-07-09T00:00:00+00:00, execution_date=20260709T000000, start_date=20260710T010420, end_date=20260710T010424
+[2026-07-10T01:04:24.899+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-10T01:04:24.927+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T01:04:24.931+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-10T02:14:26.012+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T02:14:26.029+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T02:14:26.042+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T02:14:26.045+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-10T02:14:26.062+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): incremental_insert_to_bronze> on 2026-07-09 00:00:00+00:00
+[2026-07-10T02:14:26.070+0000] {standard_task_runner.py:72} INFO - Started process 889 to run task
+[2026-07-10T02:14:26.074+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'incremental_insert_to_bronze', 'scheduled__2026-07-09T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmpkmenmylu']
+[2026-07-10T02:14:26.078+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask incremental_insert_to_bronze
+[2026-07-10T02:14:26.164+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [running]> on host 9f40604dd01d
+[2026-07-10T02:14:26.265+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='incremental_insert_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-07-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-09T00:00:00+00:00'
+[2026-07-10T02:14:26.267+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T02:14:26.270+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-10T02:14:26.271+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-10T02:14:26.276+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-10T02:14:26.278+0000] {consumer_complaints_incremental_dag_test.py:121} INFO - Kết nối thành công Nessie Catalog tại: http://nessie:19120/iceberg
+[2026-07-10T02:14:26.411+0000] {duckdb_to_bronze.py:50} INFO - Đã khởi tạo DuckDB Connection và cấu hình S3 Secret thành công.
+[2026-07-10T02:14:27.482+0000] {__init__.py:331} INFO - Loaded FileIO: pyiceberg.io.fsspec.FsspecFileIO
+[2026-07-10T02:14:27.493+0000] {duckdb_to_bronze.py:152} INFO - Đã đóng kết nối DuckDB an toàn.
+[2026-07-10T02:14:27.494+0000] {duckdb_to_bronze.py:59} ERROR - Pipeline dừng đột ngột do lỗi: Binder Error: format must be one of ['array', 'newline_delimited', 'unstructured', 'nd', 'auto'], not 'json'
+[2026-07-10T02:14:27.496+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/consumer_complaints_incremental_dag_test.py", line 145, in incremental_insert_to_bronze
+    inserted_rows = loader.load_incremental(
+  File "/opt/airflow/dags/utils/duckdb_to_bronze.py", line 96, in load_incremental
+    arrow_table = self.con.execute(query).to_arrow_table()
+duckdb.duckdb.BinderException: Binder Error: format must be one of ['array', 'newline_delimited', 'unstructured', 'nd', 'auto'], not 'json'
+[2026-07-10T02:14:27.520+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=consumer_complaints_incremental_load_test, task_id=incremental_insert_to_bronze, run_id=scheduled__2026-07-09T00:00:00+00:00, execution_date=20260709T000000, start_date=20260710T021426, end_date=20260710T021427
+[2026-07-10T02:14:27.534+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T02:14:27.536+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 5 for task incremental_insert_to_bronze (Binder Error: format must be one of ['array', 'newline_delimited', 'unstructured', 'nd', 'auto'], not 'json'; 889)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/consumer_complaints_incremental_dag_test.py", line 145, in incremental_insert_to_bronze
+    inserted_rows = loader.load_incremental(
+  File "/opt/airflow/dags/utils/duckdb_to_bronze.py", line 96, in load_incremental
+    arrow_table = self.con.execute(query).to_arrow_table()
+duckdb.duckdb.BinderException: Binder Error: format must be one of ['array', 'newline_delimited', 'unstructured', 'nd', 'auto'], not 'json'
+[2026-07-10T02:14:27.581+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-07-10T02:14:27.607+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T02:14:27.613+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-10T03:47:11.654+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T03:47:11.673+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T03:47:11.687+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T03:47:11.688+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-10T03:47:11.701+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): incremental_insert_to_bronze> on 2026-07-09 00:00:00+00:00
+[2026-07-10T03:47:11.706+0000] {standard_task_runner.py:72} INFO - Started process 550 to run task
+[2026-07-10T03:47:11.711+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'incremental_insert_to_bronze', 'scheduled__2026-07-09T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmp11ya1qnm']
+[2026-07-10T03:47:11.713+0000] {standard_task_runner.py:105} INFO - Job 8: Subtask incremental_insert_to_bronze
+[2026-07-10T03:47:11.815+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [running]> on host 6745639acbf0
+[2026-07-10T03:47:11.930+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='incremental_insert_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-07-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-09T00:00:00+00:00'
+[2026-07-10T03:47:11.933+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T03:47:11.936+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-10T03:47:11.938+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-10T03:47:11.940+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-10T03:47:12.090+0000] {duckdb_to_bronze.py:50} INFO - Đã khởi tạo DuckDB Connection và cấu hình S3 Secret thành công.
+[2026-07-10T03:47:13.115+0000] {__init__.py:331} INFO - Loaded FileIO: pyiceberg.io.fsspec.FsspecFileIO
+[2026-07-10T03:47:13.867+0000] {duckdb_to_bronze.py:104} INFO - Hoàn tất (Batch): 18 dòng vào bronze.raw_consumer_complaints.
+[2026-07-10T03:47:13.870+0000] {duckdb_to_bronze.py:152} INFO - Đã đóng kết nối DuckDB an toàn.
+[2026-07-10T03:47:13.872+0000] {python.py:240} INFO - Done. Returned value was: {'inserted_run_id': 'scheduled__2026-07-09T00:00:00+00:00', 'total_inserted_rows': 18, 'total_extracted_rows': 18}
+[2026-07-10T03:47:13.910+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T03:47:13.912+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_incremental_load_test, task_id=incremental_insert_to_bronze, run_id=scheduled__2026-07-09T00:00:00+00:00, execution_date=20260709T000000, start_date=20260710T034711, end_date=20260710T034713
+[2026-07-10T03:47:13.944+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-10T03:47:13.971+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T03:47:13.977+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-10T04:14:03.185+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T04:14:03.210+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T04:14:03.224+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T04:14:03.226+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-10T04:14:03.240+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): incremental_insert_to_bronze> on 2026-07-09 00:00:00+00:00
+[2026-07-10T04:14:03.247+0000] {standard_task_runner.py:72} INFO - Started process 400 to run task
+[2026-07-10T04:14:03.252+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'incremental_insert_to_bronze', 'scheduled__2026-07-09T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmpukvrcdma']
+[2026-07-10T04:14:03.254+0000] {standard_task_runner.py:105} INFO - Job 8: Subtask incremental_insert_to_bronze
+[2026-07-10T04:14:03.351+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [running]> on host 23840578ac65
+[2026-07-10T04:14:03.494+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='incremental_insert_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-07-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-09T00:00:00+00:00'
+[2026-07-10T04:14:03.498+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T04:14:03.505+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-10T04:14:03.508+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-10T04:14:03.510+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-10T04:14:03.677+0000] {duckdb_to_bronze.py:50} INFO - Đã khởi tạo DuckDB Connection và cấu hình S3 Secret thành công.
+[2026-07-10T04:14:04.748+0000] {__init__.py:331} INFO - Loaded FileIO: pyiceberg.io.fsspec.FsspecFileIO
+[2026-07-10T04:14:05.899+0000] {duckdb_to_bronze.py:152} INFO - Đã đóng kết nối DuckDB an toàn.
+[2026-07-10T04:14:05.901+0000] {duckdb_to_bronze.py:59} ERROR - Pipeline dừng đột ngột do lỗi: Got differing time zone 'Etc/UTC' for argument 2; expected 'UTC'
+[2026-07-10T04:14:05.903+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/consumer_complaints_incremental_dag_test.py", line 178, in incremental_insert_to_bronze
+    inserted_rows = loader.load_incremental(
+  File "/opt/airflow/dags/utils/duckdb_to_bronze.py", line 103, in load_incremental
+    iceberg_table.append(arrow_table)
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/table/__init__.py", line 1578, in append
+    tx.append(df=df, snapshot_properties=snapshot_properties)
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/table/__init__.py", line 509, in append
+    for data_file in data_files:
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/io/pyarrow.py", line 2363, in _dataframe_to_data_files
+    partitions = _determine_partitions(spec=table_metadata.spec(), schema=table_metadata.schema(), arrow_table=df)
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/io/pyarrow.py", line 2442, in _determine_partitions
+    partition_values_table = pa.table({
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/io/pyarrow.py", line 2443, in <dictcomp>
+    str(partition.field_id): partition.transform.pyarrow_transform(field.field_type)(arrow_table[field.name])
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/transforms.py", line 547, in <lambda>
+    return lambda v: pc.days_between(pa.scalar(epoch), v) if v is not None else None
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyarrow/compute.py", line 246, in wrapper
+    return func.call(args, None, memory_pool)
+  File "pyarrow/_compute.pyx", line 385, in pyarrow._compute.Function.call
+  File "pyarrow/error.pxi", line 154, in pyarrow.lib.pyarrow_internal_check_status
+  File "pyarrow/error.pxi", line 91, in pyarrow.lib.check_status
+pyarrow.lib.ArrowTypeError: Got differing time zone 'Etc/UTC' for argument 2; expected 'UTC'
+[2026-07-10T04:14:05.933+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=consumer_complaints_incremental_load_test, task_id=incremental_insert_to_bronze, run_id=scheduled__2026-07-09T00:00:00+00:00, execution_date=20260709T000000, start_date=20260710T041403, end_date=20260710T041405
+[2026-07-10T04:14:05.949+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T04:14:05.951+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 8 for task incremental_insert_to_bronze (Got differing time zone 'Etc/UTC' for argument 2; expected 'UTC'; 400)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/consumer_complaints_incremental_dag_test.py", line 178, in incremental_insert_to_bronze
+    inserted_rows = loader.load_incremental(
+  File "/opt/airflow/dags/utils/duckdb_to_bronze.py", line 103, in load_incremental
+    iceberg_table.append(arrow_table)
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/table/__init__.py", line 1578, in append
+    tx.append(df=df, snapshot_properties=snapshot_properties)
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/table/__init__.py", line 509, in append
+    for data_file in data_files:
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/io/pyarrow.py", line 2363, in _dataframe_to_data_files
+    partitions = _determine_partitions(spec=table_metadata.spec(), schema=table_metadata.schema(), arrow_table=df)
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/io/pyarrow.py", line 2442, in _determine_partitions
+    partition_values_table = pa.table({
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/io/pyarrow.py", line 2443, in <dictcomp>
+    str(partition.field_id): partition.transform.pyarrow_transform(field.field_type)(arrow_table[field.name])
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/transforms.py", line 547, in <lambda>
+    return lambda v: pc.days_between(pa.scalar(epoch), v) if v is not None else None
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyarrow/compute.py", line 246, in wrapper
+    return func.call(args, None, memory_pool)
+  File "pyarrow/_compute.pyx", line 385, in pyarrow._compute.Function.call
+  File "pyarrow/error.pxi", line 154, in pyarrow.lib.pyarrow_internal_check_status
+  File "pyarrow/error.pxi", line 91, in pyarrow.lib.check_status
+pyarrow.lib.ArrowTypeError: Got differing time zone 'Etc/UTC' for argument 2; expected 'UTC'
+[2026-07-10T04:14:06.010+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-07-10T04:14:06.049+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T04:14:06.058+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-10T04:22:22.604+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T04:22:22.624+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T04:22:22.633+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T04:22:22.635+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-10T04:22:22.648+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): incremental_insert_to_bronze> on 2026-07-09 00:00:00+00:00
+[2026-07-10T04:22:22.654+0000] {standard_task_runner.py:72} INFO - Started process 350 to run task
+[2026-07-10T04:22:22.657+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'incremental_insert_to_bronze', 'scheduled__2026-07-09T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmppby0zawv']
+[2026-07-10T04:22:22.660+0000] {standard_task_runner.py:105} INFO - Job 8: Subtask incremental_insert_to_bronze
+[2026-07-10T04:22:22.755+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [running]> on host dbcdf91220f7
+[2026-07-10T04:22:22.862+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='incremental_insert_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-07-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-09T00:00:00+00:00'
+[2026-07-10T04:22:22.865+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T04:22:22.868+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-10T04:22:22.870+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-10T04:22:22.873+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-10T04:22:22.998+0000] {duckdb_to_bronze.py:51} INFO - Đã khởi tạo DuckDB Connection và cấu hình S3 Secret thành công.
+[2026-07-10T04:22:23.976+0000] {__init__.py:331} INFO - Loaded FileIO: pyiceberg.io.fsspec.FsspecFileIO
+[2026-07-10T04:22:24.836+0000] {duckdb_to_bronze.py:105} INFO - Hoàn tất (Batch): 18 dòng vào bronze.raw_consumer_complaints.
+[2026-07-10T04:22:24.840+0000] {duckdb_to_bronze.py:153} INFO - Đã đóng kết nối DuckDB an toàn.
+[2026-07-10T04:22:24.842+0000] {python.py:240} INFO - Done. Returned value was: {'inserted_run_id': 'scheduled__2026-07-09T00:00:00+00:00', 'total_inserted_rows': 18, 'total_extracted_rows': 18}
+[2026-07-10T04:22:24.878+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T04:22:24.880+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_incremental_load_test, task_id=incremental_insert_to_bronze, run_id=scheduled__2026-07-09T00:00:00+00:00, execution_date=20260709T000000, start_date=20260710T042222, end_date=20260710T042224
+[2026-07-10T04:22:24.924+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-10T04:22:24.949+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T04:22:24.954+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-10T04:33:45.356+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T04:33:45.377+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T04:33:45.387+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T04:33:45.390+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-10T04:33:45.404+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): incremental_insert_to_bronze> on 2026-07-09 00:00:00+00:00
+[2026-07-10T04:33:45.411+0000] {standard_task_runner.py:72} INFO - Started process 472 to run task
+[2026-07-10T04:33:45.414+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'incremental_insert_to_bronze', 'scheduled__2026-07-09T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmpm1shjtf8']
+[2026-07-10T04:33:45.417+0000] {standard_task_runner.py:105} INFO - Job 9: Subtask incremental_insert_to_bronze
+[2026-07-10T04:33:45.498+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [running]> on host b3ee855efc82
+[2026-07-10T04:33:45.609+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='incremental_insert_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-07-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-09T00:00:00+00:00'
+[2026-07-10T04:33:45.613+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T04:33:45.617+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-10T04:33:45.620+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-10T04:33:45.622+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-10T04:33:45.819+0000] {duckdb_to_bronze.py:51} INFO - Đã khởi tạo DuckDB Connection và cấu hình S3 Secret thành công.
+[2026-07-10T04:33:46.729+0000] {__init__.py:331} INFO - Loaded FileIO: pyiceberg.io.fsspec.FsspecFileIO
+[2026-07-10T04:33:47.505+0000] {duckdb_to_bronze.py:105} INFO - Hoàn tất (Batch): 18 dòng vào bronze.raw_consumer_complaints.
+[2026-07-10T04:33:47.508+0000] {duckdb_to_bronze.py:153} INFO - Đã đóng kết nối DuckDB an toàn.
+[2026-07-10T04:33:47.510+0000] {python.py:240} INFO - Done. Returned value was: {'inserted_run_id': 'scheduled__2026-07-09T00:00:00+00:00', 'total_inserted_rows': 18, 'total_extracted_rows': 18}
+[2026-07-10T04:33:47.548+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T04:33:47.550+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_incremental_load_test, task_id=incremental_insert_to_bronze, run_id=scheduled__2026-07-09T00:00:00+00:00, execution_date=20260709T000000, start_date=20260710T043345, end_date=20260710T043347
+[2026-07-10T04:33:47.573+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-10T04:33:47.601+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T04:33:47.605+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-10T04:47:54.245+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T04:47:54.268+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T04:47:54.283+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [queued]>
+[2026-07-10T04:47:54.287+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-10T04:47:54.301+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): incremental_insert_to_bronze> on 2026-07-09 00:00:00+00:00
+[2026-07-10T04:47:54.309+0000] {standard_task_runner.py:72} INFO - Started process 2707 to run task
+[2026-07-10T04:47:54.313+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load_test', 'incremental_insert_to_bronze', 'scheduled__2026-07-09T00:00:00+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag_test.py', '--cfg-path', '/tmp/tmpk0wutgj_']
+[2026-07-10T04:47:54.316+0000] {standard_task_runner.py:105} INFO - Job 39: Subtask incremental_insert_to_bronze
+[2026-07-10T04:47:54.409+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load_test.incremental_insert_to_bronze scheduled__2026-07-09T00:00:00+00:00 [running]> on host 3c4c4f9f722a
+[2026-07-10T04:47:54.552+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load_test' AIRFLOW_CTX_TASK_ID='incremental_insert_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-07-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-09T00:00:00+00:00'
+[2026-07-10T04:47:54.556+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T04:47:54.560+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-10T04:47:54.565+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-10T04:47:54.568+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-10T04:47:54.662+0000] {duckdb_to_bronze.py:51} INFO - Đã khởi tạo DuckDB Connection và cấu hình S3 Secret thành công.
+[2026-07-10T04:47:54.676+0000] {duckdb_to_bronze.py:153} INFO - Đã đóng kết nối DuckDB an toàn.
+[2026-07-10T04:47:54.678+0000] {duckdb_to_bronze.py:60} ERROR - Pipeline dừng đột ngột do lỗi: NoSuchTableException: Table does not exist: bronze.raw_consumer_complaints
+[2026-07-10T04:47:54.680+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/catalog/rest.py", line 642, in load_table
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://nessie:19120/iceberg/v1/main/namespaces/bronze/tables/raw_consumer_complaints
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/consumer_complaints_incremental_dag_test.py", line 178, in incremental_insert_to_bronze
+    inserted_rows = loader.load_incremental(
+  File "/opt/airflow/dags/utils/duckdb_to_bronze.py", line 93, in load_incremental
+    iceberg_table = self.catalog.load_table(table_identifier)
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 398, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/usr/local/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/catalog/rest.py", line 644, in load_table
+    self._handle_non_200_response(exc, {404: NoSuchTableError})
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/catalog/rest.py", line 418, in _handle_non_200_response
+    raise exception(response) from exc
+pyiceberg.exceptions.NoSuchTableError: NoSuchTableException: Table does not exist: bronze.raw_consumer_complaints
+[2026-07-10T04:47:54.708+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=consumer_complaints_incremental_load_test, task_id=incremental_insert_to_bronze, run_id=scheduled__2026-07-09T00:00:00+00:00, execution_date=20260709T000000, start_date=20260710T044754, end_date=20260710T044754
+[2026-07-10T04:47:54.729+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T04:47:54.731+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 39 for task incremental_insert_to_bronze (NoSuchTableException: Table does not exist: bronze.raw_consumer_complaints; 2707)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/catalog/rest.py", line 642, in load_table
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://nessie:19120/iceberg/v1/main/namespaces/bronze/tables/raw_consumer_complaints
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/consumer_complaints_incremental_dag_test.py", line 178, in incremental_insert_to_bronze
+    inserted_rows = loader.load_incremental(
+  File "/opt/airflow/dags/utils/duckdb_to_bronze.py", line 93, in load_incremental
+    iceberg_table = self.catalog.load_table(table_identifier)
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 398, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/usr/local/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/catalog/rest.py", line 644, in load_table
+    self._handle_non_200_response(exc, {404: NoSuchTableError})
+  File "/home/airflow/.local/lib/python3.10/site-packages/pyiceberg/catalog/rest.py", line 418, in _handle_non_200_response
+    raise exception(response) from exc
+pyiceberg.exceptions.NoSuchTableError: NoSuchTableException: Table does not exist: bronze.raw_consumer_complaints
+[2026-07-10T04:47:54.775+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-07-10T04:47:54.806+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T04:47:54.812+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

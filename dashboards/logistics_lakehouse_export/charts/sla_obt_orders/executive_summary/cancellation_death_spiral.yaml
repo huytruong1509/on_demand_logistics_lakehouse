@@ -1,0 +1,29 @@
+version: 1.0.0
+uuid: c8f41111-0001-4000-8000-000000000006
+slice_name: "5. Cancellation Death Spiral (Volume vs Cancel Rate)"
+viz_type: echarts_timeseries_line
+dataset_uuid: d8f41111-8888-4000-8000-000000000001
+params:
+  datasource: d8f41111-8888-4000-8000-000000000001__table
+  viz_type: echarts_timeseries_line
+  granularity_sqla: create_date
+  time_grain_sqla: P1W
+  # Trục Y1 (Bên trái): Volume đơn hàng
+  metrics:
+    - metric_name: total_orders
+      expressionType: SQL
+      sqlExpression: "COUNT(order_id)"
+      label: "Total Orders"
+  # Trục Y2 (Bên phải): Tỷ lệ hủy đơn
+  metrics_b:
+    - expressionType: SQL
+      sqlExpression: >
+        COUNT(CASE WHEN order_status = 'CANCELLED' THEN 1 END) * 1.0
+        / NULLIF(COUNT(order_id), 0)
+      label: "Cancel Rate (%)"
+  show_value: false
+  series_type: "line"
+  smooth: true
+  y_axis_format: ",.0f"
+  y_axis_format_secondary: ",.2%"
+  rich_tooltip: true

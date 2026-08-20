@@ -1,0 +1,116 @@
+[2026-07-15T03:07:42.807+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-15T03:07:42.841+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_silver_gold_incremental.transform_gold.dim_locations.test manual__2026-07-15T02:37:53.942365+00:00 [queued]>
+[2026-07-15T03:07:42.858+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_silver_gold_incremental.transform_gold.dim_locations.test manual__2026-07-15T02:37:53.942365+00:00 [queued]>
+[2026-07-15T03:07:42.860+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2026-07-15T03:07:42.879+0000] {taskinstance.py:2888} INFO - Executing <Task(DbtTestLocalOperator): transform_gold.dim_locations.test> on 2026-07-15 02:37:53.942365+00:00
+[2026-07-15T03:07:42.887+0000] {standard_task_runner.py:72} INFO - Started process 11472 to run task
+[2026-07-15T03:07:42.895+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'dbt_silver_gold_incremental', 'transform_gold.dim_locations.test', 'manual__2026-07-15T02:37:53.942365+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/dbt_silver_gold.py', '--cfg-path', '/tmp/tmpttwbxi96']
+[2026-07-15T03:07:42.899+0000] {standard_task_runner.py:105} INFO - Job 70: Subtask transform_gold.dim_locations.test
+[2026-07-15T03:07:43.013+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_silver_gold_incremental.transform_gold.dim_locations.test manual__2026-07-15T02:37:53.942365+00:00 [running]> on host 46914d9ee5b9
+[2026-07-15T03:07:43.132+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='dbt_silver_gold_incremental' AIRFLOW_CTX_TASK_ID='transform_gold.dim_locations.test' AIRFLOW_CTX_EXECUTION_DATE='2026-07-15T02:37:53.942365+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-15T02:37:53.942365+00:00'
+[2026-07-15T03:07:43.136+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-15T03:07:44.664+0000] {local.py:294} INFO - dbtRunner is available. Using dbtRunner for invoking dbt.
+[2026-07-15T03:07:44.667+0000] {local.py:518} INFO - Cloning project to writable temp directory /tmp/tmp0og2dvi5 from /opt/airflow/dbt_transform
+[2026-07-15T03:07:44.686+0000] {local.py:538} INFO - Partial parse is enabled and the latest partial parse file is /tmp/cosmos/dbt_silver_gold_incremental__transform_gold/target/partial_parse.msgpack
+[2026-07-15T03:07:44.701+0000] {config.py:395} INFO - Using user-supplied profiles.yml at /opt/airflow/dbt_transform/profiles.yml
+[2026-07-15T03:07:44.721+0000] {runner.py:95} INFO - Trying to run dbtRunner with:
+ ['deps', '--project-dir', '/tmp/tmp0og2dvi5', '--profiles-dir', '/opt/airflow/dbt_transform', '--profile', 'lakehouse_dbt', '--target', 'dev', '--no-static-parser']
+ in /tmp/tmp0og2dvi5
+[2026-07-15T03:07:44.825+0000] {logging_mixin.py:190} INFO - 03:07:44  Running with dbt=1.8.8
+[2026-07-15T03:07:45.008+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-07-15T03:07:45.014+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_incremental__transform_silver...
+[2026-07-15T03:07:48.740+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_incremental__transform_silver for current version: 3.7106418530001974
+[2026-07-15T03:07:48.741+0000] {graph.py:886} INFO - Cosmos performance [46914d9ee5b9|11472]: The cache size for cosmos_cache__dbt_silver_gold_incremental__transform_silver is 5960
+[2026-07-15T03:07:48.744+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_incremental__transform_silver - 8dcc078b1dfa9dffbe5c77c325890f8f,5e34606eb5f2b3dea81a8e19fa3ba138
+[2026-07-15T03:07:48.745+0000] {graph.py:799} INFO - Total nodes: 7
+[2026-07-15T03:07:48.747+0000] {graph.py:800} INFO - Total filtered nodes: 7
+[2026-07-15T03:07:48.750+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_silver) - [46914d9ee5b9|11472]: It took 3.74s to parse the dbt project for DAG using dbt_ls_cache
+[2026-07-15T03:07:48.764+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_silver) - [46914d9ee5b9|11472]: It took 0.0146s to build the Airflow DAG.
+[2026-07-15T03:07:48.766+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-07-15T03:07:48.768+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-07-15T03:07:48.775+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_incremental__transform_gold...
+[2026-07-15T03:07:52.222+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_incremental__transform_gold for current version: 3.4210686939995867
+[2026-07-15T03:07:52.224+0000] {graph.py:886} INFO - Cosmos performance [46914d9ee5b9|11472]: The cache size for cosmos_cache__dbt_silver_gold_incremental__transform_gold is 35989
+[2026-07-15T03:07:52.228+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_incremental__transform_gold - 8dcc078b1dfa9dffbe5c77c325890f8f,304321e940a9403dceb380589bd0566f
+[2026-07-15T03:07:52.230+0000] {graph.py:799} INFO - Total nodes: 39
+[2026-07-15T03:07:52.232+0000] {graph.py:800} INFO - Total filtered nodes: 39
+[2026-07-15T03:07:52.235+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_gold) - [46914d9ee5b9|11472]: It took 3.46s to parse the dbt project for DAG using dbt_ls_cache
+[2026-07-15T03:07:52.286+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_gold) - [46914d9ee5b9|11472]: It took 0.0512s to build the Airflow DAG.
+[2026-07-15T03:07:52.288+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-07-15T03:07:52.291+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-07-15T03:07:52.297+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_full_load__transform_silver...
+[2026-07-15T03:07:55.547+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_full_load__transform_silver for current version: 3.249212961000012
+[2026-07-15T03:07:55.550+0000] {graph.py:886} INFO - Cosmos performance [46914d9ee5b9|11472]: The cache size for cosmos_cache__dbt_silver_gold_full_load__transform_silver is 5960
+[2026-07-15T03:07:55.553+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_full_load__transform_silver - 8dcc078b1dfa9dffbe5c77c325890f8f,5e34606eb5f2b3dea81a8e19fa3ba138
+[2026-07-15T03:07:55.555+0000] {graph.py:799} INFO - Total nodes: 7
+[2026-07-15T03:07:55.557+0000] {graph.py:800} INFO - Total filtered nodes: 7
+[2026-07-15T03:07:55.559+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_full_load__transform_silver) - [46914d9ee5b9|11472]: It took 3.28s to parse the dbt project for DAG using dbt_ls_cache
+[2026-07-15T03:07:55.575+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_full_load__transform_silver) - [46914d9ee5b9|11472]: It took 0.016s to build the Airflow DAG.
+[2026-07-15T03:07:55.577+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-07-15T03:07:55.580+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-07-15T03:07:55.587+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_full_load__transform_gold...
+[2026-07-15T03:07:59.001+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_full_load__transform_gold for current version: 3.3847895219996644
+[2026-07-15T03:07:59.003+0000] {graph.py:886} INFO - Cosmos performance [46914d9ee5b9|11472]: The cache size for cosmos_cache__dbt_silver_gold_full_load__transform_gold is 35989
+[2026-07-15T03:07:59.007+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_full_load__transform_gold - 8dcc078b1dfa9dffbe5c77c325890f8f,304321e940a9403dceb380589bd0566f
+[2026-07-15T03:07:59.009+0000] {graph.py:799} INFO - Total nodes: 39
+[2026-07-15T03:07:59.012+0000] {graph.py:800} INFO - Total filtered nodes: 39
+[2026-07-15T03:07:59.014+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_full_load__transform_gold) - [46914d9ee5b9|11472]: It took 3.43s to parse the dbt project for DAG using dbt_ls_cache
+[2026-07-15T03:07:59.084+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_full_load__transform_gold) - [46914d9ee5b9|11472]: It took 0.0705s to build the Airflow DAG.
+[2026-07-15T03:07:59.087+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-07-15T03:07:59.666+0000] {logging_mixin.py:190} INFO - 03:07:59  Installing dbt-labs/dbt_utils
+[2026-07-15T03:08:00.383+0000] {logging_mixin.py:190} INFO - 03:08:00  Installed from version 1.3.0
+[2026-07-15T03:08:00.398+0000] {logging_mixin.py:190} INFO - 03:08:00  Updated version available: 1.4.1
+[2026-07-15T03:08:00.413+0000] {logging_mixin.py:190} INFO - 03:08:00  Installing metaplane/dbt_expectations
+[2026-07-15T03:08:02.193+0000] {logging_mixin.py:190} INFO - 03:08:02  Installed from version 0.10.8
+[2026-07-15T03:08:02.198+0000] {logging_mixin.py:190} INFO - 03:08:02  Updated version available: 0.10.10
+[2026-07-15T03:08:02.203+0000] {logging_mixin.py:190} INFO - 03:08:02  Installing godatadriven/dbt_date
+[2026-07-15T03:08:02.912+0000] {logging_mixin.py:190} INFO - 03:08:02  Installed from version 0.15.0
+[2026-07-15T03:08:02.917+0000] {logging_mixin.py:190} INFO - 03:08:02  Up to date!
+[2026-07-15T03:08:02.925+0000] {logging_mixin.py:190} INFO - 03:08:02
+[2026-07-15T03:08:02.937+0000] {logging_mixin.py:190} INFO - 03:08:02  Updates available for packages: ['dbt-labs/dbt_utils', 'metaplane/dbt_expectations']                 
+Update your versions in packages.yml, then run dbt deps
+[2026-07-15T03:08:04.180+0000] {runner.py:95} INFO - Trying to run dbtRunner with:
+ ['test', '--select', 'dim_locations', '--project-dir', '/tmp/tmp0og2dvi5', '--profiles-dir', '/opt/airflow/dbt_transform', '--profile', 'lakehouse_dbt', '--target', 'dev', '--no-static-parser']
+ in /tmp/tmp0og2dvi5
+[2026-07-15T03:08:04.238+0000] {logging_mixin.py:190} INFO - 03:08:04  Running with dbt=1.8.8
+[2026-07-15T03:08:04.284+0000] {auth.py:343} INFO - keyring module not found. OAuth2 token will not be stored in keyring.
+[2026-07-15T03:08:04.289+0000] {auth.py:343} INFO - keyring module not found. OAuth2 token will not be stored in keyring.
+[2026-07-15T03:08:04.446+0000] {logging_mixin.py:190} INFO - 03:08:04  Registered adapter: trino=1.8.5
+[2026-07-15T03:08:06.409+0000] {logging_mixin.py:190} INFO - 03:08:06  Found 8 models, 40 data tests, 1 source, 9 metrics, 838 macros, 5 semantic models
+[2026-07-15T03:08:06.413+0000] {logging_mixin.py:190} INFO - 03:08:06
+[2026-07-15T03:08:06.471+0000] {logging_mixin.py:190} INFO - 03:08:06  [WARNING]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[2026-07-15T03:08:06.473+0000] {logging_mixin.py:190} INFO - 03:08:06  [WARNING]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[2026-07-15T03:08:06.597+0000] {logging_mixin.py:190} INFO - 03:08:06  Concurrency: 4 threads (target='dev')
+[2026-07-15T03:08:06.600+0000] {logging_mixin.py:190} INFO - 03:08:06
+[2026-07-15T03:08:06.610+0000] {logging_mixin.py:190} INFO - 03:08:06  1 of 5 START test dbt_expectations_expect_column_values_to_match_regex_dim_locations_state_code___A_Z_2_Unknown_  [RUN]
+[2026-07-15T03:08:06.614+0000] {logging_mixin.py:190} INFO - 03:08:06  2 of 5 START test dbt_expectations_expect_column_values_to_match_regex_dim_locations_zip_code___0_9_5_Unknown_  [RUN]
+[2026-07-15T03:08:06.642+0000] {logging_mixin.py:190} INFO - 03:08:06  3 of 5 START test not_null_dim_locations_location_key .......................... [RUN]
+[2026-07-15T03:08:06.656+0000] {logging_mixin.py:190} INFO - 03:08:06  4 of 5 START test relationships_fct_complaints_location_key__location_key__ref_dim_locations_  [RUN]
+[2026-07-15T03:08:06.898+0000] {logging_mixin.py:190} INFO - 03:08:06  3 of 5 PASS not_null_dim_locations_location_key ................................ [PASS in 0.24s]
+[2026-07-15T03:08:06.909+0000] {logging_mixin.py:190} INFO - 03:08:06  5 of 5 START test unique_dim_locations_location_key ............................ [RUN]
+[2026-07-15T03:08:07.057+0000] {logging_mixin.py:190} INFO - 03:08:07  1 of 5 PASS dbt_expectations_expect_column_values_to_match_regex_dim_locations_state_code___A_Z_2_Unknown_  [PASS in 0.44s]
+[2026-07-15T03:08:07.081+0000] {logging_mixin.py:190} INFO - 03:08:07  2 of 5 WARN 3 dbt_expectations_expect_column_values_to_match_regex_dim_locations_zip_code___0_9_5_Unknown_  [WARN 3 in 0.43s]
+[2026-07-15T03:08:07.202+0000] {logging_mixin.py:190} INFO - 03:08:07  4 of 5 PASS relationships_fct_complaints_location_key__location_key__ref_dim_locations_  [PASS in 0.51s]
+[2026-07-15T03:08:07.375+0000] {logging_mixin.py:190} INFO - 03:08:07  5 of 5 PASS unique_dim_locations_location_key .................................. [PASS in 0.46s]
+[2026-07-15T03:08:07.392+0000] {logging_mixin.py:190} INFO - 03:08:07
+[2026-07-15T03:08:07.396+0000] {logging_mixin.py:190} INFO - 03:08:07  Finished running 5 data tests in 0 hours 0 minutes and 0.98 seconds (0.98s).
+[2026-07-15T03:08:07.526+0000] {logging_mixin.py:190} INFO - 03:08:07
+[2026-07-15T03:08:07.532+0000] {logging_mixin.py:190} INFO - 03:08:07  Completed with 1 warning:
+[2026-07-15T03:08:07.539+0000] {logging_mixin.py:190} INFO - 03:08:07
+[2026-07-15T03:08:07.548+0000] {logging_mixin.py:190} INFO - 03:08:07  Warning in test dbt_expectations_expect_column_values_to_match_regex_dim_locations_zip_code___0_9_5_Unknown_ (models/marts/marts_schema.yml)
+[2026-07-15T03:08:07.553+0000] {logging_mixin.py:190} INFO - 03:08:07  Got 3 results, configured to warn if != 0
+[2026-07-15T03:08:07.557+0000] {logging_mixin.py:190} INFO - 03:08:07
+[2026-07-15T03:08:07.564+0000] {logging_mixin.py:190} INFO - 03:08:07    compiled code at target/compiled/consumer_complaints_transformation/models/marts/marts_schema.yml/dbt_expectations_expect_column_fb3ef72e0d62665308cd8fe1519ea112.sql
+[2026-07-15T03:08:07.571+0000] {logging_mixin.py:190} INFO - 03:08:07
+[2026-07-15T03:08:07.575+0000] {logging_mixin.py:190} INFO - 03:08:07  Done. PASS=4 WARN=1 ERROR=0 SKIP=0 TOTAL=5
+[2026-07-15T03:08:08.777+0000] {local.py:196} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/manifest/v12.json is above dbt-ol supported version 7. This might cause errors.
+[2026-07-15T03:08:08.832+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-15T03:08:08.834+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dbt_silver_gold_incremental, task_id=transform_gold.dim_locations.test, run_id=manual__2026-07-15T02:37:53.942365+00:00, execution_date=20260715T023753, start_date=20260715T030742, end_date=20260715T030808
+[2026-07-15T03:08:09.611+0000] {_client.py:1026} INFO - HTTP Request: GET https://astronomer.gateway.scarf.sh/astronomer-cosmos/v3/task_instance?cosmos_version=1.15.0&airflow_version=2.10.2&python_version=3.10.15&platform_system=Linux&platform_machine=x86_64&status=success&operator_name=DbtTestLocalOperator&is_cosmos_operator_subclass=False&invocation_mode=dbt_runner&execution_mode=local&profile_strategy=yaml_file&profile_mapping_class=None&database=trino&is_mapped_task=False&dbt_command=test&install_deps=True&has_callback=False&duration=25.991577 "HTTP/1.1 200 OK"
+[2026-07-15T03:08:09.647+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-15T03:08:09.674+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-15T03:08:09.679+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

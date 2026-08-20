@@ -1,0 +1,135 @@
+[2026-06-28T01:40:23.220+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.create_bronze_iceberg_table scheduled__2026-06-27T00:00:00+00:00 [queued]>
+[2026-06-28T01:40:23.228+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.create_bronze_iceberg_table scheduled__2026-06-27T00:00:00+00:00 [queued]>
+[2026-06-28T01:40:23.229+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2026-06-28T01:40:23.239+0000] {taskinstance.py:2214} INFO - Executing <Task(_PythonDecoratedOperator): create_bronze_iceberg_table> on 2026-06-27 00:00:00+00:00
+[2026-06-28T01:40:23.245+0000] {standard_task_runner.py:60} INFO - Started process 499 to run task
+[2026-06-28T01:40:23.248+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_elt_lakehouse', 'create_bronze_iceberg_table', 'scheduled__2026-06-27T00:00:00+00:00', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_elt.py', '--cfg-path', '/tmp/tmpr4cxaa2c']
+[2026-06-28T01:40:23.249+0000] {standard_task_runner.py:88} INFO - Job 60: Subtask create_bronze_iceberg_table
+[2026-06-28T01:40:23.328+0000] {task_command.py:423} INFO - Running <TaskInstance: consumer_complaints_elt_lakehouse.create_bronze_iceberg_table scheduled__2026-06-27T00:00:00+00:00 [running]> on host 63606b61b00d
+[2026-06-28T01:40:23.409+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering' AIRFLOW_CTX_DAG_ID='consumer_complaints_elt_lakehouse' AIRFLOW_CTX_TASK_ID='create_bronze_iceberg_table' AIRFLOW_CTX_EXECUTION_DATE='2026-06-27T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-06-27T00:00:00+00:00'
+[2026-06-28T01:40:23.411+0000] {consumer_complaints_elt.py:170} INFO - Đang kiểm tra/tạo Schema: lakehouse.bronze
+[2026-06-28T01:40:23.412+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-28T01:40:23.414+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-28T01:40:23.417+0000] {sql.py:457} INFO - Running statement: CREATE SCHEMA IF NOT EXISTS lakehouse.bronze, parameters: None
+[2026-06-28T01:40:23.996+0000] {consumer_complaints_elt.py:175} INFO - Đang kiểm tra/tạo Table Iceberg: lakehouse.bronze.raw__consumer_complaints
+[2026-06-28T01:40:23.997+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-28T01:40:23.999+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-28T01:40:24.000+0000] {sql.py:457} INFO - Running statement: 
+CREATE TABLE IF NOT EXISTS lakehouse.bronze.raw__consumer_complaints (
+    complaint_id VARCHAR,
+    date_received VARCHAR,
+    date_sent_to_company VARCHAR,
+    product VARCHAR,
+    sub_product VARCHAR,
+    issue VARCHAR,
+    sub_issue VARCHAR,
+    company VARCHAR,
+    state VARCHAR,
+    zip_code VARCHAR,
+    tags VARCHAR,
+    consumer_consent_provided VARCHAR,
+    submitted_via VARCHAR,
+    company_response_to_consumer VARCHAR,
+    timely_response VARCHAR,
+    consumer_disputed VARCHAR,
+    complaint_what_happened VARCHAR,
+    company_public_response VARCHAR
+) WITH (
+    format = 'PARQUET'
+)
+, parameters: None
+[2026-06-28T01:40:24.809+0000] {consumer_complaints_elt.py:178} INFO - ✓ Setup Schema và Bảng Iceberg hoàn tất!
+[2026-06-28T01:40:24.810+0000] {python.py:202} INFO - Done. Returned value was: None
+[2026-06-28T01:40:24.824+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_elt_lakehouse, task_id=create_bronze_iceberg_table, execution_date=20260627T000000, start_date=20260628T014023, end_date=20260628T014024
+[2026-06-28T01:40:24.868+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-06-28T01:40:24.899+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-28T02:05:50.885+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.create_bronze_iceberg_table scheduled__2026-06-27T00:00:00+00:00 [queued]>
+[2026-06-28T02:05:50.892+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.create_bronze_iceberg_table scheduled__2026-06-27T00:00:00+00:00 [queued]>
+[2026-06-28T02:05:50.893+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2026-06-28T02:05:50.904+0000] {taskinstance.py:2214} INFO - Executing <Task(_PythonDecoratedOperator): create_bronze_iceberg_table> on 2026-06-27 00:00:00+00:00
+[2026-06-28T02:05:50.908+0000] {standard_task_runner.py:60} INFO - Started process 250 to run task
+[2026-06-28T02:05:50.913+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_elt_lakehouse', 'create_bronze_iceberg_table', 'scheduled__2026-06-27T00:00:00+00:00', '--job-id', '76', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_elt.py', '--cfg-path', '/tmp/tmpq1uvk7uq']
+[2026-06-28T02:05:50.914+0000] {standard_task_runner.py:88} INFO - Job 76: Subtask create_bronze_iceberg_table
+[2026-06-28T02:05:50.995+0000] {task_command.py:423} INFO - Running <TaskInstance: consumer_complaints_elt_lakehouse.create_bronze_iceberg_table scheduled__2026-06-27T00:00:00+00:00 [running]> on host efa01d26e59e
+[2026-06-28T02:05:51.071+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering' AIRFLOW_CTX_DAG_ID='consumer_complaints_elt_lakehouse' AIRFLOW_CTX_TASK_ID='create_bronze_iceberg_table' AIRFLOW_CTX_EXECUTION_DATE='2026-06-27T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-06-27T00:00:00+00:00'
+[2026-06-28T02:05:51.073+0000] {consumer_complaints_elt.py:170} INFO - Đang kiểm tra/tạo Schema: lakehouse.bronze
+[2026-06-28T02:05:51.075+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-28T02:05:51.076+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-28T02:05:51.079+0000] {sql.py:457} INFO - Running statement: CREATE SCHEMA IF NOT EXISTS lakehouse.bronze, parameters: None
+[2026-06-28T02:05:51.124+0000] {consumer_complaints_elt.py:175} INFO - Đang kiểm tra/tạo Table Iceberg: lakehouse.bronze.raw__consumer_complaints
+[2026-06-28T02:05:51.125+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-28T02:05:51.125+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-28T02:05:51.126+0000] {sql.py:457} INFO - Running statement: 
+CREATE TABLE IF NOT EXISTS lakehouse.bronze.raw__consumer_complaints (
+    complaint_id VARCHAR,
+    date_received VARCHAR,
+    date_sent_to_company VARCHAR,
+    product VARCHAR,
+    sub_product VARCHAR,
+    issue VARCHAR,
+    sub_issue VARCHAR,
+    company VARCHAR,
+    state VARCHAR,
+    zip_code VARCHAR,
+    tags VARCHAR,
+    consumer_consent_provided VARCHAR,
+    submitted_via VARCHAR,
+    company_response_to_consumer VARCHAR,
+    timely_response VARCHAR,
+    consumer_disputed VARCHAR,
+    complaint_what_happened VARCHAR,
+    company_public_response VARCHAR
+) WITH (
+    format = 'PARQUET'
+)
+, parameters: None
+[2026-06-28T02:05:51.160+0000] {consumer_complaints_elt.py:178} INFO - ✓ Setup Schema và Bảng Iceberg hoàn tất!
+[2026-06-28T02:05:51.161+0000] {python.py:202} INFO - Done. Returned value was: None
+[2026-06-28T02:05:51.172+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_elt_lakehouse, task_id=create_bronze_iceberg_table, execution_date=20260627T000000, start_date=20260628T020550, end_date=20260628T020551
+[2026-06-28T02:05:51.207+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-06-28T02:05:51.232+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-28T02:17:06.523+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.create_bronze_iceberg_table scheduled__2026-06-27T00:00:00+00:00 [queued]>
+[2026-06-28T02:17:06.531+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.create_bronze_iceberg_table scheduled__2026-06-27T00:00:00+00:00 [queued]>
+[2026-06-28T02:17:06.532+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2026-06-28T02:17:06.544+0000] {taskinstance.py:2214} INFO - Executing <Task(_PythonDecoratedOperator): create_bronze_iceberg_table> on 2026-06-27 00:00:00+00:00
+[2026-06-28T02:17:06.548+0000] {standard_task_runner.py:60} INFO - Started process 201 to run task
+[2026-06-28T02:17:06.551+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_elt_lakehouse', 'create_bronze_iceberg_table', 'scheduled__2026-06-27T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_elt.py', '--cfg-path', '/tmp/tmpp8zkkmut']
+[2026-06-28T02:17:06.552+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask create_bronze_iceberg_table
+[2026-06-28T02:17:06.634+0000] {task_command.py:423} INFO - Running <TaskInstance: consumer_complaints_elt_lakehouse.create_bronze_iceberg_table scheduled__2026-06-27T00:00:00+00:00 [running]> on host 4f8f0fb0c80f
+[2026-06-28T02:17:06.720+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering' AIRFLOW_CTX_DAG_ID='consumer_complaints_elt_lakehouse' AIRFLOW_CTX_TASK_ID='create_bronze_iceberg_table' AIRFLOW_CTX_EXECUTION_DATE='2026-06-27T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-06-27T00:00:00+00:00'
+[2026-06-28T02:17:06.723+0000] {consumer_complaints_elt.py:170} INFO - Đang kiểm tra/tạo Schema: lakehouse.bronze
+[2026-06-28T02:17:06.724+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-28T02:17:06.726+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-28T02:17:06.730+0000] {sql.py:457} INFO - Running statement: CREATE SCHEMA IF NOT EXISTS lakehouse.bronze, parameters: None
+[2026-06-28T02:17:08.024+0000] {consumer_complaints_elt.py:175} INFO - Đang kiểm tra/tạo Table Iceberg: lakehouse.bronze.raw__consumer_complaints
+[2026-06-28T02:17:08.025+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-28T02:17:08.026+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-06-28T02:17:08.027+0000] {sql.py:457} INFO - Running statement: 
+CREATE TABLE IF NOT EXISTS lakehouse.bronze.raw__consumer_complaints (
+    complaint_id VARCHAR,
+    date_received VARCHAR,
+    date_sent_to_company VARCHAR,
+    product VARCHAR,
+    sub_product VARCHAR,
+    issue VARCHAR,
+    sub_issue VARCHAR,
+    company VARCHAR,
+    state VARCHAR,
+    zip_code VARCHAR,
+    tags VARCHAR,
+    consumer_consent_provided VARCHAR,
+    submitted_via VARCHAR,
+    company_response_to_consumer VARCHAR,
+    timely_response VARCHAR,
+    consumer_disputed VARCHAR,
+    complaint_what_happened VARCHAR,
+    company_public_response VARCHAR
+) WITH (
+    format = 'PARQUET'
+)
+, parameters: None
+[2026-06-28T02:17:08.800+0000] {consumer_complaints_elt.py:178} INFO - ✓ Setup Schema và Bảng Iceberg hoàn tất!
+[2026-06-28T02:17:08.800+0000] {python.py:202} INFO - Done. Returned value was: None
+[2026-06-28T02:17:08.816+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_elt_lakehouse, task_id=create_bronze_iceberg_table, execution_date=20260627T000000, start_date=20260628T021706, end_date=20260628T021708
+[2026-06-28T02:17:08.857+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-06-28T02:17:08.892+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check

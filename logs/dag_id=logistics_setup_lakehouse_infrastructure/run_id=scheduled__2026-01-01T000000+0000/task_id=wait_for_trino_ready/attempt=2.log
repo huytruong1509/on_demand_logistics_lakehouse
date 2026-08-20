@@ -1,0 +1,20 @@
+[2026-08-05T08:52:41.049+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-05T08:52:41.069+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: logistics_setup_lakehouse_infrastructure.wait_for_trino_ready scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-08-05T08:52:41.078+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: logistics_setup_lakehouse_infrastructure.wait_for_trino_ready scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-08-05T08:52:41.079+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2026-08-05T08:52:41.093+0000] {taskinstance.py:2888} INFO - Executing <Task(HttpSensor): wait_for_trino_ready> on 2026-01-01 00:00:00+00:00
+[2026-08-05T08:52:41.097+0000] {standard_task_runner.py:72} INFO - Started process 828 to run task
+[2026-08-05T08:52:41.102+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'logistics_setup_lakehouse_infrastructure', 'wait_for_trino_ready', 'scheduled__2026-01-01T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/logistics_setup_infrastructure.py', '--cfg-path', '/tmp/tmp8_94s5ba']
+[2026-08-05T08:52:41.105+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask wait_for_trino_ready
+[2026-08-05T08:52:41.184+0000] {task_command.py:467} INFO - Running <TaskInstance: logistics_setup_lakehouse_infrastructure.wait_for_trino_ready scheduled__2026-01-01T00:00:00+00:00 [running]> on host ea50901866c3
+[2026-08-05T08:52:41.403+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='logistics_setup_lakehouse_infrastructure' AIRFLOW_CTX_TASK_ID='wait_for_trino_ready' AIRFLOW_CTX_EXECUTION_DATE='2026-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-01T00:00:00+00:00'
+[2026-08-05T08:52:41.405+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-05T08:52:41.407+0000] {baseoperator.py:405} WARNING - HttpSensor.execute cannot be called outside TaskInstance!
+[2026-08-05T08:52:41.409+0000] {http.py:137} INFO - Poking: v1/info
+[2026-08-05T08:52:41.411+0000] {base.py:84} INFO - Retrieving connection 'trino_api_conn'
+[2026-08-05T08:52:41.418+0000] {base.py:336} INFO - Success criteria met. Exiting.
+[2026-08-05T08:52:41.430+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-05T08:52:41.431+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=logistics_setup_lakehouse_infrastructure, task_id=wait_for_trino_ready, run_id=scheduled__2026-01-01T00:00:00+00:00, execution_date=20260101T000000, start_date=20260805T085241, end_date=20260805T085241
+[2026-08-05T08:52:41.477+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-08-05T08:52:41.502+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-08-05T08:52:41.505+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

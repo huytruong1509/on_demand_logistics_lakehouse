@@ -1,0 +1,18 @@
+[2026-07-10T07:35:48.247+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T07:35:48.275+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_full_load_test.aggregate_metrics manual__2026-07-10T07:35:34.389485+00:00 [queued]>
+[2026-07-10T07:35:48.287+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_full_load_test.aggregate_metrics manual__2026-07-10T07:35:34.389485+00:00 [queued]>
+[2026-07-10T07:35:48.290+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-10T07:35:48.307+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): aggregate_metrics> on 2026-07-10 07:35:34.389485+00:00
+[2026-07-10T07:35:48.313+0000] {standard_task_runner.py:72} INFO - Started process 384 to run task
+[2026-07-10T07:35:48.318+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_full_load_test', 'aggregate_metrics', 'manual__2026-07-10T07:35:34.389485+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_full_load.py', '--cfg-path', '/tmp/tmpp39l4_6b']
+[2026-07-10T07:35:48.321+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask aggregate_metrics
+[2026-07-10T07:35:48.407+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_full_load_test.aggregate_metrics manual__2026-07-10T07:35:34.389485+00:00 [running]> on host a2092c4c4556
+[2026-07-10T07:35:48.496+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_full_load_test' AIRFLOW_CTX_TASK_ID='aggregate_metrics' AIRFLOW_CTX_EXECUTION_DATE='2026-07-10T07:35:34.389485+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-10T07:35:34.389485+00:00'
+[2026-07-10T07:35:48.499+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T07:35:48.511+0000] {consumer_complaints_full_load.py:120} INFO - 🚀 TỔNG HỢP KÉO API: 77183 records.
+[2026-07-10T07:35:48.512+0000] {python.py:240} INFO - Done. Returned value was: 77183
+[2026-07-10T07:35:48.530+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T07:35:48.532+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_full_load_test, task_id=aggregate_metrics, run_id=manual__2026-07-10T07:35:34.389485+00:00, execution_date=20260710T073534, start_date=20260710T073548, end_date=20260710T073548
+[2026-07-10T07:35:48.573+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-10T07:35:48.601+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T07:35:48.606+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

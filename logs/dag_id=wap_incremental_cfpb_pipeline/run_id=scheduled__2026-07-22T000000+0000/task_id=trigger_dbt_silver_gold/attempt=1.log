@@ -1,0 +1,96 @@
+[2026-07-23T02:01:41.365+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T02:01:41.387+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T02:01:41.397+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T02:01:41.398+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-23T02:01:41.412+0000] {taskinstance.py:2888} INFO - Executing <Task(TriggerDagRunOperator): trigger_dbt_silver_gold> on 2026-07-22 00:00:00+00:00
+[2026-07-23T02:01:41.418+0000] {standard_task_runner.py:72} INFO - Started process 1799 to run task
+[2026-07-23T02:01:41.421+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_incremental_cfpb_pipeline', 'trigger_dbt_silver_gold', 'scheduled__2026-07-22T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/wap_incremental_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpbwu035gn']
+[2026-07-23T02:01:41.423+0000] {standard_task_runner.py:105} INFO - Job 13: Subtask trigger_dbt_silver_gold
+[2026-07-23T02:01:41.504+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [running]> on host d0280eba3cdf
+[2026-07-23T02:01:41.602+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_incremental_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='trigger_dbt_silver_gold' AIRFLOW_CTX_EXECUTION_DATE='2026-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-22T00:00:00+00:00'
+[2026-07-23T02:01:41.607+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T02:01:41.719+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-23T02:01:41.737+0000] {taskinstance.py:288} INFO - Pausing task as DEFERRED. dag_id=wap_incremental_cfpb_pipeline, task_id=trigger_dbt_silver_gold, run_id=scheduled__2026-07-22T00:00:00+00:00, execution_date=20260722T000000, start_date=20260723T020141
+[2026-07-23T02:01:41.739+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T02:01:41.756+0000] {local_task_job_runner.py:260} INFO - Task exited with return code 100 (task deferral)
+[2026-07-23T02:01:41.760+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-23T02:04:45.184+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T02:04:45.203+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T02:04:45.213+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T02:04:45.215+0000] {taskinstance.py:2863} INFO - Resuming after deferral
+[2026-07-23T02:04:45.227+0000] {taskinstance.py:2888} INFO - Executing <Task(TriggerDagRunOperator): trigger_dbt_silver_gold> on 2026-07-22 00:00:00+00:00
+[2026-07-23T02:04:45.233+0000] {standard_task_runner.py:72} INFO - Started process 2629 to run task
+[2026-07-23T02:04:45.238+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_incremental_cfpb_pipeline', 'trigger_dbt_silver_gold', 'scheduled__2026-07-22T00:00:00+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/wap_incremental_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpdsqpq__g']
+[2026-07-23T02:04:45.240+0000] {standard_task_runner.py:105} INFO - Job 28: Subtask trigger_dbt_silver_gold
+[2026-07-23T02:04:45.323+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [running]> on host d0280eba3cdf
+[2026-07-23T02:04:45.380+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T02:04:45.391+0000] {trigger_dagrun.py:295} INFO - dbt_silver_gold_incremental finished with allowed state success
+[2026-07-23T02:04:45.403+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T02:04:45.405+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_incremental_cfpb_pipeline, task_id=trigger_dbt_silver_gold, run_id=scheduled__2026-07-22T00:00:00+00:00, execution_date=20260722T000000, start_date=20260723T020141, end_date=20260723T020445
+[2026-07-23T02:04:45.453+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-23T02:04:45.470+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-23T02:04:45.473+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-23T03:03:19.923+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T03:03:19.943+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T03:03:19.952+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T03:03:19.954+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-23T03:03:19.968+0000] {taskinstance.py:2888} INFO - Executing <Task(TriggerDagRunOperator): trigger_dbt_silver_gold> on 2026-07-22 00:00:00+00:00
+[2026-07-23T03:03:19.975+0000] {standard_task_runner.py:72} INFO - Started process 1089 to run task
+[2026-07-23T03:03:19.981+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_incremental_cfpb_pipeline', 'trigger_dbt_silver_gold', 'scheduled__2026-07-22T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/wap_incremental_cfpb_pipeline.py', '--cfg-path', '/tmp/tmphhax5okp']
+[2026-07-23T03:03:19.983+0000] {standard_task_runner.py:105} INFO - Job 13: Subtask trigger_dbt_silver_gold
+[2026-07-23T03:03:20.063+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [running]> on host b3f56365d5f7
+[2026-07-23T03:03:20.152+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_incremental_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='trigger_dbt_silver_gold' AIRFLOW_CTX_EXECUTION_DATE='2026-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-22T00:00:00+00:00'
+[2026-07-23T03:03:20.156+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T03:03:20.266+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-23T03:03:20.292+0000] {taskinstance.py:288} INFO - Pausing task as DEFERRED. dag_id=wap_incremental_cfpb_pipeline, task_id=trigger_dbt_silver_gold, run_id=scheduled__2026-07-22T00:00:00+00:00, execution_date=20260722T000000, start_date=20260723T030319
+[2026-07-23T03:03:20.295+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T03:03:20.315+0000] {local_task_job_runner.py:260} INFO - Task exited with return code 100 (task deferral)
+[2026-07-23T03:03:20.317+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-23T03:06:24.660+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T03:06:24.678+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T03:06:24.687+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T03:06:24.689+0000] {taskinstance.py:2863} INFO - Resuming after deferral
+[2026-07-23T03:06:24.702+0000] {taskinstance.py:2888} INFO - Executing <Task(TriggerDagRunOperator): trigger_dbt_silver_gold> on 2026-07-22 00:00:00+00:00
+[2026-07-23T03:06:24.710+0000] {standard_task_runner.py:72} INFO - Started process 1941 to run task
+[2026-07-23T03:06:24.714+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_incremental_cfpb_pipeline', 'trigger_dbt_silver_gold', 'scheduled__2026-07-22T00:00:00+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/wap_incremental_cfpb_pipeline.py', '--cfg-path', '/tmp/tmprmw9_grb']
+[2026-07-23T03:06:24.715+0000] {standard_task_runner.py:105} INFO - Job 28: Subtask trigger_dbt_silver_gold
+[2026-07-23T03:06:24.800+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [running]> on host b3f56365d5f7
+[2026-07-23T03:06:24.871+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T03:06:24.883+0000] {trigger_dagrun.py:295} INFO - dbt_silver_gold_incremental finished with allowed state success
+[2026-07-23T03:06:24.896+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T03:06:24.897+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_incremental_cfpb_pipeline, task_id=trigger_dbt_silver_gold, run_id=scheduled__2026-07-22T00:00:00+00:00, execution_date=20260722T000000, start_date=20260723T030319, end_date=20260723T030624
+[2026-07-23T03:06:24.928+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-23T03:06:24.950+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-23T03:06:24.953+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-23T03:45:22.877+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T03:45:22.901+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T03:45:22.911+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T03:45:22.913+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-23T03:45:22.930+0000] {taskinstance.py:2888} INFO - Executing <Task(TriggerDagRunOperator): trigger_dbt_silver_gold> on 2026-07-22 00:00:00+00:00
+[2026-07-23T03:45:22.936+0000] {standard_task_runner.py:72} INFO - Started process 1096 to run task
+[2026-07-23T03:45:22.940+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_incremental_cfpb_pipeline', 'trigger_dbt_silver_gold', 'scheduled__2026-07-22T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/wap_incremental_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpz48u4ty3']
+[2026-07-23T03:45:22.943+0000] {standard_task_runner.py:105} INFO - Job 13: Subtask trigger_dbt_silver_gold
+[2026-07-23T03:45:23.024+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [running]> on host 260824ef083b
+[2026-07-23T03:45:23.109+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_incremental_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='trigger_dbt_silver_gold' AIRFLOW_CTX_EXECUTION_DATE='2026-07-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-22T00:00:00+00:00'
+[2026-07-23T03:45:23.113+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T03:45:23.213+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-23T03:45:23.231+0000] {taskinstance.py:288} INFO - Pausing task as DEFERRED. dag_id=wap_incremental_cfpb_pipeline, task_id=trigger_dbt_silver_gold, run_id=scheduled__2026-07-22T00:00:00+00:00, execution_date=20260722T000000, start_date=20260723T034522
+[2026-07-23T03:45:23.233+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T03:45:23.240+0000] {local_task_job_runner.py:260} INFO - Task exited with return code 100 (task deferral)
+[2026-07-23T03:45:23.242+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-23T03:48:27.109+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T03:48:27.128+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T03:48:27.137+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [queued]>
+[2026-07-23T03:48:27.140+0000] {taskinstance.py:2863} INFO - Resuming after deferral
+[2026-07-23T03:48:27.153+0000] {taskinstance.py:2888} INFO - Executing <Task(TriggerDagRunOperator): trigger_dbt_silver_gold> on 2026-07-22 00:00:00+00:00
+[2026-07-23T03:48:27.159+0000] {standard_task_runner.py:72} INFO - Started process 1975 to run task
+[2026-07-23T03:48:27.163+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_incremental_cfpb_pipeline', 'trigger_dbt_silver_gold', 'scheduled__2026-07-22T00:00:00+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/wap_incremental_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpoueka_et']
+[2026-07-23T03:48:27.165+0000] {standard_task_runner.py:105} INFO - Job 28: Subtask trigger_dbt_silver_gold
+[2026-07-23T03:48:27.254+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_incremental_cfpb_pipeline.trigger_dbt_silver_gold scheduled__2026-07-22T00:00:00+00:00 [running]> on host 260824ef083b
+[2026-07-23T03:48:27.321+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T03:48:27.334+0000] {trigger_dagrun.py:295} INFO - dbt_silver_gold_incremental finished with allowed state success
+[2026-07-23T03:48:27.346+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T03:48:27.348+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_incremental_cfpb_pipeline, task_id=trigger_dbt_silver_gold, run_id=scheduled__2026-07-22T00:00:00+00:00, execution_date=20260722T000000, start_date=20260723T034522, end_date=20260723T034827
+[2026-07-23T03:48:27.379+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-23T03:48:27.397+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-23T03:48:27.402+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

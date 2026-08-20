@@ -1,0 +1,14 @@
+[2026-08-19T04:31:12.138+0000] {processor.py:186} INFO - Started process (PID=216) to work on /opt/airflow/dags/wap_full_load_cfpb_pipeline.py
+[2026-08-19T04:31:12.140+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_full_load_cfpb_pipeline.py for tasks to queue
+[2026-08-19T04:31:12.142+0000] {logging_mixin.py:190} INFO - [2026-08-19T04:31:12.142+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_full_load_cfpb_pipeline.py
+[2026-08-19T04:31:12.493+0000] {processor.py:925} INFO - DAG(s) 'wap_full_load_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_full_load_cfpb_pipeline.py
+[2026-08-19T04:31:12.529+0000] {logging_mixin.py:190} INFO - [2026-08-19T04:31:12.529+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-19T04:31:12.559+0000] {logging_mixin.py:190} INFO - [2026-08-19T04:31:12.558+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_full_load_cfpb_pipeline to 2026-01-01 00:00:00+00:00, run_after=2026-01-01 00:00:00+00:00
+[2026-08-19T04:31:12.587+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_full_load_cfpb_pipeline.py took 0.454 seconds
+[2026-08-19T04:32:32.621+0000] {processor.py:186} INFO - Started process (PID=331) to work on /opt/airflow/dags/wap_full_load_cfpb_pipeline.py
+[2026-08-19T04:32:32.622+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_full_load_cfpb_pipeline.py for tasks to queue
+[2026-08-19T04:32:32.623+0000] {logging_mixin.py:190} INFO - [2026-08-19T04:32:32.623+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_full_load_cfpb_pipeline.py
+[2026-08-19T04:32:32.939+0000] {processor.py:925} INFO - DAG(s) 'wap_full_load_cfpb_pipeline' retrieved from /opt/airflow/dags/wap_full_load_cfpb_pipeline.py
+[2026-08-19T04:32:32.961+0000] {logging_mixin.py:190} INFO - [2026-08-19T04:32:32.961+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-19T04:32:32.980+0000] {logging_mixin.py:190} INFO - [2026-08-19T04:32:32.980+0000] {dag.py:4180} INFO - Setting next_dagrun for wap_full_load_cfpb_pipeline to 2026-01-01 00:00:00+00:00, run_after=2026-01-01 00:00:00+00:00
+[2026-08-19T04:32:32.997+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_full_load_cfpb_pipeline.py took 0.383 seconds

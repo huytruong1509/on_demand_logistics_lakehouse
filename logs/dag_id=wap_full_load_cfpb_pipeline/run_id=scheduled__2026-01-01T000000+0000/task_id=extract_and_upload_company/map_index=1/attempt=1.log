@@ -1,0 +1,77 @@
+[2026-07-20T03:01:42.356+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-20T03:01:42.378+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_full_load_cfpb_pipeline.extract_and_upload_company scheduled__2026-01-01T00:00:00+00:00 map_index=1 [queued]>
+[2026-07-20T03:01:42.387+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_full_load_cfpb_pipeline.extract_and_upload_company scheduled__2026-01-01T00:00:00+00:00 map_index=1 [queued]>
+[2026-07-20T03:01:42.388+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-20T03:01:42.403+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company> on 2026-01-01 00:00:00+00:00
+[2026-07-20T03:01:42.409+0000] {standard_task_runner.py:72} INFO - Started process 754 to run task
+[2026-07-20T03:01:42.415+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_full_load_cfpb_pipeline', 'extract_and_upload_company', 'scheduled__2026-01-01T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/wap_full_load_cfpb_pipeline.py', '--cfg-path', '/tmp/tmp7jz6qmvg', '--map-index', '1']
+[2026-07-20T03:01:42.417+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask extract_and_upload_company
+[2026-07-20T03:01:42.506+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_full_load_cfpb_pipeline.extract_and_upload_company scheduled__2026-01-01T00:00:00+00:00 map_index=1 [running]> on host e616fedc0061
+[2026-07-20T03:01:42.610+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_full_load_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='extract_and_upload_company' AIRFLOW_CTX_EXECUTION_DATE='2026-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-01T00:00:00+00:00'
+[2026-07-20T03:01:42.614+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-20T03:01:42.622+0000] {cfpb_api_client.py:487} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: BANK OF AMERICA, NATIONAL ASSOCIATION
+[2026-07-20T03:01:42.623+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: BANK OF AMERICA, NATIONAL ASSOCIATION
+[2026-07-20T03:01:42.624+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2024-01-01 đến 2025-12-31
+[2026-07-20T03:02:01.593+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 33,492 / 33,492 records...
+[2026-07-20T03:02:01.595+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 33,492 khiếu nại có sẵn.
+[2026-07-20T03:02:01.618+0000] {minio_loader.py:203} INFO - 📤 Đang upload full_2026-01-01_bank_of_america_national_association_complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-01-01/full_2026-01-01_bank_of_america_national_association_complaints.json
+[2026-07-20T03:02:01.620+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-20T03:02:01.623+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-20T03:02:01.624+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-20T03:02:02.281+0000] {python.py:240} INFO - Done. Returned value was: 33492
+[2026-07-20T03:02:02.320+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-20T03:02:02.322+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_full_load_cfpb_pipeline, task_id=extract_and_upload_company, run_id=scheduled__2026-01-01T00:00:00+00:00, map_index=1, execution_date=20260101T000000, start_date=20260720T030142, end_date=20260720T030202
+[2026-07-20T03:02:02.360+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-20T03:02:02.390+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-20T03:02:02.394+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-20T04:34:07.160+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-20T04:34:07.199+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_full_load_cfpb_pipeline.extract_and_upload_company scheduled__2026-01-01T00:00:00+00:00 map_index=1 [queued]>
+[2026-07-20T04:34:07.215+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_full_load_cfpb_pipeline.extract_and_upload_company scheduled__2026-01-01T00:00:00+00:00 map_index=1 [queued]>
+[2026-07-20T04:34:07.217+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-20T04:34:07.234+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company> on 2026-01-01 00:00:00+00:00
+[2026-07-20T04:34:07.242+0000] {standard_task_runner.py:72} INFO - Started process 651 to run task
+[2026-07-20T04:34:07.248+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_full_load_cfpb_pipeline', 'extract_and_upload_company', 'scheduled__2026-01-01T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/wap_full_load_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpfecolovl', '--map-index', '1']
+[2026-07-20T04:34:07.250+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask extract_and_upload_company
+[2026-07-20T04:34:07.344+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_full_load_cfpb_pipeline.extract_and_upload_company scheduled__2026-01-01T00:00:00+00:00 map_index=1 [running]> on host 8a8ae89cbbd7
+[2026-07-20T04:34:07.470+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_full_load_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='extract_and_upload_company' AIRFLOW_CTX_EXECUTION_DATE='2026-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-01T00:00:00+00:00'
+[2026-07-20T04:34:07.473+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-20T04:34:07.485+0000] {cfpb_api_client.py:487} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: BANK OF AMERICA, NATIONAL ASSOCIATION
+[2026-07-20T04:34:07.486+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: BANK OF AMERICA, NATIONAL ASSOCIATION
+[2026-07-20T04:34:07.487+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2024-01-01 đến 2025-12-31
+[2026-07-20T04:34:09.528+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 33,492 / 33,492 records...
+[2026-07-20T04:34:09.531+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 33,492 khiếu nại có sẵn.
+[2026-07-20T04:34:09.548+0000] {minio_loader.py:203} INFO - 📤 Đang upload full_2026-01-01_bank_of_america_national_association_complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-01-01/full_2026-01-01_bank_of_america_national_association_complaints.json
+[2026-07-20T04:34:09.551+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-20T04:34:09.553+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-20T04:34:09.555+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-20T04:34:10.337+0000] {python.py:240} INFO - Done. Returned value was: 33492
+[2026-07-20T04:34:10.381+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-20T04:34:10.383+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_full_load_cfpb_pipeline, task_id=extract_and_upload_company, run_id=scheduled__2026-01-01T00:00:00+00:00, map_index=1, execution_date=20260101T000000, start_date=20260720T043407, end_date=20260720T043410
+[2026-07-20T04:34:10.439+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-20T04:34:10.465+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-26T15:31:12.024+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-26T15:31:12.046+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_full_load_cfpb_pipeline.extract_and_upload_company scheduled__2026-01-01T00:00:00+00:00 map_index=1 [queued]>
+[2026-07-26T15:31:12.059+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_full_load_cfpb_pipeline.extract_and_upload_company scheduled__2026-01-01T00:00:00+00:00 map_index=1 [queued]>
+[2026-07-26T15:31:12.061+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-26T15:31:12.077+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload_company> on 2026-01-01 00:00:00+00:00
+[2026-07-26T15:31:12.086+0000] {standard_task_runner.py:72} INFO - Started process 5087 to run task
+[2026-07-26T15:31:12.090+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_full_load_cfpb_pipeline', 'extract_and_upload_company', 'scheduled__2026-01-01T00:00:00+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/wap_full_load_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpkg44ulb6', '--map-index', '1']
+[2026-07-26T15:31:12.093+0000] {standard_task_runner.py:105} INFO - Job 40: Subtask extract_and_upload_company
+[2026-07-26T15:31:12.188+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_full_load_cfpb_pipeline.extract_and_upload_company scheduled__2026-01-01T00:00:00+00:00 map_index=1 [running]> on host 755669804aca
+[2026-07-26T15:31:12.295+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_full_load_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='extract_and_upload_company' AIRFLOW_CTX_EXECUTION_DATE='2026-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-01T00:00:00+00:00'
+[2026-07-26T15:31:12.297+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-26T15:31:12.305+0000] {cfpb_api_client.py:487} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: BANK OF AMERICA, NATIONAL ASSOCIATION
+[2026-07-26T15:31:12.307+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: BANK OF AMERICA, NATIONAL ASSOCIATION
+[2026-07-26T15:31:12.308+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2024-01-01 đến 2025-12-31
+[2026-07-26T15:31:34.632+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 33,491 / 33,491 records...
+[2026-07-26T15:31:34.634+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 33,491 khiếu nại có sẵn.
+[2026-07-26T15:31:34.651+0000] {minio_loader.py:203} INFO - 📤 Đang upload full_2026-01-01_bank_of_america_national_association_complaints.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-01-01/full_2026-01-01_bank_of_america_national_association_complaints.json
+[2026-07-26T15:31:34.654+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-26T15:31:34.656+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-26T15:31:34.658+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-26T15:31:35.527+0000] {python.py:240} INFO - Done. Returned value was: 33491
+[2026-07-26T15:31:35.576+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-26T15:31:35.577+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_full_load_cfpb_pipeline, task_id=extract_and_upload_company, run_id=scheduled__2026-01-01T00:00:00+00:00, map_index=1, execution_date=20260101T000000, start_date=20260726T153112, end_date=20260726T153135
+[2026-07-26T15:31:35.661+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-26T15:31:35.707+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-26T15:31:35.711+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

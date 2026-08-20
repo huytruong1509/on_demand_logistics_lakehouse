@@ -1,0 +1,30 @@
+[2026-07-04T13:15:59.297+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.upload_local_to_minio_landing scheduled__2026-07-03T00:00:00+00:00 [queued]>
+[2026-07-04T13:15:59.304+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_elt_lakehouse.upload_local_to_minio_landing scheduled__2026-07-03T00:00:00+00:00 [queued]>
+[2026-07-04T13:15:59.304+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2026-07-04T13:15:59.315+0000] {taskinstance.py:2214} INFO - Executing <Task(_PythonDecoratedOperator): upload_local_to_minio_landing> on 2026-07-03 00:00:00+00:00
+[2026-07-04T13:15:59.320+0000] {standard_task_runner.py:60} INFO - Started process 232 to run task
+[2026-07-04T13:15:59.323+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_elt_lakehouse', 'upload_local_to_minio_landing', 'scheduled__2026-07-03T00:00:00+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_elt.py', '--cfg-path', '/tmp/tmpdfif2cks']
+[2026-07-04T13:15:59.323+0000] {standard_task_runner.py:88} INFO - Job 30: Subtask upload_local_to_minio_landing
+[2026-07-04T13:15:59.399+0000] {task_command.py:423} INFO - Running <TaskInstance: consumer_complaints_elt_lakehouse.upload_local_to_minio_landing scheduled__2026-07-03T00:00:00+00:00 [running]> on host 75f86298c0be
+[2026-07-04T13:15:59.494+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering' AIRFLOW_CTX_DAG_ID='consumer_complaints_elt_lakehouse' AIRFLOW_CTX_TASK_ID='upload_local_to_minio_landing' AIRFLOW_CTX_EXECUTION_DATE='2026-07-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-03T00:00:00+00:00'
+[2026-07-04T13:15:59.496+0000] {minio_loader.py:47} INFO - Đang upload 2 files lên bucket: lakehouse
+[2026-07-04T13:15:59.496+0000] {minio_loader.py:64} INFO - 📁 Đang upload jpmorgan_chase_&_co._complaints.json (50.65 MB)
+[2026-07-04T13:15:59.498+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-04T13:15:59.499+0000] {base.py:83} INFO - Using connection ID 'minio_default' for task execution.
+[2026-07-04T13:15:59.499+0000] {connection_wrapper.py:382} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-04T13:16:00.886+0000] {minio_loader.py:74} INFO - ✓ Đã upload thành công lên s3://lakehouse/landing/consumer_complaints/20260704_131559_jpmorgan_chase_&_co._complaints.json
+[2026-07-04T13:16:00.902+0000] {minio_loader.py:117} INFO - 🗑️ Đang dọn dẹp 1 file rác cũ của jpmorgan_chase_&_co.
+[2026-07-04T13:16:00.910+0000] {s3.py:1354} INFO - Deleted: ['landing/consumer_complaints/20260703_062507_jpmorgan_chase_&_co._complaints.json']
+[2026-07-04T13:16:00.911+0000] {minio_loader.py:120} INFO -    Đã xóa: landing/consumer_complaints/20260703_062507_jpmorgan_chase_&_co._complaints.json
+[2026-07-04T13:16:00.912+0000] {minio_loader.py:64} INFO - 📁 Đang upload bank_of_america,_national_association_complaints.json (41.65 MB)
+[2026-07-04T13:16:01.561+0000] {minio_loader.py:74} INFO - ✓ Đã upload thành công lên s3://lakehouse/landing/consumer_complaints/20260704_131559_bank_of_america,_national_association_complaints.json
+[2026-07-04T13:16:01.565+0000] {minio_loader.py:117} INFO - 🗑️ Đang dọn dẹp 1 file rác cũ của bank_of_america,_national_association
+[2026-07-04T13:16:01.568+0000] {s3.py:1354} INFO - Deleted: ['landing/consumer_complaints/20260703_062507_bank_of_america,_national_association_complaints.json']
+[2026-07-04T13:16:01.568+0000] {minio_loader.py:120} INFO -    Đã xóa: landing/consumer_complaints/20260703_062507_bank_of_america,_national_association_complaints.json
+[2026-07-04T13:16:01.569+0000] {minio_loader.py:91} INFO - ✓ Hoàn tất upload 2 files lên Landing Zone
+[2026-07-04T13:16:01.573+0000] {consumer_complaints_elt.py:124} INFO - Đã xóa file tạm local: /tmp/consumer_complaints/jpmorgan_chase_&_co._complaints.json
+[2026-07-04T13:16:01.579+0000] {consumer_complaints_elt.py:124} INFO - Đã xóa file tạm local: /tmp/consumer_complaints/bank_of_america,_national_association_complaints.json
+[2026-07-04T13:16:01.580+0000] {python.py:202} INFO - Done. Returned value was: [{'company': 'JPMORGAN CHASE & CO.', 's3_key': 'landing/consumer_complaints/20260704_131559_jpmorgan_chase_&_co._complaints.json', 'size_mb': 50.65127658843994}, {'company': 'BANK OF AMERICA, NATIONAL ASSOCIATION', 's3_key': 'landing/consumer_complaints/20260704_131559_bank_of_america,_national_association_complaints.json', 'size_mb': 41.6514310836792}]
+[2026-07-04T13:16:01.605+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_elt_lakehouse, task_id=upload_local_to_minio_landing, execution_date=20260703T000000, start_date=20260704T131559, end_date=20260704T131601
+[2026-07-04T13:16:01.663+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-07-04T13:16:01.690+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

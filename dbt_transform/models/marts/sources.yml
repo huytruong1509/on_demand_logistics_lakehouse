@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: silver
+    database: lakehouse
+    schema: silver
+    tables:
+      - name: orders
+        description: "Bảng Silver Orders do Spark xử lý"
+      - name: order_requests
+        description: "Bảng Silver Order Requests do Spark xử lý"
+      - name: order_stops
+        description: "Bảng Silver Order Stops do Spark xử lý"

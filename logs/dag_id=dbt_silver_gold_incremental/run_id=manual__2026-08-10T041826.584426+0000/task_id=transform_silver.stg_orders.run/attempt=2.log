@@ -1,0 +1,412 @@
+[2026-08-10T04:22:59.886+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-10T04:22:59.940+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_silver_gold_incremental.transform_silver.stg_orders.run manual__2026-08-10T04:18:26.584426+00:00 [queued]>
+[2026-08-10T04:22:59.966+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_silver_gold_incremental.transform_silver.stg_orders.run manual__2026-08-10T04:18:26.584426+00:00 [queued]>
+[2026-08-10T04:22:59.970+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2026-08-10T04:23:00.025+0000] {taskinstance.py:2888} INFO - Executing <Task(DbtRunLocalOperator): transform_silver.stg_orders.run> on 2026-08-10 04:18:26.584426+00:00
+[2026-08-10T04:23:00.044+0000] {standard_task_runner.py:72} INFO - Started process 7479 to run task
+[2026-08-10T04:23:00.057+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'dbt_silver_gold_incremental', 'transform_silver.stg_orders.run', 'manual__2026-08-10T04:18:26.584426+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/dbt_silver_gold.py', '--cfg-path', '/tmp/tmpdgg3n1yd']
+[2026-08-10T04:23:00.070+0000] {standard_task_runner.py:105} INFO - Job 19: Subtask transform_silver.stg_orders.run
+[2026-08-10T04:23:00.392+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_silver_gold_incremental.transform_silver.stg_orders.run manual__2026-08-10T04:18:26.584426+00:00 [running]> on host 1d4fe4812eeb
+[2026-08-10T04:23:00.734+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='dbt_silver_gold_incremental' AIRFLOW_CTX_TASK_ID='transform_silver.stg_orders.run' AIRFLOW_CTX_EXECUTION_DATE='2026-08-10T04:18:26.584426+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-08-10T04:18:26.584426+00:00'
+[2026-08-10T04:23:00.739+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-10T04:23:05.852+0000] {local.py:294} INFO - dbtRunner is available. Using dbtRunner for invoking dbt.
+[2026-08-10T04:23:05.857+0000] {local.py:518} INFO - Cloning project to writable temp directory /tmp/tmp2nqse9b6 from /opt/airflow/dbt_transform
+[2026-08-10T04:23:05.899+0000] {local.py:538} INFO - Partial parse is enabled and the latest partial parse file is /tmp/cosmos/dbt_silver_gold_incremental__transform_silver/target/partial_parse.msgpack
+[2026-08-10T04:23:05.940+0000] {config.py:395} INFO - Using user-supplied profiles.yml at /opt/airflow/dbt_transform/profiles.yml
+[2026-08-10T04:23:05.974+0000] {runner.py:95} INFO - Trying to run dbtRunner with:
+ ['deps', '--project-dir', '/tmp/tmp2nqse9b6', '--profiles-dir', '/opt/airflow/dbt_transform', '--profile', 'lakehouse_dbt', '--target', 'dev', '--no-static-parser']
+ in /tmp/tmp2nqse9b6
+[2026-08-10T04:23:06.243+0000] {logging_mixin.py:190} INFO - 04:23:06  Running with dbt=1.8.8
+[2026-08-10T04:23:07.239+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-08-10T04:23:07.251+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_incremental__transform_silver...
+[2026-08-10T04:23:12.466+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_incremental__transform_silver for current version: 5.181725267000047
+[2026-08-10T04:23:12.467+0000] {graph.py:886} INFO - Cosmos performance [1d4fe4812eeb|7479]: The cache size for cosmos_cache__dbt_silver_gold_incremental__transform_silver is 11336
+[2026-08-10T04:23:12.469+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_incremental__transform_silver - 260da896f6e2d7af673827e88bfa838b,5e34606eb5f2b3dea81a8e19fa3ba138
+[2026-08-10T04:23:12.471+0000] {graph.py:799} INFO - Total nodes: 13
+[2026-08-10T04:23:12.475+0000] {graph.py:800} INFO - Total filtered nodes: 13
+[2026-08-10T04:23:12.479+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_silver) - [1d4fe4812eeb|7479]: It took 5.23s to parse the dbt project for DAG using dbt_ls_cache
+[2026-08-10T04:23:12.511+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_silver) - [1d4fe4812eeb|7479]: It took 0.032s to build the Airflow DAG.
+[2026-08-10T04:23:12.513+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-08-10T04:23:12.515+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-08-10T04:23:12.519+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_incremental__transform_gold...
+[2026-08-10T04:23:17.564+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_incremental__transform_gold for current version: 5.02521022499991
+[2026-08-10T04:23:17.567+0000] {graph.py:886} INFO - Cosmos performance [1d4fe4812eeb|7479]: The cache size for cosmos_cache__dbt_silver_gold_incremental__transform_gold is 14739
+[2026-08-10T04:23:17.572+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_incremental__transform_gold - 260da896f6e2d7af673827e88bfa838b,304321e940a9403dceb380589bd0566f
+[2026-08-10T04:23:17.575+0000] {graph.py:799} INFO - Total nodes: 16
+[2026-08-10T04:23:17.579+0000] {graph.py:800} INFO - Total filtered nodes: 16
+[2026-08-10T04:23:17.582+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_gold) - [1d4fe4812eeb|7479]: It took 5.06s to parse the dbt project for DAG using dbt_ls_cache
+[2026-08-10T04:23:17.673+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_gold) - [1d4fe4812eeb|7479]: It took 0.0907s to build the Airflow DAG.
+[2026-08-10T04:23:17.677+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-08-10T04:23:17.682+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-08-10T04:23:17.689+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_full_load__transform_silver...
+[2026-08-10T04:23:20.512+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2026-08-10T04:23:20.518+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-08-10T04:23:20.525+0000] {process_utils.py:132} INFO - Sending 15 to group 7479. PIDs of all processes in the group: [7479]
+[2026-08-10T04:23:20.528+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 7479
+[2026-08-10T04:23:20.531+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2026-08-10T04:23:20.535+0000] {logging_mixin.py:190} INFO - 04:23:20  Encountered an error:
+Task received SIGTERM signal
+[2026-08-10T04:23:20.554+0000] {logging_mixin.py:190} INFO - 04:23:20  Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 201, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 240, in wrapper
+    set_up_plugin_manager(project_name=project.project_name)
+  File "/home/airflow/.local/lib/python3.10/site-packages/dbt/plugins/__init__.py", line 14, in set_up_plugin_manager
+    PLUGIN_MANAGER = PluginManager.from_modules(project_name)
+  File "/home/airflow/.local/lib/python3.10/site-packages/dbt/plugins/manager.py", line 120, in from_modules
+    discovered_dbt_modules = cls.get_prefixed_modules()
+  File "/home/airflow/.local/lib/python3.10/site-packages/dbt/plugins/manager.py", line 136, in get_prefixed_modules
+    return {
+  File "/home/airflow/.local/lib/python3.10/site-packages/dbt/plugins/manager.py", line 137, in <dictcomp>
+    name: importlib.import_module(name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_silver_gold.py", line 72, in <module>
+    transform_silver = DbtTaskGroup(
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/airflow/task_group.py", line 32, in __init__
+    DbtToAirflowConverter.__init__(self, *args, **specific_kwargs(**kwargs))
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/converter.py", line 352, in __init__
+    self.dbt_graph.load(method=render_config.load_method, execution_mode=execution_config.execution_mode)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 789, in load
+    self.load_via_dbt_ls()
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 854, in load_via_dbt_ls
+    if not self.load_via_dbt_ls_cache():
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 881, in load_via_dbt_ls_cache
+    current_version = cache._calculate_dbt_ls_cache_current_version(
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/cache.py", line 377, in _calculate_dbt_ls_cache_current_version
+    dbt_project_hash = _create_folder_version_hash(project_dir)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/versioning.py", line 34, in _create_folder_version_hash
+    with open(str(filepath), "rb") as fp:
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3094, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2026-08-10T04:23:21.745+0000] {runner.py:95} INFO - Trying to run dbtRunner with:
+ ['run', '--select', 'fqn:logistics_transformation.staging.stg_orders', '--project-dir', '/tmp/tmp2nqse9b6', '--profiles-dir', '/opt/airflow/dbt_transform', '--profile', 'lakehouse_dbt', '--target', 'dev', '--no-static-parser']
+ in /tmp/tmp2nqse9b6
+[2026-08-10T04:23:21.783+0000] {logging_mixin.py:190} INFO - 04:23:21  Running with dbt=1.8.8
+[2026-08-10T04:23:21.848+0000] {auth.py:343} INFO - keyring module not found. OAuth2 token will not be stored in keyring.
+[2026-08-10T04:23:21.856+0000] {auth.py:343} INFO - keyring module not found. OAuth2 token will not be stored in keyring.
+[2026-08-10T04:23:21.967+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-08-10T04:23:21.972+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_incremental__transform_silver...
+[2026-08-10T04:23:28.283+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_incremental__transform_silver for current version: 6.294458314999929
+[2026-08-10T04:23:28.285+0000] {graph.py:886} INFO - Cosmos performance [1d4fe4812eeb|7479]: The cache size for cosmos_cache__dbt_silver_gold_incremental__transform_silver is 11336
+[2026-08-10T04:23:28.288+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_incremental__transform_silver - 260da896f6e2d7af673827e88bfa838b,5e34606eb5f2b3dea81a8e19fa3ba138
+[2026-08-10T04:23:28.290+0000] {graph.py:799} INFO - Total nodes: 13
+[2026-08-10T04:23:28.292+0000] {graph.py:800} INFO - Total filtered nodes: 13
+[2026-08-10T04:23:28.294+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_silver) - [1d4fe4812eeb|7479]: It took 6.32s to parse the dbt project for DAG using dbt_ls_cache
+[2026-08-10T04:23:28.336+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_silver) - [1d4fe4812eeb|7479]: It took 0.0423s to build the Airflow DAG.
+[2026-08-10T04:23:28.339+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-08-10T04:23:28.342+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-08-10T04:23:28.350+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_incremental__transform_gold...
+[2026-08-10T04:23:36.074+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_incremental__transform_gold for current version: 7.703822469999977
+[2026-08-10T04:23:36.076+0000] {graph.py:886} INFO - Cosmos performance [1d4fe4812eeb|7479]: The cache size for cosmos_cache__dbt_silver_gold_incremental__transform_gold is 14739
+[2026-08-10T04:23:36.082+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_incremental__transform_gold - 260da896f6e2d7af673827e88bfa838b,304321e940a9403dceb380589bd0566f
+[2026-08-10T04:23:36.084+0000] {graph.py:799} INFO - Total nodes: 16
+[2026-08-10T04:23:36.086+0000] {graph.py:800} INFO - Total filtered nodes: 16
+[2026-08-10T04:23:36.088+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_gold) - [1d4fe4812eeb|7479]: It took 7.74s to parse the dbt project for DAG using dbt_ls_cache
+[2026-08-10T04:23:36.152+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_gold) - [1d4fe4812eeb|7479]: It took 0.0642s to build the Airflow DAG.
+[2026-08-10T04:23:36.155+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-08-10T04:23:36.158+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-08-10T04:23:36.166+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_full_load__transform_silver...
+[2026-08-10T04:23:42.485+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_full_load__transform_silver for current version: 6.301724920999959
+[2026-08-10T04:23:42.488+0000] {graph.py:886} INFO - Cosmos performance [1d4fe4812eeb|7479]: The cache size for cosmos_cache__dbt_silver_gold_full_load__transform_silver is 11336
+[2026-08-10T04:23:42.493+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_full_load__transform_silver - 260da896f6e2d7af673827e88bfa838b,5e34606eb5f2b3dea81a8e19fa3ba138
+[2026-08-10T04:23:42.496+0000] {graph.py:799} INFO - Total nodes: 13
+[2026-08-10T04:23:42.499+0000] {graph.py:800} INFO - Total filtered nodes: 13
+[2026-08-10T04:23:42.505+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_full_load__transform_silver) - [1d4fe4812eeb|7479]: It took 6.34s to parse the dbt project for DAG using dbt_ls_cache
+[2026-08-10T04:23:42.559+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_full_load__transform_silver) - [1d4fe4812eeb|7479]: It took 0.0535s to build the Airflow DAG.
+[2026-08-10T04:23:42.562+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-08-10T04:23:42.567+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-08-10T04:23:42.579+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_full_load__transform_gold...
+[2026-08-10T04:23:47.750+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_full_load__transform_gold for current version: 5.145329274000005
+[2026-08-10T04:23:47.752+0000] {graph.py:886} INFO - Cosmos performance [1d4fe4812eeb|7479]: The cache size for cosmos_cache__dbt_silver_gold_full_load__transform_gold is 14739
+[2026-08-10T04:23:47.753+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_full_load__transform_gold - 260da896f6e2d7af673827e88bfa838b,304321e940a9403dceb380589bd0566f
+[2026-08-10T04:23:47.755+0000] {graph.py:799} INFO - Total nodes: 16
+[2026-08-10T04:23:47.756+0000] {graph.py:800} INFO - Total filtered nodes: 16
+[2026-08-10T04:23:47.758+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_full_load__transform_gold) - [1d4fe4812eeb|7479]: It took 5.18s to parse the dbt project for DAG using dbt_ls_cache
+[2026-08-10T04:23:47.830+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_full_load__transform_gold) - [1d4fe4812eeb|7479]: It took 0.0719s to build the Airflow DAG.
+[2026-08-10T04:23:47.833+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-08-10T04:23:47.965+0000] {logging_mixin.py:190} INFO - 04:23:47  Registered adapter: trino=1.8.5
+[2026-08-10T04:23:48.484+0000] {logging_mixin.py:190} INFO - 04:23:48  Encountered an error:
+Compilation Error
+  dbt found 3 package(s) specified in packages.yml, but only 0 package(s) installed in dbt_packages. Run "dbt deps" to install package dependencies.
+[2026-08-10T04:23:49.686+0000] {local.py:196} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/manifest/v12.json is above dbt-ol supported version 7. This might cause errors.
+[2026-08-10T04:23:49.689+0000] {local.py:594} INFO - Inlets: []
+[2026-08-10T04:23:49.691+0000] {local.py:595} INFO - Outlets: []
+[2026-08-10T04:23:49.693+0000] {local.py:886} INFO - Assigning inlets/outlets with DatasetAlias in Airflow 2
+[2026-08-10T04:23:49.723+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.ForeignKeyViolation: insert or update on table "rendered_task_instance_fields" violates foreign key constraint "rtif_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(dbt_silver_gold_incremental, transform_silver.stg_orders.run, manual__2026-08-10T04:18:26.584426+00:00, -1) is not present in table "task_instance".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/base.py", line 346, in execute
+    self.build_and_run_cmd(context=context, cmd_flags=self.add_cmd_flags(), **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 968, in build_and_run_cmd
+    result = self.run_command(
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 742, in run_command
+    self._handle_post_execution(tmp_project_dir, context, push_run_results_to_xcom)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 631, in _handle_post_execution
+    self._override_rtif(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 476, in _override_rtif
+    _override_rtif_airflow_2_x()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 96, in wrapper
+    with create_session() as session:
+  File "/usr/local/lib/python3.10/contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 57, in create_session
+    session.commit()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1454, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 832, in commit
+    self._prepare_impl()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 811, in _prepare_impl
+    self.session.flush()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3449, in flush
+    self._flush(objects)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3588, in _flush
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3549, in _flush
+    flush_context.execute()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 1097, in _emit_insert_statements
+    c = connection._execute_20(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) insert or update on table "rendered_task_instance_fields" violates foreign key constraint "rtif_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(dbt_silver_gold_incremental, transform_silver.stg_orders.run, manual__2026-08-10T04:18:26.584426+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO rendered_task_instance_fields (dag_id, task_id, run_id, map_index, rendered_fields, k8s_pod_yaml) VALUES (%(dag_id)s, %(task_id)s, %(run_id)s, %(map_index)s, %(rendered_fields)s, %(k8s_pod_yaml)s)]
+[parameters: {'dag_id': 'dbt_silver_gold_incremental', 'task_id': 'transform_silver.stg_orders.run', 'run_id': 'manual__2026-08-10T04:18:26.584426+00:00', 'map_index': -1, 'rendered_fields': '{"env": null, "select": "fqn:logistics_transformation.staging.stg_orders", "exclude": null, "selector": null, "vars": null, "models": null, "dbt_cmd_flags": [], "compiled_sql": "", "freshness": "", "install_deps": true, "full_refresh": false}', 'k8s_pod_yaml': 'null'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2026-08-10T04:23:50.478+0000] {_client.py:1026} INFO - HTTP Request: GET https://astronomer.gateway.scarf.sh/astronomer-cosmos/v3/task_instance?cosmos_version=1.15.0&airflow_version=2.10.2&python_version=3.10.15&platform_system=Linux&platform_machine=x86_64&status=failed&operator_name=DbtRunLocalOperator&is_cosmos_operator_subclass=False&invocation_mode=dbt_runner&execution_mode=local&profile_strategy=yaml_file&profile_mapping_class=None&database=trino&is_mapped_task=False&dbt_command=run&install_deps=True&has_callback=False&duration=49.808011 "HTTP/1.1 200 OK"
+[2026-08-10T04:23:50.482+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=dbt_silver_gold_incremental, task_id=transform_silver.stg_orders.run, run_id=manual__2026-08-10T04:18:26.584426+00:00, execution_date=20260810T041826, start_date=20260810T042259, end_date=20260810T042349
+[2026-08-10T04:23:50.528+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-10T04:23:50.531+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 19 for task transform_silver.stg_orders.run ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(dbt_silver_gold_incremental, transform_silver.stg_orders.run, manual__2026-08-10T04:18:26.584426+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'transform_silver.stg_orders.run', 'dag_id': 'dbt_silver_gold_incremental', 'run_id': 'manual__2026-08-10T04:18:26.584426+00:00', 'map_index': -1, 'start_date': datetime.datetime(2026, 8, 10, 4, 22, 59, 943531, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2026, 8, 10, 4, 23, 49, 751542, tzinfo=Timezone('UTC')), 'duration': 49}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 7479)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.ForeignKeyViolation: insert or update on table "rendered_task_instance_fields" violates foreign key constraint "rtif_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(dbt_silver_gold_incremental, transform_silver.stg_orders.run, manual__2026-08-10T04:18:26.584426+00:00, -1) is not present in table "task_instance".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/base.py", line 346, in execute
+    self.build_and_run_cmd(context=context, cmd_flags=self.add_cmd_flags(), **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 968, in build_and_run_cmd
+    result = self.run_command(
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 742, in run_command
+    self._handle_post_execution(tmp_project_dir, context, push_run_results_to_xcom)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 631, in _handle_post_execution
+    self._override_rtif(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 476, in _override_rtif
+    _override_rtif_airflow_2_x()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 96, in wrapper
+    with create_session() as session:
+  File "/usr/local/lib/python3.10/contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 57, in create_session
+    session.commit()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1454, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 832, in commit
+    self._prepare_impl()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 811, in _prepare_impl
+    self.session.flush()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3449, in flush
+    self._flush(objects)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3588, in _flush
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3549, in _flush
+    flush_context.execute()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 1097, in _emit_insert_statements
+    c = connection._execute_20(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) insert or update on table "rendered_task_instance_fields" violates foreign key constraint "rtif_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(dbt_silver_gold_incremental, transform_silver.stg_orders.run, manual__2026-08-10T04:18:26.584426+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO rendered_task_instance_fields (dag_id, task_id, run_id, map_index, rendered_fields, k8s_pod_yaml) VALUES (%(dag_id)s, %(task_id)s, %(run_id)s, %(map_index)s, %(rendered_fields)s, %(k8s_pod_yaml)s)]
+[parameters: {'dag_id': 'dbt_silver_gold_incremental', 'task_id': 'transform_silver.stg_orders.run', 'run_id': 'manual__2026-08-10T04:18:26.584426+00:00', 'map_index': -1, 'rendered_fields': '{"env": null, "select": "fqn:logistics_transformation.staging.stg_orders", "exclude": null, "selector": null, "vars": null, "models": null, "dbt_cmd_flags": [], "compiled_sql": "", "freshness": "", "install_deps": true, "full_refresh": false}', 'k8s_pod_yaml': 'null'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.ForeignKeyViolation: insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(dbt_silver_gold_incremental, transform_silver.stg_orders.run, manual__2026-08-10T04:18:26.584426+00:00, -1) is not present in table "task_instance".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 336, in _run_raw_task
+    ti.handle_failure(e, test_mode, context, session=session)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3427, in handle_failure
+    _handle_failure(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1243, in _handle_failure
+    TaskInstance.save_to_db(failure_context["ti"], session)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3399, in save_to_db
+    session.flush()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3449, in flush
+    self._flush(objects)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3588, in _flush
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3549, in _flush
+    flush_context.execute()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(dbt_silver_gold_incremental, transform_silver.stg_orders.run, manual__2026-08-10T04:18:26.584426+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'transform_silver.stg_orders.run', 'dag_id': 'dbt_silver_gold_incremental', 'run_id': 'manual__2026-08-10T04:18:26.584426+00:00', 'map_index': -1, 'start_date': datetime.datetime(2026, 8, 10, 4, 22, 59, 943531, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2026, 8, 10, 4, 23, 49, 751542, tzinfo=Timezone('UTC')), 'duration': 49}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2026-08-10T04:23:50.599+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7479, status='terminated', exitcode=1, started='04:22:59') (7479) terminated with exit code 1

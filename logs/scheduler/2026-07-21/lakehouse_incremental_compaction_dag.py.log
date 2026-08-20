@@ -1,0 +1,735 @@
+[2026-07-21T03:28:02.498+0000] {processor.py:186} INFO - Started process (PID=167) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:28:02.500+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:28:02.503+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:02.503+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:28:02.553+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:28:02.658+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:02.658+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:lakehouse_incremental_compaction
+[2026-07-21T03:28:02.673+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:02.672+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:lakehouse_incremental_compaction
+[2026-07-21T03:28:02.682+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:02.682+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:lakehouse_incremental_compaction
+[2026-07-21T03:28:02.692+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:02.692+0000] {override.py:1900} INFO - Created Permission View: can create on DAG Run:lakehouse_incremental_compaction
+[2026-07-21T03:28:02.700+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:02.700+0000] {override.py:1900} INFO - Created Permission View: can read on DAG Run:lakehouse_incremental_compaction
+[2026-07-21T03:28:02.708+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:02.708+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG Run:lakehouse_incremental_compaction
+[2026-07-21T03:28:02.719+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:02.719+0000] {override.py:1900} INFO - Created Permission View: menu access on DAG Run:lakehouse_incremental_compaction
+[2026-07-21T03:28:02.720+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:02.720+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:28:02.742+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:02.741+0000] {dag.py:3262} INFO - Creating ORM DAG for lakehouse_incremental_compaction
+[2026-07-21T03:28:02.759+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:02.758+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:28:02.977+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.489 seconds
+[2026-07-21T03:28:34.273+0000] {processor.py:186} INFO - Started process (PID=288) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:28:34.274+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:28:34.276+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:34.276+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:28:34.298+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:28:34.327+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:34.327+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:28:34.348+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:28:34.348+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:28:34.366+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.099 seconds
+[2026-07-21T03:29:05.060+0000] {processor.py:186} INFO - Started process (PID=399) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:29:05.061+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:29:05.064+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:29:05.064+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:29:05.090+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:29:05.112+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:29:05.112+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:29:05.139+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:29:05.139+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:29:05.162+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.107 seconds
+[2026-07-21T03:29:35.327+0000] {processor.py:186} INFO - Started process (PID=513) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:29:35.329+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:29:35.331+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:29:35.330+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:29:35.352+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:29:35.377+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:29:35.377+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:29:35.402+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:29:35.402+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:29:35.425+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.105 seconds
+[2026-07-21T03:30:05.776+0000] {processor.py:186} INFO - Started process (PID=626) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:30:05.777+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:30:05.780+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:30:05.779+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:30:05.804+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:30:05.830+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:30:05.830+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:30:05.857+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:30:05.857+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:30:05.884+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.115 seconds
+[2026-07-21T03:30:36.079+0000] {processor.py:186} INFO - Started process (PID=742) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:30:36.080+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:30:36.082+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:30:36.082+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:30:36.108+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:30:36.134+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:30:36.134+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:30:36.160+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:30:36.160+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:30:36.185+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.111 seconds
+[2026-07-21T03:31:06.507+0000] {processor.py:186} INFO - Started process (PID=858) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:31:06.509+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:31:06.511+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:31:06.511+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:31:06.534+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:31:06.562+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:31:06.562+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:31:06.588+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:31:06.588+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:31:06.611+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.110 seconds
+[2026-07-21T03:31:36.787+0000] {processor.py:186} INFO - Started process (PID=975) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:31:36.788+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:31:36.790+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:31:36.790+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:31:36.815+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:31:36.838+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:31:36.838+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:31:36.860+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:31:36.860+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:31:36.880+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.099 seconds
+[2026-07-21T03:32:07.609+0000] {processor.py:186} INFO - Started process (PID=1426) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:32:07.610+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:32:07.612+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:32:07.612+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:32:07.633+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:32:07.657+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:32:07.657+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:32:07.678+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:32:07.678+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:32:07.695+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.092 seconds
+[2026-07-21T03:32:37.791+0000] {processor.py:186} INFO - Started process (PID=1552) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:32:37.793+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:32:37.797+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:32:37.796+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:32:37.841+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:32:37.871+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:32:37.870+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:32:37.909+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:32:37.909+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:32:37.948+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.163 seconds
+[2026-07-21T03:33:08.025+0000] {processor.py:186} INFO - Started process (PID=1670) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:33:08.026+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:33:08.028+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:33:08.028+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:33:08.050+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:33:08.072+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:33:08.072+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:33:08.092+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:33:08.092+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:33:08.110+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.090 seconds
+[2026-07-21T03:33:38.664+0000] {processor.py:186} INFO - Started process (PID=1808) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:33:38.666+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:33:38.670+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:33:38.669+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:33:38.748+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:33:38.841+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:33:38.840+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:33:38.916+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:33:38.916+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:33:38.960+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.326 seconds
+[2026-07-21T03:34:09.231+0000] {processor.py:186} INFO - Started process (PID=1982) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:34:09.233+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:34:09.236+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:34:09.235+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:34:09.272+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:34:09.325+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:34:09.325+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:34:09.379+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:34:09.379+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:34:09.418+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.194 seconds
+[2026-07-21T03:34:39.966+0000] {processor.py:186} INFO - Started process (PID=2140) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:34:39.968+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:34:39.972+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:34:39.971+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:34:39.997+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:34:40.026+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:34:40.025+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:34:40.053+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:34:40.053+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:34:40.079+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.120 seconds
+[2026-07-21T03:35:10.427+0000] {processor.py:186} INFO - Started process (PID=2268) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:35:10.428+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:35:10.430+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:35:10.430+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:35:10.453+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:35:10.478+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:35:10.478+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:35:10.506+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:35:10.506+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:35:10.534+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.113 seconds
+[2026-07-21T03:35:41.166+0000] {processor.py:186} INFO - Started process (PID=2384) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:35:41.167+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:35:41.170+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:35:41.170+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:35:41.200+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:35:41.232+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:35:41.232+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:35:41.261+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:35:41.261+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:35:41.287+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.128 seconds
+[2026-07-21T03:36:11.745+0000] {processor.py:186} INFO - Started process (PID=2498) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:36:11.747+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:36:11.751+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:36:11.750+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:36:11.777+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:36:11.806+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:36:11.806+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:36:11.833+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:36:11.833+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:36:11.858+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.120 seconds
+[2026-07-21T03:36:41.919+0000] {processor.py:186} INFO - Started process (PID=2611) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:36:41.920+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:36:41.922+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:36:41.922+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:36:41.947+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:36:41.972+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:36:41.972+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:36:41.996+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:36:41.996+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:36:42.021+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.108 seconds
+[2026-07-21T03:37:12.385+0000] {processor.py:186} INFO - Started process (PID=2727) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:37:12.386+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T03:37:12.388+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:37:12.388+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:37:12.417+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T03:37:12.448+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:37:12.448+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T03:37:12.473+0000] {logging_mixin.py:190} INFO - [2026-07-21T03:37:12.472+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T03:37:12.500+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.123 seconds
+[2026-07-21T04:32:08.556+0000] {processor.py:186} INFO - Started process (PID=167) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:32:08.559+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:32:08.564+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:08.564+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:32:08.614+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:32:08.725+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:08.724+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:lakehouse_incremental_compaction
+[2026-07-21T04:32:08.738+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:08.738+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:lakehouse_incremental_compaction
+[2026-07-21T04:32:08.747+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:08.747+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:lakehouse_incremental_compaction
+[2026-07-21T04:32:08.757+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:08.756+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG Run:lakehouse_incremental_compaction
+[2026-07-21T04:32:08.766+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:08.765+0000] {override.py:1900} INFO - Created Permission View: menu access on DAG Run:lakehouse_incremental_compaction
+[2026-07-21T04:32:08.774+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:08.774+0000] {override.py:1900} INFO - Created Permission View: can create on DAG Run:lakehouse_incremental_compaction
+[2026-07-21T04:32:08.783+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:08.783+0000] {override.py:1900} INFO - Created Permission View: can read on DAG Run:lakehouse_incremental_compaction
+[2026-07-21T04:32:08.784+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:08.784+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:32:08.802+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:08.801+0000] {dag.py:3262} INFO - Creating ORM DAG for lakehouse_incremental_compaction
+[2026-07-21T04:32:08.818+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:08.818+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:32:09.064+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.519 seconds
+[2026-07-21T04:32:40.391+0000] {processor.py:186} INFO - Started process (PID=288) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:32:40.393+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:32:40.395+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:40.395+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:32:40.423+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:32:40.451+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:40.451+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:32:40.477+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:32:40.477+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:32:40.515+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.131 seconds
+[2026-07-21T04:33:10.636+0000] {processor.py:186} INFO - Started process (PID=399) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:33:10.637+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:33:10.640+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:33:10.640+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:33:10.662+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:33:10.686+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:33:10.686+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:33:10.713+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:33:10.712+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:33:10.739+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.108 seconds
+[2026-07-21T04:33:41.001+0000] {processor.py:186} INFO - Started process (PID=513) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:33:41.002+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:33:41.004+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:33:41.004+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:33:41.027+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:33:41.053+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:33:41.052+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:33:41.078+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:33:41.078+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:33:41.106+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.110 seconds
+[2026-07-21T04:34:11.341+0000] {processor.py:186} INFO - Started process (PID=626) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:34:11.342+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:34:11.344+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:34:11.344+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:34:11.365+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:34:11.388+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:34:11.388+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:34:11.409+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:34:11.409+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:34:11.428+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.096 seconds
+[2026-07-21T04:34:41.714+0000] {processor.py:186} INFO - Started process (PID=742) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:34:41.715+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:34:41.717+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:34:41.717+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:34:41.741+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:34:41.768+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:34:41.767+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:34:41.791+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:34:41.791+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:34:41.813+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.105 seconds
+[2026-07-21T04:35:12.339+0000] {processor.py:186} INFO - Started process (PID=1152) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:35:12.342+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:35:12.346+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:35:12.346+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:35:12.374+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:35:12.404+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:35:12.404+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:35:12.428+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:35:12.428+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:35:12.458+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.130 seconds
+[2026-07-21T04:35:42.707+0000] {processor.py:186} INFO - Started process (PID=1315) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:35:42.709+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:35:42.714+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:35:42.713+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:35:42.742+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:35:42.773+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:35:42.772+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:35:42.803+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:35:42.802+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:35:42.834+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.137 seconds
+[2026-07-21T04:36:07.933+0000] {processor.py:186} INFO - Started process (PID=1431) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:36:07.934+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:36:07.938+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:36:07.938+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:36:07.982+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:36:07.974+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 176, in <module>
+    dag_instance = incremental_compaction_pipeline()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 114, in incremental_compaction_pipeline
+    pool=COMPACTION_POOL
+NameError: name 'COMPACTION_POOL' is not defined
+[2026-07-21T04:36:07.987+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:36:08.010+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.084 seconds
+[2026-07-21T04:36:38.706+0000] {processor.py:186} INFO - Started process (PID=1562) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:36:38.708+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:36:38.711+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:36:38.711+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:36:38.749+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:36:38.739+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 176, in <module>
+    dag_instance = incremental_compaction_pipeline()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 114, in incremental_compaction_pipeline
+    pool=COMPACTION_POOL
+NameError: name 'COMPACTION_POOL' is not defined
+[2026-07-21T04:36:38.755+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:36:38.783+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.088 seconds
+[2026-07-21T04:37:08.989+0000] {processor.py:186} INFO - Started process (PID=1724) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:37:08.992+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:37:08.998+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:37:08.997+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:37:09.095+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:37:09.073+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 176, in <module>
+    dag_instance = incremental_compaction_pipeline()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 114, in incremental_compaction_pipeline
+    pool=COMPACTION_POOL
+NameError: name 'COMPACTION_POOL' is not defined
+[2026-07-21T04:37:09.112+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:37:09.168+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.204 seconds
+[2026-07-21T04:37:39.600+0000] {processor.py:186} INFO - Started process (PID=1892) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:37:39.601+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:37:39.603+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:37:39.602+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:37:39.647+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:37:39.636+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 176, in <module>
+    dag_instance = incremental_compaction_pipeline()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 114, in incremental_compaction_pipeline
+    pool=COMPACTION_POOL
+NameError: name 'COMPACTION_POOL' is not defined
+[2026-07-21T04:37:39.653+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:37:39.686+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.092 seconds
+[2026-07-21T04:38:09.809+0000] {processor.py:186} INFO - Started process (PID=2025) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:38:09.811+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:38:09.813+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:38:09.813+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:38:09.854+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:38:09.841+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 176, in <module>
+    dag_instance = incremental_compaction_pipeline()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 114, in incremental_compaction_pipeline
+    pool=COMPACTION_POOL
+NameError: name 'COMPACTION_POOL' is not defined
+[2026-07-21T04:38:09.861+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:38:09.903+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.102 seconds
+[2026-07-21T04:38:40.074+0000] {processor.py:186} INFO - Started process (PID=2154) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:38:40.076+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:38:40.078+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:38:40.077+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:38:40.111+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:38:40.101+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 176, in <module>
+    dag_instance = incremental_compaction_pipeline()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 114, in incremental_compaction_pipeline
+    pool=COMPACTION_POOL
+NameError: name 'COMPACTION_POOL' is not defined
+[2026-07-21T04:38:40.116+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:38:40.144+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.079 seconds
+[2026-07-21T04:39:10.699+0000] {processor.py:186} INFO - Started process (PID=2267) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:39:10.700+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:39:10.701+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:39:10.701+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:39:10.733+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:39:10.724+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 176, in <module>
+    dag_instance = incremental_compaction_pipeline()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 114, in incremental_compaction_pipeline
+    pool=COMPACTION_POOL
+NameError: name 'COMPACTION_POOL' is not defined
+[2026-07-21T04:39:10.737+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:39:10.758+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.064 seconds
+[2026-07-21T04:39:41.236+0000] {processor.py:186} INFO - Started process (PID=2383) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:39:41.237+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:39:41.238+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:39:41.238+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:39:41.266+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:39:41.258+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 176, in <module>
+    dag_instance = incremental_compaction_pipeline()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 114, in incremental_compaction_pipeline
+    pool=COMPACTION_POOL
+NameError: name 'COMPACTION_POOL' is not defined
+[2026-07-21T04:39:41.270+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:39:41.292+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.063 seconds
+[2026-07-21T04:40:11.366+0000] {processor.py:186} INFO - Started process (PID=2497) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:40:11.367+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:40:11.368+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:40:11.368+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:40:11.397+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:40:11.390+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 176, in <module>
+    dag_instance = incremental_compaction_pipeline()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 114, in incremental_compaction_pipeline
+    pool=COMPACTION_POOL
+NameError: name 'COMPACTION_POOL' is not defined
+[2026-07-21T04:40:11.401+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:40:11.423+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.064 seconds
+[2026-07-21T04:40:41.517+0000] {processor.py:186} INFO - Started process (PID=2610) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:40:41.518+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:40:41.519+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:40:41.519+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:40:41.549+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:40:41.541+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 176, in <module>
+    dag_instance = incremental_compaction_pipeline()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 114, in incremental_compaction_pipeline
+    pool=COMPACTION_POOL
+NameError: name 'COMPACTION_POOL' is not defined
+[2026-07-21T04:40:41.553+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:40:41.574+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.063 seconds
+[2026-07-21T04:41:12.254+0000] {processor.py:186} INFO - Started process (PID=2726) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:41:12.255+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:41:12.257+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:41:12.257+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:41:12.294+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:41:12.283+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 176, in <module>
+    dag_instance = incremental_compaction_pipeline()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 114, in incremental_compaction_pipeline
+    pool=COMPACTION_POOL
+NameError: name 'COMPACTION_POOL' is not defined
+[2026-07-21T04:41:12.299+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:41:12.336+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.095 seconds
+[2026-07-21T04:41:19.545+0000] {processor.py:186} INFO - Started process (PID=2736) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:41:19.546+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:41:19.547+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:41:19.547+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:41:19.586+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:41:19.644+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:41:19.643+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:41:19.663+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:41:19.663+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:41:19.692+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.153 seconds
+[2026-07-21T04:41:49.760+0000] {processor.py:186} INFO - Started process (PID=2852) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:41:49.761+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:41:49.763+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:41:49.762+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:41:49.787+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:41:49.809+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:41:49.808+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:41:49.830+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:41:49.830+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:41:49.852+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.097 seconds
+[2026-07-21T04:42:20.117+0000] {processor.py:186} INFO - Started process (PID=2966) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:42:20.118+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:42:20.120+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:42:20.120+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:42:20.143+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:42:20.169+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:42:20.168+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:42:20.195+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:42:20.195+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:42:20.219+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.108 seconds
+[2026-07-21T04:42:50.608+0000] {processor.py:186} INFO - Started process (PID=3079) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:42:50.610+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:42:50.611+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:42:50.610+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:42:50.638+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:42:50.666+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:42:50.665+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:42:50.688+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:42:50.688+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:42:50.709+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.107 seconds
+[2026-07-21T04:43:21.248+0000] {processor.py:186} INFO - Started process (PID=3195) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:43:21.249+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:43:21.250+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:43:21.250+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:43:21.270+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:43:21.292+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:43:21.292+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:43:21.312+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:43:21.312+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:43:21.335+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.092 seconds
+[2026-07-21T04:43:51.664+0000] {processor.py:186} INFO - Started process (PID=3311) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:43:51.665+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:43:51.668+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:43:51.667+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:43:51.697+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:43:51.723+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:43:51.723+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:43:51.745+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:43:51.744+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T04:43:51.766+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.109 seconds
+[2026-07-21T04:44:22.040+0000] {processor.py:186} INFO - Started process (PID=3452) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:44:22.041+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:44:22.042+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:44:22.042+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:44:22.070+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:44:22.103+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:44:22.102+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:44:22.154+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.120 seconds
+[2026-07-21T04:44:52.578+0000] {processor.py:186} INFO - Started process (PID=3565) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:44:52.579+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:44:52.580+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:44:52.580+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:44:52.604+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:44:52.625+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:44:52.625+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:44:52.670+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.097 seconds
+[2026-07-21T04:45:22.912+0000] {processor.py:186} INFO - Started process (PID=3681) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:45:22.913+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:45:22.915+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:45:22.914+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:45:22.938+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:45:22.970+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:45:22.969+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:45:23.029+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.123 seconds
+[2026-07-21T04:45:53.868+0000] {processor.py:186} INFO - Started process (PID=3795) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:45:53.870+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:45:53.871+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:45:53.871+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:45:53.899+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:45:53.927+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:45:53.926+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:45:53.974+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.112 seconds
+[2026-07-21T04:46:24.715+0000] {processor.py:186} INFO - Started process (PID=3908) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:46:24.716+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:46:24.720+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:46:24.719+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:46:24.744+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:46:24.765+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:46:24.765+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:46:24.800+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.091 seconds
+[2026-07-21T04:46:55.376+0000] {processor.py:186} INFO - Started process (PID=4024) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:46:55.378+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:46:55.379+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:46:55.379+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:46:55.406+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:46:55.435+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:46:55.435+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:46:55.490+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.121 seconds
+[2026-07-21T04:47:25.624+0000] {processor.py:186} INFO - Started process (PID=4161) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:47:25.626+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:47:25.627+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:47:25.627+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:47:25.651+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:47:25.673+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:47:25.673+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:47:25.713+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.095 seconds
+[2026-07-21T04:47:55.843+0000] {processor.py:186} INFO - Started process (PID=4275) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:47:55.844+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:47:55.845+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:47:55.845+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:47:55.870+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:47:55.895+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:47:55.895+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:47:55.937+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.100 seconds
+[2026-07-21T04:48:26.128+0000] {processor.py:186} INFO - Started process (PID=4388) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:48:26.129+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:48:26.130+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:48:26.130+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:48:26.152+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:48:26.173+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:48:26.173+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:48:26.217+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.094 seconds
+[2026-07-21T04:48:56.329+0000] {processor.py:186} INFO - Started process (PID=4504) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:48:56.330+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:48:56.331+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:48:56.331+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:48:56.355+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:48:56.377+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:48:56.377+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:48:56.417+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.093 seconds
+[2026-07-21T04:49:26.761+0000] {processor.py:186} INFO - Started process (PID=4618) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:49:26.762+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:49:26.763+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:49:26.763+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:49:26.789+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:49:26.811+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:49:26.811+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:49:26.849+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.093 seconds
+[2026-07-21T04:49:57.339+0000] {processor.py:186} INFO - Started process (PID=4731) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:49:57.340+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:49:57.341+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:49:57.341+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:49:57.367+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:49:57.389+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:49:57.389+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:49:57.433+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.100 seconds
+[2026-07-21T04:50:27.896+0000] {processor.py:186} INFO - Started process (PID=4868) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:50:27.898+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:50:27.899+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:50:27.899+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:50:27.922+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:50:27.948+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:50:27.948+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:50:27.970+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:50:27.969+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-21 02:00:00+00:00, run_after=2026-07-22 02:00:00+00:00
+[2026-07-21T04:50:27.988+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.099 seconds
+[2026-07-21T04:50:58.235+0000] {processor.py:186} INFO - Started process (PID=4984) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:50:58.236+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:50:58.237+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:50:58.237+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:50:58.257+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:50:58.278+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:50:58.278+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:50:58.301+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:50:58.300+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-21 02:00:00+00:00, run_after=2026-07-22 02:00:00+00:00
+[2026-07-21T04:50:58.434+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.204 seconds
+[2026-07-21T04:51:28.643+0000] {processor.py:186} INFO - Started process (PID=5098) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:51:28.644+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:51:28.645+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:51:28.645+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:51:28.668+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:51:28.823+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:51:28.823+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:51:28.846+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:51:28.846+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-21 02:00:00+00:00, run_after=2026-07-22 02:00:00+00:00
+[2026-07-21T04:51:28.866+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.229 seconds
+[2026-07-21T04:51:59.562+0000] {processor.py:186} INFO - Started process (PID=5211) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:51:59.563+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:51:59.565+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:51:59.565+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:51:59.586+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:51:59.610+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:51:59.610+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:51:59.634+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:51:59.634+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-21 02:00:00+00:00, run_after=2026-07-22 02:00:00+00:00
+[2026-07-21T04:51:59.785+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.229 seconds
+[2026-07-21T04:52:29.973+0000] {processor.py:186} INFO - Started process (PID=5327) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:52:29.974+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:52:29.976+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:52:29.976+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:52:29.999+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:52:30.024+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:52:30.024+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:52:30.046+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:52:30.046+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-21 02:00:00+00:00, run_after=2026-07-22 02:00:00+00:00
+[2026-07-21T04:52:30.069+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.102 seconds
+[2026-07-21T04:53:00.228+0000] {processor.py:186} INFO - Started process (PID=5441) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:53:00.229+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:53:00.230+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:53:00.230+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:53:00.252+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:53:00.276+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:53:00.275+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:53:00.298+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:53:00.297+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-21 02:00:00+00:00, run_after=2026-07-22 02:00:00+00:00
+[2026-07-21T04:53:00.318+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.096 seconds
+[2026-07-21T04:53:30.593+0000] {processor.py:186} INFO - Started process (PID=5554) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:53:30.595+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:53:30.596+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:53:30.596+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:53:30.622+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:53:30.645+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:53:30.645+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:53:30.667+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:53:30.666+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-21 02:00:00+00:00, run_after=2026-07-22 02:00:00+00:00
+[2026-07-21T04:53:30.688+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.101 seconds
+[2026-07-21T04:54:01.464+0000] {processor.py:186} INFO - Started process (PID=5670) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:54:01.465+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:54:01.467+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:54:01.467+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:54:01.494+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:54:01.524+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:54:01.524+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:54:01.548+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:54:01.548+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-21 02:00:00+00:00, run_after=2026-07-22 02:00:00+00:00
+[2026-07-21T04:54:01.571+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.113 seconds
+[2026-07-21T04:54:32.405+0000] {processor.py:186} INFO - Started process (PID=5786) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:54:32.407+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:54:32.408+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:54:32.408+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:54:32.438+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:54:32.461+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:54:32.460+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:54:32.483+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:54:32.483+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-21 02:00:00+00:00, run_after=2026-07-22 02:00:00+00:00
+[2026-07-21T04:54:32.506+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.107 seconds
+[2026-07-21T04:55:02.625+0000] {processor.py:186} INFO - Started process (PID=5900) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:55:02.626+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:55:02.628+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:55:02.627+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:55:02.651+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:55:02.674+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:55:02.674+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:55:02.698+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:55:02.698+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-21 02:00:00+00:00, run_after=2026-07-22 02:00:00+00:00
+[2026-07-21T04:55:02.719+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.100 seconds
+[2026-07-21T04:55:33.165+0000] {processor.py:186} INFO - Started process (PID=6013) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:55:33.167+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:55:33.168+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:55:33.168+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:55:33.188+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:55:33.214+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:55:33.213+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:55:33.234+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:55:33.234+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-21 02:00:00+00:00, run_after=2026-07-22 02:00:00+00:00
+[2026-07-21T04:55:33.256+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.096 seconds
+[2026-07-21T04:56:03.596+0000] {processor.py:186} INFO - Started process (PID=6129) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:56:03.597+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:56:03.599+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:56:03.599+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:56:03.624+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:56:03.649+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:56:03.649+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:56:03.673+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:56:03.672+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-21 02:00:00+00:00, run_after=2026-07-22 02:00:00+00:00
+[2026-07-21T04:56:03.691+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.101 seconds
+[2026-07-21T04:56:33.873+0000] {processor.py:186} INFO - Started process (PID=6243) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:56:33.874+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T04:56:33.876+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:56:33.875+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:56:33.896+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T04:56:33.919+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:56:33.919+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T04:56:33.939+0000] {logging_mixin.py:190} INFO - [2026-07-21T04:56:33.939+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-21 02:00:00+00:00, run_after=2026-07-22 02:00:00+00:00
+[2026-07-21T04:56:33.955+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.088 seconds
+[2026-07-21T07:18:01.560+0000] {processor.py:186} INFO - Started process (PID=167) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:18:01.563+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:18:01.568+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:01.567+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:18:01.609+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:18:01.764+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:01.762+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:lakehouse_incremental_compaction
+[2026-07-21T07:18:01.778+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:01.777+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:lakehouse_incremental_compaction
+[2026-07-21T07:18:01.792+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:01.791+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:lakehouse_incremental_compaction
+[2026-07-21T07:18:01.805+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:01.805+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG Run:lakehouse_incremental_compaction
+[2026-07-21T07:18:01.816+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:01.816+0000] {override.py:1900} INFO - Created Permission View: menu access on DAG Run:lakehouse_incremental_compaction
+[2026-07-21T07:18:01.827+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:01.827+0000] {override.py:1900} INFO - Created Permission View: can create on DAG Run:lakehouse_incremental_compaction
+[2026-07-21T07:18:01.838+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:01.837+0000] {override.py:1900} INFO - Created Permission View: can read on DAG Run:lakehouse_incremental_compaction
+[2026-07-21T07:18:01.839+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:01.839+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:18:01.861+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:01.861+0000] {dag.py:3262} INFO - Creating ORM DAG for lakehouse_incremental_compaction
+[2026-07-21T07:18:01.878+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:01.878+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:18:02.142+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.594 seconds
+[2026-07-21T07:18:32.842+0000] {processor.py:186} INFO - Started process (PID=283) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:18:32.843+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:18:32.845+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:32.845+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:18:32.867+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:18:32.895+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:32.895+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:18:32.921+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:18:32.920+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:18:32.953+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.118 seconds
+[2026-07-21T07:19:03.777+0000] {processor.py:186} INFO - Started process (PID=400) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:19:03.778+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:19:03.781+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:19:03.780+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:19:03.805+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:19:03.834+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:19:03.833+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:19:03.861+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:19:03.860+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:19:03.885+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.116 seconds
+[2026-07-21T07:19:34.289+0000] {processor.py:186} INFO - Started process (PID=514) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:19:34.290+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:19:34.293+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:19:34.293+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:19:34.322+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:19:34.355+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:19:34.354+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:19:34.382+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:19:34.382+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:19:34.414+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.134 seconds
+[2026-07-21T07:20:04.474+0000] {processor.py:186} INFO - Started process (PID=629) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:20:04.475+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:20:04.477+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:20:04.476+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:20:04.494+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:20:04.518+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:20:04.518+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:20:04.540+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:20:04.540+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:20:04.560+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.092 seconds
+[2026-07-21T07:20:34.694+0000] {processor.py:186} INFO - Started process (PID=1074) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:20:34.696+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:20:34.699+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:20:34.698+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:20:34.725+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:20:34.753+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:20:34.753+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:20:34.775+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:20:34.775+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:20:34.793+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.105 seconds
+[2026-07-21T07:21:04.945+0000] {processor.py:186} INFO - Started process (PID=1194) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:21:04.947+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:21:04.950+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:21:04.950+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:21:04.974+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:21:05.004+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:21:05.003+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:21:05.032+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:21:05.032+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:21:05.062+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.124 seconds
+[2026-07-21T07:21:35.856+0000] {processor.py:186} INFO - Started process (PID=1320) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:21:35.858+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:21:35.860+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:21:35.860+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:21:35.882+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:21:35.904+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:21:35.904+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:21:35.925+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:21:35.925+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:21:35.945+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.094 seconds
+[2026-07-21T07:22:06.481+0000] {processor.py:186} INFO - Started process (PID=1464) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:22:06.482+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:22:06.486+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:22:06.485+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:22:06.513+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:22:06.556+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:22:06.556+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:22:06.584+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:22:06.584+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:22:06.614+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.144 seconds
+[2026-07-21T07:22:36.781+0000] {processor.py:186} INFO - Started process (PID=1643) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:22:36.783+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:22:36.785+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:22:36.785+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:22:36.819+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:22:36.851+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:22:36.851+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:22:36.883+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:22:36.883+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:22:36.908+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.134 seconds
+[2026-07-21T07:23:07.408+0000] {processor.py:186} INFO - Started process (PID=1795) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:23:07.410+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:23:07.413+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:23:07.412+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:23:07.435+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:23:07.462+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:23:07.462+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:23:07.485+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:23:07.484+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:23:07.509+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.108 seconds
+[2026-07-21T07:23:38.054+0000] {processor.py:186} INFO - Started process (PID=1926) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:23:38.056+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:23:38.058+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:23:38.058+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:23:38.086+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:23:38.118+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:23:38.117+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:23:38.148+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:23:38.147+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:23:38.172+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.125 seconds
+[2026-07-21T07:24:08.595+0000] {processor.py:186} INFO - Started process (PID=2040) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:24:08.597+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:24:08.599+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:24:08.599+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:24:08.623+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:24:08.650+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:24:08.650+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:24:08.675+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:24:08.675+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:24:08.695+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.107 seconds
+[2026-07-21T07:24:39.258+0000] {processor.py:186} INFO - Started process (PID=2153) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:24:39.261+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:24:39.266+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:24:39.265+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:24:39.319+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:24:39.367+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:24:39.366+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:24:39.398+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:24:39.398+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:24:39.418+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.168 seconds
+[2026-07-21T07:25:09.694+0000] {processor.py:186} INFO - Started process (PID=2269) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:25:09.696+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:25:09.699+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:25:09.699+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:25:09.726+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:25:09.756+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:25:09.756+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:25:09.782+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:25:09.781+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:25:09.806+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.118 seconds
+[2026-07-21T07:25:40.290+0000] {processor.py:186} INFO - Started process (PID=2383) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:25:40.291+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:25:40.295+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:25:40.294+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:25:40.325+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:25:40.353+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:25:40.353+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:25:40.379+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:25:40.379+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:25:40.404+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.126 seconds
+[2026-07-21T07:26:10.598+0000] {processor.py:186} INFO - Started process (PID=2496) to work on /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:26:10.599+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/lakehouse_incremental_compaction_dag.py for tasks to queue
+[2026-07-21T07:26:10.601+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:26:10.601+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:26:10.627+0000] {processor.py:925} INFO - DAG(s) 'lakehouse_incremental_compaction' retrieved from /opt/airflow/dags/lakehouse_incremental_compaction_dag.py
+[2026-07-21T07:26:10.651+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:26:10.651+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-21T07:26:10.674+0000] {logging_mixin.py:190} INFO - [2026-07-21T07:26:10.674+0000] {dag.py:4180} INFO - Setting next_dagrun for lakehouse_incremental_compaction to 2026-07-20 02:00:00+00:00, run_after=2026-07-21 02:00:00+00:00
+[2026-07-21T07:26:10.694+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/lakehouse_incremental_compaction_dag.py took 0.102 seconds

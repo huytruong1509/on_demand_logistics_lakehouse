@@ -1,0 +1,50 @@
+[2026-07-19T01:10:53.058+0000] {processor.py:186} INFO - Started process (PID=167) to work on /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:10:53.060+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_consumer_complaints_pipeline.py for tasks to queue
+[2026-07-19T01:10:53.066+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:10:53.065+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:10:53.826+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_ingestion_wap' retrieved from /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:10:53.904+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:10:53.904+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:consumer_complaints_ingestion_wap
+[2026-07-19T01:10:53.920+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:10:53.919+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:consumer_complaints_ingestion_wap
+[2026-07-19T01:10:53.931+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:10:53.930+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:consumer_complaints_ingestion_wap
+[2026-07-19T01:10:53.947+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:10:53.947+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG Run:consumer_complaints_ingestion_wap
+[2026-07-19T01:10:53.957+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:10:53.957+0000] {override.py:1900} INFO - Created Permission View: can read on DAG Run:consumer_complaints_ingestion_wap
+[2026-07-19T01:10:53.968+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:10:53.968+0000] {override.py:1900} INFO - Created Permission View: menu access on DAG Run:consumer_complaints_ingestion_wap
+[2026-07-19T01:10:53.979+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:10:53.978+0000] {override.py:1900} INFO - Created Permission View: can create on DAG Run:consumer_complaints_ingestion_wap
+[2026-07-19T01:10:53.980+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:10:53.979+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-19T01:10:54.000+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:10:53.999+0000] {dag.py:3262} INFO - Creating ORM DAG for consumer_complaints_ingestion_wap
+[2026-07-19T01:10:54.021+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:10:54.021+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_ingestion_wap to 2026-07-18 00:00:00+00:00, run_after=2026-07-19 00:00:00+00:00
+[2026-07-19T01:10:54.061+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_consumer_complaints_pipeline.py took 1.013 seconds
+[2026-07-19T01:11:24.195+0000] {processor.py:186} INFO - Started process (PID=256) to work on /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:11:24.197+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_consumer_complaints_pipeline.py for tasks to queue
+[2026-07-19T01:11:24.201+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:11:24.200+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:11:24.622+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_ingestion_wap' retrieved from /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:11:24.652+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:11:24.652+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-19T01:11:24.675+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:11:24.675+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_ingestion_wap to 2026-07-18 00:00:00+00:00, run_after=2026-07-19 00:00:00+00:00
+[2026-07-19T01:11:24.695+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_consumer_complaints_pipeline.py took 0.509 seconds
+[2026-07-19T01:11:54.839+0000] {processor.py:186} INFO - Started process (PID=340) to work on /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:11:54.840+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_consumer_complaints_pipeline.py for tasks to queue
+[2026-07-19T01:11:54.843+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:11:54.843+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:11:55.110+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_ingestion_wap' retrieved from /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:11:55.134+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:11:55.134+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-19T01:11:55.155+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:11:55.155+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_ingestion_wap to 2026-07-18 00:00:00+00:00, run_after=2026-07-19 00:00:00+00:00
+[2026-07-19T01:11:55.186+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_consumer_complaints_pipeline.py took 0.353 seconds
+[2026-07-19T01:12:26.224+0000] {processor.py:186} INFO - Started process (PID=428) to work on /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:12:26.225+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_consumer_complaints_pipeline.py for tasks to queue
+[2026-07-19T01:12:26.228+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:12:26.228+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:12:26.514+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_ingestion_wap' retrieved from /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:12:26.539+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:12:26.538+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-19T01:12:26.562+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:12:26.562+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_ingestion_wap to 2026-07-18 00:00:00+00:00, run_after=2026-07-19 00:00:00+00:00
+[2026-07-19T01:12:26.580+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_consumer_complaints_pipeline.py took 0.361 seconds
+[2026-07-19T01:12:57.057+0000] {processor.py:186} INFO - Started process (PID=515) to work on /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:12:57.059+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_consumer_complaints_pipeline.py for tasks to queue
+[2026-07-19T01:12:57.061+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:12:57.061+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:12:57.390+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_ingestion_wap' retrieved from /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:12:57.418+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:12:57.417+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-19T01:12:57.442+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:12:57.441+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_ingestion_wap to 2026-07-18 00:00:00+00:00, run_after=2026-07-19 00:00:00+00:00
+[2026-07-19T01:12:57.467+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_consumer_complaints_pipeline.py took 0.415 seconds
+[2026-07-19T01:13:28.241+0000] {processor.py:186} INFO - Started process (PID=602) to work on /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:13:28.242+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/wap_consumer_complaints_pipeline.py for tasks to queue
+[2026-07-19T01:13:28.245+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:13:28.245+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:13:28.572+0000] {processor.py:925} INFO - DAG(s) 'consumer_complaints_ingestion_wap' retrieved from /opt/airflow/dags/wap_consumer_complaints_pipeline.py
+[2026-07-19T01:13:28.597+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:13:28.597+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-19T01:13:28.619+0000] {logging_mixin.py:190} INFO - [2026-07-19T01:13:28.619+0000] {dag.py:4180} INFO - Setting next_dagrun for consumer_complaints_ingestion_wap to 2026-07-18 00:00:00+00:00, run_after=2026-07-19 00:00:00+00:00
+[2026-07-19T01:13:28.639+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/wap_consumer_complaints_pipeline.py took 0.404 seconds

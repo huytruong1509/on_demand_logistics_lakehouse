@@ -1,0 +1,199 @@
+[2026-07-15T01:44:09.965+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-15T01:44:09.997+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_silver_gold_incremental.transform_gold.fct_complaints.test manual__2026-07-15T01:41:56.661054+00:00 [queued]>
+[2026-07-15T01:44:10.010+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_silver_gold_incremental.transform_gold.fct_complaints.test manual__2026-07-15T01:41:56.661054+00:00 [queued]>
+[2026-07-15T01:44:10.012+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2026-07-15T01:44:10.030+0000] {taskinstance.py:2888} INFO - Executing <Task(DbtTestLocalOperator): transform_gold.fct_complaints.test> on 2026-07-15 01:41:56.661054+00:00
+[2026-07-15T01:44:10.038+0000] {standard_task_runner.py:72} INFO - Started process 1489 to run task
+[2026-07-15T01:44:10.047+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'dbt_silver_gold_incremental', 'transform_gold.fct_complaints.test', 'manual__2026-07-15T01:41:56.661054+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/dbt_silver_gold.py', '--cfg-path', '/tmp/tmpz5cvdfda']
+[2026-07-15T01:44:10.054+0000] {standard_task_runner.py:105} INFO - Job 24: Subtask transform_gold.fct_complaints.test
+[2026-07-15T01:44:10.180+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_silver_gold_incremental.transform_gold.fct_complaints.test manual__2026-07-15T01:41:56.661054+00:00 [running]> on host 46914d9ee5b9
+[2026-07-15T01:44:10.312+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='dbt_silver_gold_incremental' AIRFLOW_CTX_TASK_ID='transform_gold.fct_complaints.test' AIRFLOW_CTX_EXECUTION_DATE='2026-07-15T01:41:56.661054+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-15T01:41:56.661054+00:00'
+[2026-07-15T01:44:10.314+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-15T01:44:11.909+0000] {local.py:294} INFO - dbtRunner is available. Using dbtRunner for invoking dbt.
+[2026-07-15T01:44:11.912+0000] {local.py:518} INFO - Cloning project to writable temp directory /tmp/tmpmvpwkn0y from /opt/airflow/dbt_transform
+[2026-07-15T01:44:11.928+0000] {local.py:538} INFO - Partial parse is enabled and the latest partial parse file is /tmp/cosmos/dbt_silver_gold_incremental__transform_gold/target/partial_parse.msgpack
+[2026-07-15T01:44:11.946+0000] {config.py:395} INFO - Using user-supplied profiles.yml at /opt/airflow/dbt_transform/profiles.yml
+[2026-07-15T01:44:11.964+0000] {runner.py:95} INFO - Trying to run dbtRunner with:
+ ['deps', '--project-dir', '/tmp/tmpmvpwkn0y', '--profiles-dir', '/opt/airflow/dbt_transform', '--profile', 'lakehouse_dbt', '--target', 'dev', '--no-static-parser']
+ in /tmp/tmpmvpwkn0y
+[2026-07-15T01:44:12.074+0000] {logging_mixin.py:190} INFO - 01:44:12  Running with dbt=1.8.8
+[2026-07-15T01:44:12.250+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-07-15T01:44:12.255+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_incremental__transform_silver...
+[2026-07-15T01:44:15.762+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_incremental__transform_silver for current version: 3.490078110000013
+[2026-07-15T01:44:15.764+0000] {graph.py:886} INFO - Cosmos performance [46914d9ee5b9|1489]: The cache size for cosmos_cache__dbt_silver_gold_incremental__transform_silver is 5960
+[2026-07-15T01:44:15.766+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_incremental__transform_silver - b4d80079b94d2a343d6831c58115d578,5e34606eb5f2b3dea81a8e19fa3ba138
+[2026-07-15T01:44:15.768+0000] {graph.py:799} INFO - Total nodes: 7
+[2026-07-15T01:44:15.770+0000] {graph.py:800} INFO - Total filtered nodes: 7
+[2026-07-15T01:44:15.772+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_silver) - [46914d9ee5b9|1489]: It took 3.52s to parse the dbt project for DAG using dbt_ls_cache
+[2026-07-15T01:44:15.787+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_silver) - [46914d9ee5b9|1489]: It took 0.0148s to build the Airflow DAG.
+[2026-07-15T01:44:15.789+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-07-15T01:44:15.791+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-07-15T01:44:15.796+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_incremental__transform_gold...
+[2026-07-15T01:44:18.416+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_incremental__transform_gold for current version: 2.604056123999726
+[2026-07-15T01:44:18.418+0000] {graph.py:886} INFO - Cosmos performance [46914d9ee5b9|1489]: The cache size for cosmos_cache__dbt_silver_gold_incremental__transform_gold is 35989
+[2026-07-15T01:44:18.422+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_incremental__transform_gold - b4d80079b94d2a343d6831c58115d578,304321e940a9403dceb380589bd0566f
+[2026-07-15T01:44:18.424+0000] {graph.py:799} INFO - Total nodes: 39
+[2026-07-15T01:44:18.426+0000] {graph.py:800} INFO - Total filtered nodes: 39
+[2026-07-15T01:44:18.428+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_gold) - [46914d9ee5b9|1489]: It took 2.63s to parse the dbt project for DAG using dbt_ls_cache
+[2026-07-15T01:44:18.466+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_incremental__transform_gold) - [46914d9ee5b9|1489]: It took 0.0374s to build the Airflow DAG.
+[2026-07-15T01:44:18.468+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-07-15T01:44:18.470+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-07-15T01:44:18.477+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_full_load__transform_silver...
+[2026-07-15T01:44:22.338+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_full_load__transform_silver for current version: 3.842112349999752
+[2026-07-15T01:44:22.341+0000] {graph.py:886} INFO - Cosmos performance [46914d9ee5b9|1489]: The cache size for cosmos_cache__dbt_silver_gold_full_load__transform_silver is 5960
+[2026-07-15T01:44:22.343+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_full_load__transform_silver - b4d80079b94d2a343d6831c58115d578,5e34606eb5f2b3dea81a8e19fa3ba138
+[2026-07-15T01:44:22.346+0000] {graph.py:799} INFO - Total nodes: 7
+[2026-07-15T01:44:22.347+0000] {graph.py:800} INFO - Total filtered nodes: 7
+[2026-07-15T01:44:22.349+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_full_load__transform_silver) - [46914d9ee5b9|1489]: It took 3.87s to parse the dbt project for DAG using dbt_ls_cache
+[2026-07-15T01:44:22.365+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_full_load__transform_silver) - [46914d9ee5b9|1489]: It took 0.0165s to build the Airflow DAG.
+[2026-07-15T01:44:22.367+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-07-15T01:44:22.369+0000] {converter.py:314} INFO - ::group::Cosmos DAG parsing logs
+[2026-07-15T01:44:22.376+0000] {graph.py:869} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dbt_silver_gold_full_load__transform_gold...
+[2026-07-15T01:44:29.077+0000] {cache.py:383} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dbt_silver_gold_full_load__transform_gold for current version: 6.68468082399977
+[2026-07-15T01:44:29.079+0000] {graph.py:886} INFO - Cosmos performance [46914d9ee5b9|1489]: The cache size for cosmos_cache__dbt_silver_gold_full_load__transform_gold is 35989
+[2026-07-15T01:44:29.097+0000] {graph.py:898} INFO - Cosmos performance: Cache hit for cosmos_cache__dbt_silver_gold_full_load__transform_gold - b4d80079b94d2a343d6831c58115d578,304321e940a9403dceb380589bd0566f
+[2026-07-15T01:44:29.101+0000] {graph.py:799} INFO - Total nodes: 39
+[2026-07-15T01:44:29.104+0000] {graph.py:800} INFO - Total filtered nodes: 39
+[2026-07-15T01:44:29.108+0000] {converter.py:361} INFO - Cosmos performance (dbt_silver_gold_full_load__transform_gold) - [46914d9ee5b9|1489]: It took 6.73s to parse the dbt project for DAG using dbt_ls_cache
+[2026-07-15T01:44:29.302+0000] {converter.py:413} INFO - Cosmos performance (dbt_silver_gold_full_load__transform_gold) - [46914d9ee5b9|1489]: It took 0.194s to build the Airflow DAG.
+[2026-07-15T01:44:29.305+0000] {converter.py:420} INFO - ::endgroup::Cosmos DAG parsing logs
+[2026-07-15T01:44:30.114+0000] {logging_mixin.py:190} INFO - 01:44:30  Installing dbt-labs/dbt_utils
+[2026-07-15T01:44:30.829+0000] {logging_mixin.py:190} INFO - 01:44:30  Installed from version 1.3.0
+[2026-07-15T01:44:30.833+0000] {logging_mixin.py:190} INFO - 01:44:30  Updated version available: 1.4.1
+[2026-07-15T01:44:30.839+0000] {logging_mixin.py:190} INFO - 01:44:30  Installing metaplane/dbt_expectations
+[2026-07-15T01:44:32.640+0000] {logging_mixin.py:190} INFO - 01:44:32  Installed from version 0.10.8
+[2026-07-15T01:44:32.645+0000] {logging_mixin.py:190} INFO - 01:44:32  Updated version available: 0.10.10
+[2026-07-15T01:44:32.652+0000] {logging_mixin.py:190} INFO - 01:44:32  Installing godatadriven/dbt_date
+[2026-07-15T01:44:33.213+0000] {logging_mixin.py:190} INFO - 01:44:33  Installed from version 0.15.0
+[2026-07-15T01:44:33.215+0000] {logging_mixin.py:190} INFO - 01:44:33  Up to date!
+[2026-07-15T01:44:33.217+0000] {logging_mixin.py:190} INFO - 01:44:33
+[2026-07-15T01:44:33.219+0000] {logging_mixin.py:190} INFO - 01:44:33  Updates available for packages: ['dbt-labs/dbt_utils', 'metaplane/dbt_expectations']                 
+Update your versions in packages.yml, then run dbt deps
+[2026-07-15T01:44:34.337+0000] {runner.py:95} INFO - Trying to run dbtRunner with:
+ ['test', '--select', 'fct_complaints', '--project-dir', '/tmp/tmpmvpwkn0y', '--profiles-dir', '/opt/airflow/dbt_transform', '--profile', 'lakehouse_dbt', '--target', 'dev', '--no-static-parser']
+ in /tmp/tmpmvpwkn0y
+[2026-07-15T01:44:34.367+0000] {logging_mixin.py:190} INFO - 01:44:34  Running with dbt=1.8.8
+[2026-07-15T01:44:34.400+0000] {auth.py:343} INFO - keyring module not found. OAuth2 token will not be stored in keyring.
+[2026-07-15T01:44:34.405+0000] {auth.py:343} INFO - keyring module not found. OAuth2 token will not be stored in keyring.
+[2026-07-15T01:44:34.533+0000] {logging_mixin.py:190} INFO - 01:44:34  Registered adapter: trino=1.8.5
+[2026-07-15T01:44:35.523+0000] {logging_mixin.py:190} INFO - 01:44:35  Found 8 models, 40 data tests, 1 source, 9 metrics, 838 macros, 5 semantic models
+[2026-07-15T01:44:35.527+0000] {logging_mixin.py:190} INFO - 01:44:35
+[2026-07-15T01:44:35.587+0000] {logging_mixin.py:190} INFO - 01:44:35  [WARNING]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[2026-07-15T01:44:35.590+0000] {logging_mixin.py:190} INFO - 01:44:35  [WARNING]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[2026-07-15T01:44:35.864+0000] {logging_mixin.py:190} INFO - 01:44:35  Concurrency: 4 threads (target='dev')
+[2026-07-15T01:44:35.870+0000] {logging_mixin.py:190} INFO - 01:44:35
+[2026-07-15T01:44:35.887+0000] {logging_mixin.py:190} INFO - 01:44:35  1 of 14 START test dbt_expectations_expect_column_pair_values_A_to_be_greater_than_or_equal_to_B_fct_complaints_date_sent_to_company__date_received__either_value_is_null  [RUN]
+[2026-07-15T01:44:35.895+0000] {logging_mixin.py:190} INFO - 01:44:35  2 of 14 START test dbt_expectations_expect_column_values_to_be_between_fct_complaints_days_to_send_to_company__0  [RUN]
+[2026-07-15T01:44:35.907+0000] {logging_mixin.py:190} INFO - 01:44:35  3 of 14 START test not_null_fct_complaints_company_key ......................... [RUN]
+[2026-07-15T01:44:35.941+0000] {logging_mixin.py:190} INFO - 01:44:35  4 of 14 START test not_null_fct_complaints_complaint_id ........................ [RUN]
+[2026-07-15T01:44:36.115+0000] {logging_mixin.py:190} INFO - 01:44:36  1 of 14 ERROR dbt_expectations_expect_column_pair_values_A_to_be_greater_than_or_equal_to_B_fct_complaints_date_sent_to_company__date_received__either_value_is_null  [ERROR in 0.22s]
+[2026-07-15T01:44:36.141+0000] {logging_mixin.py:190} INFO - 01:44:36  5 of 14 START test not_null_fct_complaints_issue_key ........................... [RUN]
+[2026-07-15T01:44:36.348+0000] {logging_mixin.py:190} INFO - 01:44:36  4 of 14 PASS not_null_fct_complaints_complaint_id .............................. [PASS in 0.34s]
+[2026-07-15T01:44:36.362+0000] {logging_mixin.py:190} INFO - 01:44:36  6 of 14 START test not_null_fct_complaints_location_key ........................ [RUN]
+[2026-07-15T01:44:36.459+0000] {logging_mixin.py:190} INFO - 01:44:36  3 of 14 PASS not_null_fct_complaints_company_key ............................... [PASS in 0.50s]
+[2026-07-15T01:44:36.473+0000] {logging_mixin.py:190} INFO - 01:44:36  2 of 14 PASS dbt_expectations_expect_column_values_to_be_between_fct_complaints_days_to_send_to_company__0  [PASS in 0.55s]
+[2026-07-15T01:44:36.489+0000] {logging_mixin.py:190} INFO - 01:44:36  7 of 14 START test not_null_fct_complaints_product_key ......................... [RUN]
+[2026-07-15T01:44:36.501+0000] {logging_mixin.py:190} INFO - 01:44:36  5 of 14 PASS not_null_fct_complaints_issue_key ................................. [PASS in 0.35s]
+[2026-07-15T01:44:36.523+0000] {logging_mixin.py:190} INFO - 01:44:36  8 of 14 START test relationships_fct_complaints_company_key__company_key__ref_dim_companies_  [RUN]
+[2026-07-15T01:44:36.532+0000] {logging_mixin.py:190} INFO - 01:44:36  9 of 14 START test relationships_fct_complaints_date_received_key__date_key__ref_dim_dates_  [RUN]
+[2026-07-15T01:44:36.692+0000] {logging_mixin.py:190} INFO - 01:44:36  6 of 14 PASS not_null_fct_complaints_location_key .............................. [PASS in 0.31s]
+[2026-07-15T01:44:36.715+0000] {logging_mixin.py:190} INFO - 01:44:36  10 of 14 START test relationships_fct_complaints_date_sent_key__date_key__ref_dim_dates_  [RUN]
+[2026-07-15T01:44:36.850+0000] {logging_mixin.py:190} INFO - 01:44:36  7 of 14 PASS not_null_fct_complaints_product_key ............................... [PASS in 0.35s]
+[2026-07-15T01:44:36.862+0000] {logging_mixin.py:190} INFO - 01:44:36  11 of 14 START test relationships_fct_complaints_issue_key__issue_key__ref_dim_issues_  [RUN]
+[2026-07-15T01:44:37.229+0000] {logging_mixin.py:190} INFO - 01:44:37  8 of 14 PASS relationships_fct_complaints_company_key__company_key__ref_dim_companies_  [PASS in 0.68s]
+[2026-07-15T01:44:37.249+0000] {logging_mixin.py:190} INFO - 01:44:37  12 of 14 START test relationships_fct_complaints_location_key__location_key__ref_dim_locations_  [RUN]
+[2026-07-15T01:44:37.391+0000] {logging_mixin.py:190} INFO - 01:44:37  9 of 14 PASS relationships_fct_complaints_date_received_key__date_key__ref_dim_dates_  [PASS in 0.83s]
+[2026-07-15T01:44:37.413+0000] {logging_mixin.py:190} INFO - 01:44:37  13 of 14 START test relationships_fct_complaints_product_key__product_key__ref_dim_products_  [RUN]
+[2026-07-15T01:44:37.493+0000] {logging_mixin.py:190} INFO - 01:44:37  10 of 14 PASS relationships_fct_complaints_date_sent_key__date_key__ref_dim_dates_  [PASS in 0.76s]
+[2026-07-15T01:44:37.526+0000] {logging_mixin.py:190} INFO - 01:44:37  14 of 14 START test unique_fct_complaints_complaint_id ......................... [RUN]
+[2026-07-15T01:44:38.091+0000] {logging_mixin.py:190} INFO - 01:44:38  11 of 14 PASS relationships_fct_complaints_issue_key__issue_key__ref_dim_issues_  [PASS in 1.22s]
+[2026-07-15T01:44:38.118+0000] {logging_mixin.py:190} INFO - 01:44:38  12 of 14 PASS relationships_fct_complaints_location_key__location_key__ref_dim_locations_  [PASS in 0.86s]
+[2026-07-15T01:44:38.125+0000] {logging_mixin.py:190} INFO - 01:44:38  13 of 14 PASS relationships_fct_complaints_product_key__product_key__ref_dim_products_  [PASS in 0.69s]
+[2026-07-15T01:44:38.395+0000] {logging_mixin.py:190} INFO - 01:44:38  14 of 14 PASS unique_fct_complaints_complaint_id ............................... [PASS in 0.86s]
+[2026-07-15T01:44:38.409+0000] {logging_mixin.py:190} INFO - 01:44:38
+[2026-07-15T01:44:38.413+0000] {logging_mixin.py:190} INFO - 01:44:38  Finished running 14 data tests in 0 hours 0 minutes and 2.88 seconds (2.88s).
+[2026-07-15T01:44:38.492+0000] {logging_mixin.py:190} INFO - 01:44:38
+[2026-07-15T01:44:38.496+0000] {logging_mixin.py:190} INFO - 01:44:38  Completed with 1 error and 0 warnings:
+[2026-07-15T01:44:38.499+0000] {logging_mixin.py:190} INFO - 01:44:38
+[2026-07-15T01:44:38.505+0000] {logging_mixin.py:190} INFO - 01:44:38    Compilation Error in test dbt_expectations_expect_column_pair_values_A_to_be_greater_than_or_equal_to_B_fct_complaints_date_sent_to_company__date_received__either_value_is_null (models/marts/marts_schema.yml)
+  'dict object' has no attribute 'test_expect_column_pair_values_A_to_be_greater_than_or_equal_to_B'. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[2026-07-15T01:44:38.509+0000] {logging_mixin.py:190} INFO - 01:44:38
+[2026-07-15T01:44:38.513+0000] {logging_mixin.py:190} INFO - 01:44:38  Done. PASS=13 WARN=0 ERROR=1 SKIP=0 TOTAL=14
+[2026-07-15T01:44:39.715+0000] {local.py:196} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/manifest/v12.json is above dbt-ol supported version 7. This might cause errors.
+[2026-07-15T01:44:39.754+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 1276, in execute
+    result = self.build_and_run_cmd(context=context, cmd_flags=self.add_cmd_flags())
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 968, in build_and_run_cmd
+    result = self.run_command(
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 743, in run_command
+    self.handle_exception(result)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 308, in handle_exception_dbt_runner
+    return dbt_runner.handle_exception_if_needed(result)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/runner.py", line 156, in handle_exception_if_needed
+    raise CosmosDbtRunError(f"dbt invocation completed with errors: {error_message}")
+cosmos.exceptions.CosmosDbtRunError: dbt invocation completed with errors: dbt_expectations_expect_column_pair_values_A_to_be_greater_than_or_equal_to_B_fct_complaints_date_sent_to_company__date_received__either_value_is_null: Compilation Error in test dbt_expectations_expect_column_pair_values_A_to_be_greater_than_or_equal_to_B_fct_complaints_date_sent_to_company__date_received__either_value_is_null (models/marts/marts_schema.yml)
+  'dict object' has no attribute 'test_expect_column_pair_values_A_to_be_greater_than_or_equal_to_B'. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[2026-07-15T01:44:40.504+0000] {_client.py:1026} INFO - HTTP Request: GET https://astronomer.gateway.scarf.sh/astronomer-cosmos/v3/task_instance?cosmos_version=1.15.0&airflow_version=2.10.2&python_version=3.10.15&platform_system=Linux&platform_machine=x86_64&status=failed&operator_name=DbtTestLocalOperator&is_cosmos_operator_subclass=False&invocation_mode=dbt_runner&execution_mode=local&profile_strategy=yaml_file&profile_mapping_class=None&database=trino&is_mapped_task=False&dbt_command=test&install_deps=True&has_callback=False&duration=29.774386 "HTTP/1.1 200 OK"
+[2026-07-15T01:44:40.507+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=dbt_silver_gold_incremental, task_id=transform_gold.fct_complaints.test, run_id=manual__2026-07-15T01:41:56.661054+00:00, execution_date=20260715T014156, start_date=20260715T014410, end_date=20260715T014439
+[2026-07-15T01:44:40.523+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-15T01:44:40.525+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 24 for task transform_gold.fct_complaints.test (dbt invocation completed with errors: dbt_expectations_expect_column_pair_values_A_to_be_greater_than_or_equal_to_B_fct_complaints_date_sent_to_company__date_received__either_value_is_null: Compilation Error in test dbt_expectations_expect_column_pair_values_A_to_be_greater_than_or_equal_to_B_fct_complaints_date_sent_to_company__date_received__either_value_is_null (models/marts/marts_schema.yml)
+  'dict object' has no attribute 'test_expect_column_pair_values_A_to_be_greater_than_or_equal_to_B'. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".; 1489)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 1276, in execute
+    result = self.build_and_run_cmd(context=context, cmd_flags=self.add_cmd_flags())
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 968, in build_and_run_cmd
+    result = self.run_command(
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 743, in run_command
+    self.handle_exception(result)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/operators/local.py", line 308, in handle_exception_dbt_runner
+    return dbt_runner.handle_exception_if_needed(result)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/runner.py", line 156, in handle_exception_if_needed
+    raise CosmosDbtRunError(f"dbt invocation completed with errors: {error_message}")
+cosmos.exceptions.CosmosDbtRunError: dbt invocation completed with errors: dbt_expectations_expect_column_pair_values_A_to_be_greater_than_or_equal_to_B_fct_complaints_date_sent_to_company__date_received__either_value_is_null: Compilation Error in test dbt_expectations_expect_column_pair_values_A_to_be_greater_than_or_equal_to_B_fct_complaints_date_sent_to_company__date_received__either_value_is_null (models/marts/marts_schema.yml)
+  'dict object' has no attribute 'test_expect_column_pair_values_A_to_be_greater_than_or_equal_to_B'. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[2026-07-15T01:44:40.551+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-07-15T01:44:40.575+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-15T01:44:40.579+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

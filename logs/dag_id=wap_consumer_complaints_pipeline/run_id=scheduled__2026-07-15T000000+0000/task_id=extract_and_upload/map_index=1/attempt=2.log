@@ -1,0 +1,26 @@
+[2026-07-16T04:24:03.183+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-16T04:24:03.207+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_consumer_complaints_pipeline.extract_and_upload scheduled__2026-07-15T00:00:00+00:00 map_index=1 [queued]>
+[2026-07-16T04:24:03.219+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_consumer_complaints_pipeline.extract_and_upload scheduled__2026-07-15T00:00:00+00:00 map_index=1 [queued]>
+[2026-07-16T04:24:03.221+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 3
+[2026-07-16T04:24:03.235+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): extract_and_upload> on 2026-07-15 00:00:00+00:00
+[2026-07-16T04:24:03.240+0000] {standard_task_runner.py:72} INFO - Started process 1502 to run task
+[2026-07-16T04:24:03.244+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_consumer_complaints_pipeline', 'extract_and_upload', 'scheduled__2026-07-15T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/wap_consumer_complaints_pipeline.py', '--cfg-path', '/tmp/tmpolie2slr', '--map-index', '1']
+[2026-07-16T04:24:03.247+0000] {standard_task_runner.py:105} INFO - Job 12: Subtask extract_and_upload
+[2026-07-16T04:24:03.322+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_consumer_complaints_pipeline.extract_and_upload scheduled__2026-07-15T00:00:00+00:00 map_index=1 [running]> on host 32badddb9ea4
+[2026-07-16T04:24:03.428+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='wap_consumer_complaints_pipeline' AIRFLOW_CTX_TASK_ID='extract_and_upload' AIRFLOW_CTX_EXECUTION_DATE='2026-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-15T00:00:00+00:00'
+[2026-07-16T04:24:03.434+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-16T04:24:03.441+0000] {cfpb_api_client.py:487} INFO - 🛡️ Khởi động lưới lọc Rescued Data cho công ty: BANK OF AMERICA, NATIONAL ASSOCIATION
+[2026-07-16T04:24:03.442+0000] {cfpb_api_client.py:460} INFO - 🏢 Khởi tạo luồng kéo dữ liệu cho công ty: BANK OF AMERICA, NATIONAL ASSOCIATION
+[2026-07-16T04:24:03.443+0000] {cfpb_api_client.py:389} INFO - 🚀 BẮT ĐẦU: Kéo luồng dữ liệu từ 2026-07-08 đến 2026-07-15
+[2026-07-16T04:24:03.774+0000] {cfpb_api_client.py:438} INFO -   ➜ Đã kéo được 11 / 11 records...
+[2026-07-16T04:24:03.775+0000] {cfpb_api_client.py:442} INFO - ✅ HOÀN TẤT: Đã lấy toàn bộ 11 khiếu nại có sẵn.
+[2026-07-16T04:24:03.777+0000] {minio_loader.py:203} INFO - 📤 Đang upload inc_2026-07-15_BANK_OF_AMERICA,_NATIONAL_ASSOCIATION.json lên s3://lakehouse/landing/consumer_complaints/run_date=2026-07-15/inc_2026-07-15_BANK_OF_AMERICA,_NATIONAL_ASSOCIATION.json
+[2026-07-16T04:24:03.779+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-16T04:24:03.781+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-16T04:24:03.783+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-16T04:24:04.222+0000] {python.py:240} INFO - Done. Returned value was: 11
+[2026-07-16T04:24:04.256+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-16T04:24:04.257+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_consumer_complaints_pipeline, task_id=extract_and_upload, run_id=scheduled__2026-07-15T00:00:00+00:00, map_index=1, execution_date=20260715T000000, start_date=20260716T042403, end_date=20260716T042404
+[2026-07-16T04:24:04.304+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-16T04:24:04.350+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-16T04:24:04.358+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

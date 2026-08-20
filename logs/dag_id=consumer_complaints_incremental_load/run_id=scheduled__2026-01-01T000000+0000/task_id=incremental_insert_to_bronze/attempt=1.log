@@ -1,0 +1,349 @@
+[2026-07-07T04:38:53.987+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load.incremental_insert_to_bronze scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-07-07T04:38:53.994+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load.incremental_insert_to_bronze scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-07-07T04:38:53.994+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2026-07-07T04:38:54.005+0000] {taskinstance.py:2214} INFO - Executing <Task(_PythonDecoratedOperator): incremental_insert_to_bronze> on 2026-01-01 00:00:00+00:00
+[2026-07-07T04:38:54.010+0000] {standard_task_runner.py:60} INFO - Started process 525 to run task
+[2026-07-07T04:38:54.013+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load', 'incremental_insert_to_bronze', 'scheduled__2026-01-01T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag.py', '--cfg-path', '/tmp/tmphfth1xzz']
+[2026-07-07T04:38:54.015+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask incremental_insert_to_bronze
+[2026-07-07T04:38:54.088+0000] {task_command.py:423} INFO - Running <TaskInstance: consumer_complaints_incremental_load.incremental_insert_to_bronze scheduled__2026-01-01T00:00:00+00:00 [running]> on host 7c5539580669
+[2026-07-07T04:38:54.190+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load' AIRFLOW_CTX_TASK_ID='incremental_insert_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-01T00:00:00+00:00'
+[2026-07-07T04:38:54.196+0000] {minio_to_trino.py:232} INFO - 🔍 Đang kiểm tra đối soát Schema (Reconciliation Check)...
+[2026-07-07T04:38:54.197+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:38:54.198+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:38:54.200+0000] {sql.py:457} INFO - Running statement: SHOW COLUMNS FROM lakehouse.bronze.raw_consumer_complaints, parameters: None
+[2026-07-07T04:38:55.292+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py:407 AirflowProviderDeprecationWarning: Call to deprecated method _make_common_data_structure. (The `_make_serializable` method is deprecated and support will be removed in a future version of the common.sql provider. Please update the DbApiHook's provider to a version based on common.sql >= 1.9.1.)
+[2026-07-07T04:38:55.293+0000] {minio_to_trino.py:251} INFO - Tạo External Table tạm thời: ext_landing_complaints_20260101
+[2026-07-07T04:38:55.295+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:38:55.296+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:38:55.297+0000] {sql.py:457} INFO - Running statement: DROP TABLE IF EXISTS minio_landing.default.ext_landing_complaints_20260101, parameters: None
+[2026-07-07T04:38:55.330+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:38:55.331+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:38:55.332+0000] {sql.py:457} INFO - Running statement: 
+                CREATE TABLE minio_landing.default.ext_landing_complaints_20260101 (
+                    complaint_id VARCHAR,
+                date_received VARCHAR,
+                date_sent_to_company VARCHAR,
+                product VARCHAR,
+                sub_product VARCHAR,
+                issue VARCHAR,
+                sub_issue VARCHAR,
+                company VARCHAR,
+                state VARCHAR,
+                zip_code VARCHAR,
+                tags VARCHAR,
+                submitted_via VARCHAR,
+                company_response VARCHAR,
+                timely VARCHAR,
+                has_narrative VARCHAR,
+                complaint_what_happened VARCHAR,
+                company_public_response VARCHAR,
+                _rescued_data VARCHAR
+                ) WITH (
+                    format = 'JSON',
+                    external_location = 's3://lakehouse/landing/consumer_complaints/run_date=2026-01-01/'
+                )
+            , parameters: None
+[2026-07-07T04:38:55.426+0000] {minio_to_trino.py:281} INFO - 🚀 Đang INSERT dữ liệu vào Bronze Zone...
+[2026-07-07T04:38:55.427+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:38:55.427+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:38:55.428+0000] {sql.py:457} INFO - Running statement: 
+                INSERT INTO lakehouse.bronze.raw_consumer_complaints (
+                    complaint_id,
+                date_received,
+                date_sent_to_company,
+                product,
+                sub_product,
+                issue,
+                sub_issue,
+                company,
+                state,
+                zip_code,
+                tags,
+                submitted_via,
+                company_response,
+                timely,
+                has_narrative,
+                complaint_what_happened,
+                company_public_response,
+                _rescued_data,
+                _ingest_time,
+                _run_id,
+                _source_system
+                )
+                SELECT 
+                    complaint_id,
+                date_received,
+                date_sent_to_company,
+                product,
+                sub_product,
+                issue,
+                sub_issue,
+                company,
+                state,
+                zip_code,
+                tags,
+                submitted_via,
+                company_response,
+                timely,
+                has_narrative,
+                complaint_what_happened,
+                company_public_response,
+                _rescued_data,
+                CURRENT_TIMESTAMP AS _ingest_time,
+                'scheduled__2026-01-01T00:00:00+00:00' AS _run_id,
+                'CFPB_API' AS _source_system
+                FROM minio_landing.default.ext_landing_complaints_20260101
+            , parameters: None
+[2026-07-07T04:38:57.926+0000] {sql.py:466} INFO - Rows affected: 868
+[2026-07-07T04:38:57.939+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:38:57.940+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:38:57.941+0000] {sql.py:457} INFO - Running statement: DROP TABLE IF EXISTS minio_landing.default.ext_landing_complaints_20260101, parameters: None
+[2026-07-07T04:38:58.043+0000] {minio_to_trino.py:294} INFO - ✓ Hoàn tất Incremental Load vào Bronze!
+[2026-07-07T04:38:58.044+0000] {python.py:202} INFO - Done. Returned value was: scheduled__2026-01-01T00:00:00+00:00
+[2026-07-07T04:38:58.081+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_incremental_load, task_id=incremental_insert_to_bronze, execution_date=20260101T000000, start_date=20260707T043853, end_date=20260707T043858
+[2026-07-07T04:38:58.125+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-07-07T04:38:58.150+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-07T04:54:22.514+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load.incremental_insert_to_bronze scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-07-07T04:54:22.522+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load.incremental_insert_to_bronze scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-07-07T04:54:22.523+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2026-07-07T04:54:22.532+0000] {taskinstance.py:2214} INFO - Executing <Task(_PythonDecoratedOperator): incremental_insert_to_bronze> on 2026-01-01 00:00:00+00:00
+[2026-07-07T04:54:22.538+0000] {standard_task_runner.py:60} INFO - Started process 336 to run task
+[2026-07-07T04:54:22.543+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load', 'incremental_insert_to_bronze', 'scheduled__2026-01-01T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag.py', '--cfg-path', '/tmp/tmp7jnnvc5n']
+[2026-07-07T04:54:22.545+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask incremental_insert_to_bronze
+[2026-07-07T04:54:22.649+0000] {task_command.py:423} INFO - Running <TaskInstance: consumer_complaints_incremental_load.incremental_insert_to_bronze scheduled__2026-01-01T00:00:00+00:00 [running]> on host 7c9da0b9f835
+[2026-07-07T04:54:22.741+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load' AIRFLOW_CTX_TASK_ID='incremental_insert_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-01T00:00:00+00:00'
+[2026-07-07T04:54:22.746+0000] {minio_to_trino.py:232} INFO - 🔍 Đang kiểm tra đối soát Schema (Reconciliation Check)...
+[2026-07-07T04:54:22.747+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:54:22.748+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:54:22.751+0000] {sql.py:457} INFO - Running statement: SHOW COLUMNS FROM lakehouse.bronze.raw_consumer_complaints, parameters: None
+[2026-07-07T04:54:23.476+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py:407 AirflowProviderDeprecationWarning: Call to deprecated method _make_common_data_structure. (The `_make_serializable` method is deprecated and support will be removed in a future version of the common.sql provider. Please update the DbApiHook's provider to a version based on common.sql >= 1.9.1.)
+[2026-07-07T04:54:23.477+0000] {minio_to_trino.py:251} INFO - Tạo External Table tạm thời: ext_landing_complaints_20260101
+[2026-07-07T04:54:23.477+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:54:23.478+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:54:23.479+0000] {sql.py:457} INFO - Running statement: DROP TABLE IF EXISTS minio_landing.default.ext_landing_complaints_20260101, parameters: None
+[2026-07-07T04:54:23.504+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:54:23.505+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:54:23.506+0000] {sql.py:457} INFO - Running statement: 
+                CREATE TABLE minio_landing.default.ext_landing_complaints_20260101 (
+                    complaint_id VARCHAR,
+                date_received VARCHAR,
+                date_sent_to_company VARCHAR,
+                product VARCHAR,
+                sub_product VARCHAR,
+                issue VARCHAR,
+                sub_issue VARCHAR,
+                company VARCHAR,
+                state VARCHAR,
+                zip_code VARCHAR,
+                tags VARCHAR,
+                submitted_via VARCHAR,
+                company_response VARCHAR,
+                timely VARCHAR,
+                has_narrative VARCHAR,
+                complaint_what_happened VARCHAR,
+                company_public_response VARCHAR,
+                _rescued_data VARCHAR
+                ) WITH (
+                    format = 'JSON',
+                    external_location = 's3://lakehouse/landing/consumer_complaints/run_date=2026-01-01/'
+                )
+            , parameters: None
+[2026-07-07T04:54:23.589+0000] {minio_to_trino.py:281} INFO - 🚀 Đang INSERT dữ liệu vào Bronze Zone...
+[2026-07-07T04:54:23.590+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:54:23.591+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:54:23.592+0000] {sql.py:457} INFO - Running statement: 
+                INSERT INTO lakehouse.bronze.raw_consumer_complaints (
+                    complaint_id,
+                date_received,
+                date_sent_to_company,
+                product,
+                sub_product,
+                issue,
+                sub_issue,
+                company,
+                state,
+                zip_code,
+                tags,
+                submitted_via,
+                company_response,
+                timely,
+                has_narrative,
+                complaint_what_happened,
+                company_public_response,
+                _rescued_data,
+                _ingest_time,
+                _run_id,
+                _source_system
+                )
+                SELECT 
+                    complaint_id,
+                date_received,
+                date_sent_to_company,
+                product,
+                sub_product,
+                issue,
+                sub_issue,
+                company,
+                state,
+                zip_code,
+                tags,
+                submitted_via,
+                company_response,
+                timely,
+                has_narrative,
+                complaint_what_happened,
+                company_public_response,
+                _rescued_data,
+                CURRENT_TIMESTAMP AS _ingest_time,
+                'scheduled__2026-01-01T00:00:00+00:00' AS _run_id,
+                'CFPB_API' AS _source_system
+                FROM minio_landing.default.ext_landing_complaints_20260101
+            , parameters: None
+[2026-07-07T04:54:25.606+0000] {sql.py:466} INFO - Rows affected: 868
+[2026-07-07T04:54:25.616+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:54:25.618+0000] {base.py:83} INFO - Using connection ID 'trino_default' for task execution.
+[2026-07-07T04:54:25.619+0000] {sql.py:457} INFO - Running statement: DROP TABLE IF EXISTS minio_landing.default.ext_landing_complaints_20260101, parameters: None
+[2026-07-07T04:54:25.716+0000] {minio_to_trino.py:294} INFO - ✓ Hoàn tất Incremental Load vào Bronze!
+[2026-07-07T04:54:25.717+0000] {python.py:202} INFO - Done. Returned value was: scheduled__2026-01-01T00:00:00+00:00
+[2026-07-07T04:54:25.748+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=consumer_complaints_incremental_load, task_id=incremental_insert_to_bronze, execution_date=20260101T000000, start_date=20260707T045422, end_date=20260707T045425
+[2026-07-07T04:54:25.774+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-07-07T04:54:25.799+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T04:45:51.651+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T04:45:51.669+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load.incremental_insert_to_bronze scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-07-10T04:45:51.680+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_complaints_incremental_load.incremental_insert_to_bronze scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-07-10T04:45:51.682+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-10T04:45:51.695+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): incremental_insert_to_bronze> on 2026-01-01 00:00:00+00:00
+[2026-07-10T04:45:51.703+0000] {standard_task_runner.py:72} INFO - Started process 1835 to run task
+[2026-07-10T04:45:51.706+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consumer_complaints_incremental_load', 'incremental_insert_to_bronze', 'scheduled__2026-01-01T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/consumer_complaints_incremental_dag.py', '--cfg-path', '/tmp/tmpv6m5rvnn']
+[2026-07-10T04:45:51.710+0000] {standard_task_runner.py:105} INFO - Job 16: Subtask incremental_insert_to_bronze
+[2026-07-10T04:45:51.794+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer_complaints_incremental_load.incremental_insert_to_bronze scheduled__2026-01-01T00:00:00+00:00 [running]> on host 3c4c4f9f722a
+[2026-07-10T04:45:51.926+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consumer_complaints_incremental_load' AIRFLOW_CTX_TASK_ID='incremental_insert_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-01T00:00:00+00:00'
+[2026-07-10T04:45:51.930+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T04:45:51.939+0000] {minio_to_trino.py:232} INFO - 🔍 Đang kiểm tra đối soát Schema (Reconciliation Check)...
+[2026-07-10T04:45:51.943+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-10T04:45:51.945+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-10T04:45:51.950+0000] {sql.py:509} INFO - Running statement: SHOW COLUMNS FROM lakehouse.bronze.raw_consumer_complaints, parameters: None
+[2026-07-10T04:45:52.067+0000] {minio_to_trino.py:305} ERROR - Lỗi khi Incremental Load: TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 1:1: Table 'lakehouse.bronze.raw_consumer_complaints' does not exist", query_id=20260710_044552_00011_v22m2)
+[2026-07-10T04:45:52.069+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/trino/hooks/trino.py", line 181, in get_records
+    return super().get_records(self.strip_sql_string(sql), parameters)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 323, in get_records
+    return self.run(sql=sql, parameters=parameters, handler=fetch_all_handler)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 456, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 514, in _run_command
+    cur.execute(sql_statement)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/dbapi.py", line 589, in execute
+    self._iterator = iter(self._query.execute())
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 819, in execute
+    self._result.rows += self.fetch()
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 839, in fetch
+    status = self._request.process(response)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 611, in process
+    raise self._process_error(response["error"], response.get("id"))
+trino.exceptions.TrinoUserError: TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 1:1: Table 'lakehouse.bronze.raw_consumer_complaints' does not exist", query_id=20260710_044552_00011_v22m2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/consumer_complaints_incremental_dag.py", line 114, in incremental_insert_to_bronze
+    inserted_rows = loader.incremental_insert_to_bronze(
+  File "/opt/airflow/dags/utils/minio_to_trino.py", line 234, in incremental_insert_to_bronze
+    actual_cols_records = self.trino_hook.get_records(show_cols_sql)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/trino/hooks/trino.py", line 183, in get_records
+    raise TrinoException(e)
+airflow.providers.trino.hooks.trino.TrinoException: TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 1:1: Table 'lakehouse.bronze.raw_consumer_complaints' does not exist", query_id=20260710_044552_00011_v22m2)
+[2026-07-10T04:45:52.106+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=consumer_complaints_incremental_load, task_id=incremental_insert_to_bronze, run_id=scheduled__2026-01-01T00:00:00+00:00, execution_date=20260101T000000, start_date=20260710T044551, end_date=20260710T044552
+[2026-07-10T04:45:52.126+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T04:45:52.128+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 16 for task incremental_insert_to_bronze (TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 1:1: Table 'lakehouse.bronze.raw_consumer_complaints' does not exist", query_id=20260710_044552_00011_v22m2); 1835)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/trino/hooks/trino.py", line 181, in get_records
+    return super().get_records(self.strip_sql_string(sql), parameters)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 323, in get_records
+    return self.run(sql=sql, parameters=parameters, handler=fetch_all_handler)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 456, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 514, in _run_command
+    cur.execute(sql_statement)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/dbapi.py", line 589, in execute
+    self._iterator = iter(self._query.execute())
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 819, in execute
+    self._result.rows += self.fetch()
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 839, in fetch
+    status = self._request.process(response)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 611, in process
+    raise self._process_error(response["error"], response.get("id"))
+trino.exceptions.TrinoUserError: TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 1:1: Table 'lakehouse.bronze.raw_consumer_complaints' does not exist", query_id=20260710_044552_00011_v22m2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/consumer_complaints_incremental_dag.py", line 114, in incremental_insert_to_bronze
+    inserted_rows = loader.incremental_insert_to_bronze(
+  File "/opt/airflow/dags/utils/minio_to_trino.py", line 234, in incremental_insert_to_bronze
+    actual_cols_records = self.trino_hook.get_records(show_cols_sql)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/trino/hooks/trino.py", line 183, in get_records
+    raise TrinoException(e)
+airflow.providers.trino.hooks.trino.TrinoException: TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 1:1: Table 'lakehouse.bronze.raw_consumer_complaints' does not exist", query_id=20260710_044552_00011_v22m2)
+[2026-07-10T04:45:52.162+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-07-10T04:45:52.193+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T04:45:52.202+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

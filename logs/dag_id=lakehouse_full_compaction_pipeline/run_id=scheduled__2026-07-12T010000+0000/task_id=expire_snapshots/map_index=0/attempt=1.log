@@ -1,0 +1,221 @@
+[2026-07-22T04:22:32.121+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-22T04:22:32.156+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.expire_snapshots scheduled__2026-07-12T01:00:00+00:00 map_index=0 [queued]>
+[2026-07-22T04:22:32.172+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.expire_snapshots scheduled__2026-07-12T01:00:00+00:00 map_index=0 [queued]>
+[2026-07-22T04:22:32.174+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 4
+[2026-07-22T04:22:32.193+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): expire_snapshots> on 2026-07-12 01:00:00+00:00
+[2026-07-22T04:22:32.199+0000] {standard_task_runner.py:72} INFO - Started process 2642 to run task
+[2026-07-22T04:22:32.202+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'lakehouse_full_compaction_pipeline', 'expire_snapshots', 'scheduled__2026-07-12T01:00:00+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/lakehouse_incremental_compaction_dag.py', '--cfg-path', '/tmp/tmptbptfbcz', '--map-index', '0']
+[2026-07-22T04:22:32.204+0000] {standard_task_runner.py:105} INFO - Job 39: Subtask expire_snapshots
+[2026-07-22T04:22:32.294+0000] {task_command.py:467} INFO - Running <TaskInstance: lakehouse_full_compaction_pipeline.expire_snapshots scheduled__2026-07-12T01:00:00+00:00 map_index=0 [running]> on host 46567f661dca
+[2026-07-22T04:22:32.574+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='lakehouse_full_compaction_pipeline' AIRFLOW_CTX_TASK_ID='expire_snapshots' AIRFLOW_CTX_EXECUTION_DATE='2026-07-12T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-12T01:00:00+00:00'
+[2026-07-22T04:22:32.577+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-22T04:22:32.580+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T04:22:32.582+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T04:22:32.586+0000] {sql.py:509} INFO - Running statement: ALTER TABLE lakehouse.bronze.raw_consumer_complaints EXECUTE expire_snapshots(retention_threshold => '2d'), parameters: None
+[2026-07-22T04:22:32.697+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 132, in expire_snapshots
+    TrinoHook(trino_conn_id=TRINO_CONN_ID).run(sql)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 456, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 514, in _run_command
+    cur.execute(sql_statement)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/dbapi.py", line 589, in execute
+    self._iterator = iter(self._query.execute())
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 819, in execute
+    self._result.rows += self.fetch()
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 839, in fetch
+    status = self._request.process(response)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 611, in process
+    raise self._process_error(response["error"], response.get("id"))
+trino.exceptions.TrinoUserError: TrinoUserError(type=USER_ERROR, name=INVALID_PROCEDURE_ARGUMENT, message="Retention specified (2.00d) is shorter than the minimum retention configured in the system (7.00d). Minimum retention can be changed with iceberg.expire-snapshots.min-retention configuration property or iceberg.expire_snapshots_min_retention session property", query_id=20260722_042232_00109_wwgfn)
+[2026-07-22T04:22:32.733+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=lakehouse_full_compaction_pipeline, task_id=expire_snapshots, run_id=scheduled__2026-07-12T01:00:00+00:00, map_index=0, execution_date=20260712T010000, start_date=20260722T042232, end_date=20260722T042232
+[2026-07-22T04:22:32.754+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-22T04:22:32.758+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 39 for task expire_snapshots (TrinoUserError(type=USER_ERROR, name=INVALID_PROCEDURE_ARGUMENT, message="Retention specified (2.00d) is shorter than the minimum retention configured in the system (7.00d). Minimum retention can be changed with iceberg.expire-snapshots.min-retention configuration property or iceberg.expire_snapshots_min_retention session property", query_id=20260722_042232_00109_wwgfn); 2642)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 132, in expire_snapshots
+    TrinoHook(trino_conn_id=TRINO_CONN_ID).run(sql)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 456, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 514, in _run_command
+    cur.execute(sql_statement)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/dbapi.py", line 589, in execute
+    self._iterator = iter(self._query.execute())
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 819, in execute
+    self._result.rows += self.fetch()
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 839, in fetch
+    status = self._request.process(response)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 611, in process
+    raise self._process_error(response["error"], response.get("id"))
+trino.exceptions.TrinoUserError: TrinoUserError(type=USER_ERROR, name=INVALID_PROCEDURE_ARGUMENT, message="Retention specified (2.00d) is shorter than the minimum retention configured in the system (7.00d). Minimum retention can be changed with iceberg.expire-snapshots.min-retention configuration property or iceberg.expire_snapshots_min_retention session property", query_id=20260722_042232_00109_wwgfn)
+[2026-07-22T04:22:32.780+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-07-22T04:22:32.811+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-22T04:22:32.815+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-22T04:36:42.087+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-22T04:36:42.119+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.expire_snapshots scheduled__2026-07-12T01:00:00+00:00 map_index=0 [queued]>
+[2026-07-22T04:36:42.134+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.expire_snapshots scheduled__2026-07-12T01:00:00+00:00 map_index=0 [queued]>
+[2026-07-22T04:36:42.136+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 4
+[2026-07-22T04:36:42.151+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): expire_snapshots> on 2026-07-12 01:00:00+00:00
+[2026-07-22T04:36:42.159+0000] {standard_task_runner.py:72} INFO - Started process 882 to run task
+[2026-07-22T04:36:42.164+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'lakehouse_full_compaction_pipeline', 'expire_snapshots', 'scheduled__2026-07-12T01:00:00+00:00', '--job-id', '76', '--raw', '--subdir', 'DAGS_FOLDER/lakehouse_incremental_compaction_dag.py', '--cfg-path', '/tmp/tmp1vgga_mg', '--map-index', '0']
+[2026-07-22T04:36:42.166+0000] {standard_task_runner.py:105} INFO - Job 76: Subtask expire_snapshots
+[2026-07-22T04:36:42.269+0000] {task_command.py:467} INFO - Running <TaskInstance: lakehouse_full_compaction_pipeline.expire_snapshots scheduled__2026-07-12T01:00:00+00:00 map_index=0 [running]> on host b4f4a6304972
+[2026-07-22T04:36:42.582+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='lakehouse_full_compaction_pipeline' AIRFLOW_CTX_TASK_ID='expire_snapshots' AIRFLOW_CTX_EXECUTION_DATE='2026-07-12T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-12T01:00:00+00:00'
+[2026-07-22T04:36:42.584+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-22T04:36:42.587+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T04:36:42.590+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T04:36:42.594+0000] {sql.py:509} INFO - Running statement: ALTER TABLE lakehouse.bronze.raw_consumer_complaints EXECUTE expire_snapshots(retention_threshold => '7d'), parameters: None
+[2026-07-22T04:36:42.825+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 132, in expire_snapshots
+    TrinoHook(trino_conn_id=TRINO_CONN_ID).run(sql)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 456, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 514, in _run_command
+    cur.execute(sql_statement)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/dbapi.py", line 589, in execute
+    self._iterator = iter(self._query.execute())
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 819, in execute
+    self._result.rows += self.fetch()
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 839, in fetch
+    status = self._request.process(response)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 611, in process
+    raise self._process_error(response["error"], response.get("id"))
+trino.exceptions.TrinoQueryError: TrinoQueryError(type=INTERNAL_ERROR, name=GENERIC_INTERNAL_ERROR, message="Cannot expire snapshots: GC is disabled (deleting files may corrupt other tables)", query_id=20260722_043642_00011_8yusx)
+[2026-07-22T04:36:42.853+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=lakehouse_full_compaction_pipeline, task_id=expire_snapshots, run_id=scheduled__2026-07-12T01:00:00+00:00, map_index=0, execution_date=20260712T010000, start_date=20260722T043642, end_date=20260722T043642
+[2026-07-22T04:36:42.879+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-22T04:36:42.881+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 76 for task expire_snapshots (TrinoQueryError(type=INTERNAL_ERROR, name=GENERIC_INTERNAL_ERROR, message="Cannot expire snapshots: GC is disabled (deleting files may corrupt other tables)", query_id=20260722_043642_00011_8yusx); 882)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 132, in expire_snapshots
+    TrinoHook(trino_conn_id=TRINO_CONN_ID).run(sql)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 456, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 514, in _run_command
+    cur.execute(sql_statement)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/dbapi.py", line 589, in execute
+    self._iterator = iter(self._query.execute())
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 819, in execute
+    self._result.rows += self.fetch()
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 839, in fetch
+    status = self._request.process(response)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 611, in process
+    raise self._process_error(response["error"], response.get("id"))
+trino.exceptions.TrinoQueryError: TrinoQueryError(type=INTERNAL_ERROR, name=GENERIC_INTERNAL_ERROR, message="Cannot expire snapshots: GC is disabled (deleting files may corrupt other tables)", query_id=20260722_043642_00011_8yusx)
+[2026-07-22T04:36:42.904+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-07-22T04:36:42.930+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

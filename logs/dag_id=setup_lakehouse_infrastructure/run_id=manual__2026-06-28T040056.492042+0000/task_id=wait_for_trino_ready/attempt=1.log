@@ -1,0 +1,65 @@
+[2026-06-28T04:00:58.133+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: setup_lakehouse_infrastructure.wait_for_trino_ready manual__2026-06-28T04:00:56.492042+00:00 [queued]>
+[2026-06-28T04:00:58.153+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: setup_lakehouse_infrastructure.wait_for_trino_ready manual__2026-06-28T04:00:56.492042+00:00 [queued]>
+[2026-06-28T04:00:58.154+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2026-06-28T04:00:58.176+0000] {taskinstance.py:2214} INFO - Executing <Task(_PythonDecoratedOperator): wait_for_trino_ready> on 2026-06-28 04:00:56.492042+00:00
+[2026-06-28T04:00:58.184+0000] {standard_task_runner.py:60} INFO - Started process 788 to run task
+[2026-06-28T04:00:58.189+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'setup_lakehouse_infrastructure', 'wait_for_trino_ready', 'manual__2026-06-28T04:00:56.492042+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/setup_infrastructure_dag.py', '--cfg-path', '/tmp/tmpru_8p04h']
+[2026-06-28T04:00:58.192+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask wait_for_trino_ready
+[2026-06-28T04:00:58.316+0000] {task_command.py:423} INFO - Running <TaskInstance: setup_lakehouse_infrastructure.wait_for_trino_ready manual__2026-06-28T04:00:56.492042+00:00 [running]> on host 77f8d72bce83
+[2026-06-28T04:00:58.476+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='setup_lakehouse_infrastructure' AIRFLOW_CTX_TASK_ID='wait_for_trino_ready' AIRFLOW_CTX_EXECUTION_DATE='2026-06-28T04:00:56.492042+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-28T04:00:56.492042+00:00'
+[2026-06-28T04:00:58.478+0000] {setup_infrastructure_dag.py:30} INFO - ⏳ Cảm biến được kích hoạt: Đang kiểm tra trạng thái Trino...
+[2026-06-28T04:00:58.515+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 1/30)
+[2026-06-28T04:01:03.523+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 2/30)
+[2026-06-28T04:01:10.470+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 3/30)
+[2026-06-28T04:01:15.490+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 4/30)
+[2026-06-28T04:01:20.499+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 5/30)
+[2026-06-28T04:01:25.507+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 6/30)
+[2026-06-28T04:01:30.523+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 7/30)
+[2026-06-28T04:01:35.538+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 8/30)
+[2026-06-28T04:01:40.544+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 9/30)
+[2026-06-28T04:01:47.432+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 10/30)
+[2026-06-28T04:01:52.452+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 11/30)
+[2026-06-28T04:01:57.463+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 12/30)
+[2026-06-28T04:02:02.474+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 13/30)
+[2026-06-28T04:02:07.508+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 14/30)
+[2026-06-28T04:02:12.526+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 15/30)
+[2026-06-28T04:02:17.534+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 16/30)
+[2026-06-28T04:02:24.939+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 17/30)
+[2026-06-28T04:02:29.962+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 18/30)
+[2026-06-28T04:02:37.615+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 19/30)
+[2026-06-28T04:02:47.625+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 20/30)
+[2026-06-28T04:02:52.635+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 21/30)
+[2026-06-28T04:03:02.648+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 22/30)
+[2026-06-28T04:03:07.656+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 23/30)
+[2026-06-28T04:03:12.667+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 24/30)
+[2026-06-28T04:03:22.680+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 25/30)
+[2026-06-28T04:03:27.686+0000] {setup_infrastructure_dag.py:49} INFO - Trino chưa sẵn sàng. Cảm biến đang đợi thêm 5 giây... (Lần thử 26/30)
+[2026-06-28T04:03:30.007+0000] {local_task_job_runner.py:302} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2026-06-28T04:03:30.011+0000] {process_utils.py:131} INFO - Sending 15 to group 788. PIDs of all processes in the group: [788]
+[2026-06-28T04:03:30.012+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 788
+[2026-06-28T04:03:30.014+0000] {taskinstance.py:2480} ERROR - Received SIGTERM. Terminating subprocesses.
+[2026-06-28T04:03:30.034+0000] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/setup_infrastructure_dag.py", line 50, in wait_for_trino_ready
+    time.sleep(5)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2482, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2026-06-28T04:03:30.048+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=setup_lakehouse_infrastructure, task_id=wait_for_trino_ready, execution_date=20260628T040056, start_date=20260628T040058, end_date=20260628T040330
+[2026-06-28T04:03:30.071+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 5 for task wait_for_trino_ready ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(setup_lakehouse_infrastructure, wait_for_trino_ready, manual__2026-06-28T04:00:56.492042+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'wait_for_trino_ready', 'dag_id': 'setup_lakehouse_infrastructure', 'run_id': 'manual__2026-06-28T04:00:56.492042+00:00', 'map_index': -1, 'start_date': datetime.datetime(2026, 6, 28, 4, 0, 58, 134998, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2026, 6, 28, 4, 3, 30, 47206, tzinfo=Timezone('UTC')), 'duration': 151}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 788)
+[2026-06-28T04:03:30.107+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=788, status='terminated', exitcode=1, started='04:00:57') (788) terminated with exit code 1

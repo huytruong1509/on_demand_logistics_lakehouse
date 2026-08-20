@@ -1,0 +1,16 @@
+version: 1.0.0
+uuid: c8f41111-0001-4000-8000-000000000005
+slice_name: "4. Severe SLA Breach Rate (>60 mins)"
+viz_type: big_number_total
+dataset_uuid: d8f41111-8888-4000-8000-000000000001
+params:
+  datasource: d8f41111-8888-4000-8000-000000000001__table
+  viz_type: big_number_total
+  metric:
+    expressionType: SQL
+    sqlExpression: >
+      SUM(CASE WHEN time_to_complete_minutes > 60 THEN 1 ELSE 0 END) * 100.0 
+      / NULLIF(COUNT(order_id), 0)
+    label: "Severe Breach Rate (%)"
+  header_font_size: 0.4
+  y_axis_format: ",.2f"

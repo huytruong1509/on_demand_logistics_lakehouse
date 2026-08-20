@@ -1,0 +1,24 @@
+[2026-08-05T08:10:16.646+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-05T08:10:16.665+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: logistics_orders_full_load.audit_rescued_data_alert manual__2026-08-05T08:10:02.075131+00:00 [queued]>
+[2026-08-05T08:10:16.674+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: logistics_orders_full_load.audit_rescued_data_alert manual__2026-08-05T08:10:02.075131+00:00 [queued]>
+[2026-08-05T08:10:16.675+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-08-05T08:10:16.688+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): audit_rescued_data_alert> on 2026-08-05 08:10:02.075131+00:00
+[2026-08-05T08:10:16.693+0000] {standard_task_runner.py:72} INFO - Started process 787 to run task
+[2026-08-05T08:10:16.696+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'logistics_orders_full_load', 'audit_rescued_data_alert', 'manual__2026-08-05T08:10:02.075131+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/logistics_full_load.py', '--cfg-path', '/tmp/tmp_5wiwg5t']
+[2026-08-05T08:10:16.699+0000] {standard_task_runner.py:105} INFO - Job 8: Subtask audit_rescued_data_alert
+[2026-08-05T08:10:16.775+0000] {task_command.py:467} INFO - Running <TaskInstance: logistics_orders_full_load.audit_rescued_data_alert manual__2026-08-05T08:10:02.075131+00:00 [running]> on host 0bb1d40618d6
+[2026-08-05T08:10:16.879+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='logistics_orders_full_load' AIRFLOW_CTX_TASK_ID='audit_rescued_data_alert' AIRFLOW_CTX_EXECUTION_DATE='2026-08-05T08:10:02.075131+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-08-05T08:10:02.075131+00:00'
+[2026-08-05T08:10:16.881+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-05T08:10:16.885+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-05T08:10:16.887+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-08-05T08:10:16.891+0000] {sql.py:509} INFO - Running statement: SELECT COUNT(*) 
+            FROM lakehouse.bronze.raw_orders 
+            WHERE _run_id = 'manual__2026-08-05T08:10:02.075131+00:00' 
+              AND _rescued_data IS NOT NULL, parameters: None
+[2026-08-05T08:10:17.806+0000] {logistics_full_load.py:203} INFO - ✅ Dữ liệu an toàn. Không phát hiện Rescued Data.
+[2026-08-05T08:10:17.808+0000] {python.py:240} INFO - Done. Returned value was: {'inserted_run_id': 'manual__2026-08-05T08:10:02.075131+00:00', 'total_extracted_rows': 10000, 'total_inserted_rows': 10000, 'total_rescued_rows': 0}
+[2026-08-05T08:10:17.867+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-05T08:10:17.869+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=logistics_orders_full_load, task_id=audit_rescued_data_alert, run_id=manual__2026-08-05T08:10:02.075131+00:00, execution_date=20260805T081002, start_date=20260805T081016, end_date=20260805T081017
+[2026-08-05T08:10:17.915+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-08-05T08:10:17.941+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-08-05T08:10:17.944+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

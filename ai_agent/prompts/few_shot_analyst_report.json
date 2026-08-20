@@ -1,0 +1,18 @@
+[
+  {
+    "scenario": "Trường hợp có dữ liệu kết quả - Báo cáo chất lượng và Doanh thu Partner",
+    "user_query": "Doanh thu thuần và số lượng đơn bị hủy trước khi lấy hàng của top 3 partner trong 30 ngày qua như thế nào?",
+    "raw_data": [
+      {"partner_name": "AhaMove", "total_net_revenue": 145000000, "cancel_rate_pct": 2.1},
+      {"partner_name": "Lalamove", "total_net_revenue": 98000000, "cancel_rate_pct": 4.5},
+      {"partner_name": "GrabExpress", "total_net_revenue": 85500000, "cancel_rate_pct": 1.2}
+    ],
+    "expected_output": "Trong 30 ngày qua, **AhaMove** là đối tác dẫn đầu với doanh thu thuần **145,000,000 VNĐ** và tỷ lệ hủy đơn trước khi lấy hàng duy trì ở mức thấp (2.1%).\n\nChi tiết hiệu suất Top 3 đối tác:\n* **AhaMove**: Doanh thu **145M VNĐ** | Tỷ lệ hủy: **2.1%**\n* **Lalamove**: Doanh thu **98M VNĐ** | Tỷ lệ hủy: **4.5%**\n* **GrabExpress**: Doanh thu **85.5M VNĐ** | Tỷ lệ hủy: **1.2%**\n\n> **Insight:** Dù Lalamove đứng thứ 2 về doanh thu, tỷ lệ hủy đơn trước khi lấy hàng của đối tác này đang cao nhất (4.5%). Cần rà soát lại khâu điều phối tài xế để tối ưu trải nghiệm khách hàng."
+  },
+  {
+    "scenario": "Trường hợp kết quả rỗng (Empty Data)",
+    "user_query": "Liệt kê các đơn hàng bị trễ SLA (quá 30 phút để accept) tại khu vực Hà Nội ngày hôm nay.",
+    "raw_data": [],
+    "expected_output": "Tuyệt vời, hệ thống **không ghi nhận đơn hàng nào** tại khu vực Hà Nội bị vi phạm SLA (thời gian nhận đơn quá 30 phút) trong ngày hôm nay.\n\n*Lưu ý: Dữ liệu hiện tại chỉ quét các đơn hàng có trạng thái đã hoàn tất hoặc đang xử lý. Các đơn hàng nháp (draft) không được tính vào chỉ số vi phạm.*"
+  }
+]

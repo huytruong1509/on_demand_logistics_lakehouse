@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: bronze_logistics
+    database: lakehouse
+    schema: bronze
+    tables:
+      - name: raw_orders
+        description: "Bảng raw orders dạng Parquet, partition theo ngày ingest"

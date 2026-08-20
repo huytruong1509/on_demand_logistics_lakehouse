@@ -1,0 +1,159 @@
+[2026-07-26T02:40:43.521+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-26T02:40:43.543+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_docs_generate_and_publish.generate_dbt_docs scheduled__2026-07-25T02:00:00+00:00 [queued]>
+[2026-07-26T02:40:43.553+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_docs_generate_and_publish.generate_dbt_docs scheduled__2026-07-25T02:00:00+00:00 [queued]>
+[2026-07-26T02:40:43.555+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 3
+[2026-07-26T02:40:43.570+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): generate_dbt_docs> on 2026-07-25 02:00:00+00:00
+[2026-07-26T02:40:43.577+0000] {standard_task_runner.py:72} INFO - Started process 360 to run task
+[2026-07-26T02:40:43.581+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'dbt_docs_generate_and_publish', 'generate_dbt_docs', 'scheduled__2026-07-25T02:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dbt_docs_pipeline.py', '--cfg-path', '/tmp/tmpd16u5m_0']
+[2026-07-26T02:40:43.584+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask generate_dbt_docs
+[2026-07-26T02:40:43.678+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_docs_generate_and_publish.generate_dbt_docs scheduled__2026-07-25T02:00:00+00:00 [running]> on host 327712b8479a
+[2026-07-26T02:40:43.777+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='dbt_docs_generate_and_publish' AIRFLOW_CTX_TASK_ID='generate_dbt_docs' AIRFLOW_CTX_EXECUTION_DATE='2026-07-25T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-25T02:00:00+00:00'
+[2026-07-26T02:40:43.779+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-26T02:40:43.782+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-26T02:40:43.784+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/airflow/dbt_transform && dbt clean && dbt deps && dbt docs generate --profiles-dir /opt/airflow/dbt_transform']
+[2026-07-26T02:40:43.795+0000] {subprocess.py:86} INFO - Output:
+[2026-07-26T02:40:45.567+0000] {subprocess.py:93} INFO - [0m02:40:45  Running with dbt=1.8.8
+[2026-07-26T02:40:45.724+0000] {subprocess.py:93} INFO - [0m02:40:45  Checking /opt/airflow/dbt_transform/target/*
+[2026-07-26T02:40:45.871+0000] {subprocess.py:93} INFO - [0m02:40:45  Cleaned /opt/airflow/dbt_transform/target/*
+[2026-07-26T02:40:45.873+0000] {subprocess.py:93} INFO - [0m02:40:45  Finished cleaning all paths.
+[2026-07-26T02:40:48.680+0000] {subprocess.py:93} INFO - [0m02:40:48  Running with dbt=1.8.8
+[2026-07-26T02:40:50.500+0000] {subprocess.py:93} INFO - [0m02:40:50  Installing dbt-labs/dbt_utils
+[2026-07-26T02:40:56.345+0000] {subprocess.py:93} INFO - [0m02:40:56  Installed from version 1.3.0
+[2026-07-26T02:40:56.346+0000] {subprocess.py:93} INFO - [0m02:40:56  Updated version available: 1.4.1
+[2026-07-26T02:40:56.350+0000] {subprocess.py:93} INFO - [0m02:40:56  Installing metaplane/dbt_expectations
+[2026-07-26T02:41:00.878+0000] {subprocess.py:93} INFO - [0m02:41:00  Installed from version 0.10.8
+[2026-07-26T02:41:00.879+0000] {subprocess.py:93} INFO - [0m02:41:00  Updated version available: 0.10.10
+[2026-07-26T02:41:00.883+0000] {subprocess.py:93} INFO - [0m02:41:00  Installing godatadriven/dbt_date
+[2026-07-26T02:41:03.098+0000] {subprocess.py:93} INFO - [0m02:41:03  Installed from version 0.15.0
+[2026-07-26T02:41:03.101+0000] {subprocess.py:93} INFO - [0m02:41:03  Up to date!
+[2026-07-26T02:41:03.106+0000] {subprocess.py:93} INFO - [0m02:41:03
+[2026-07-26T02:41:03.109+0000] {subprocess.py:93} INFO - [0m02:41:03  Updates available for packages: ['dbt-labs/dbt_utils', 'metaplane/dbt_expectations']
+[2026-07-26T02:41:03.110+0000] {subprocess.py:93} INFO - Update your versions in packages.yml, then run dbt deps
+[2026-07-26T02:41:06.256+0000] {subprocess.py:93} INFO - [0m02:41:06  Running with dbt=1.8.8
+[2026-07-26T02:41:06.477+0000] {subprocess.py:93} INFO - [0m02:41:06  Registered adapter: trino=1.8.5
+[2026-07-26T02:41:06.607+0000] {subprocess.py:93} INFO - [0m02:41:06  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[2026-07-26T02:41:12.055+0000] {subprocess.py:93} INFO - [0m02:41:12  [[33mWARNING[0m]: Deprecated functionality
+[2026-07-26T02:41:12.057+0000] {subprocess.py:93} INFO - The `tests` config has been renamed to `data_tests`. Please see
+[2026-07-26T02:41:12.058+0000] {subprocess.py:93} INFO - https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+[2026-07-26T02:41:12.060+0000] {subprocess.py:93} INFO - information.
+[2026-07-26T02:41:12.613+0000] {subprocess.py:93} INFO - [0m02:41:12  Found 8 models, 40 data tests, 1 source, 9 metrics, 839 macros, 5 semantic models
+[2026-07-26T02:41:12.619+0000] {subprocess.py:93} INFO - [0m02:41:12
+[2026-07-26T02:41:12.740+0000] {subprocess.py:93} INFO - [0m02:41:12  [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+[2026-07-26T02:41:12.742+0000] {subprocess.py:93} INFO - You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+[2026-07-26T02:41:12.743+0000] {subprocess.py:93} INFO - Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[2026-07-26T02:41:15.379+0000] {subprocess.py:93} INFO - [0m02:41:15  Concurrency: 1 threads (target='dev')
+[2026-07-26T02:41:15.381+0000] {subprocess.py:93} INFO - [0m02:41:15
+[2026-07-26T02:41:17.746+0000] {subprocess.py:93} INFO - [0m02:41:17  Building catalog
+[2026-07-26T02:41:20.177+0000] {subprocess.py:93} INFO - [0m02:41:20  Catalog written to /opt/airflow/dbt_transform/target/catalog.json
+[2026-07-26T02:41:21.527+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-26T02:41:21.564+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-26T02:41:21.565+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dbt_docs_generate_and_publish, task_id=generate_dbt_docs, run_id=scheduled__2026-07-25T02:00:00+00:00, execution_date=20260725T020000, start_date=20260726T024043, end_date=20260726T024121
+[2026-07-26T02:41:21.597+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-26T02:41:21.619+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-26T02:41:21.624+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-26T10:21:07.221+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-26T10:21:07.241+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_docs_generate_and_publish.generate_dbt_docs scheduled__2026-07-25T02:00:00+00:00 [queued]>
+[2026-07-26T10:21:07.250+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_docs_generate_and_publish.generate_dbt_docs scheduled__2026-07-25T02:00:00+00:00 [queued]>
+[2026-07-26T10:21:07.251+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 3
+[2026-07-26T10:21:07.263+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): generate_dbt_docs> on 2026-07-25 02:00:00+00:00
+[2026-07-26T10:21:07.269+0000] {standard_task_runner.py:72} INFO - Started process 352 to run task
+[2026-07-26T10:21:07.274+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'dbt_docs_generate_and_publish', 'generate_dbt_docs', 'scheduled__2026-07-25T02:00:00+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/dbt_docs_pipeline.py', '--cfg-path', '/tmp/tmp95mlos_1']
+[2026-07-26T10:21:07.277+0000] {standard_task_runner.py:105} INFO - Job 39: Subtask generate_dbt_docs
+[2026-07-26T10:21:07.363+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_docs_generate_and_publish.generate_dbt_docs scheduled__2026-07-25T02:00:00+00:00 [running]> on host a69e4e253d86
+[2026-07-26T10:21:07.453+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='dbt_docs_generate_and_publish' AIRFLOW_CTX_TASK_ID='generate_dbt_docs' AIRFLOW_CTX_EXECUTION_DATE='2026-07-25T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-25T02:00:00+00:00'
+[2026-07-26T10:21:07.456+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-26T10:21:07.459+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-26T10:21:07.460+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/airflow/dbt_transform && dbt clean && dbt deps && dbt docs generate --profiles-dir /opt/airflow/dbt_transform']
+[2026-07-26T10:21:07.470+0000] {subprocess.py:86} INFO - Output:
+[2026-07-26T10:21:09.563+0000] {subprocess.py:93} INFO - [0m10:21:09  Running with dbt=1.8.8
+[2026-07-26T10:21:09.721+0000] {subprocess.py:93} INFO - [0m10:21:09  Checking /opt/airflow/dbt_transform/target/*
+[2026-07-26T10:21:09.843+0000] {subprocess.py:93} INFO - [0m10:21:09  Cleaned /opt/airflow/dbt_transform/target/*
+[2026-07-26T10:21:09.844+0000] {subprocess.py:93} INFO - [0m10:21:09  Finished cleaning all paths.
+[2026-07-26T10:21:13.354+0000] {subprocess.py:93} INFO - [0m10:21:13  Running with dbt=1.8.8
+[2026-07-26T10:21:15.333+0000] {subprocess.py:93} INFO - [0m10:21:15  Installing dbt-labs/dbt_utils
+[2026-07-26T10:21:21.337+0000] {subprocess.py:93} INFO - [0m10:21:21  Installed from version 1.3.0
+[2026-07-26T10:21:21.339+0000] {subprocess.py:93} INFO - [0m10:21:21  Updated version available: 1.4.1
+[2026-07-26T10:21:21.344+0000] {subprocess.py:93} INFO - [0m10:21:21  Installing metaplane/dbt_expectations
+[2026-07-26T10:21:32.564+0000] {subprocess.py:93} INFO - [0m10:21:32  Installed from version 0.10.8
+[2026-07-26T10:21:32.566+0000] {subprocess.py:93} INFO - [0m10:21:32  Updated version available: 0.10.10
+[2026-07-26T10:21:32.568+0000] {subprocess.py:93} INFO - [0m10:21:32  Installing godatadriven/dbt_date
+[2026-07-26T10:21:34.276+0000] {subprocess.py:93} INFO - [0m10:21:34  Installed from version 0.15.0
+[2026-07-26T10:21:34.278+0000] {subprocess.py:93} INFO - [0m10:21:34  Up to date!
+[2026-07-26T10:21:34.280+0000] {subprocess.py:93} INFO - [0m10:21:34
+[2026-07-26T10:21:34.281+0000] {subprocess.py:93} INFO - [0m10:21:34  Updates available for packages: ['dbt-labs/dbt_utils', 'metaplane/dbt_expectations']
+[2026-07-26T10:21:34.282+0000] {subprocess.py:93} INFO - Update your versions in packages.yml, then run dbt deps
+[2026-07-26T10:21:36.886+0000] {subprocess.py:93} INFO - [0m10:21:36  Running with dbt=1.8.8
+[2026-07-26T10:21:37.090+0000] {subprocess.py:93} INFO - [0m10:21:37  Registered adapter: trino=1.8.5
+[2026-07-26T10:21:37.252+0000] {subprocess.py:93} INFO - [0m10:21:37  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[2026-07-26T10:21:42.496+0000] {subprocess.py:93} INFO - [0m10:21:42  [[33mWARNING[0m]: Deprecated functionality
+[2026-07-26T10:21:42.497+0000] {subprocess.py:93} INFO - The `tests` config has been renamed to `data_tests`. Please see
+[2026-07-26T10:21:42.499+0000] {subprocess.py:93} INFO - https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+[2026-07-26T10:21:42.500+0000] {subprocess.py:93} INFO - information.
+[2026-07-26T10:21:43.072+0000] {subprocess.py:93} INFO - [0m10:21:43  Found 8 models, 40 data tests, 1 source, 9 metrics, 839 macros, 5 semantic models
+[2026-07-26T10:21:43.077+0000] {subprocess.py:93} INFO - [0m10:21:43
+[2026-07-26T10:21:43.188+0000] {subprocess.py:93} INFO - [0m10:21:43  [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+[2026-07-26T10:21:43.190+0000] {subprocess.py:93} INFO - You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+[2026-07-26T10:21:43.191+0000] {subprocess.py:93} INFO - Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[2026-07-26T10:21:45.427+0000] {subprocess.py:93} INFO - [0m10:21:45  Concurrency: 1 threads (target='dev')
+[2026-07-26T10:21:45.429+0000] {subprocess.py:93} INFO - [0m10:21:45
+[2026-07-26T10:21:47.441+0000] {subprocess.py:93} INFO - [0m10:21:47  Building catalog
+[2026-07-26T10:21:50.560+0000] {subprocess.py:93} INFO - [0m10:21:50  Catalog written to /opt/airflow/dbt_transform/target/catalog.json
+[2026-07-26T10:21:51.820+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-26T10:21:51.866+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-26T10:21:51.867+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dbt_docs_generate_and_publish, task_id=generate_dbt_docs, run_id=scheduled__2026-07-25T02:00:00+00:00, execution_date=20260725T020000, start_date=20260726T102107, end_date=20260726T102151
+[2026-07-26T10:21:51.903+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-26T10:21:51.931+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-26T10:21:51.933+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-26T13:01:04.148+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-26T13:01:04.167+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_docs_generate_and_publish.generate_dbt_docs scheduled__2026-07-25T02:00:00+00:00 [queued]>
+[2026-07-26T13:01:04.174+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_docs_generate_and_publish.generate_dbt_docs scheduled__2026-07-25T02:00:00+00:00 [queued]>
+[2026-07-26T13:01:04.176+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 3
+[2026-07-26T13:01:04.186+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): generate_dbt_docs> on 2026-07-25 02:00:00+00:00
+[2026-07-26T13:01:04.191+0000] {standard_task_runner.py:72} INFO - Started process 2407 to run task
+[2026-07-26T13:01:04.195+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'dbt_docs_generate_and_publish', 'generate_dbt_docs', 'scheduled__2026-07-25T02:00:00+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/dbt_docs_pipeline.py', '--cfg-path', '/tmp/tmpogpmlnze']
+[2026-07-26T13:01:04.198+0000] {standard_task_runner.py:105} INFO - Job 29: Subtask generate_dbt_docs
+[2026-07-26T13:01:04.284+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_docs_generate_and_publish.generate_dbt_docs scheduled__2026-07-25T02:00:00+00:00 [running]> on host a0b459f8cde6
+[2026-07-26T13:01:04.362+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='dbt_docs_generate_and_publish' AIRFLOW_CTX_TASK_ID='generate_dbt_docs' AIRFLOW_CTX_EXECUTION_DATE='2026-07-25T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-25T02:00:00+00:00'
+[2026-07-26T13:01:04.364+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-26T13:01:04.367+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-26T13:01:04.369+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/airflow/dbt_transform && dbt clean && dbt deps && dbt docs generate --profiles-dir /opt/airflow/dbt_transform']
+[2026-07-26T13:01:04.378+0000] {subprocess.py:86} INFO - Output:
+[2026-07-26T13:01:05.887+0000] {subprocess.py:93} INFO - [0m13:01:05  Running with dbt=1.8.8
+[2026-07-26T13:01:06.005+0000] {subprocess.py:93} INFO - [0m13:01:06  Checking /opt/airflow/dbt_transform/target/*
+[2026-07-26T13:01:06.107+0000] {subprocess.py:93} INFO - [0m13:01:06  Cleaned /opt/airflow/dbt_transform/target/*
+[2026-07-26T13:01:06.108+0000] {subprocess.py:93} INFO - [0m13:01:06  Finished cleaning all paths.
+[2026-07-26T13:01:09.209+0000] {subprocess.py:93} INFO - [0m13:01:09  Running with dbt=1.8.8
+[2026-07-26T13:01:10.926+0000] {subprocess.py:93} INFO - [0m13:01:10  Installing dbt-labs/dbt_utils
+[2026-07-26T13:01:15.643+0000] {subprocess.py:93} INFO - [0m13:01:15  Installed from version 1.3.0
+[2026-07-26T13:01:15.645+0000] {subprocess.py:93} INFO - [0m13:01:15  Updated version available: 1.4.1
+[2026-07-26T13:01:15.647+0000] {subprocess.py:93} INFO - [0m13:01:15  Installing metaplane/dbt_expectations
+[2026-07-26T13:01:19.355+0000] {subprocess.py:93} INFO - [0m13:01:19  Installed from version 0.10.8
+[2026-07-26T13:01:19.356+0000] {subprocess.py:93} INFO - [0m13:01:19  Updated version available: 0.10.10
+[2026-07-26T13:01:19.360+0000] {subprocess.py:93} INFO - [0m13:01:19  Installing godatadriven/dbt_date
+[2026-07-26T13:01:21.313+0000] {subprocess.py:93} INFO - [0m13:01:21  Installed from version 0.15.0
+[2026-07-26T13:01:21.314+0000] {subprocess.py:93} INFO - [0m13:01:21  Up to date!
+[2026-07-26T13:01:21.317+0000] {subprocess.py:93} INFO - [0m13:01:21
+[2026-07-26T13:01:21.319+0000] {subprocess.py:93} INFO - [0m13:01:21  Updates available for packages: ['dbt-labs/dbt_utils', 'metaplane/dbt_expectations']
+[2026-07-26T13:01:21.321+0000] {subprocess.py:93} INFO - Update your versions in packages.yml, then run dbt deps
+[2026-07-26T13:01:23.991+0000] {subprocess.py:93} INFO - [0m13:01:23  Running with dbt=1.8.8
+[2026-07-26T13:01:24.203+0000] {subprocess.py:93} INFO - [0m13:01:24  Registered adapter: trino=1.8.5
+[2026-07-26T13:01:24.381+0000] {subprocess.py:93} INFO - [0m13:01:24  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[2026-07-26T13:01:30.455+0000] {subprocess.py:93} INFO - [0m13:01:30  [[33mWARNING[0m]: Deprecated functionality
+[2026-07-26T13:01:30.458+0000] {subprocess.py:93} INFO - The `tests` config has been renamed to `data_tests`. Please see
+[2026-07-26T13:01:30.459+0000] {subprocess.py:93} INFO - https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+[2026-07-26T13:01:30.461+0000] {subprocess.py:93} INFO - information.
+[2026-07-26T13:01:31.010+0000] {subprocess.py:93} INFO - [0m13:01:31  Found 8 models, 40 data tests, 1 source, 9 metrics, 839 macros, 5 semantic models
+[2026-07-26T13:01:31.015+0000] {subprocess.py:93} INFO - [0m13:01:31
+[2026-07-26T13:01:31.120+0000] {subprocess.py:93} INFO - [0m13:01:31  [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+[2026-07-26T13:01:31.121+0000] {subprocess.py:93} INFO - You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+[2026-07-26T13:01:31.123+0000] {subprocess.py:93} INFO - Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[2026-07-26T13:01:31.516+0000] {subprocess.py:93} INFO - [0m13:01:31  Concurrency: 1 threads (target='dev')
+[2026-07-26T13:01:31.518+0000] {subprocess.py:93} INFO - [0m13:01:31
+[2026-07-26T13:01:33.371+0000] {subprocess.py:93} INFO - [0m13:01:33  Building catalog
+[2026-07-26T13:01:34.904+0000] {subprocess.py:93} INFO - [0m13:01:34  Catalog written to /opt/airflow/dbt_transform/target/catalog.json
+[2026-07-26T13:01:36.261+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-26T13:01:36.292+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-26T13:01:36.293+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dbt_docs_generate_and_publish, task_id=generate_dbt_docs, run_id=scheduled__2026-07-25T02:00:00+00:00, execution_date=20260725T020000, start_date=20260726T130104, end_date=20260726T130136
+[2026-07-26T13:01:36.336+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-26T13:01:36.355+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-26T13:01:36.358+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

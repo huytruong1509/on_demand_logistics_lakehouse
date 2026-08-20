@@ -1,0 +1,75 @@
+[2026-07-20T03:01:39.413+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-20T03:01:39.430+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_full_load_cfpb_pipeline.prepare_and_create_branch scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-07-20T03:01:39.438+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_full_load_cfpb_pipeline.prepare_and_create_branch scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-07-20T03:01:39.440+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-20T03:01:39.453+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): prepare_and_create_branch> on 2026-01-01 00:00:00+00:00
+[2026-07-20T03:01:39.459+0000] {standard_task_runner.py:72} INFO - Started process 725 to run task
+[2026-07-20T03:01:39.463+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_full_load_cfpb_pipeline', 'prepare_and_create_branch', 'scheduled__2026-01-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/wap_full_load_cfpb_pipeline.py', '--cfg-path', '/tmp/tmprrtot220']
+[2026-07-20T03:01:39.465+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask prepare_and_create_branch
+[2026-07-20T03:01:39.550+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_full_load_cfpb_pipeline.prepare_and_create_branch scheduled__2026-01-01T00:00:00+00:00 [running]> on host e616fedc0061
+[2026-07-20T03:01:39.631+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_full_load_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='prepare_and_create_branch' AIRFLOW_CTX_EXECUTION_DATE='2026-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-01T00:00:00+00:00'
+[2026-07-20T03:01:39.635+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-20T03:01:39.640+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-20T03:01:39.642+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-20T03:01:39.644+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-20T03:01:40.388+0000] {minio_loader.py:188} INFO - ℹ️ Phân vùng landing/consumer_complaints/run_date=2026-01-01 đang trống.
+[2026-07-20T03:01:40.391+0000] {wap_full_load_cfpb_pipeline.py:55} INFO - ✅ [LANDING] Đã dọn dẹp phân vùng run_date=2026-01-01.
+[2026-07-20T03:01:40.393+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-20T03:01:41.234+0000] {nessie_client.py:46} INFO - 🌿 Đã tạo nhánh 'full_load_20260101_scheduled202601' (Hash: 2e1cfa82)
+[2026-07-20T03:01:41.237+0000] {wap_full_load_cfpb_pipeline.py:68} INFO - 🌿 [WAP] Đã tạo/tái sử dụng nhánh tạm: full_load_20260101_scheduled202601
+[2026-07-20T03:01:41.239+0000] {python.py:240} INFO - Done. Returned value was: {'run_date': '2026-01-01', 'run_id': 'scheduled__2026-01-01T00:00:00+00:00', 'wap_branch': 'full_load_20260101_scheduled202601'}
+[2026-07-20T03:01:41.289+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-20T03:01:41.291+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_full_load_cfpb_pipeline, task_id=prepare_and_create_branch, run_id=scheduled__2026-01-01T00:00:00+00:00, execution_date=20260101T000000, start_date=20260720T030139, end_date=20260720T030141
+[2026-07-20T03:01:41.326+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-20T03:01:41.365+0000] {taskinstance.py:3900} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2026-07-20T03:01:41.369+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-20T04:34:04.957+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-20T04:34:04.979+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_full_load_cfpb_pipeline.prepare_and_create_branch scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-07-20T04:34:04.988+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_full_load_cfpb_pipeline.prepare_and_create_branch scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-07-20T04:34:04.990+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-20T04:34:05.002+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): prepare_and_create_branch> on 2026-01-01 00:00:00+00:00
+[2026-07-20T04:34:05.008+0000] {standard_task_runner.py:72} INFO - Started process 621 to run task
+[2026-07-20T04:34:05.013+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_full_load_cfpb_pipeline', 'prepare_and_create_branch', 'scheduled__2026-01-01T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/wap_full_load_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpyp8r3heg']
+[2026-07-20T04:34:05.016+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask prepare_and_create_branch
+[2026-07-20T04:34:05.109+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_full_load_cfpb_pipeline.prepare_and_create_branch scheduled__2026-01-01T00:00:00+00:00 [running]> on host 8a8ae89cbbd7
+[2026-07-20T04:34:05.204+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_full_load_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='prepare_and_create_branch' AIRFLOW_CTX_EXECUTION_DATE='2026-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-01T00:00:00+00:00'
+[2026-07-20T04:34:05.208+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-20T04:34:05.213+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-20T04:34:05.216+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-20T04:34:05.218+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-20T04:34:05.893+0000] {minio_loader.py:188} INFO - ℹ️ Phân vùng landing/consumer_complaints/run_date=2026-01-01 đang trống.
+[2026-07-20T04:34:05.895+0000] {wap_full_load_cfpb_pipeline.py:55} INFO - ✅ [LANDING] Đã dọn dẹp phân vùng run_date=2026-01-01.
+[2026-07-20T04:34:05.897+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-20T04:34:05.962+0000] {nessie_client.py:46} INFO - 🌿 Đã tạo nhánh 'full_load_20260101_scheduled202601' (Hash: 5e0c0e7d)
+[2026-07-20T04:34:05.964+0000] {wap_full_load_cfpb_pipeline.py:68} INFO - 🌿 [WAP] Đã tạo/tái sử dụng nhánh tạm: full_load_20260101_scheduled202601
+[2026-07-20T04:34:05.967+0000] {python.py:240} INFO - Done. Returned value was: {'run_date': '2026-01-01', 'run_id': 'scheduled__2026-01-01T00:00:00+00:00', 'wap_branch': 'full_load_20260101_scheduled202601'}
+[2026-07-20T04:34:06.019+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-20T04:34:06.021+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_full_load_cfpb_pipeline, task_id=prepare_and_create_branch, run_id=scheduled__2026-01-01T00:00:00+00:00, execution_date=20260101T000000, start_date=20260720T043404, end_date=20260720T043406
+[2026-07-20T04:34:06.073+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-20T04:34:06.112+0000] {taskinstance.py:3900} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2026-07-20T04:34:06.115+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-26T15:31:08.589+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-26T15:31:08.610+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wap_full_load_cfpb_pipeline.prepare_and_create_branch scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-07-26T15:31:08.623+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wap_full_load_cfpb_pipeline.prepare_and_create_branch scheduled__2026-01-01T00:00:00+00:00 [queued]>
+[2026-07-26T15:31:08.624+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-07-26T15:31:08.641+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): prepare_and_create_branch> on 2026-01-01 00:00:00+00:00
+[2026-07-26T15:31:08.649+0000] {standard_task_runner.py:72} INFO - Started process 5057 to run task
+[2026-07-26T15:31:08.654+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'wap_full_load_cfpb_pipeline', 'prepare_and_create_branch', 'scheduled__2026-01-01T00:00:00+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/wap_full_load_cfpb_pipeline.py', '--cfg-path', '/tmp/tmpralwfaa9']
+[2026-07-26T15:31:08.656+0000] {standard_task_runner.py:105} INFO - Job 39: Subtask prepare_and_create_branch
+[2026-07-26T15:31:08.745+0000] {task_command.py:467} INFO - Running <TaskInstance: wap_full_load_cfpb_pipeline.prepare_and_create_branch scheduled__2026-01-01T00:00:00+00:00 [running]> on host 755669804aca
+[2026-07-26T15:31:08.833+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='wap_full_load_cfpb_pipeline' AIRFLOW_CTX_TASK_ID='prepare_and_create_branch' AIRFLOW_CTX_EXECUTION_DATE='2026-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-01T00:00:00+00:00'
+[2026-07-26T15:31:08.837+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-26T15:31:08.841+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-26T15:31:08.843+0000] {base.py:84} INFO - Retrieving connection 'minio_default'
+[2026-07-26T15:31:08.845+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='minio_default', conn_type='aws') credentials retrieved from login and ***.
+[2026-07-26T15:31:09.842+0000] {minio_loader.py:188} INFO - ℹ️ Phân vùng landing/consumer_complaints/run_date=2026-01-01 đang trống.
+[2026-07-26T15:31:09.843+0000] {wap_full_load_cfpb_pipeline.py:55} INFO - ✅ [LANDING] Đã dọn dẹp phân vùng run_date=2026-01-01.
+[2026-07-26T15:31:09.845+0000] {base.py:84} INFO - Retrieving connection 'nessie_api_default'
+[2026-07-26T15:31:10.139+0000] {nessie_client.py:46} INFO - 🌿 Đã tạo nhánh 'full_load_20260101_scheduled202601' (Hash: bd4138eb)
+[2026-07-26T15:31:10.141+0000] {wap_full_load_cfpb_pipeline.py:68} INFO - 🌿 [WAP] Đã tạo/tái sử dụng nhánh tạm: full_load_20260101_scheduled202601
+[2026-07-26T15:31:10.143+0000] {python.py:240} INFO - Done. Returned value was: {'run_date': '2026-01-01', 'run_id': 'scheduled__2026-01-01T00:00:00+00:00', 'wap_branch': 'full_load_20260101_scheduled202601'}
+[2026-07-26T15:31:10.178+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-26T15:31:10.180+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=wap_full_load_cfpb_pipeline, task_id=prepare_and_create_branch, run_id=scheduled__2026-01-01T00:00:00+00:00, execution_date=20260101T000000, start_date=20260726T153108, end_date=20260726T153110
+[2026-07-26T15:31:10.235+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-26T15:31:10.276+0000] {taskinstance.py:3900} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2026-07-26T15:31:10.279+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

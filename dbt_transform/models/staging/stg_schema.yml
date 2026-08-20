@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Bảng Silver làm sạch dữ liệu Orders."
+    columns:
+      - name: order_id
+        description: "Mã đơn hàng gốc"
+        tests:
+          - not_null
+      - name: source_system
+        tests:
+          - not_null
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - source_system
+            - db_id
+            - order_id
+
+  - name: stg_order_stops
+    description: "Bảng Silver chi tiết các điểm giao/nhận hàng (Routing)."
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+      - name: stop_index
+        tests:
+          - not_null
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - source_system
+            - db_id
+            - order_id
+            - stop_index
+
+  - name: stg_order_requests
+    description: "Bảng Silver chi tiết các dịch vụ cộng thêm (Line-item requests) của đơn hàng."
+    columns:
+      - name: order_id
+        description: "Mã đơn hàng gốc"
+        tests:
+          - not_null
+      - name: request_id
+        description: "Mã dịch vụ hoặc yêu cầu cộng thêm"
+        tests:
+          - not_null
+      - name: request_price
+        description: "Giá của dịch vụ cộng thêm"
+      - name: request_quantity
+        description: "Số lượng của dịch vụ"
+    tests:
+      # Đảm bảo không có dòng nào bị trùng lặp dựa trên tập hợp khóa chính của request[cite: 2]
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - source_system
+            - db_id
+            - order_id

@@ -1,0 +1,14 @@
+[
+  {
+    "intent": "Thống kê tổng doanh thu thuần và tỷ lệ hủy đơn trước khi lấy hàng theo từng đối tác trong tháng qua",
+    "user_query": "Doanh thu thuần và số lượng đơn bị hủy trước khi lấy hàng của các partner trong 30 ngày qua như thế nào?",
+    "schema_context": "Tables: lakehouse.gold.fct_orders (order_sk, partner_sk, net_revenue, is_cancelled_before_pickup, create_date_sk), lakehouse.gold.dim_partner (partner_sk, partner_name), lakehouse.gold.dim_date (date_sk, full_date)",
+    "expected_sql": "WITH recent_orders AS (\n    SELECT \n        dp.partner_name,\n        SUM(fo.net_revenue) AS total_net_revenue,\n        COUNT(CASE WHEN fo.is_cancelled_before_pickup = TRUE THEN 1 END) AS cancelled_before_pickup_count,\n        COUNT(fo.order_sk) AS total_orders\n    FROM lakehouse.gold.fct_orders fo\n    JOIN lakehouse.gold.dim_partner dp ON fo.partner_sk = dp.partner_sk\n    JOIN lakehouse.gold.dim_date dd ON fo.create_date_sk = dd.date_sk\n    WHERE dd.full_date >= date_add('day', -30, CURRENT_DATE)\n    GROUP BY dp.partner_name\n)\nSELECT \n    partner_name,\n    total_net_revenue,\n    cancelled_before_pickup_count,\n    ROUND(CAST(cancelled_before_pickup_count AS DOUBLE) / NULLIF(total_orders, 0) * 100, 2) AS cancel_rate_pct\nFROM recent_orders\nORDER BY total_net_revenue DESC;"
+  },
+  {
+    "intent": "Tính khoảng cách trung bình và tỷ lệ tuân thủ POD (Proof of Delivery) tại các điểm dừng (stops)",
+    "user_query": "Trung bình tài xế dừng cách điểm giao hàng bao xa và tỷ lệ chụp ảnh POD thành công của ngày hôm qua là bao nhiêu?",
+    "schema_context": "Tables: lakehouse.gold.fct_order_stops (order_stop_sk, is_pod_compliant, distance_to_target_meters, create_date_sk, is_successful_stop), lakehouse.gold.dim_date (date_sk, full_date)",
+    "expected_sql": "SELECT \n    ROUND(AVG(distance_to_target_meters), 2) AS avg_distance_to_target_meters,\n    COUNT(CASE WHEN is_pod_compliant = TRUE THEN 1 END) AS compliant_pod_count,\n    COUNT(order_stop_sk) AS total_stops,\n    ROUND(CAST(COUNT(CASE WHEN is_pod_compliant = TRUE THEN 1 END) AS DOUBLE) / NULLIF(COUNT(order_stop_sk), 0) * 100, 2) AS pod_compliance_rate\nFROM lakehouse.gold.fct_order_stops os\nJOIN lakehouse.gold.dim_date dd ON os.create_date_sk = dd.date_sk\nWHERE dd.full_date = date_add('day', -1, CURRENT_DATE)\n  AND is_successful_stop = TRUE;"
+  }
+]

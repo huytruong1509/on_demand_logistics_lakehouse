@@ -1,0 +1,15 @@
+FROM apache/superset:6.1.0
+
+USER root
+
+# Cài đặt Trino driver + psycopg2 vào đúng môi trường ảo của Superset
+RUN uv pip install --python /app/.venv/bin/python \
+    sqlalchemy-trino \
+    trino \
+    psycopg2-binary
+
+# Copy cấu hình thẳng vào image khi thực hiện Build
+COPY superset_config.py /app/superset_config.py
+ENV SUPERSET_CONFIG_PATH=/app/superset_config.py
+
+USER superset

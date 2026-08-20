@@ -1,0 +1,244 @@
+[2026-07-22T01:49:06.063+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-22T01:49:06.091+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-22T01:49:06.103+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-22T01:49:06.105+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 4
+[2026-07-22T01:49:06.118+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): execute_optimize> on 2026-07-12 01:00:00+00:00
+[2026-07-22T01:49:06.123+0000] {standard_task_runner.py:72} INFO - Started process 1865 to run task
+[2026-07-22T01:49:06.127+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'lakehouse_full_compaction_pipeline', 'execute_optimize', 'scheduled__2026-07-12T01:00:00+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/lakehouse_incremental_compaction_dag.py', '--cfg-path', '/tmp/tmp170ebhiz', '--map-index', '3']
+[2026-07-22T01:49:06.129+0000] {standard_task_runner.py:105} INFO - Job 84: Subtask execute_optimize
+[2026-07-22T01:49:06.213+0000] {task_command.py:467} INFO - Running <TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [running]> on host dbd63abba702
+[2026-07-22T01:49:06.508+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='lakehouse_full_compaction_pipeline' AIRFLOW_CTX_TASK_ID='execute_optimize' AIRFLOW_CTX_EXECUTION_DATE='2026-07-12T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-12T01:00:00+00:00'
+[2026-07-22T01:49:06.510+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-22T01:49:06.513+0000] {lakehouse_incremental_compaction_dag.py:121} INFO - Đang thực thi: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize
+[2026-07-22T01:49:06.516+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T01:49:06.518+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T01:49:06.521+0000] {sql.py:509} INFO - Running statement: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize, parameters: None
+[2026-07-22T01:49:06.547+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 122, in execute_optimize
+    trino_hook.run(sql)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 456, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 514, in _run_command
+    cur.execute(sql_statement)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/dbapi.py", line 589, in execute
+    self._iterator = iter(self._query.execute())
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 819, in execute
+    self._result.rows += self.fetch()
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 839, in fetch
+    status = self._request.process(response)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 611, in process
+    raise self._process_error(response["error"], response.get("id"))
+trino.exceptions.TrinoUserError: TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 1:7: Table 'lakehouse.gold.dim_companies' does not exist", query_id=20260722_014906_00119_vn5ju)
+[2026-07-22T01:49:06.568+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=lakehouse_full_compaction_pipeline, task_id=execute_optimize, run_id=scheduled__2026-07-12T01:00:00+00:00, map_index=3, execution_date=20260712T010000, start_date=20260722T014906, end_date=20260722T014906
+[2026-07-22T01:49:06.586+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-22T01:49:06.587+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 84 for task execute_optimize (TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 1:7: Table 'lakehouse.gold.dim_companies' does not exist", query_id=20260722_014906_00119_vn5ju); 1865)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dags/lakehouse_incremental_compaction_dag.py", line 122, in execute_optimize
+    trino_hook.run(sql)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 456, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 514, in _run_command
+    cur.execute(sql_statement)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/dbapi.py", line 589, in execute
+    self._iterator = iter(self._query.execute())
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 819, in execute
+    self._result.rows += self.fetch()
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 839, in fetch
+    status = self._request.process(response)
+  File "/home/airflow/.local/lib/python3.10/site-packages/trino/client.py", line 611, in process
+    raise self._process_error(response["error"], response.get("id"))
+trino.exceptions.TrinoUserError: TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 1:7: Table 'lakehouse.gold.dim_companies' does not exist", query_id=20260722_014906_00119_vn5ju)
+[2026-07-22T01:49:06.624+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-07-22T01:49:06.658+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-22T01:49:06.662+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-22T03:12:54.351+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-22T03:12:54.388+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-22T03:12:54.403+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-22T03:12:54.404+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 4
+[2026-07-22T03:12:54.420+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): execute_optimize> on 2026-07-12 01:00:00+00:00
+[2026-07-22T03:12:54.426+0000] {standard_task_runner.py:72} INFO - Started process 2279 to run task
+[2026-07-22T03:12:54.430+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'lakehouse_full_compaction_pipeline', 'execute_optimize', 'scheduled__2026-07-12T01:00:00+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/lakehouse_incremental_compaction_dag.py', '--cfg-path', '/tmp/tmpsqyw4tzk', '--map-index', '3']
+[2026-07-22T03:12:54.432+0000] {standard_task_runner.py:105} INFO - Job 32: Subtask execute_optimize
+[2026-07-22T03:12:54.538+0000] {task_command.py:467} INFO - Running <TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [running]> on host 55d72f6a8c76
+[2026-07-22T03:12:54.808+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='lakehouse_full_compaction_pipeline' AIRFLOW_CTX_TASK_ID='execute_optimize' AIRFLOW_CTX_EXECUTION_DATE='2026-07-12T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-12T01:00:00+00:00'
+[2026-07-22T03:12:54.811+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-22T03:12:54.815+0000] {lakehouse_incremental_compaction_dag.py:121} INFO - Đang thực thi: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize
+[2026-07-22T03:12:54.817+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T03:12:54.819+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T03:12:54.823+0000] {sql.py:509} INFO - Running statement: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize, parameters: None
+[2026-07-22T03:12:54.951+0000] {python.py:240} INFO - Done. Returned value was: {'table': 'lakehouse.gold.dim_companies', 'layer': 'gold', 'strategy': 'full_scan', 'retention_days': '14d'}
+[2026-07-22T03:12:55.029+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-22T03:12:55.032+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=lakehouse_full_compaction_pipeline, task_id=execute_optimize, run_id=scheduled__2026-07-12T01:00:00+00:00, map_index=3, execution_date=20260712T010000, start_date=20260722T031254, end_date=20260722T031255
+[2026-07-22T03:12:55.094+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-22T03:12:55.137+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-22T03:12:55.140+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-22T03:55:44.841+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-22T03:55:44.879+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-22T03:55:44.895+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-22T03:55:44.897+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 4
+[2026-07-22T03:55:44.914+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): execute_optimize> on 2026-07-12 01:00:00+00:00
+[2026-07-22T03:55:44.921+0000] {standard_task_runner.py:72} INFO - Started process 2260 to run task
+[2026-07-22T03:55:44.924+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'lakehouse_full_compaction_pipeline', 'execute_optimize', 'scheduled__2026-07-12T01:00:00+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/lakehouse_incremental_compaction_dag.py', '--cfg-path', '/tmp/tmpei9f0wxh', '--map-index', '3']
+[2026-07-22T03:55:44.926+0000] {standard_task_runner.py:105} INFO - Job 32: Subtask execute_optimize
+[2026-07-22T03:55:45.045+0000] {task_command.py:467} INFO - Running <TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [running]> on host 793e7e004e3d
+[2026-07-22T03:55:45.346+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='lakehouse_full_compaction_pipeline' AIRFLOW_CTX_TASK_ID='execute_optimize' AIRFLOW_CTX_EXECUTION_DATE='2026-07-12T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-12T01:00:00+00:00'
+[2026-07-22T03:55:45.348+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-22T03:55:45.351+0000] {lakehouse_incremental_compaction_dag.py:121} INFO - Đang thực thi: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize
+[2026-07-22T03:55:45.354+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T03:55:45.357+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T03:55:45.361+0000] {sql.py:509} INFO - Running statement: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize, parameters: None
+[2026-07-22T03:55:45.614+0000] {python.py:240} INFO - Done. Returned value was: {'table': 'lakehouse.gold.dim_companies', 'layer': 'gold', 'strategy': 'full_scan', 'retention_days': '14d'}
+[2026-07-22T03:55:45.699+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-22T03:55:45.704+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=lakehouse_full_compaction_pipeline, task_id=execute_optimize, run_id=scheduled__2026-07-12T01:00:00+00:00, map_index=3, execution_date=20260712T010000, start_date=20260722T035544, end_date=20260722T035545
+[2026-07-22T03:55:45.752+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-22T03:55:45.826+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-22T03:55:45.829+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-22T04:22:28.790+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-22T04:22:28.819+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-22T04:22:28.837+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-22T04:22:28.840+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 4
+[2026-07-22T04:22:28.858+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): execute_optimize> on 2026-07-12 01:00:00+00:00
+[2026-07-22T04:22:28.863+0000] {standard_task_runner.py:72} INFO - Started process 2620 to run task
+[2026-07-22T04:22:28.867+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'lakehouse_full_compaction_pipeline', 'execute_optimize', 'scheduled__2026-07-12T01:00:00+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/lakehouse_incremental_compaction_dag.py', '--cfg-path', '/tmp/tmp5_w1zw13', '--map-index', '3']
+[2026-07-22T04:22:28.870+0000] {standard_task_runner.py:105} INFO - Job 32: Subtask execute_optimize
+[2026-07-22T04:22:28.992+0000] {task_command.py:467} INFO - Running <TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [running]> on host 46567f661dca
+[2026-07-22T04:22:29.276+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='lakehouse_full_compaction_pipeline' AIRFLOW_CTX_TASK_ID='execute_optimize' AIRFLOW_CTX_EXECUTION_DATE='2026-07-12T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-12T01:00:00+00:00'
+[2026-07-22T04:22:29.278+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-22T04:22:29.282+0000] {lakehouse_incremental_compaction_dag.py:121} INFO - Đang thực thi: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize
+[2026-07-22T04:22:29.284+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T04:22:29.286+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T04:22:29.290+0000] {sql.py:509} INFO - Running statement: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize, parameters: None
+[2026-07-22T04:22:29.441+0000] {python.py:240} INFO - Done. Returned value was: {'table': 'lakehouse.gold.dim_companies', 'layer': 'gold', 'strategy': 'full_scan', 'retention_days': '14d'}
+[2026-07-22T04:22:29.517+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-22T04:22:29.519+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=lakehouse_full_compaction_pipeline, task_id=execute_optimize, run_id=scheduled__2026-07-12T01:00:00+00:00, map_index=3, execution_date=20260712T010000, start_date=20260722T042228, end_date=20260722T042229
+[2026-07-22T04:22:29.569+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-22T04:22:29.601+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-22T04:22:29.603+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-22T04:36:38.140+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-22T04:36:38.164+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-22T04:36:38.177+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-22T04:36:38.179+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 4
+[2026-07-22T04:36:38.191+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): execute_optimize> on 2026-07-12 01:00:00+00:00
+[2026-07-22T04:36:38.196+0000] {standard_task_runner.py:72} INFO - Started process 865 to run task
+[2026-07-22T04:36:38.200+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'lakehouse_full_compaction_pipeline', 'execute_optimize', 'scheduled__2026-07-12T01:00:00+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/lakehouse_incremental_compaction_dag.py', '--cfg-path', '/tmp/tmp7248w6js', '--map-index', '3']
+[2026-07-22T04:36:38.202+0000] {standard_task_runner.py:105} INFO - Job 72: Subtask execute_optimize
+[2026-07-22T04:36:38.305+0000] {task_command.py:467} INFO - Running <TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [running]> on host b4f4a6304972
+[2026-07-22T04:36:38.536+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='lakehouse_full_compaction_pipeline' AIRFLOW_CTX_TASK_ID='execute_optimize' AIRFLOW_CTX_EXECUTION_DATE='2026-07-12T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-12T01:00:00+00:00'
+[2026-07-22T04:36:38.539+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-22T04:36:38.541+0000] {lakehouse_incremental_compaction_dag.py:121} INFO - Đang thực thi: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize
+[2026-07-22T04:36:38.544+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T04:36:38.546+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-22T04:36:38.548+0000] {sql.py:509} INFO - Running statement: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize, parameters: None
+[2026-07-22T04:36:38.914+0000] {python.py:240} INFO - Done. Returned value was: {'table': 'lakehouse.gold.dim_companies', 'layer': 'gold', 'strategy': 'full_scan', 'retention_days': '14d'}
+[2026-07-22T04:36:39.007+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-22T04:36:39.009+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=lakehouse_full_compaction_pipeline, task_id=execute_optimize, run_id=scheduled__2026-07-12T01:00:00+00:00, map_index=3, execution_date=20260712T010000, start_date=20260722T043638, end_date=20260722T043639
+[2026-07-22T04:36:39.066+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-22T04:36:39.120+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-22T04:36:39.128+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-23T02:17:07.757+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T02:17:07.780+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-23T02:17:07.791+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-23T02:17:07.793+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 4
+[2026-07-23T02:17:07.805+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): execute_optimize> on 2026-07-12 01:00:00+00:00
+[2026-07-23T02:17:07.809+0000] {standard_task_runner.py:72} INFO - Started process 3674 to run task
+[2026-07-23T02:17:07.813+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'lakehouse_full_compaction_pipeline', 'execute_optimize', 'scheduled__2026-07-12T01:00:00+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/lakehouse_incremental_compaction_dag.py', '--cfg-path', '/tmp/tmpw5zzvvrt', '--map-index', '3']
+[2026-07-23T02:17:07.815+0000] {standard_task_runner.py:105} INFO - Job 32: Subtask execute_optimize
+[2026-07-23T02:17:07.914+0000] {task_command.py:467} INFO - Running <TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [running]> on host d0280eba3cdf
+[2026-07-23T02:17:08.158+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='lakehouse_full_compaction_pipeline' AIRFLOW_CTX_TASK_ID='execute_optimize' AIRFLOW_CTX_EXECUTION_DATE='2026-07-12T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-12T01:00:00+00:00'
+[2026-07-23T02:17:08.160+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T02:17:08.162+0000] {lakehouse_incremental_compaction_dag.py:123} INFO - Đang thực thi: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize
+[2026-07-23T02:17:08.164+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-23T02:17:08.166+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-23T02:17:08.169+0000] {sql.py:509} INFO - Running statement: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize, parameters: None
+[2026-07-23T02:17:08.780+0000] {python.py:240} INFO - Done. Returned value was: {'table': 'lakehouse.gold.dim_companies', 'layer': 'gold', 'strategy': 'full_scan', 'retention_days': '14d'}
+[2026-07-23T02:17:08.855+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T02:17:08.857+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=lakehouse_full_compaction_pipeline, task_id=execute_optimize, run_id=scheduled__2026-07-12T01:00:00+00:00, map_index=3, execution_date=20260712T010000, start_date=20260723T021707, end_date=20260723T021708
+[2026-07-23T02:17:08.916+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-23T02:17:08.936+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-23T02:17:08.939+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-07-23T03:07:30.762+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T03:07:30.795+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-23T03:07:30.814+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [queued]>
+[2026-07-23T03:07:30.816+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 4
+[2026-07-23T03:07:30.833+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): execute_optimize> on 2026-07-12 01:00:00+00:00
+[2026-07-23T03:07:30.843+0000] {standard_task_runner.py:72} INFO - Started process 2272 to run task
+[2026-07-23T03:07:30.848+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'lakehouse_full_compaction_pipeline', 'execute_optimize', 'scheduled__2026-07-12T01:00:00+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/lakehouse_incremental_compaction_dag.py', '--cfg-path', '/tmp/tmpwfswmcge', '--map-index', '3']
+[2026-07-23T03:07:30.851+0000] {standard_task_runner.py:105} INFO - Job 32: Subtask execute_optimize
+[2026-07-23T03:07:30.977+0000] {task_command.py:467} INFO - Running <TaskInstance: lakehouse_full_compaction_pipeline.execute_optimize scheduled__2026-07-12T01:00:00+00:00 map_index=3 [running]> on host b3f56365d5f7
+[2026-07-23T03:07:31.244+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='lakehouse_full_compaction_pipeline' AIRFLOW_CTX_TASK_ID='execute_optimize' AIRFLOW_CTX_EXECUTION_DATE='2026-07-12T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-12T01:00:00+00:00'
+[2026-07-23T03:07:31.246+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T03:07:31.249+0000] {lakehouse_incremental_compaction_dag.py:126} INFO - ==================================================
+[2026-07-23T03:07:31.251+0000] {lakehouse_incremental_compaction_dag.py:127} INFO - 🚀 BẮT ĐẦU OPTIMIZE: lakehouse.gold.dim_companies
+[2026-07-23T03:07:31.252+0000] {lakehouse_incremental_compaction_dag.py:128} INFO - ⚙️ Chiến lược: full_scan
+[2026-07-23T03:07:31.254+0000] {lakehouse_incremental_compaction_dag.py:129} INFO - 📝 DDL: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize
+[2026-07-23T03:07:31.256+0000] {lakehouse_incremental_compaction_dag.py:130} INFO - ==================================================
+[2026-07-23T03:07:31.259+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-23T03:07:31.262+0000] {base.py:84} INFO - Retrieving connection 'trino_default'
+[2026-07-23T03:07:31.265+0000] {sql.py:509} INFO - Running statement: ALTER TABLE lakehouse.gold.dim_companies EXECUTE optimize, parameters: None
+[2026-07-23T03:07:31.508+0000] {lakehouse_incremental_compaction_dag.py:139} INFO - ✅ Hoàn thành truy vấn trong 0.25 giây.
+[2026-07-23T03:07:31.510+0000] {lakehouse_incremental_compaction_dag.py:151} INFO - ℹ️ KẾT QUẢ: Không có dữ liệu trả về hoặc không có file nào được tác động.
+[2026-07-23T03:07:31.512+0000] {lakehouse_incremental_compaction_dag.py:159} INFO - 🏁 Đã bảo trì xong metadata cho lakehouse.gold.dim_companies.
+[2026-07-23T03:07:31.514+0000] {python.py:240} INFO - Done. Returned value was: {'table': 'lakehouse.gold.dim_companies', 'layer': 'gold', 'strategy': 'full_scan', 'retention_days': '14d'}
+[2026-07-23T03:07:31.570+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T03:07:31.572+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=lakehouse_full_compaction_pipeline, task_id=execute_optimize, run_id=scheduled__2026-07-12T01:00:00+00:00, map_index=3, execution_date=20260712T010000, start_date=20260723T030730, end_date=20260723T030731
+[2026-07-23T03:07:31.631+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-23T03:07:31.646+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,258 @@
+[2026-08-14T01:56:15.863+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-14T01:56:15.886+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: serverless_spark_dev_pipeline.run_silver_requests_dev manual__2026-08-14T01:55:42.985613+00:00 [queued]>
+[2026-08-14T01:56:15.896+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: serverless_spark_dev_pipeline.run_silver_requests_dev manual__2026-08-14T01:55:42.985613+00:00 [queued]>
+[2026-08-14T01:56:15.898+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2026-08-14T01:56:15.912+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_silver_requests_dev> on 2026-08-14 01:55:42.985613+00:00
+[2026-08-14T01:56:15.918+0000] {standard_task_runner.py:72} INFO - Started process 426 to run task
+[2026-08-14T01:56:15.921+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'serverless_spark_dev_pipeline', 'run_silver_requests_dev', 'manual__2026-08-14T01:55:42.985613+00:00', '--job-id', '161', '--raw', '--subdir', 'DAGS_FOLDER/silver_spark_serverless.py', '--cfg-path', '/tmp/tmpzg8cosrd']
+[2026-08-14T01:56:15.925+0000] {standard_task_runner.py:105} INFO - Job 161: Subtask run_silver_requests_dev
+[2026-08-14T01:56:16.017+0000] {task_command.py:467} INFO - Running <TaskInstance: serverless_spark_dev_pipeline.run_silver_requests_dev manual__2026-08-14T01:55:42.985613+00:00 [running]> on host 795d172b9d32
+[2026-08-14T01:56:16.326+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering_dev' AIRFLOW_CTX_DAG_ID='serverless_spark_dev_pipeline' AIRFLOW_CTX_TASK_ID='run_silver_requests_dev' AIRFLOW_CTX_EXECUTION_DATE='2026-08-14T01:55:42.985613+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-08-14T01:55:42.985613+00:00'
+[2026-08-14T01:56:16.329+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-14T01:56:16.419+0000] {docker.py:367} INFO - Starting docker container from image logistics-lakehouse-spark:latest
+[2026-08-14T01:56:19.518+0000] {docker.py:438} INFO - 2026-08-14 01:56:19 | INFO     | __main__ | 🚀 Khởi động Pipeline. Cấu hình: Job='silver_requests', LookbackDays=3
+[2026-08-14T01:56:19.520+0000] {docker.py:438} INFO - 2026-08-14 01:56:19 | INFO     | configs.spark_config | Initializing SparkSession for App: Job_Silver_Order_Requests in DEV environment...
+[2026-08-14T01:56:19.752+0000] {docker.py:438} INFO - 26/08/14 01:56:19 INFO SparkContext: Running Spark version 3.5.4
+[2026-08-14T01:56:19.756+0000] {docker.py:438} INFO - 26/08/14 01:56:19 INFO SparkContext: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+[2026-08-14T01:56:19.760+0000] {docker.py:438} INFO - 26/08/14 01:56:19 INFO SparkContext: Java version 17.0.13
+[2026-08-14T01:56:19.880+0000] {docker.py:438} INFO - 26/08/14 01:56:19 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-08-14T01:56:20.067+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO ResourceUtils: ==============================================================
+[2026-08-14T01:56:20.070+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2026-08-14T01:56:20.072+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO ResourceUtils: ==============================================================
+[2026-08-14T01:56:20.074+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO SparkContext: Submitted application: Job_Silver_Order_Requests
+[2026-08-14T01:56:20.103+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 1024, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2026-08-14T01:56:20.116+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO ResourceProfile: Limiting resource is cpu
+[2026-08-14T01:56:20.125+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2026-08-14T01:56:20.220+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO SecurityManager: Changing view acls to: spark
+[2026-08-14T01:56:20.224+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO SecurityManager: Changing modify acls to: spark
+[2026-08-14T01:56:20.229+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO SecurityManager: Changing view acls groups to:
+[2026-08-14T01:56:20.231+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO SecurityManager: Changing modify acls groups to:
+[2026-08-14T01:56:20.234+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+[2026-08-14T01:56:20.914+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO Utils: Successfully started service 'sparkDriver' on port 40497.
+[2026-08-14T01:56:20.989+0000] {docker.py:438} INFO - 26/08/14 01:56:20 INFO SparkEnv: Registering MapOutputTracker
+[2026-08-14T01:56:21.090+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO SparkEnv: Registering BlockManagerMaster
+[2026-08-14T01:56:21.153+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2026-08-14T01:56:21.155+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2026-08-14T01:56:21.174+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2026-08-14T01:56:21.225+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-e0739b86-5e35-45a2-a998-2a51ae269d52
+[2026-08-14T01:56:21.245+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO MemoryStore: MemoryStore started with capacity 3.2 GiB
+[2026-08-14T01:56:21.267+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO SparkEnv: Registering OutputCommitCoordinator
+[2026-08-14T01:56:21.512+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2026-08-14T01:56:21.593+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2026-08-14T01:56:21.873+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO Executor: Starting executor ID driver on host 1d7d9490e344
+[2026-08-14T01:56:21.876+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO Executor: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+[2026-08-14T01:56:21.880+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO Executor: Java version 17.0.13
+[2026-08-14T01:56:21.889+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2026-08-14T01:56:21.894+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@77ef9790 for default.
+[2026-08-14T01:56:21.925+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36287.
+[2026-08-14T01:56:21.930+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO NettyBlockTransferService: Server created on 1d7d9490e344:36287
+[2026-08-14T01:56:21.934+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2026-08-14T01:56:21.937+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 1d7d9490e344, 36287, None)
+[2026-08-14T01:56:21.939+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO BlockManagerMasterEndpoint: Registering block manager 1d7d9490e344:36287 with 3.2 GiB RAM, BlockManagerId(driver, 1d7d9490e344, 36287, None)
+[2026-08-14T01:56:21.942+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 1d7d9490e344, 36287, None)
+[2026-08-14T01:56:21.943+0000] {docker.py:438} INFO - 26/08/14 01:56:21 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 1d7d9490e344, 36287, None)
+[2026-08-14T01:56:22.351+0000] {docker.py:438} INFO - 2026-08-14 01:56:22 | INFO     | configs.spark_config | Spark initialized successfully. Version: 3.5.4
+[2026-08-14T01:56:22.354+0000] {docker.py:438} INFO - 2026-08-14 01:56:22 | INFO     | jobs.silver_requests_job | --- BẮT ĐẦU CHẠY JOB: Job_Silver_Order_Requests ---
+[2026-08-14T01:56:22.433+0000] {docker.py:438} INFO - 26/08/14 01:56:22 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2026-08-14T01:56:22.443+0000] {docker.py:438} INFO - 26/08/14 01:56:22 INFO SharedState: Warehouse path is 'file:/opt/spark/work-dir/spark-warehouse'.
+[2026-08-14T01:56:23.609+0000] {docker.py:438} INFO - 26/08/14 01:56:23 INFO CatalogUtil: Loading custom FileIO implementation: org.apache.iceberg.hadoop.HadoopFileIO
+[2026-08-14T01:56:24.306+0000] {docker.py:438} INFO - 2026-08-14 01:56:24 | INFO     | utils.spark_utils | Bảng lakehouse.silver.order_requests không tồn tại hoặc vừa được reset. Job sẽ chạy ở chế độ Full Load.
+[2026-08-14T01:56:24.308+0000] {docker.py:438} INFO - 2026-08-14 01:56:24 | INFO     | jobs.silver_requests_job | Đọc dữ liệu từ lakehouse.bronze.raw_orders với _ingest_time >= '1970-01-01 00:00:00'
+[2026-08-14T01:56:24.378+0000] {docker.py:438} INFO - 26/08/14 01:56:24 INFO BaseMetastoreTableOperations: Refreshing table metadata from new version: s3://lakehouse/bronze/raw_orders_09f0a50a-33ab-4012-8e38-5bdb34c9f27d/metadata/00000-18c40179-b27a-4d40-ac75-fc7f00b7cf87.metadata.json
+[2026-08-14T01:56:24.453+0000] {docker.py:438} INFO - 26/08/14 01:56:24 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+[2026-08-14T01:56:24.461+0000] {docker.py:438} INFO - 26/08/14 01:56:24 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+[2026-08-14T01:56:24.462+0000] {docker.py:438} INFO - 26/08/14 01:56:24 INFO MetricsSystemImpl: s3a-file-system metrics system started
+[2026-08-14T01:56:25.191+0000] {docker.py:438} INFO - 26/08/14 01:56:25 INFO NessieUtil: loadTableMetadata for 'bronze.raw_orders' from location 's3://lakehouse/bronze/raw_orders_09f0a50a-33ab-4012-8e38-5bdb34c9f27d/metadata/00000-18c40179-b27a-4d40-ac75-fc7f00b7cf87.metadata.json' at 'Branch{name=main, metadata=null, hash=5f21a9a00054939ed12ac635de8a5d3ac0b3dd267c63c08904f220732aadfc09}'
+[2026-08-14T01:56:25.197+0000] {docker.py:438} INFO - 26/08/14 01:56:25 INFO BaseMetastoreCatalog: Table loaded by catalog: lakehouse.bronze.raw_orders
+[2026-08-14T01:56:25.755+0000] {docker.py:438} INFO - 26/08/14 01:56:25 INFO SparkScanBuilder: Evaluating completely on Iceberg side: _ingest_time IS NOT NULL
+[2026-08-14T01:56:25.777+0000] {docker.py:438} INFO - 26/08/14 01:56:25 INFO V2ScanRelationPushDown: 
+[2026-08-14T01:56:25.779+0000] {docker.py:438} INFO - Pushing operators to lakehouse.bronze.raw_orders
+[2026-08-14T01:56:25.780+0000] {docker.py:438} INFO - Pushed Filters: _ingest_time IS NOT NULL, _ingest_time >= 0
+[2026-08-14T01:56:25.782+0000] {docker.py:438} INFO - Post-Scan Filters: (_ingest_time#58 >= 1970-01-01 00:00:00)
+[2026-08-14T01:56:25.818+0000] {docker.py:438} INFO - 26/08/14 01:56:25 INFO V2ScanRelationPushDown: 
+[2026-08-14T01:56:25.822+0000] {docker.py:438} INFO - Output: _ingest_time#58
+[2026-08-14T01:56:25.830+0000] {docker.py:438} INFO - 26/08/14 01:56:25 INFO SnapshotScan: Scanning table lakehouse.bronze.raw_orders snapshot 3741569906607206598 created at 2026-08-11T09:18:07.516+00:00 with filter (_ingest_time IS NOT NULL AND _ingest_time >= (1-digit-int))
+[2026-08-14T01:56:25.981+0000] {docker.py:438} INFO - 26/08/14 01:56:25 INFO BaseDistributedDataScan: Planning file tasks locally for table lakehouse.bronze.raw_orders
+[2026-08-14T01:56:26.081+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO SparkPartitioningAwareScan: Reporting UnknownPartitioning with 2 partition(s) for table lakehouse.bronze.raw_orders
+[2026-08-14T01:56:26.187+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 32.0 KiB, free 3.2 GiB)
+[2026-08-14T01:56:26.370+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 28.4 KiB, free 3.2 GiB)
+[2026-08-14T01:56:26.373+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 1d7d9490e344:36287 (size: 28.4 KiB, free: 3.2 GiB)
+[2026-08-14T01:56:26.380+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO SparkContext: Created broadcast 0 from broadcast at SparkBatch.java:79
+[2026-08-14T01:56:26.410+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 32.0 KiB, free 3.2 GiB)
+[2026-08-14T01:56:26.420+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 28.4 KiB, free 3.2 GiB)
+[2026-08-14T01:56:26.435+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 1d7d9490e344:36287 (size: 28.4 KiB, free: 3.2 GiB)
+[2026-08-14T01:56:26.438+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO SparkContext: Created broadcast 1 from broadcast at SparkBatch.java:79
+[2026-08-14T01:56:26.678+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO CodeGenerator: Code generated in 142.405007 ms
+[2026-08-14T01:56:26.763+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO SparkContext: Starting job: isEmpty at NativeMethodAccessorImpl.java:0
+[2026-08-14T01:56:26.784+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO DAGScheduler: Got job 0 (isEmpty at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2026-08-14T01:56:26.785+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO DAGScheduler: Final stage: ResultStage 0 (isEmpty at NativeMethodAccessorImpl.java:0)
+[2026-08-14T01:56:26.786+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO DAGScheduler: Parents of final stage: List()
+[2026-08-14T01:56:26.788+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO DAGScheduler: Missing parents: List()
+[2026-08-14T01:56:26.797+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at isEmpty at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2026-08-14T01:56:26.890+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 11.8 KiB, free 3.2 GiB)
+[2026-08-14T01:56:26.892+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 5.1 KiB, free 3.2 GiB)
+[2026-08-14T01:56:26.894+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 1d7d9490e344:36287 (size: 5.1 KiB, free: 3.2 GiB)
+[2026-08-14T01:56:26.896+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1585
+[2026-08-14T01:56:26.911+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at isEmpty at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2026-08-14T01:56:26.913+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+[2026-08-14T01:56:26.997+0000] {docker.py:438} INFO - 26/08/14 01:56:26 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (1d7d9490e344, executor driver, partition 0, PROCESS_LOCAL, 20144 bytes)
+[2026-08-14T01:56:27.026+0000] {docker.py:438} INFO - 26/08/14 01:56:27 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+[2026-08-14T01:56:27.223+0000] {docker.py:438} INFO - 26/08/14 01:56:27 INFO CodeGenerator: Code generated in 23.952686 ms
+[2026-08-14T01:56:27.340+0000] {docker.py:438} INFO - 26/08/14 01:56:27 INFO S3AInputStream: Switching to Random IO seek policy
+[2026-08-14T01:56:27.526+0000] {docker.py:438} INFO - 26/08/14 01:56:27 INFO CodecPool: Got brand-new decompressor [.zstd]
+[2026-08-14T01:56:27.615+0000] {docker.py:438} INFO - 26/08/14 01:56:27 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 4213 bytes result sent to driver
+[2026-08-14T01:56:27.631+0000] {docker.py:438} INFO - 26/08/14 01:56:27 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 698 ms on 1d7d9490e344 (executor driver) (1/1)
+[2026-08-14T01:56:27.633+0000] {docker.py:438} INFO - 26/08/14 01:56:27 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2026-08-14T01:56:27.638+0000] {docker.py:438} INFO - 26/08/14 01:56:27 INFO DAGScheduler: ResultStage 0 (isEmpty at NativeMethodAccessorImpl.java:0) finished in 0.825 s
+[2026-08-14T01:56:27.640+0000] {docker.py:438} INFO - 26/08/14 01:56:27 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2026-08-14T01:56:27.642+0000] {docker.py:438} INFO - 26/08/14 01:56:27 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+[2026-08-14T01:56:27.643+0000] {docker.py:438} INFO - 26/08/14 01:56:27 INFO DAGScheduler: Job 0 finished: isEmpty at NativeMethodAccessorImpl.java:0, took 0.877788 s
+[2026-08-14T01:56:27.646+0000] {docker.py:438} INFO - 2026-08-14 01:56:27 | INFO     | utils.spark_utils | Deduplicating data based on keys: ['_source_system', '_db_id', '_id'], ordered by _ingest_time DESC
+[2026-08-14T01:56:27.779+0000] {docker.py:438} INFO - 2026-08-14 01:56:27 | INFO     | transformations.requests_tf | Bắt đầu transform dữ liệu order_requests...
+[2026-08-14T01:56:28.068+0000] {docker.py:438} INFO - 2026-08-14 01:56:28 | INFO     | transformations.requests_tf | Hoàn tất thiết lập logic transform order_requests.
+[2026-08-14T01:56:28.080+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 1d7d9490e344:36287 in memory (size: 5.1 KiB, free: 3.2 GiB)
+[2026-08-14T01:56:28.126+0000] {docker.py:438} INFO - 2026-08-14 01:56:28 | INFO     | utils.iceberg_utils | Table lakehouse.silver.order_requests not found. Creating and writing initial data...
+[2026-08-14T01:56:28.260+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO BaseMetastoreCatalog: Table properties set at catalog level through catalog properties: {gc.enabled=false, write.metadata.delete-after-commit.enabled=false}
+[2026-08-14T01:56:28.262+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO BaseMetastoreCatalog: Table properties enforced at catalog level through catalog properties: {}
+[2026-08-14T01:56:28.371+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO SparkScanBuilder: Evaluating completely on Iceberg side: _ingest_time IS NOT NULL
+[2026-08-14T01:56:28.373+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO V2ScanRelationPushDown: 
+[2026-08-14T01:56:28.375+0000] {docker.py:438} INFO - Pushing operators to lakehouse.bronze.raw_orders
+[2026-08-14T01:56:28.380+0000] {docker.py:438} INFO - Pushed Filters: _ingest_time IS NOT NULL, _ingest_time >= 0
+[2026-08-14T01:56:28.382+0000] {docker.py:438} INFO - Post-Scan Filters: (_ingest_time#58 >= 1970-01-01 00:00:00)
+[2026-08-14T01:56:28.383+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO V2ScanRelationPushDown: 
+[2026-08-14T01:56:28.385+0000] {docker.py:438} INFO - Output: _db_id#0, _id#1, requests#6, create_time#12, _ingest_time#58, _source_system#60
+[2026-08-14T01:56:28.388+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO SnapshotScan: Scanning table lakehouse.bronze.raw_orders snapshot 3741569906607206598 created at 2026-08-11T09:18:07.516+00:00 with filter (_ingest_time IS NOT NULL AND _ingest_time >= (1-digit-int))
+[2026-08-14T01:56:28.390+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO BaseDistributedDataScan: Planning file tasks locally for table lakehouse.bronze.raw_orders
+[2026-08-14T01:56:28.398+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO SparkPartitioningAwareScan: Reporting UnknownPartitioning with 2 partition(s) for table lakehouse.bronze.raw_orders
+[2026-08-14T01:56:28.411+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO SparkWrite: Requesting 0 bytes advisory partition size for table silver.order_requests
+[2026-08-14T01:56:28.413+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO SparkWrite: Requesting UnspecifiedDistribution as write distribution for table silver.order_requests
+[2026-08-14T01:56:28.418+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO SparkWrite: Requesting [] as write ordering for table silver.order_requests
+[2026-08-14T01:56:28.456+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 32.0 KiB, free 3.2 GiB)
+[2026-08-14T01:56:28.460+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 28.4 KiB, free 3.2 GiB)
+[2026-08-14T01:56:28.461+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 1d7d9490e344:36287 (size: 28.4 KiB, free: 3.2 GiB)
+[2026-08-14T01:56:28.463+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO SparkContext: Created broadcast 3 from broadcast at SparkBatch.java:79
+[2026-08-14T01:56:28.484+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 32.0 KiB, free 3.2 GiB)
+[2026-08-14T01:56:28.487+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 28.4 KiB, free 3.2 GiB)
+[2026-08-14T01:56:28.488+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 1d7d9490e344:36287 (size: 28.4 KiB, free: 3.2 GiB)
+[2026-08-14T01:56:28.490+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO SparkContext: Created broadcast 4 from broadcast at SparkBatch.java:79
+[2026-08-14T01:56:28.574+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO CodeGenerator: Code generated in 18.6449 ms
+[2026-08-14T01:56:28.640+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO DAGScheduler: Registering RDD 8 (saveAsTable at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+[2026-08-14T01:56:28.648+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO DAGScheduler: Got map stage job 1 (saveAsTable at NativeMethodAccessorImpl.java:0) with 2 output partitions
+[2026-08-14T01:56:28.650+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO DAGScheduler: Final stage: ShuffleMapStage 1 (saveAsTable at NativeMethodAccessorImpl.java:0)
+[2026-08-14T01:56:28.652+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO DAGScheduler: Parents of final stage: List()
+[2026-08-14T01:56:28.654+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO DAGScheduler: Missing parents: List()
+[2026-08-14T01:56:28.656+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[8] at saveAsTable at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2026-08-14T01:56:28.706+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 32.1 KiB, free 3.2 GiB)
+[2026-08-14T01:56:28.731+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 14.0 KiB, free 3.2 GiB)
+[2026-08-14T01:56:28.733+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 1d7d9490e344:36287 (size: 14.0 KiB, free: 3.2 GiB)
+[2026-08-14T01:56:28.737+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1585
+[2026-08-14T01:56:28.738+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[8] at saveAsTable at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+[2026-08-14T01:56:28.739+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks resource profile 0
+[2026-08-14T01:56:28.744+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (1d7d9490e344, executor driver, partition 0, PROCESS_LOCAL, 20434 bytes)
+[2026-08-14T01:56:28.746+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 2) (1d7d9490e344, executor driver, partition 1, PROCESS_LOCAL, 20443 bytes)
+[2026-08-14T01:56:28.748+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+[2026-08-14T01:56:28.750+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO Executor: Running task 1.0 in stage 1.0 (TID 2)
+[2026-08-14T01:56:28.790+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO CodeGenerator: Code generated in 14.444604 ms
+[2026-08-14T01:56:28.823+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO CodeGenerator: Code generated in 22.493737 ms
+[2026-08-14T01:56:28.841+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO CodeGenerator: Code generated in 9.812402 ms
+[2026-08-14T01:56:28.857+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO CodeGenerator: Code generated in 6.192366 ms
+[2026-08-14T01:56:28.881+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO S3AInputStream: Switching to Random IO seek policy
+[2026-08-14T01:56:28.885+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO S3AInputStream: Switching to Random IO seek policy
+[2026-08-14T01:56:28.957+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO CodecPool: Got brand-new decompressor [.zstd]
+[2026-08-14T01:56:28.961+0000] {docker.py:438} INFO - 26/08/14 01:56:28 INFO CodecPool: Got brand-new decompressor [.zstd]
+[2026-08-14T01:56:29.118+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO CodeGenerator: Code generated in 18.791111 ms
+[2026-08-14T01:56:29.256+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO Executor: Finished task 1.0 in stage 1.0 (TID 2). 5097 bytes result sent to driver
+[2026-08-14T01:56:29.263+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 2) in 518 ms on 1d7d9490e344 (executor driver) (1/2)
+[2026-08-14T01:56:29.466+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 5140 bytes result sent to driver
+[2026-08-14T01:56:29.468+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 729 ms on 1d7d9490e344 (executor driver) (2/2)
+[2026-08-14T01:56:29.470+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2026-08-14T01:56:29.473+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO DAGScheduler: ShuffleMapStage 1 (saveAsTable at NativeMethodAccessorImpl.java:0) finished in 0.818 s
+[2026-08-14T01:56:29.474+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO DAGScheduler: looking for newly runnable stages
+[2026-08-14T01:56:29.475+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO DAGScheduler: running: Set()
+[2026-08-14T01:56:29.476+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO DAGScheduler: waiting: Set()
+[2026-08-14T01:56:29.477+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO DAGScheduler: failed: Set()
+[2026-08-14T01:56:29.523+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO ShufflePartitionsUtil: For shuffle(0), advisory target size: 67108864, actual target size 3896933, minimum partition size: 1048576
+[2026-08-14T01:56:29.533+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 1d7d9490e344:36287 in memory (size: 28.4 KiB, free: 3.2 GiB)
+[2026-08-14T01:56:29.546+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 1d7d9490e344:36287 in memory (size: 28.4 KiB, free: 3.2 GiB)
+[2026-08-14T01:56:29.589+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO CodeGenerator: Code generated in 14.254221 ms
+[2026-08-14T01:56:29.616+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO CodeGenerator: Code generated in 13.829589 ms
+[2026-08-14T01:56:29.650+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 32.0 KiB, free 3.2 GiB)
+[2026-08-14T01:56:29.652+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 27.5 KiB, free 3.2 GiB)
+[2026-08-14T01:56:29.657+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 1d7d9490e344:36287 (size: 27.5 KiB, free: 3.2 GiB)
+[2026-08-14T01:56:29.659+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO SparkContext: Created broadcast 6 from broadcast at SparkWrite.java:193
+[2026-08-14T01:56:29.661+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO AppendDataExec: Start processing data source write support: IcebergBatchWrite(table=silver.order_requests, format=PARQUET). The input RDD has 2 partitions.
+[2026-08-14T01:56:29.671+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO SparkContext: Starting job: saveAsTable at NativeMethodAccessorImpl.java:0
+[2026-08-14T01:56:29.678+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO DAGScheduler: Got job 2 (saveAsTable at NativeMethodAccessorImpl.java:0) with 2 output partitions
+[2026-08-14T01:56:29.682+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO DAGScheduler: Final stage: ResultStage 3 (saveAsTable at NativeMethodAccessorImpl.java:0)
+[2026-08-14T01:56:29.684+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+[2026-08-14T01:56:29.686+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO DAGScheduler: Missing parents: List()
+[2026-08-14T01:56:29.687+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[15] at saveAsTable at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2026-08-14T01:56:29.720+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 55.4 KiB, free 3.2 GiB)
+[2026-08-14T01:56:29.723+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 24.1 KiB, free 3.2 GiB)
+[2026-08-14T01:56:29.724+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 1d7d9490e344:36287 (size: 24.1 KiB, free: 3.2 GiB)
+[2026-08-14T01:56:29.726+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1585
+[2026-08-14T01:56:29.727+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 3 (MapPartitionsRDD[15] at saveAsTable at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+[2026-08-14T01:56:29.728+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO TaskSchedulerImpl: Adding task set 3.0 with 2 tasks resource profile 0
+[2026-08-14T01:56:29.734+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3) (1d7d9490e344, executor driver, partition 0, NODE_LOCAL, 8999 bytes)
+[2026-08-14T01:56:29.736+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 4) (1d7d9490e344, executor driver, partition 1, NODE_LOCAL, 8999 bytes)
+[2026-08-14T01:56:29.738+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO Executor: Running task 1.0 in stage 3.0 (TID 4)
+[2026-08-14T01:56:29.741+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO Executor: Running task 0.0 in stage 3.0 (TID 3)
+[2026-08-14T01:56:29.820+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO ShuffleBlockFetcherIterator: Getting 2 (3.7 MiB) non-empty blocks including 2 (3.7 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2026-08-14T01:56:29.822+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO ShuffleBlockFetcherIterator: Getting 2 (3.7 MiB) non-empty blocks including 2 (3.7 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2026-08-14T01:56:29.824+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 15 ms
+[2026-08-14T01:56:29.828+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 17 ms
+[2026-08-14T01:56:29.840+0000] {docker.py:438} INFO - 26/08/14 01:56:29 INFO CodeGenerator: Code generated in 8.113423 ms
+[2026-08-14T01:56:30.102+0000] {docker.py:438} INFO - 26/08/14 01:56:30 INFO CodeGenerator: Code generated in 12.035091 ms
+[2026-08-14T01:56:30.119+0000] {docker.py:438} INFO - 26/08/14 01:56:30 INFO CodeGenerator: Code generated in 5.989561 ms
+[2026-08-14T01:56:30.130+0000] {docker.py:438} INFO - 26/08/14 01:56:30 INFO CodeGenerator: Code generated in 7.272512 ms
+[2026-08-14T01:56:30.138+0000] {docker.py:438} INFO - 26/08/14 01:56:30 INFO CodeGenerator: Code generated in 4.960456 ms
+[2026-08-14T01:56:30.160+0000] {docker.py:438} INFO - 26/08/14 01:56:30 INFO CodeGenerator: Code generated in 7.429054 ms
+[2026-08-14T01:56:30.216+0000] {docker.py:438} INFO - 26/08/14 01:56:30 INFO CodeGenerator: Code generated in 28.737341 ms
+[2026-08-14T01:56:30.236+0000] {docker.py:438} INFO - 26/08/14 01:56:30 INFO CodeGenerator: Code generated in 19.677237 ms
+[2026-08-14T01:56:30.270+0000] {docker.py:438} INFO - 26/08/14 01:56:30 INFO CodecPool: Got brand-new compressor [.zstd]
+[2026-08-14T01:56:30.272+0000] {docker.py:438} INFO - 26/08/14 01:56:30 INFO CodecPool: Got brand-new compressor [.zstd]
+[2026-08-14T01:56:32.089+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO DataWritingSparkTask: Writer for partition 0 is committing.
+[2026-08-14T01:56:32.108+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO DataWritingSparkTask: Writer for partition 1 is committing.
+[2026-08-14T01:56:32.350+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO DataWritingSparkTask: Committed partition 1 (task 4, attempt 0, stage 3.0)
+[2026-08-14T01:56:32.352+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO DataWritingSparkTask: Committed partition 0 (task 3, attempt 0, stage 3.0)
+[2026-08-14T01:56:32.354+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO Executor: Finished task 1.0 in stage 3.0 (TID 4). 9653 bytes result sent to driver
+[2026-08-14T01:56:32.357+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO Executor: Finished task 0.0 in stage 3.0 (TID 3). 9610 bytes result sent to driver
+[2026-08-14T01:56:32.361+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 4) in 2627 ms on 1d7d9490e344 (executor driver) (1/2)
+[2026-08-14T01:56:32.371+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 2638 ms on 1d7d9490e344 (executor driver) (2/2)
+[2026-08-14T01:56:32.373+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool
+[2026-08-14T01:56:32.375+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO DAGScheduler: ResultStage 3 (saveAsTable at NativeMethodAccessorImpl.java:0) finished in 2.677 s
+[2026-08-14T01:56:32.376+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+[2026-08-14T01:56:32.378+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+[2026-08-14T01:56:32.380+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO DAGScheduler: Job 2 finished: saveAsTable at NativeMethodAccessorImpl.java:0, took 2.706529 s
+[2026-08-14T01:56:32.382+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO AppendDataExec: Data source write support IcebergBatchWrite(table=silver.order_requests, format=PARQUET) is committing.
+[2026-08-14T01:56:32.395+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO SparkWrite: Committing append with 2 new data files to table silver.order_requests
+[2026-08-14T01:56:32.489+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO SnapshotProducer: Committed snapshot 1746720367664777896 (MergeAppend)
+[2026-08-14T01:56:32.507+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO LoggingMetricsReporter: Received metrics report: CommitReport{tableName=silver.order_requests, snapshotId=1746720367664777896, sequenceNumber=1, operation=append, commitMetrics=CommitMetricsResult{totalDuration=TimerResult{timeUnit=NANOSECONDS, totalDuration=PT0.107648486S, count=1}, attempts=CounterResult{unit=COUNT, value=1}, addedDataFiles=CounterResult{unit=COUNT, value=2}, removedDataFiles=null, totalDataFiles=CounterResult{unit=COUNT, value=2}, addedDeleteFiles=null, addedEqualityDeleteFiles=null, addedPositionalDeleteFiles=null, removedDeleteFiles=null, removedEqualityDeleteFiles=null, removedPositionalDeleteFiles=null, totalDeleteFiles=CounterResult{unit=COUNT, value=0}, addedRecords=CounterResult{unit=COUNT, value=107835}, removedRecords=null, totalRecords=CounterResult{unit=COUNT, value=107835}, addedFilesSizeInBytes=CounterResult{unit=BYTES, value=1401372}, removedFilesSizeInBytes=null, totalFilesSizeInBytes=CounterResult{unit=BYTES, value=1401372}, addedPositionalDeletes=null, removedPositionalDeletes=null, totalPositionalDeletes=CounterResult{unit=COUNT, value=0}, addedEqualityDeletes=null, removedEqualityDeletes=null, totalEqualityDeletes=CounterResult{unit=COUNT, value=0}}, metadata={engine-version=3.5.4, app-id=local-1786672581752, engine-name=spark, iceberg-version=Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)}}
+[2026-08-14T01:56:32.512+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO SparkWrite: Committed in 112 ms
+[2026-08-14T01:56:32.516+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO AppendDataExec: Data source write support IcebergBatchWrite(table=silver.order_requests, format=PARQUET) committed.
+[2026-08-14T01:56:32.604+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO NessieIcebergClient: Committed 'silver.order_requests' against 'Branch{name=main, metadata=null, hash=2e618b17853c7a413d89a83adefee55f63e8579092dfa088c7e23d8f416a74ef}', expected commit-id was '5f21a9a00054939ed12ac635de8a5d3ac0b3dd267c63c08904f220732aadfc09'
+[2026-08-14T01:56:32.605+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO BaseMetastoreTableOperations: Successfully committed to table silver.order_requests in 66 ms
+[2026-08-14T01:56:32.607+0000] {docker.py:438} INFO - 2026-08-14 01:56:32 | INFO     | utils.iceberg_utils | Successfully created and loaded initial data into lakehouse.silver.order_requests
+[2026-08-14T01:56:32.608+0000] {docker.py:438} INFO - 2026-08-14 01:56:32 | INFO     | jobs.silver_requests_job | --- KẾT THÚC THÀNH CÔNG JOB: Job_Silver_Order_Requests ---
+[2026-08-14T01:56:32.610+0000] {docker.py:438} INFO - 2026-08-14 01:56:32 | INFO     | jobs.silver_requests_job | Đóng SparkSession. Giải phóng tài nguyên.
+[2026-08-14T01:56:32.611+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2026-08-14T01:56:32.614+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO SparkUI: Stopped Spark web UI at http://1d7d9490e344:4040
+[2026-08-14T01:56:32.623+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2026-08-14T01:56:32.633+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO MemoryStore: MemoryStore cleared
+[2026-08-14T01:56:32.635+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO BlockManager: BlockManager stopped
+[2026-08-14T01:56:32.637+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2026-08-14T01:56:32.638+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2026-08-14T01:56:32.642+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO SparkContext: Successfully stopped SparkContext
+[2026-08-14T01:56:32.705+0000] {docker.py:438} INFO - 2026-08-14 01:56:32 | INFO     | __main__ | ✅ Job 'silver_requests' chạy THÀNH CÔNG. Tổng thời gian: 13.19 giây.
+[2026-08-14T01:56:32.726+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO ShutdownHookManager: Shutdown hook called
+[2026-08-14T01:56:32.728+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO ShutdownHookManager: Deleting directory /tmp/spark-6ff3cf3f-3334-4bdb-98a6-158835e08923
+[2026-08-14T01:56:32.730+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO ShutdownHookManager: Deleting directory /tmp/spark-b8b51a4a-1130-4ece-88e7-f6213aff8193
+[2026-08-14T01:56:32.731+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO ShutdownHookManager: Deleting directory /tmp/spark-b8b51a4a-1130-4ece-88e7-f6213aff8193/pyspark-0eab823a-4bf5-49d6-adc5-28bcd143c329
+[2026-08-14T01:56:32.735+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO MetricsSystemImpl: Stopping s3a-file-system metrics system...
+[2026-08-14T01:56:32.737+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO MetricsSystemImpl: s3a-file-system metrics system stopped.
+[2026-08-14T01:56:32.739+0000] {docker.py:438} INFO - 26/08/14 01:56:32 INFO MetricsSystemImpl: s3a-file-system metrics system shutdown complete.
+[2026-08-14T01:56:33.337+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-14T01:56:33.340+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=serverless_spark_dev_pipeline, task_id=run_silver_requests_dev, run_id=manual__2026-08-14T01:55:42.985613+00:00, execution_date=20260814T015542, start_date=20260814T015615, end_date=20260814T015633
+[2026-08-14T01:56:33.385+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-08-14T01:56:33.408+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-08-14T01:56:33.411+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
