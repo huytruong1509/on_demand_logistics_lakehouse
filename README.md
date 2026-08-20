@@ -12,13 +12,13 @@
 
 ## 📌 1. Tổng Quan Dự Án (Project Overview)
 
-**On-Demand Logistics Lakehouse** là hệ thống dữ liệu được xây dựng theo mô hình Data Lakehouse nhằm xử lý và theo dõi chỉ số **SLA Pre-pickup** (giai đoạn từ khi tạo đơn đến khi tài xế lấy hàng thành công) trong mô hình giao hàng nhanh theo yêu cầu (On-Demand Logistics).
+**On-Demand Logistics Lakehouse** là hệ thống dữ liệu được xây dựng theo mô hình Data Lakehouse nhằm xử lý và theo dõi chỉ số **SLA Pre-pickup** (giai đoạn từ khi tạo đơn đến khi tài xế lấy hàng thành công) trong mô hình giao hàng theo yêu cầu (On-Demand Logistics).
 
 Hệ thống hỗ trợ giải quyết các bài toán vận hành cốt lõi:
 
 - **Tối ưu hóa thời gian chờ (Latency Tracking):** Đo lường chính xác khoảng thời gian từ lúc tài xế chấp nhận đơn đến khi tới điểm lấy hàng (_Phase Accept ➔ Boarding_).
 - **Phát hiện điểm nghẽn SLA (Bottleneck Identification):** Bóc tách nguyên nhân khiến tài xế hủy đơn, lấy hàng chậm hoặc các khu vực thường xuyên bị vỡ SLA.
-- **Theo dõi hiệu suất (Performance Tracking):** Thống kê tỷ lệ hoàn thành SLA theo từng quận huyện, khung giờ và loại dịch vụ (_Siêu Tốc, Nhanh, 4H, Đồng Giá_).
+- **Theo dõi hiệu suất (Performance Tracking):** Thống kê tỷ lệ hoàn thành SLA ở HCM, khung giờ và loại dịch vụ (_Siêu Tốc, Nhanh, 4H, Đồng Giá_).
 
 > 💡 **Data Source:** Dữ liệu đầu vào được mô phỏng (Mock Data Generator) dựa trên [Ahamove Order API Data Model](https://developers.ahamove.com/docs/api-reference/order-apis/data-model)
 
