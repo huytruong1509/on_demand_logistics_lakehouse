@@ -151,7 +151,7 @@ logistics-lakehouse/
 
 #### 📊 Bảng Sự Kiện (Fact Tables)
 
-- **`fct_orders`**: Bảng sự kiện đơn hàng cốt lõi (phân vùng theo `day(create_time)`). Lưu trữ đầy đủ vòng đời mốc thời gian (_create_, _accept_, _pickup_, _complete_, _cancel_), đo lường các chỉ số SLA (`time_to_accept_seconds`, `time_to_pickup_minutes`, `is_cancelled_before_pickup`) cùng các chỉ số tài chính (Gross/Net Revenue).
+- **`fct_orders`**: Bảng sự kiện đơn hàng cốt lõi (phân vùng theo `day(create_time)`). Đo lường các chỉ số SLA (`time_to_accept_seconds`, `time_to_pickup_minutes`, `is_cancelled_before_pickup`) cùng các chỉ số tài chính (Gross/Net Revenue).
 - **`fct_order_stops`**: Bảng sự kiện các điểm dừng giao nhận hàng (phân vùng theo `day(create_time)`), hỗ trợ tính khoảng cách thực tế di chuyển (`distance_to_target_meters`), thời gian dừng (`stop_duration_minutes`), xác thực POD và tiền thu hộ COD.
 - **`fct_order_requests`**: Bảng sự kiện chi tiết các yêu cầu / dịch vụ đặc biệt đi kèm theo từng đơn hàng.
 
