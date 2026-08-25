@@ -16,14 +16,17 @@
 
 Hệ thống hỗ trợ giải quyết các bài toán vận hành cốt lõi:
 
-- **Tối ưu hóa thời gian chờ (Latency Tracking):** Đo lường chính xác khoảng thời gian từ lúc tài xế chấp nhận đơn đến khi tới điểm lấy hàng (_Phase Accept ➔ Boarding_).
-- **Phát hiện điểm nghẽn SLA (Bottleneck Identification):** Bóc tách nguyên nhân khiến tài xế hủy đơn, lấy hàng chậm hoặc các khu vực thường xuyên bị vỡ SLA.
-- **Theo dõi hiệu suất (Performance Tracking):** Thống kê tỷ lệ hoàn thành SLA ở HCM, khung giờ và loại dịch vụ (_Siêu Tốc, Nhanh, 4H, Đồng Giá_).
-
+- **Tối ưu thời gian vận hành :** Xác định các điểm nghẽn trễ SLA tại chặng tìm tài xế, di chuyển và bàn giao hàng tại điểm lấy.
+- **Phân tích nguyên nhân hủy đơn:** Xác định các yếu tố gây hủy đơn (Khách hủy, Tài xế từ chối, Hệ thống hết giờ) nhằm bảo vệ doanh thu.
+- **Tối ưu thuật toán điều phối & Surge Pricing:** Đánh giá tác động của tăng giá (Surge) và attribute order (COD cao, hàng cồng kềnh,..) đến tỷ lệ nhận đơn.
+- **Theo dõi hành vi tài xế:** Phát hiện tỷ lệ bỏ qua ping và hủy đơn sau khi nhận để đề xuất giải pháp cải thiện.
+  
 > 💡 **Data Source:** Dữ liệu đầu vào được mô phỏng (Mock Data Generator) dựa trên [Ahamove Order API Data Model](https://developers.ahamove.com/docs/api-reference/order-apis/data-model)
 
 > 👉 **Live Interactive Dashboard:** [Ahamove Pre-Pickup SLA Dashboard](https://huytruong1509.github.io/ahamove_pre_pickup_sla_dashboard/)
 
+📌 **Xem báo cáo chi tiết:**  
+👉 [Ahamove Pre-Pickup SLA & Executive Report](https://drive.google.com/file/d/1FlNR7lLbgMb4lG57hASMeKegBhxMOiRA/view?usp=sharing)
 ---
 
 ## 🏗️ 2. Kiến Trúc Hệ Thống (Architecture & Tech Stack)
@@ -157,15 +160,13 @@ logistics-lakehouse/
 
 ## 📊 5. Executive Dashboard
 
-Dashboard hỗ trợ Ops Team tracking vận hành và tìm ra nguyên nhân gây trễ SLA:
+Dashboard hỗ trợ Ops Team tracking vận hành và tìm ra nguyên nhân ảnh hưởng đến pre-pick SLA:
 
-- **1. LTA Dashboard (SLA Health):** Theo dõi tổng quan tỷ lệ đạt SLA. So sánh thời gian xử lý trung bình (P50) và nhóm trễ nhất (P90) để phát hiện sự cố kịp thời.
-- **2. Cancel Rate Breakdown:** Phân tích tỷ lệ hủy đơn trước khi tài xế lấy hàng (_Pre-Boarding_) theo 3 nhóm nguyên nhân: Khách hủy (_User Cancel_), Tài xế từ chối (_Driver Cancel_) và Hệ thống hết giờ (_System Timeout_).
-- **3. Hotspot Matrix:** Bản đồ nhiệt (Heatmap) thể hiện tỷ lệ trễ SLA theo từng `[Quận x Loại dịch vụ]` trong các tình huống thời tiết xấu (như mưa lớn, ngập lụt) để xác định điểm nóng vỡ SLA.
-- **4. Dispatch Dynamics:** Theo dõi hiệu quả của logic điều phối giữa hai hình thức: Gom đơn (_Batching_) và Giao ngay (_On-Demand_).
-- **5. Spatial Anomaly Scatter:** Biểu đồ phân tán (_Scatter Plot_) giúp phát hiện các đơn hàng distance ngắn nhưng có thời gian lấy hàng lâu bất thường.
-- **6. B2B Merchant Friction:** Đo lường thời gian tài xế chờ lấy hàng tại các Kho B2B / Hub tập kết để phát hiện các điểm nghẽn làm chậm quá trình vận chuyển.
-
+1. **SLA Health & Core Latency:** Tracking tỷ lệ hoàn thành SLA và đo lường thời gian thực thi qua từng chặng.
+2. **Cancellation Diagnostics:** Phân tích nguyên nhân hủy đơn và tổn thất doanh thu thực tế.
+3. **Supply & Surge Hotspots:** Bản đồ nhiệt (Heatmap) theo dõi độ phủ cung và hiệu quả tăng giá theo khu vực / khung giờ.
+4. **Merchant & Field Friction:** Đo lường thời gian đỗ xe, tìm tầng và chờ cửa hàng bàn giao hàng.
+   
 ## 🚀 6. (Getting Started)
 
 ### Yêu Cầu (Prerequisites)
