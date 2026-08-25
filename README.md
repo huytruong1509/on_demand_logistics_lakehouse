@@ -164,8 +164,8 @@ Dashboard hỗ trợ Ops Team tracking vận hành và tìm ra nguyên nhân ả
 
 1. **SLA Health & Core Latency:** Tracking tỷ lệ hoàn thành SLA và đo lường thời gian thực thi qua từng chặng.
 2. **Cancellation Diagnostics:** Phân tích nguyên nhân hủy đơn và tổn thất doanh thu thực tế.
-3. **Supply & Surge Hotspots:** Bản đồ nhiệt (Heatmap) theo dõi độ phủ cung và hiệu quả tăng giá theo khu vực / khung giờ.
-4. **Merchant & Field Friction:** Đo lường thời gian đỗ xe, tìm tầng và chờ cửa hàng bàn giao hàng.
+3. **Supply & Surge Hotspots:** Tracking active drivers và hiệu quả tăng giá theo khu vực / khung giờ.
+4. **Merchant & Field Friction:** Tracking thời gian xử lý tại điểm lấy và nguyên nhân dẫn đến bottleneck 
    
 ## 🚀 6. (Getting Started)
 
