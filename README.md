@@ -26,7 +26,7 @@ Hệ thống hỗ trợ giải quyết các bài toán vận hành cốt lõi:
 > 👉 **Live Interactive Dashboard:** [Ahamove Pre-Pickup SLA Dashboard](https://huytruong1509.github.io/ahamove_pre_pickup_sla_dashboard/)
 
 📌 **Xem báo cáo chi tiết:**  
-👉 [Ahamove Pre-Pickup SLA & Executive Report](https://drive.google.com/file/d/1FlNR7lLbgMb4lG57hASMeKegBhxMOiRA/view?usp=sharing)
+  [Ahamove Pre-Pickup SLA & Executive Report](https://drive.google.com/file/d/1FlNR7lLbgMb4lG57hASMeKegBhxMOiRA/view?usp=sharing)
 ---
 
 ## 🏗️ 2. Kiến Trúc Hệ Thống (Architecture & Tech Stack)
